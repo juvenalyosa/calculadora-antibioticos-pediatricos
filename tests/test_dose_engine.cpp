@@ -4,6 +4,7 @@
 #include <doctest/doctest.h>
 
 #include <string>
+#include <string_view>
 
 #include "calc/dose_engine.hpp"
 #include "support/test_kb.hpp"
@@ -35,13 +36,16 @@ const OptionResult& optionOf(const LineResult& line, int number) {
   return line.options.front();
 }
 
-const Administration& administrationOf(const RegimenResult& result, const std::string& id) {
+// `id` se recibe por valor (string_view) y no como const std::string&: así no
+// se crea un std::string temporal en la llamada, que GCC señalaría como una
+// posible referencia colgante en el valor devuelto.
+const Administration& administrationOf(const RegimenResult& result, std::string_view id) {
   for (const Administration& administration : result.administrations) {
     if (administration.presentation_id == id) {
       return administration;
     }
   }
-  FAIL("no hay administración para la presentación " << id);
+  FAIL("no hay administración para la presentación " << std::string(id));
   return result.administrations.front();
 }
 
