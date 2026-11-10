@@ -1,0 +1,16 @@
+/// @file version.hpp
+/// @brief Versión de la aplicación. GENERADO por CMake a partir de
+///        version.hpp.in; no editar el archivo generado.
+#pragma once
+
+#include <string_view>
+
+namespace calc {
+
+/// Versión semántica de la aplicación (se define en el CMakeLists.txt raíz).
+inline constexpr std::string_view kAppVersion = "@PROJECT_VERSION@";
+
+/// Nombre visible de la aplicación.
+inline constexpr std::string_view kAppName = "Calculadora de dosis de antibióticos pediátricos";
+
+}  // namespace calc

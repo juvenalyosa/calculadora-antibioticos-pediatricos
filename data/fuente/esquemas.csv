@@ -1,0 +1,10 @@
+enfermedad_id,linea,opcion,descripcion_opcion,medicamento_id,via,base,dosis_min,dosis_usual,dosis_max,intervalo_horas,max_por_dosis,max_por_dia,duracion_dias_min,duracion_dias_max,edad_min_meses,edad_max_meses,peso_min_kg,peso_max_kg,nota,fuente_id,pagina,estado,verificado_por_1,verificado_por_2
+oma,primera,1,Amoxicilina a dosis altas,amoxicilina,oral,mg_kg_dia,80,90,90,12,,4000,5,10,,,,,10 días en menores de 2 años; 7 días de 2 a 5 años; 5 a 7 días desde los 6 años. El tope diario es de muestra: confirmar con la fuente.,aap_oma_2013,Tabla 5,muestra,,
+oma,segunda,1,Amoxicilina-clavulanato a dosis altas,amoxicilina_clavulanato,oral,mg_kg_dia,90,90,90,12,,4000,5,10,,,,,Dosis expresada en el componente amoxicilina. El tope diario es de muestra: confirmar con la fuente.,aap_oma_2013,Tabla 5,muestra,,
+oma,segunda,2,Ceftriaxona intramuscular,ceftriaxona,im,mg_kg_dosis,50,50,50,24,1000,,3,3,,,,,,aap_oma_2013,Tabla 5,muestra,,
+oma,alergia,1,Cefuroxima,cefuroxima,oral,mg_kg_dia,30,30,30,12,500,,5,10,,,,,Solo si la alergia a la penicilina no es grave. El tope por toma es de muestra: confirmar con la fuente.,aap_oma_2013,Tabla 5,muestra,,
+faringoamigdalitis,primera,1,Amoxicilina una vez al día,amoxicilina,oral,mg_kg_dia,50,50,50,24,1000,,10,10,,,,,,idsa_faringitis_2012,Tabla 2,muestra,,
+faringoamigdalitis,primera,2,Penicilina G benzatínica (menos de 27 kg),penicilina_benzatinica,im,dosis_fija,600000,600000,600000,,,,,,,,,27,,idsa_faringitis_2012,Tabla 2,muestra,,
+faringoamigdalitis,primera,3,Penicilina G benzatínica (27 kg o más),penicilina_benzatinica,im,dosis_fija,1200000,1200000,1200000,,,,,,,,27,,,idsa_faringitis_2012,Tabla 2,muestra,,
+faringoamigdalitis,alergia,1,Cefalexina,cefalexina,oral,mg_kg_dosis,20,20,20,12,500,,10,10,,,,,Evitar si hubo anafilaxia a la penicilina.,idsa_faringitis_2012,Tabla 2,muestra,,
+faringoamigdalitis,alergia,2,Azitromicina,azitromicina,oral,mg_kg_dia,12,12,12,24,500,,5,5,,,,,,idsa_faringitis_2012,Tabla 2,muestra,,

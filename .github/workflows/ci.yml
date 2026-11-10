@@ -1,0 +1,28 @@
+# Integración continua: compila y ejecuta todas las pruebas (incluida la
+# matriz de validación alfa) en los tres sistemas operativos.
+#
+# Solo tiene efecto si el repositorio se aloja en GitHub.
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  construir-y-probar:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Configurar
+        run: cmake -S . -B build -DCMAKE_BUILD_TYPE=Release -DCALC_WARNINGS_AS_ERRORS=ON
+
+      - name: Compilar
+        run: cmake --build build --config Release --parallel
+
+      - name: Probar
+        run: ctest --test-dir build --build-config Release --output-on-failure

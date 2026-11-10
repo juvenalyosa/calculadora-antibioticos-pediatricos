@@ -1,0 +1,494 @@
+{
+  "esquema_version": 1,
+  "version": "0.1.0-muestra",
+  "fecha": "2026-11-10",
+  "fuentes": [
+    {
+      "id": "aap_oma_2013",
+      "titulo": "The Diagnosis and Management of Acute Otitis Media",
+      "organizacion": "American Academy of Pediatrics",
+      "anio": 2013,
+      "url": "https://doi.org/10.1542/peds.2012-3488"
+    },
+    {
+      "id": "idsa_faringitis_2012",
+      "titulo": "Clinical Practice Guideline for the Diagnosis and Management of Group A Streptococcal Pharyngitis: 2012 Update",
+      "organizacion": "Infectious Diseases Society of America",
+      "anio": 2012,
+      "url": "https://doi.org/10.1093/cid/cis629"
+    },
+    {
+      "id": "aap_bronquiolitis_2014",
+      "titulo": "Clinical Practice Guideline: The Diagnosis, Management, and Prevention of Bronchiolitis",
+      "organizacion": "American Academy of Pediatrics",
+      "anio": 2014,
+      "url": "https://doi.org/10.1542/peds.2014-2742"
+    }
+  ],
+  "medicamentos": [
+    {
+      "id": "amoxicilina",
+      "nombre": "Amoxicilina",
+      "unidad": "mg",
+      "ajuste_renal": {
+        "tipo": "por_bandas",
+        "estado": "muestra",
+        "nota": "Bandas ilustrativas para probar el motor: falta definir la referencia farmacológica.",
+        "bandas": [
+          {
+            "tfg_min": 10,
+            "tfg_max": 30,
+            "factor_dosis": 1,
+            "intervalo_minimo_horas": 12,
+            "evitar": false
+          },
+          {
+            "tfg_min": 0,
+            "tfg_max": 10,
+            "factor_dosis": 1,
+            "intervalo_minimo_horas": 24,
+            "evitar": false
+          }
+        ]
+      },
+      "presentaciones": [
+        {
+          "id": "amox_susp_250",
+          "descripcion": "Suspensión 250 mg/5 mL",
+          "via": "oral",
+          "tipo": "liquido",
+          "cantidad": 250,
+          "volumen_ml": 5
+        },
+        {
+          "id": "amox_cap_500",
+          "descripcion": "Cápsula 500 mg",
+          "via": "oral",
+          "tipo": "solido",
+          "cantidad": 500,
+          "unidad": "cápsula",
+          "divisible": false
+        }
+      ]
+    },
+    {
+      "id": "amoxicilina_clavulanato",
+      "nombre": "Amoxicilina-clavulanato",
+      "unidad": "mg",
+      "ajuste_renal": {
+        "tipo": "sin_dato",
+        "estado": "muestra"
+      },
+      "presentaciones": [
+        {
+          "id": "amoxclav_susp_600",
+          "descripcion": "Suspensión 600 mg + 42,9 mg/5 mL",
+          "via": "oral",
+          "tipo": "liquido",
+          "cantidad": 600,
+          "volumen_ml": 5
+        }
+      ]
+    },
+    {
+      "id": "ceftriaxona",
+      "nombre": "Ceftriaxona",
+      "unidad": "mg",
+      "ajuste_renal": {
+        "tipo": "sin_dato",
+        "estado": "muestra"
+      },
+      "presentaciones": [
+        {
+          "id": "ceftriaxona_vial_im",
+          "descripcion": "Vial 1 g reconstituido a 250 mg/mL",
+          "via": "im",
+          "tipo": "liquido",
+          "cantidad": 250,
+          "volumen_ml": 1,
+          "paso_redondeo": 0.1
+        }
+      ]
+    },
+    {
+      "id": "cefuroxima",
+      "nombre": "Cefuroxima axetil",
+      "unidad": "mg",
+      "ajuste_renal": {
+        "tipo": "sin_dato",
+        "estado": "muestra"
+      },
+      "presentaciones": [
+        {
+          "id": "cefuroxima_susp_250",
+          "descripcion": "Suspensión 250 mg/5 mL",
+          "via": "oral",
+          "tipo": "liquido",
+          "cantidad": 250,
+          "volumen_ml": 5
+        },
+        {
+          "id": "cefuroxima_tab_250",
+          "descripcion": "Tableta 250 mg",
+          "via": "oral",
+          "tipo": "solido",
+          "cantidad": 250,
+          "unidad": "tableta",
+          "divisible": false
+        }
+      ]
+    },
+    {
+      "id": "cefalexina",
+      "nombre": "Cefalexina",
+      "unidad": "mg",
+      "ajuste_renal": {
+        "tipo": "sin_dato",
+        "estado": "muestra"
+      },
+      "presentaciones": [
+        {
+          "id": "cefalexina_susp_250",
+          "descripcion": "Suspensión 250 mg/5 mL",
+          "via": "oral",
+          "tipo": "liquido",
+          "cantidad": 250,
+          "volumen_ml": 5
+        },
+        {
+          "id": "cefalexina_cap_500",
+          "descripcion": "Cápsula 500 mg",
+          "via": "oral",
+          "tipo": "solido",
+          "cantidad": 500,
+          "unidad": "cápsula",
+          "divisible": false
+        }
+      ]
+    },
+    {
+      "id": "azitromicina",
+      "nombre": "Azitromicina",
+      "unidad": "mg",
+      "ajuste_renal": {
+        "tipo": "sin_dato",
+        "estado": "muestra"
+      },
+      "presentaciones": [
+        {
+          "id": "azitro_susp_200",
+          "descripcion": "Suspensión 200 mg/5 mL",
+          "via": "oral",
+          "tipo": "liquido",
+          "cantidad": 200,
+          "volumen_ml": 5
+        },
+        {
+          "id": "azitro_tab_500",
+          "descripcion": "Tableta 500 mg",
+          "via": "oral",
+          "tipo": "solido",
+          "cantidad": 500,
+          "unidad": "tableta",
+          "divisible": false
+        }
+      ]
+    },
+    {
+      "id": "penicilina_benzatinica",
+      "nombre": "Penicilina G benzatínica",
+      "unidad": "UI",
+      "ajuste_renal": {
+        "tipo": "sin_dato",
+        "estado": "muestra"
+      },
+      "presentaciones": [
+        {
+          "id": "benzatinica_vial_1200000",
+          "descripcion": "Vial 1 200 000 UI",
+          "via": "im",
+          "tipo": "solido",
+          "cantidad": 1200000,
+          "unidad": "vial",
+          "divisible": true
+        }
+      ]
+    }
+  ],
+  "enfermedades": [
+    {
+      "id": "oma",
+      "nombre": "Otitis media aguda",
+      "grupo": "Respiratorias altas",
+      "fuente_id": "aap_oma_2013",
+      "lineas": [
+        {
+          "linea": "primera",
+          "opciones": [
+            {
+              "numero": 1,
+              "descripcion": "Amoxicilina a dosis altas",
+              "componentes": [
+                {
+                  "medicamento_id": "amoxicilina",
+                  "via": "oral",
+                  "base": "mg_kg_dia",
+                  "dosis": {
+                    "min": 80,
+                    "usual": 90,
+                    "max": 90
+                  },
+                  "intervalo_horas": 12,
+                  "max_por_dia": 4000,
+                  "duracion_dias": {
+                    "min": 5,
+                    "max": 10
+                  },
+                  "nota": "10 días en menores de 2 años; 7 días de 2 a 5 años; 5 a 7 días desde los 6 años. El tope diario es de muestra: confirmar con la fuente.",
+                  "fuente_id": "aap_oma_2013",
+                  "pagina": "Tabla 5",
+                  "estado": "muestra"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "linea": "segunda",
+          "opciones": [
+            {
+              "numero": 1,
+              "descripcion": "Amoxicilina-clavulanato a dosis altas",
+              "componentes": [
+                {
+                  "medicamento_id": "amoxicilina_clavulanato",
+                  "via": "oral",
+                  "base": "mg_kg_dia",
+                  "dosis": {
+                    "min": 90,
+                    "usual": 90,
+                    "max": 90
+                  },
+                  "intervalo_horas": 12,
+                  "max_por_dia": 4000,
+                  "duracion_dias": {
+                    "min": 5,
+                    "max": 10
+                  },
+                  "nota": "Dosis expresada en el componente amoxicilina. El tope diario es de muestra: confirmar con la fuente.",
+                  "fuente_id": "aap_oma_2013",
+                  "pagina": "Tabla 5",
+                  "estado": "muestra"
+                }
+              ]
+            },
+            {
+              "numero": 2,
+              "descripcion": "Ceftriaxona intramuscular",
+              "componentes": [
+                {
+                  "medicamento_id": "ceftriaxona",
+                  "via": "im",
+                  "base": "mg_kg_dosis",
+                  "dosis": {
+                    "min": 50,
+                    "usual": 50,
+                    "max": 50
+                  },
+                  "intervalo_horas": 24,
+                  "max_por_dosis": 1000,
+                  "duracion_dias": {
+                    "min": 3,
+                    "max": 3
+                  },
+                  "fuente_id": "aap_oma_2013",
+                  "pagina": "Tabla 5",
+                  "estado": "muestra"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "linea": "alergia",
+          "opciones": [
+            {
+              "numero": 1,
+              "descripcion": "Cefuroxima",
+              "componentes": [
+                {
+                  "medicamento_id": "cefuroxima",
+                  "via": "oral",
+                  "base": "mg_kg_dia",
+                  "dosis": {
+                    "min": 30,
+                    "usual": 30,
+                    "max": 30
+                  },
+                  "intervalo_horas": 12,
+                  "max_por_dosis": 500,
+                  "duracion_dias": {
+                    "min": 5,
+                    "max": 10
+                  },
+                  "nota": "Solo si la alergia a la penicilina no es grave. El tope por toma es de muestra: confirmar con la fuente.",
+                  "fuente_id": "aap_oma_2013",
+                  "pagina": "Tabla 5",
+                  "estado": "muestra"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "requiere_antibiotico": true
+    },
+    {
+      "id": "faringoamigdalitis",
+      "nombre": "Faringoamigdalitis estreptocócica",
+      "grupo": "Respiratorias altas",
+      "fuente_id": "idsa_faringitis_2012",
+      "lineas": [
+        {
+          "linea": "primera",
+          "opciones": [
+            {
+              "numero": 1,
+              "descripcion": "Amoxicilina una vez al día",
+              "componentes": [
+                {
+                  "medicamento_id": "amoxicilina",
+                  "via": "oral",
+                  "base": "mg_kg_dia",
+                  "dosis": {
+                    "min": 50,
+                    "usual": 50,
+                    "max": 50
+                  },
+                  "intervalo_horas": 24,
+                  "max_por_dosis": 1000,
+                  "duracion_dias": {
+                    "min": 10,
+                    "max": 10
+                  },
+                  "fuente_id": "idsa_faringitis_2012",
+                  "pagina": "Tabla 2",
+                  "estado": "muestra"
+                }
+              ]
+            },
+            {
+              "numero": 2,
+              "descripcion": "Penicilina G benzatínica (menos de 27 kg)",
+              "componentes": [
+                {
+                  "medicamento_id": "penicilina_benzatinica",
+                  "via": "im",
+                  "base": "dosis_fija",
+                  "dosis": {
+                    "min": 600000,
+                    "usual": 600000,
+                    "max": 600000
+                  },
+                  "peso_kg": {
+                    "max": 27
+                  },
+                  "fuente_id": "idsa_faringitis_2012",
+                  "pagina": "Tabla 2",
+                  "estado": "muestra"
+                }
+              ]
+            },
+            {
+              "numero": 3,
+              "descripcion": "Penicilina G benzatínica (27 kg o más)",
+              "componentes": [
+                {
+                  "medicamento_id": "penicilina_benzatinica",
+                  "via": "im",
+                  "base": "dosis_fija",
+                  "dosis": {
+                    "min": 1200000,
+                    "usual": 1200000,
+                    "max": 1200000
+                  },
+                  "peso_kg": {
+                    "min": 27
+                  },
+                  "fuente_id": "idsa_faringitis_2012",
+                  "pagina": "Tabla 2",
+                  "estado": "muestra"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "linea": "alergia",
+          "opciones": [
+            {
+              "numero": 1,
+              "descripcion": "Cefalexina",
+              "componentes": [
+                {
+                  "medicamento_id": "cefalexina",
+                  "via": "oral",
+                  "base": "mg_kg_dosis",
+                  "dosis": {
+                    "min": 20,
+                    "usual": 20,
+                    "max": 20
+                  },
+                  "intervalo_horas": 12,
+                  "max_por_dosis": 500,
+                  "duracion_dias": {
+                    "min": 10,
+                    "max": 10
+                  },
+                  "nota": "Evitar si hubo anafilaxia a la penicilina.",
+                  "fuente_id": "idsa_faringitis_2012",
+                  "pagina": "Tabla 2",
+                  "estado": "muestra"
+                }
+              ]
+            },
+            {
+              "numero": 2,
+              "descripcion": "Azitromicina",
+              "componentes": [
+                {
+                  "medicamento_id": "azitromicina",
+                  "via": "oral",
+                  "base": "mg_kg_dia",
+                  "dosis": {
+                    "min": 12,
+                    "usual": 12,
+                    "max": 12
+                  },
+                  "intervalo_horas": 24,
+                  "max_por_dosis": 500,
+                  "duracion_dias": {
+                    "min": 5,
+                    "max": 5
+                  },
+                  "fuente_id": "idsa_faringitis_2012",
+                  "pagina": "Tabla 2",
+                  "estado": "muestra"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "requiere_antibiotico": true
+    },
+    {
+      "id": "bronquiolitis",
+      "nombre": "Bronquiolitis",
+      "grupo": "Respiratorias bajas",
+      "mensaje": "La bronquiolitis es una infección viral: no se indican antibióticos, salvo coinfección bacteriana confirmada o fuertemente sospechada.",
+      "fuente_id": "aap_bronquiolitis_2014",
+      "requiere_antibiotico": false
+    }
+  ]
+}

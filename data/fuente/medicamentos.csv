@@ -1,0 +1,8 @@
+id,nombre,unidad,ajuste_renal_tipo,ajuste_renal_nota,ajuste_renal_fuente_id,ajuste_renal_estado
+amoxicilina,Amoxicilina,mg,por_bandas,Bandas ilustrativas para probar el motor: falta definir la referencia farmacológica.,,muestra
+amoxicilina_clavulanato,Amoxicilina-clavulanato,mg,sin_dato,,,muestra
+ceftriaxona,Ceftriaxona,mg,sin_dato,,,muestra
+cefuroxima,Cefuroxima axetil,mg,sin_dato,,,muestra
+cefalexina,Cefalexina,mg,sin_dato,,,muestra
+azitromicina,Azitromicina,mg,sin_dato,,,muestra
+penicilina_benzatinica,Penicilina G benzatínica,UI,sin_dato,,,muestra

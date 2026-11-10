@@ -1,0 +1,22 @@
+# Directorios de construcción
+/build/
+/cmake-build-*/
+/out/
+
+# Editores e IDE
+.vscode/
+.idea/
+*.swp
+.DS_Store
+compile_commands.json
+
+# Python (herramientas)
+__pycache__/
+*.pyc
+
+# Reportes de error generados localmente al probar
+*.jsonl
+
+# Documento de radicación: contiene datos personales (cédula, correo).
+# Se conserva fuera del control de versiones.
+/RADICACIÓN*.pdf

@@ -1,0 +1,3 @@
+medicamento_id,tfg_min,tfg_max,factor_dosis,intervalo_minimo_horas,evitar,nota
+amoxicilina,10,30,1,12,no,
+amoxicilina,0,10,1,24,no,

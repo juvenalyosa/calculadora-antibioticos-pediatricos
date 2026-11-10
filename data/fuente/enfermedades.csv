@@ -1,0 +1,4 @@
+id,nombre,grupo,requiere_antibiotico,mensaje,fuente_id
+oma,Otitis media aguda,Respiratorias altas,si,,aap_oma_2013
+faringoamigdalitis,Faringoamigdalitis estreptocócica,Respiratorias altas,si,,idsa_faringitis_2012
+bronquiolitis,Bronquiolitis,Respiratorias bajas,no,"La bronquiolitis es una infección viral: no se indican antibióticos, salvo coinfección bacteriana confirmada o fuertemente sospechada.",aap_bronquiolitis_2014

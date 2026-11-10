@@ -1,0 +1,12 @@
+id,medicamento_id,descripcion,via,tipo,cantidad,volumen_ml,unidad,divisible,paso_redondeo
+amox_susp_250,amoxicilina,Suspensión 250 mg/5 mL,oral,liquido,250,5,,,
+amox_cap_500,amoxicilina,Cápsula 500 mg,oral,solido,500,,cápsula,no,
+amoxclav_susp_600,amoxicilina_clavulanato,"Suspensión 600 mg + 42,9 mg/5 mL",oral,liquido,600,5,,,
+ceftriaxona_vial_im,ceftriaxona,Vial 1 g reconstituido a 250 mg/mL,im,liquido,250,1,,,"0,1"
+cefuroxima_susp_250,cefuroxima,Suspensión 250 mg/5 mL,oral,liquido,250,5,,,
+cefuroxima_tab_250,cefuroxima,Tableta 250 mg,oral,solido,250,,tableta,no,
+cefalexina_susp_250,cefalexina,Suspensión 250 mg/5 mL,oral,liquido,250,5,,,
+cefalexina_cap_500,cefalexina,Cápsula 500 mg,oral,solido,500,,cápsula,no,
+azitro_susp_200,azitromicina,Suspensión 200 mg/5 mL,oral,liquido,200,5,,,
+azitro_tab_500,azitromicina,Tableta 500 mg,oral,solido,500,,tableta,no,
+benzatinica_vial_1200000,penicilina_benzatinica,Vial 1 200 000 UI,im,solido,1200000,,vial,si,

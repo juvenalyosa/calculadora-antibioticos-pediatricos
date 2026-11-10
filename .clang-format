@@ -1,0 +1,10 @@
+# Formato del código C++. Aplicar con:  clang-format -i <archivos>
+BasedOnStyle: Google
+ColumnLimit: 100
+IndentWidth: 2
+DerivePointerAlignment: false
+PointerAlignment: Left
+AllowShortFunctionsOnASingleLine: Inline
+AllowShortIfStatementsOnASingleLine: Never
+AllowShortLoopsOnASingleLine: false
+IncludeBlocks: Preserve
