@@ -1,7 +1,11 @@
-# Integración continua: compila y ejecuta todas las pruebas (incluida la
-# matriz de validación alfa) en los tres sistemas operativos.
+# Integración continua.
 #
-# Solo tiene efecto si el repositorio se aloja en GitHub.
+#   construir-y-probar   núcleo, consola y pruebas (incluida la matriz de
+#                        validación alfa) en los tres sistemas, SIN Qt:
+#                        comprueba que el proyecto no depende de la interfaz.
+#   interfaz-windows     compila la interfaz gráfica con Qt en Windows, la
+#                        recorre sin pantalla y publica un paquete listo para
+#                        descomprimir y ejecutar.
 name: CI
 
 on:
@@ -26,3 +30,42 @@ jobs:
 
       - name: Probar
         run: ctest --test-dir build --build-config Release --output-on-failure
+
+  interfaz-windows:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Instalar Qt
+        uses: jurplel/install-qt-action@v4
+        with:
+          version: '6.8.3'
+          cache: true
+
+      - name: Configurar
+        run: cmake -S . -B build -DCALC_WARNINGS_AS_ERRORS=ON
+
+      - name: Compilar
+        run: cmake --build build --config Release --parallel
+
+      # Incluye interfaz_recorrido: los cuatro pasos de la interfaz, sin pantalla.
+      - name: Probar
+        run: ctest --test-dir build --build-config Release --output-on-failure
+
+      # Paquete portátil: el ejecutable, las bibliotecas de Qt como archivos
+      # separados (requisito de la LGPL) y la base de conocimiento.
+      - name: Empaquetar
+        shell: pwsh
+        run: |
+          New-Item -ItemType Directory -Force dist/data/kb | Out-Null
+          Copy-Item build/src/gui/Release/CalculadoraAntibioticos.exe dist/
+          Copy-Item build/src/cli/Release/calc-dosis.exe dist/
+          Copy-Item data/kb/base_conocimiento.json dist/data/kb/
+          windeployqt --release --compiler-runtime dist/CalculadoraAntibioticos.exe
+
+      - name: Publicar paquete
+        uses: actions/upload-artifact@v4
+        with:
+          name: CalculadoraAntibioticos-windows
+          path: dist/
+          if-no-files-found: error
