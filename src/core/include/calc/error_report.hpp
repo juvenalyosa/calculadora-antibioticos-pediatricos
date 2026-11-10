@@ -7,7 +7,8 @@
 /// del estado del cálculo y `ReportSink` decide a dónde se envía.
 ///
 /// Privacidad: el reporte solo contiene las variables del cálculo (edad, peso,
-/// talla, función renal, enfermedad). No hay campo para identificar al paciente.
+/// talla, sexo, función renal, enfermedad). No hay campo para identificar al
+/// paciente.
 #pragma once
 
 #include <filesystem>

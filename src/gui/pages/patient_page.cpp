@@ -16,12 +16,16 @@ namespace calc::gui {
 namespace {
 // Unidades de peso que ofrece el selector (índices del QComboBox).
 enum WeightUnit { kKilograms = 0, kPounds = 1, kGrams = 2 };
+// Opciones del selector de sexo (índices del QComboBox).
+enum SexChoice { kSexNotRecorded = 0, kSexMale = 1, kSexFemale = 2 };
 }  // namespace
 
 PatientPage::PatientPage(Session& session, QWidget* parent)
     : QWizardPage(parent), session_(session) {
   setTitle("Paso 1 de 4 · Paciente");
-  setSubTitle("Ingrese la edad y el peso. La talla solo se necesita para estimar la función renal.");
+  setSubTitle(
+      "Ingrese la edad y el peso. La talla y el sexo solo se necesitan para estimar la función "
+      "renal.");
 
   // --- Edad ---
   years_ = new QSpinBox(this);
@@ -57,10 +61,18 @@ PatientPage::PatientPage(Session& session, QWidget* parent)
   height_row->addWidget(height_);
   height_row->addStretch();
 
+  // --- Sexo (opcional; lo usa la ecuación CKiD U25) ---
+  sex_ = new QComboBox(this);
+  sex_->addItems({"No registrado", "Masculino", "Femenino"});
+  auto* sex_row = new QHBoxLayout;
+  sex_row->addWidget(sex_);
+  sex_row->addStretch();
+
   auto* form = new QFormLayout;
   form->addRow("Edad:", age_row);
   form->addRow("Peso:", weight_row);
   form->addRow("Talla:", height_row);
+  form->addRow("Sexo:", sex_row);
 
   messages_ = new QLabel(this);
   messages_->setWordWrap(true);
@@ -84,6 +96,7 @@ PatientPage::PatientPage(Session& session, QWidget* parent)
   connect(months_, &QSpinBox::valueChanged, this, &PatientPage::refresh);
   connect(weight_, &QDoubleSpinBox::valueChanged, this, &PatientPage::refresh);
   connect(height_, &QDoubleSpinBox::valueChanged, this, &PatientPage::refresh);
+  connect(sex_, &QComboBox::currentIndexChanged, this, &PatientPage::refresh);
   connect(weight_unit_, &QComboBox::currentIndexChanged, this, [this] {
     applyWeightUnit();
     refresh();
@@ -96,12 +109,14 @@ bool PatientPage::isComplete() const {
   return complete_;
 }
 
-void PatientPage::setValues(int years, int months, double weight_kg, double height_cm) {
+void PatientPage::setValues(int years, int months, double weight_kg, double height_cm,
+                            std::optional<Sex> sex) {
   years_->setValue(years);
   months_->setValue(months);
   weight_unit_->setCurrentIndex(kKilograms);
   weight_->setValue(weight_kg);
   height_->setValue(height_cm);
+  sex_->setCurrentIndex(!sex ? kSexNotRecorded : (*sex == Sex::Male ? kSexMale : kSexFemale));
 }
 
 double PatientPage::weightInKilograms() const {
@@ -143,6 +158,17 @@ void PatientPage::refresh() {
     session_.patient.height = Centimeters(height_->value());
   } else {
     session_.patient.height.reset();
+  }
+  switch (sex_->currentIndex()) {
+    case kSexMale:
+      session_.patient.sex = Sex::Male;
+      break;
+    case kSexFemale:
+      session_.patient.sex = Sex::Female;
+      break;
+    default:
+      session_.patient.sex.reset();
+      break;
   }
 
   // Si la unidad no es kg, mostrar la conversión para que el usuario la vea.

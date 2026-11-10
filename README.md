@@ -28,8 +28,12 @@ Calcular el caso tipo 1 de la validación alfa (lactante de 1 año, 10 kg, 75 cm
 
 ```sh
 ./build/dev/src/cli/calc-dosis calcular --enfermedad oma \
-    --edad-anios 1 --peso-kg 10 --talla-cm 75 --creatinina 0,4
+    --edad-anios 1 --peso-kg 10 --talla-cm 75 --sexo m --creatinina 0,4
 ```
+
+Con `--creatinina` la función renal se estima con la ecuación CKiD U25, que
+necesita talla y sexo; `--formula schwartz` usa Schwartz de cabecera (solo
+talla).
 
 Otras órdenes: `calc-dosis listar`, `calc-dosis validar`, `calc-dosis ayuda`.
 

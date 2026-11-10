@@ -37,6 +37,18 @@ std::string Age::describe() const {
   return plural(years, "año", "años") + " " + plural(months, "mes", "meses");
 }
 
+// --- Sex ---------------------------------------------------------------------
+
+std::string_view label(Sex sex) noexcept {
+  switch (sex) {
+    case Sex::Male:
+      return "masculino";
+    case Sex::Female:
+      return "femenino";
+  }
+  return "";
+}
+
 // --- Validación --------------------------------------------------------------
 
 Kilograms expectedWeightForAge(Age age) noexcept {

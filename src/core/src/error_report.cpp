@@ -82,6 +82,9 @@ ErrorReport makeErrorReport(const std::string& step, ReportCategory category,
   if (request.patient.height) {
     report.context["talla_cm"] = plainNumber(request.patient.height->value());
   }
+  if (request.patient.sex) {
+    report.context["sexo"] = std::string(label(*request.patient.sex));
+  }
   report.context["funcion_renal"] = std::string(toString(request.renal.source));
   if (request.renal.gfr) {
     report.context["tfg"] = plainNumber(request.renal.gfr->value());

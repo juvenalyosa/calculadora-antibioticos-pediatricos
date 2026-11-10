@@ -7,6 +7,7 @@
 
 #include <optional>
 #include <string>
+#include <string_view>
 #include <vector>
 
 #include "calc/units.hpp"
@@ -33,11 +34,19 @@ class Age {
   int months_;
 };
 
+/// Sexo del paciente. Solo lo usan las fórmulas de función renal que tienen
+/// constantes distintas por sexo (p. ej. CKiD U25); las dosis no dependen de él.
+enum class Sex { Male, Female };
+
+/// Texto visible: "masculino" o "femenino".
+[[nodiscard]] std::string_view label(Sex sex) noexcept;
+
 /// Variables del paciente que entran al cálculo.
 struct Patient {
   Age age;
   Kilograms weight;
-  std::optional<Centimeters> height;  ///< Necesaria solo para estimar la TFG.
+  std::optional<Centimeters> height = std::nullopt;  ///< Solo para estimar la TFG.
+  std::optional<Sex> sex = std::nullopt;             ///< Solo para estimar la TFG.
 };
 
 /// Límites de alcance y de plausibilidad de los datos de entrada.

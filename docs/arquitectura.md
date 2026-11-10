@@ -42,7 +42,7 @@ Cada cabecera de `src/core/include/calc/` documenta su propio contrato.
 | `units.hpp` | Magnitudes con tipos fuertes (kg, cm, mL, mg/dL, TFG) y conversiones |
 | `warnings.hpp` | Advertencias con gravedad y código estable |
 | `patient.hpp` | Edad, paciente, validación de alcance y plausibilidad |
-| `renal.hpp` | Función renal e interfaz `GfrEstimator` (Schwartz de cabecera) |
+| `renal.hpp` | Función renal, interfaz `GfrEstimator` y catálogo de fórmulas (CKiD U25, Schwartz de cabecera) |
 | `knowledge_base.hpp` | Modelo en memoria de los datos clínicos |
 | `kb_loader.hpp` | Lectura del JSON y validación de todas sus reglas |
 | `dose_engine.hpp` | Motor: solicitud → plan de tratamiento |
@@ -100,11 +100,34 @@ respetarlas.
 
 Solo datos: ver [guia_datos.md](guia_datos.md). No se toca C++.
 
-### Agregar otra fórmula de TFG
+### Fórmulas de TFG
 
-Crear una clase que herede de `GfrEstimator` (`renal.hpp`), junto a
-`BedsideSchwartzEstimator`, con sus pruebas en `tests/test_renal.cpp`. El
-motor no cambia: recibe la TFG ya estimada dentro de `RenalFunction`.
+Cuando el usuario digita la creatinina, la TFG se estima con una de estas
+fórmulas (ambas con creatinina enzimática y talla):
+
+| Fórmula | Cálculo | Datos | Referencia |
+|---|---|---|---|
+| **CKiD U25** (por defecto) | `k × talla (m) ÷ creatinina`, con `k` según edad y sexo | talla, sexo | Pierce et al., Kidney Int 2021;99:948-956 |
+| Schwartz de cabecera | `0,413 × talla (cm) ÷ creatinina` | talla | Schwartz et al., J Am Soc Nephrol 2009 |
+
+Constante `k` de CKiD U25 (edad en años, con decimales):
+
+| Edad | Masculino | Femenino |
+|---|---|---|
+| < 12 años | 39,0 × 1,008^(edad − 12) | 36,1 × 1,008^(edad − 12) |
+| 12 a < 18 años | 39,0 × 1,045^(edad − 12) | 36,1 × 1,023^(edad − 12) |
+| 18 a 25 años | 50,8 | 41,4 |
+
+Schwartz equivale a un `k` fijo de 41,3 para todos; CKiD U25 lo baja en los
+niños pequeños y en las mujeres. En el caso tipo de 1 año (75 cm, creatinina
+0,4 mg/dL) Schwartz da 77,4 y CKiD U25 da 67,0 (niño) o 62,0 (niña). El sexo
+solo se usa aquí: ninguna dosis depende de él.
+
+Para agregar otra fórmula: crear una clase que herede de `GfrEstimator`
+(`renal.hpp`), añadirla al catálogo (`GfrFormula`, `kGfrFormulas`, `id`,
+`makeGfrEstimator`) y probarla en `tests/test_renal.cpp`. La consola
+(`--formula`) y la interfaz (selector del paso 2) la ofrecen sin más cambios.
+El motor no cambia: recibe la TFG ya estimada dentro de `RenalFunction`.
 
 ### Agregar un destino para los reportes de error
 
@@ -199,6 +222,8 @@ Valores que hoy son supuestos razonables del desarrollo y deben confirmarse:
 |---|---|---|
 | Desviación máxima aceptable por redondeo | 10 % | `limits::kMaxRoundingDeviation` |
 | TFG bajo la cual se avisa si falta el dato de ajuste renal | 90 | `limits::kReducedGfrThreshold` |
+| Fórmula de TFG por defecto | CKiD U25 | `kDefaultGfrFormula` en `renal.hpp` |
+| Constantes de CKiD U25 | tomadas de fuentes secundarias (NIDDK); cotejar con el artículo original | `renal.cpp` |
 | Rango de edad en que se considera válida la fórmula de Schwartz | 1 a 16 años | `BedsideSchwartzEstimator` |
 | Peso «poco plausible» para la edad | fuera de 0,5 a 2,5 veces el esperado | `limits` en `patient.hpp` |
 | Paso de redondeo de líquidos por defecto | 0,5 mL | `kb_loader.cpp` |

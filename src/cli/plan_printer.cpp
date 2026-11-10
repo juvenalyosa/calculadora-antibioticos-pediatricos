@@ -88,6 +88,9 @@ void printPlan(std::ostream& out, const CalculationRequest& request, const Treat
   if (request.patient.height) {
     out << ", " << formatNumber(request.patient.height->value(), 1) << " cm";
   }
+  if (request.patient.sex) {
+    out << ", sexo " << label(*request.patient.sex);
+  }
   out << "\n";
   out << "Función renal: " << describeRenal(request.renal) << "\n";
   out << "Enfermedad: " << plan.disease_name << "\n";

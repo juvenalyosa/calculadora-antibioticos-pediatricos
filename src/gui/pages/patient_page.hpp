@@ -1,6 +1,8 @@
 /// @file patient_page.hpp
-/// @brief Paso 1: datos del paciente (edad, peso, talla).
+/// @brief Paso 1: datos del paciente (edad, peso, talla, sexo).
 #pragma once
+
+#include <optional>
 
 #include <QWizardPage>
 
@@ -23,8 +25,9 @@ class PatientPage final : public QWizardPage {
   [[nodiscard]] bool isComplete() const override;
 
   /// Carga valores sin intervención del usuario (pruebas y capturas).
-  /// Una talla de 0 significa «no registrada».
-  void setValues(int years, int months, double weight_kg, double height_cm);
+  /// Una talla de 0 significa «no registrada»; un sexo vacío, «no registrado».
+  void setValues(int years, int months, double weight_kg, double height_cm,
+                 std::optional<Sex> sex = std::nullopt);
 
  private:
   /// Peso digitado, convertido a kilogramos según la unidad elegida.
@@ -41,6 +44,7 @@ class PatientPage final : public QWizardPage {
   QComboBox* weight_unit_ = nullptr;
   QLabel* weight_in_kg_ = nullptr;
   QDoubleSpinBox* height_ = nullptr;
+  QComboBox* sex_ = nullptr;
   QLabel* messages_ = nullptr;
   bool complete_ = false;
 };

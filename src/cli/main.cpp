@@ -15,6 +15,7 @@
 #include <iostream>
 #include <locale>
 #include <map>
+#include <memory>
 #include <optional>
 #include <sstream>
 #include <stdexcept>
@@ -42,12 +43,15 @@ constexpr const char* kUsage = R"(Uso:
   calc-dosis listar   [--kb <archivo>]
   calc-dosis calcular [--kb <archivo>] --enfermedad <id>
                       (--edad-meses <n> | --edad-anios <n>) --peso-kg <x>
-                      [--talla-cm <x>] [--tfg <x> | --creatinina <mg/dL>]
-                      [--sin-desglose]
+                      [--talla-cm <x>] [--sexo <m|f>]
+                      [--tfg <x> | --creatinina <mg/dL>]
+                      [--formula <ckid-u25|schwartz>] [--sin-desglose]
   calc-dosis version
 
 Si no se indica --kb se usa data/kb/base_conocimiento.json.
-La TFG se estima con Schwartz de cabecera cuando se dan --creatinina y --talla-cm.
+Con --creatinina la TFG se estima con la fórmula indicada en --formula:
+  ckid-u25  (por defecto) necesita --talla-cm y --sexo
+  schwartz  necesita --talla-cm
 
 Ejemplo (caso tipo 1 de la validación alfa):
   calc-dosis calcular --enfermedad oma --edad-anios 1 --peso-kg 10 --talla-cm 75
@@ -129,6 +133,17 @@ KnowledgeBase loadKb(const Arguments& arguments) {
   return loadKnowledgeBaseFromFile(arguments.text("--kb", kDefaultKbPath));
 }
 
+/// Sexo a partir de --sexo: "m", "f", "masculino" o "femenino".
+Sex parseSex(const std::string& text) {
+  if (text == "m" || text == "M" || text == "masculino") {
+    return Sex::Male;
+  }
+  if (text == "f" || text == "F" || text == "femenino") {
+    return Sex::Female;
+  }
+  throw UsageError("El valor de --sexo debe ser m o f: " + text);
+}
+
 // --- Órdenes -----------------------------------------------------------------
 
 int runValidate(const Arguments& arguments) {
@@ -187,17 +202,29 @@ int runCalculate(const Arguments& arguments) {
   if (const auto height = arguments.number("--talla-cm")) {
     patient.height = Centimeters(*height);
   }
+  if (arguments.has("--sexo")) {
+    patient.sex = parseSex(arguments.requiredText("--sexo"));
+  }
 
   // Función renal: digitada, estimada o no evaluada.
   if (arguments.has("--tfg") && arguments.has("--creatinina")) {
     throw UsageError("Indique --tfg o --creatinina, no ambas");
   }
+  if (arguments.has("--formula") && !arguments.has("--creatinina")) {
+    throw UsageError("--formula solo aplica cuando la TFG se estima con --creatinina");
+  }
   RenalFunction renal = RenalFunction::assumedNormal();
   if (const auto gfr = arguments.number("--tfg")) {
     renal = RenalFunction::entered(Gfr(*gfr));
   } else if (const auto creatinine = arguments.number("--creatinina")) {
-    const BedsideSchwartzEstimator estimator;
-    const GfrEstimate estimate = estimator.estimate(patient, MgPerDl(*creatinine));
+    const std::string formula_id =
+        arguments.text("--formula", std::string(id(kDefaultGfrFormula)));
+    const std::optional<GfrFormula> formula = gfrFormulaFromId(formula_id);
+    if (!formula) {
+      throw UsageError("Fórmula desconocida: " + formula_id + " (use ckid-u25 o schwartz)");
+    }
+    const std::unique_ptr<GfrEstimator> estimator = makeGfrEstimator(*formula);
+    const GfrEstimate estimate = estimator->estimate(patient, MgPerDl(*creatinine));
     for (const Warning& warning : estimate.warnings) {
       std::cout << (warning.severity == Severity::Blocking ? "[X] " : "[!] ") << warning.message
                 << "\n";
@@ -205,8 +232,8 @@ int runCalculate(const Arguments& arguments) {
     if (!estimate.gfr) {
       return 2;
     }
-    std::cout << "TFG estimada (" << estimator.name() << "): " << estimate.formula << "\n";
-    renal = RenalFunction::estimated(*estimate.gfr, estimator.name());
+    std::cout << "TFG estimada (" << estimator->name() << "): " << estimate.formula << "\n";
+    renal = RenalFunction::estimated(*estimate.gfr, estimator->name());
   }
 
   const CalculationRequest request{patient, renal, arguments.requiredText("--enfermedad")};

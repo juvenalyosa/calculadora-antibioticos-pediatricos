@@ -141,6 +141,9 @@ QString planHtml(const CalculationRequest& request, const TreatmentPlan& plan,
   if (request.patient.height) {
     patient += " · " + esc(formatNumber(request.patient.height->value(), 1)) + " cm";
   }
+  if (request.patient.sex) {
+    patient += " · sexo " + esc(label(*request.patient.sex));
+  }
   html += "<p style='color:" + colors.muted + "'>Paciente: " + patient +
           "<br>Función renal: " + esc(describeRenal(request.renal)) +
           "<br>Base de conocimiento: versión " + esc(plan.kb_version) + "</p>";

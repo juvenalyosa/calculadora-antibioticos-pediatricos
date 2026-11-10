@@ -15,7 +15,9 @@
 using namespace calc;
 
 TEST_CASE("reporte: captura automática de los parámetros del cálculo") {
-  const CalculationRequest request{testing::infantCase(),
+  Patient infant = testing::infantCase();
+  infant.sex = Sex::Female;
+  const CalculationRequest request{infant,
                                    RenalFunction::estimated(Gfr(77.4), "Schwartz de cabecera"),
                                    "oma"};
   const ErrorReport report = makeErrorReport("resultado", ReportCategory::CalculationError,
@@ -32,6 +34,7 @@ TEST_CASE("reporte: captura automática de los parámetros del cálculo") {
   CHECK(report.context.at("edad_meses") == "12");
   CHECK(report.context.at("peso_kg") == "10");
   CHECK(report.context.at("talla_cm") == "75");
+  CHECK(report.context.at("sexo") == "femenino");
   CHECK(report.context.at("funcion_renal") == "estimada");
   CHECK(report.context.at("tfg") == "77.4");
   CHECK(report.context.at("metodo_tfg") == "Schwartz de cabecera");
@@ -44,6 +47,7 @@ TEST_CASE("reporte: no incluye lo que el usuario no introdujo") {
   const ErrorReport report = makeErrorReport("paciente", ReportCategory::Usability, "",
                                              {patient, RenalFunction::assumedNormal(), ""}, "x");
   CHECK(report.context.count("talla_cm") == 0);
+  CHECK(report.context.count("sexo") == 0);
   CHECK(report.context.count("tfg") == 0);
   CHECK(report.context.count("enfermedad_id") == 0);
   CHECK(report.context.at("funcion_renal") == "asumida_normal");

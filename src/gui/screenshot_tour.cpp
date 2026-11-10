@@ -29,7 +29,7 @@ bool runScreenshotTour(CalculatorWizard& wizard, ReportSink& sink, const QString
   wizard.show();
   bool ok = true;
 
-  wizard.patientPage()->setValues(1, 0, 10.0, 75.0);
+  wizard.patientPage()->setValues(1, 0, 10.0, 75.0, Sex::Male);
   ok = capture(wizard, folder, "01_paciente.png") && ok;
 
   wizard.next();
