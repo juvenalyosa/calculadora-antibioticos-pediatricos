@@ -8,15 +8,15 @@ El programa separa tres cosas que cambian a ritmos distintos:
 |---|---|---|---|
 | **Datos** | Enfermedades, dosis, ajustes renales, presentaciones, fuentes | Equipo clínico | `data/` |
 | **Motor** | Cómo se calcula una dosis a partir de los datos | Desarrolladores | `src/core/` |
-| **Interfaz** | Cómo se piden los datos y se muestra el resultado | Desarrolladores | `src/cli/` (hoy), `src/gui/` (previsto) |
+| **Interfaz** | Cómo se piden los datos y se muestra el resultado | Desarrolladores | `src/cli/` (consola), `src/gui/` (gráfica) |
 
 Ningún antibiótico ni dosis está escrito en el código C++. Actualizar una guía
 es cambiar datos; el motor y sus pruebas no se tocan.
 
 ```
         ┌──────────────┐   ┌──────────────┐   ┌───────────────────┐
-        │ calc-dosis   │   │ GUI Qt       │   │ otras interfaces  │
-        │ (consola)    │   │ (previsto)   │   │ (web, etc.)       │
+        │ calc-dosis   │   │ calc-gui     │   │ otras interfaces  │
+        │ (consola)    │   │ (Qt Widgets) │   │ (web, etc.)       │
         └──────┬───────┘   └──────┬───────┘   └─────────┬─────────┘
                └──────────────────┼─────────────────────┘
                                   ▼
@@ -146,17 +146,42 @@ clasificar los reportes de error de la beta, o apoyar a los asistentes en la
 extracción de tablas de las guías (siempre con verificación humana, fuera del
 programa). `tests/test_advisor.cpp` trae dos módulos de ejemplo.
 
-### Agregar la interfaz gráfica
+### Interfaz gráfica (`src/gui/`)
 
-Crear `src/gui/` con su `CMakeLists.txt`, enlazar con `calc::core` y añadir
-`add_subdirectory(src/gui)` tras una opción `CALC_BUILD_GUI` en el archivo
-raíz. La interfaz por pasos prevista (Qt Widgets, `QWizard`) es:
+Asistente por pasos con Qt Widgets (`QWizard`), todo en C++:
 
     paciente → función renal → enfermedad → resultado
 
-En cada paso hay un botón «Reportar un error» que llama a `makeErrorReport`
-con el nombre del paso. La interfaz debe usar `text.hpp` para escribir números
-y dosis igual que la consola.
+| Archivo | Responsabilidad |
+|---|---|
+| `main.cpp` | Arranque: idioma, base de conocimiento, servicios, ventana |
+| `calculator_wizard.*` | Ventana principal, orden de los pasos, botón de reporte |
+| `session.hpp` | Lo que el usuario ha introducido; lo comparten las páginas |
+| `pages/*_page.*` | Una clase por paso |
+| `report_dialog.*` | Formato semiautomatizado de reporte de error |
+| `html.*` | Resultado del núcleo → HTML (usa `text.hpp`, igual que la consola) |
+| `app_paths.*` | Dónde están la base de conocimiento y el archivo de reportes |
+| `screenshot_tour.*` | Recorrido automático con capturas (prueba y manual) |
+
+Reglas que sigue la interfaz:
+
+- **No calcula nada.** Valida y calcula con las mismas funciones del núcleo
+  que usa la consola; por eso ambas dan siempre el mismo resultado.
+- **La sesión se actualiza en cada cambio**, no al pulsar «Siguiente», para
+  que un reporte de error capture lo que el usuario tiene en pantalla.
+- **«Siguiente» se deshabilita** mientras haya una advertencia bloqueante.
+- **Los módulos de apoyo** se registran en `main.cpp` y sus observaciones se
+  muestran al final del resultado, separadas y atribuidas.
+
+Para agregar un paso: crear la página en `pages/`, darle un identificador en
+`CalculatorWizard::PageId`, registrarla con `setPage` y añadir su nombre en
+`currentStepName()` para los reportes.
+
+Los reportes se guardan en la carpeta de datos de la aplicación del usuario
+(`reportes_de_error.jsonl`), una línea por reporte.
+
+Pendiente para distribuir: empaquetar con `macdeployqt` (macOS) y
+`windeployqt` (Windows), y compilar y probar en Windows.
 
 ### Actualización automática de los datos
 
@@ -187,3 +212,5 @@ Valores que hoy son supuestos razonables del desarrollo y deben confirmarse:
 - **Matriz alfa** (`tests/test_alpha_matrix.cpp`): compara el motor con los
   cálculos hechos a mano sobre la base real. Ver [validacion_alfa.md](validacion_alfa.md).
 - **Base al día** (`kb_al_dia`): falla si el JSON no corresponde a las hojas CSV.
+- **Recorrido de la interfaz** (`interfaz_recorrido`): ejecuta los cuatro pasos
+  de la interfaz gráfica sin pantalla. Solo existe si se construyó con Qt.

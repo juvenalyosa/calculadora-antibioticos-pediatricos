@@ -33,6 +33,26 @@ Calcular el caso tipo 1 de la validación alfa (lactante de 1 año, 10 kg, 75 cm
 
 Otras órdenes: `calc-dosis listar`, `calc-dosis validar`, `calc-dosis ayuda`.
 
+### Interfaz gráfica
+
+La interfaz por pasos necesita Qt 6.5 o superior (módulo Widgets). Si CMake no
+encuentra Qt, compila todo lo demás y omite la interfaz. Para indicarle dónde
+está, la primera vez:
+
+```sh
+cmake --preset dev -DCMAKE_PREFIX_PATH=$HOME/Qt/6.8.3/macos   # ajustar la ruta
+cmake --build --preset dev
+open build/dev/src/gui/CalculadoraAntibioticos.app            # macOS
+```
+
+Los pasos son paciente → función renal → enfermedad → resultado, y en todos
+hay un botón «Reportar un error…». Las imágenes de `docs/capturas/` se
+regeneran con la opción `--capturas <carpeta>` del ejecutable.
+
+| | |
+|---|---|
+| ![Paciente](docs/capturas/01_paciente.png) | ![Resultado](docs/capturas/04_resultado.png) |
+
 ## Estructura del repositorio
 
 ```
@@ -47,7 +67,8 @@ Otras órdenes: `calc-dosis listar`, `calc-dosis validar`, `calc-dosis ayuda`.
 │   ├── core/                 biblioteca calc_core: todo el dominio
 │   │   ├── include/calc/     interfaz pública (documentada)
 │   │   └── src/              implementación
-│   └── cli/                  programa de consola calc-dosis
+│   ├── cli/                  programa de consola calc-dosis
+│   └── gui/                  interfaz gráfica por pasos (Qt 6 Widgets)
 ├── tests/                    pruebas automáticas y matriz de validación alfa
 ├── tools/                    construir_kb.py (CSV → JSON)
 └── third_party/              bibliotecas de terceros y sus licencias

@@ -6,6 +6,7 @@
 #   matriz_alfa        dentro del mismo ejecutable: compara el motor contra
 #                      tests/data/matriz_alfa.csv usando la base real.
 #   kb_al_dia          comprueba que el JSON corresponde a las hojas CSV.
+#   interfaz_recorrido recorre la interfaz gráfica (si se construyó con Qt).
 
 add_executable(calc_tests
   test_main.cpp
@@ -33,6 +34,15 @@ target_compile_definitions(calc_tests PRIVATE
 calc_set_warnings(calc_tests)
 
 add_test(NAME pruebas_unitarias COMMAND calc_tests)
+
+# Prueba de humo de la interfaz gráfica: recorre los cuatro pasos sin pantalla
+# y guarda una captura de cada uno. Solo existe si se construyó calc-gui.
+if(TARGET calc-gui)
+  add_test(NAME interfaz_recorrido
+    COMMAND calc-gui --capturas "${CMAKE_CURRENT_BINARY_DIR}/capturas")
+  set_tests_properties(interfaz_recorrido PROPERTIES
+    ENVIRONMENT "QT_QPA_PLATFORM=offscreen")
+endif()
 
 find_package(Python3 COMPONENTS Interpreter)
 if(Python3_FOUND)
