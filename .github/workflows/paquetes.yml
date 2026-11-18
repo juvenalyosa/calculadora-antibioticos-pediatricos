@@ -81,10 +81,10 @@ jobs:
           if-no-files-found: error
 
   macos:
-    # macos-14 y no macos-latest: Qt 6.8 enlaza el marco AGL, que el SDK de
+    # macos-15 y no macos-latest: Qt 6.8 enlaza el marco AGL, que el SDK de
     # las versiones más nuevas de Xcode ya no trae («framework 'AGL' not
     # found»). Se puede volver a macos-latest al pasar a un Qt que no lo use.
-    runs-on: macos-14
+    runs-on: macos-15
     steps:
       - uses: actions/checkout@v4
 
