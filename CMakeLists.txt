@@ -11,7 +11,7 @@
 cmake_minimum_required(VERSION 3.21)
 
 project(CalculadoraAntibioticos
-  VERSION 0.1.0
+  VERSION 0.2.0
   DESCRIPTION "Calculadora de dosis de antibióticos pediátricos (UMNG)"
   LANGUAGES CXX)
 
@@ -47,6 +47,13 @@ if(CALC_BUILD_GUI)
   else()
     message(STATUS "Qt 6 no encontrado: se omite la interfaz gráfica (calc-gui).")
   endif()
+endif()
+
+if(WIN32)
+  # Bibliotecas de ejecución de Visual C++ junto al ejecutable: el programa
+  # funciona sin instalar nada más ni pedir permisos de administrador.
+  set(CMAKE_INSTALL_SYSTEM_RUNTIME_DESTINATION ".")
+  include(InstallRequiredSystemLibraries)
 endif()
 
 if(CALC_BUILD_TESTS)

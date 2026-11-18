@@ -7,6 +7,7 @@
 #pragma once
 
 #include <QIcon>
+#include <QPixmap>
 #include <QString>
 
 class QApplication;
@@ -34,7 +35,8 @@ struct Theme {
   QString sidebar;          ///< Fondo de la barra lateral de pasos.
   QString sidebar_text;
   QString sidebar_muted;
-  QString sidebar_active;   ///< Fondo del paso actual.
+  QString sidebar_active;   ///< Extremo del degradado de la banda del encabezado.
+  QString accent;           ///< Detalle fino: línea del encabezado y aro del paso actual.
 
   // Avisos: texto, fondo y franja de acento por gravedad.
   QString info_text, info_bg, info_accent;
@@ -60,5 +62,9 @@ void applyTheme(QApplication& app, ThemeChoice choice);
 
 /// Icono de la aplicación, dibujado por código (no necesita archivos).
 [[nodiscard]] QIcon makeAppIcon();
+
+/// El mismo dibujo en un tamaño dado, en píxeles (para exportar los iconos de
+/// los instaladores).
+[[nodiscard]] QPixmap renderAppIcon(int size);
 
 }  // namespace calc::gui

@@ -10,9 +10,11 @@ class QWidget;
 
 namespace calc::gui {
 
-/// Encabezado de página: «Paso n de 4», título grande y una línea de ayuda.
-[[nodiscard]] QWidget* makePageHeader(const QString& step, const QString& title,
-                                      const QString& subtitle, QWidget* parent);
+/// Encabezado de página: banda de color con el título, una línea de ayuda y
+/// el progreso. `step` es el índice del paso (0 = primero); con un valor
+/// negativo no se dibujan los pasos (diálogos).
+[[nodiscard]] QWidget* makePageHeader(int step, const QString& title, const QString& subtitle,
+                                      QWidget* parent);
 
 /// Tarjeta: marco blanco con borde y esquinas redondeadas. Su contenido se
 /// agrega con un layout propio.

@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Calculadora de antibióticos pediátricos
+GenericName=Calculadora de dosis
+Comment=Dosis de antibióticos para infecciones frecuentes en la infancia
+Exec=CalculadoraAntibioticos
+Icon=calculadora-antibioticos
+Terminal=false
+Categories=Science;MedicalSoftware;Education;

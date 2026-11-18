@@ -1,0 +1,199 @@
+# Instaladores para Windows, macOS y Linux.
+#
+# Cada trabajo compila en modo de entrega, añade las bibliotecas de Qt, prueba
+# que el programa ya empaquetado arranca y encuentra su base de conocimiento, y
+# publica el instalador como artefacto.
+#
+# Se ejecuta:
+#   - al subir una etiqueta v* (además crea un borrador de publicación con los
+#     tres instaladores);
+#   - a mano, desde la pestaña Actions;
+#   - cuando cambia el empaquetado (carpeta packaging/ o este archivo).
+name: Paquetes
+
+on:
+  workflow_dispatch:
+  push:
+    tags: ['v*']
+    branches: ['**']
+    paths:
+      - 'packaging/**'
+      - '.github/workflows/paquetes.yml'
+
+env:
+  QT_VERSION: '6.8.3'
+
+jobs:
+  windows:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Instalar Qt
+        uses: jurplel/install-qt-action@v4
+        with:
+          version: ${{ env.QT_VERSION }}
+          cache: true
+
+      - name: Leer la versión
+        shell: pwsh
+        run: |
+          $v = (Select-String -Path CMakeLists.txt -Pattern '^\s*VERSION\s+([0-9.]+)').Matches[0].Groups[1].Value
+          "CALC_VERSION=$v" | Out-File -FilePath $env:GITHUB_ENV -Append
+
+      - name: Compilar
+        run: |
+          cmake -S . -B build -DCALC_BUILD_TESTS=OFF
+          cmake --build build --config Release --parallel
+
+      # El ejecutable, la base de conocimiento y las bibliotecas de Visual C++
+      # (cmake --install), más las de Qt (windeployqt), en una sola carpeta.
+      - name: Reunir los archivos
+        shell: pwsh
+        run: |
+          cmake --install build --config Release --prefix dist
+          windeployqt --release --no-compiler-runtime --no-opengl-sw --no-system-d3d-compiler dist/CalculadoraAntibioticos.exe
+          Get-ChildItem dist | Select-Object Name, Length
+
+      - name: Probar el programa empaquetado
+        shell: pwsh
+        run: |
+          $env:QT_QPA_PLATFORM = "offscreen"
+          $p = Start-Process -FilePath dist/CalculadoraAntibioticos.exe -ArgumentList "--tema","claro","--capturas","humo" -Wait -PassThru
+          if ($p.ExitCode -ne 0) { throw "El programa empaquetado terminó con código $($p.ExitCode)" }
+          if ((Get-ChildItem humo -Filter *.png).Count -ne 5) { throw "No se generaron las cinco capturas" }
+          Remove-Item -Recurse -Force humo
+
+      - name: Crear el instalador y el paquete portátil
+        shell: pwsh
+        run: |
+          $iscc = "${env:ProgramFiles(x86)}\Inno Setup 6\ISCC.exe"
+          if (-not (Test-Path $iscc)) { choco install innosetup -y --no-progress }
+          & $iscc "/DVersion=$env:CALC_VERSION" packaging\windows\instalador.iss
+          if ($LASTEXITCODE -ne 0) { throw "Inno Setup falló" }
+          Compress-Archive -Path dist\* -DestinationPath "salida\CalculadoraAntibioticos-$env:CALC_VERSION-windows-portatil.zip"
+          Get-ChildItem salida | Select-Object Name, Length
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: instalador-windows
+          path: salida/*
+          if-no-files-found: error
+
+  macos:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Instalar Qt
+        uses: jurplel/install-qt-action@v4
+        with:
+          version: ${{ env.QT_VERSION }}
+          cache: true
+
+      - name: Leer la versión
+        run: echo "CALC_VERSION=$(sed -nE 's/^[[:space:]]*VERSION[[:space:]]+([0-9.]+).*/\1/p' CMakeLists.txt | head -1)" >> "$GITHUB_ENV"
+
+      # Binario universal: sirve en equipos Intel y Apple Silicon.
+      - name: Compilar
+        run: |
+          cmake -S . -B build -DCMAKE_BUILD_TYPE=Release -DCALC_BUILD_TESTS=OFF \
+            "-DCMAKE_OSX_ARCHITECTURES=x86_64;arm64" -DCMAKE_OSX_DEPLOYMENT_TARGET=12.0
+          cmake --build build --parallel
+          lipo -archs build/src/gui/CalculadoraAntibioticos.app/Contents/MacOS/CalculadoraAntibioticos
+
+      - name: Crear la imagen de disco
+        run: |
+          sh packaging/macos/crear_dmg.sh build/src/gui/CalculadoraAntibioticos.app \
+            "salida/CalculadoraAntibioticos-${CALC_VERSION}-macos.dmg"
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: instalador-macos
+          path: salida/*
+          if-no-files-found: error
+
+  linux:
+    # La versión más antigua disponible: el paquete funciona en esta y en las
+    # distribuciones más nuevas.
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Instalar dependencias del sistema
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libgl1-mesa-dev libxkbcommon-x11-0 libxcb-cursor0 libxcb-icccm4 \
+            libxcb-image0 libxcb-keysyms1 libxcb-randr0 libxcb-render-util0 libxcb-shape0 \
+            libxcb-xinerama0 libxcb-xkb1 libfontconfig1 libfuse2 file
+
+      - name: Instalar Qt
+        uses: jurplel/install-qt-action@v4
+        with:
+          version: ${{ env.QT_VERSION }}
+          cache: true
+
+      - name: Leer la versión
+        run: echo "CALC_VERSION=$(sed -nE 's/^[[:space:]]*VERSION[[:space:]]+([0-9.]+).*/\1/p' CMakeLists.txt | head -1)" >> "$GITHUB_ENV"
+
+      - name: Compilar
+        run: |
+          cmake -S . -B build -DCMAKE_BUILD_TYPE=Release -DCALC_BUILD_TESTS=OFF -DCMAKE_INSTALL_PREFIX=/usr
+          cmake --build build --parallel
+          DESTDIR="$PWD/AppDir" cmake --install build
+
+      # AppImage: un solo archivo que lleva dentro Qt y la base de conocimiento.
+      - name: Crear el AppImage
+        env:
+          APPIMAGE_EXTRACT_AND_RUN: '1'
+        run: |
+          curl -fsSL -o linuxdeploy https://github.com/linuxdeploy/linuxdeploy/releases/download/continuous/linuxdeploy-x86_64.AppImage
+          curl -fsSL -o linuxdeploy-plugin-qt https://github.com/linuxdeploy/linuxdeploy-plugin-qt/releases/download/continuous/linuxdeploy-plugin-qt-x86_64.AppImage
+          chmod +x linuxdeploy linuxdeploy-plugin-qt
+          export QMAKE="$QT_ROOT_DIR/bin/qmake"
+          export EXTRA_PLATFORM_PLUGINS="libqoffscreen.so"
+          export LINUXDEPLOY_OUTPUT_VERSION="$CALC_VERSION"
+          mkdir -p salida
+          ./linuxdeploy --appdir AppDir --plugin qt --output appimage \
+            --desktop-file AppDir/usr/share/applications/calculadora-antibioticos.desktop \
+            --icon-file AppDir/usr/share/icons/hicolor/256x256/apps/calculadora-antibioticos.png
+          ls -la ./*.AppImage
+          mv ./Calculadora*.AppImage "salida/CalculadoraAntibioticos-${CALC_VERSION}-linux-x86_64.AppImage"
+
+      - name: Probar el programa empaquetado
+        env:
+          APPIMAGE_EXTRACT_AND_RUN: '1'
+          QT_QPA_PLATFORM: offscreen
+        run: |
+          chmod +x salida/*.AppImage
+          salida/*.AppImage --tema claro --capturas "$PWD/humo"
+          test "$(ls humo/*.png | wc -l)" -eq 5
+          rm -rf humo
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: instalador-linux
+          path: salida/*
+          if-no-files-found: error
+
+  publicar:
+    # Solo con etiqueta: deja un BORRADOR de publicación con los instaladores.
+    # Publicarlo es una decisión de una persona.
+    if: startsWith(github.ref, 'refs/tags/v')
+    needs: [windows, macos, linux]
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          path: instaladores
+          merge-multiple: true
+
+      - name: Crear el borrador de publicación
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create "$GITHUB_REF_NAME" instaladores/* --repo "$GITHUB_REPOSITORY" \
+            --draft --title "Calculadora de antibióticos pediátricos $GITHUB_REF_NAME" \
+            --notes "Prototipo académico. El contenido clínico está en borrador y sin verificación clínica: no usar para decisiones clínicas. Instrucciones de instalación en docs/instalacion.md."

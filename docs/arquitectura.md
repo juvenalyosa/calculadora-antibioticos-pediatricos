@@ -184,7 +184,8 @@ Asistente por pasos con Qt Widgets (`QWizard`), todo en C++:
 | `report_dialog.*` | Formato semiautomatizado de reporte de error |
 | `html.*` | Resultado del núcleo → HTML (usa `text.hpp`, igual que la consola) |
 | `theme.*` | Aspecto visual: tabla de colores (clara y oscura), hoja de estilo e icono |
-| `widgets/step_sidebar.*` | Barra lateral con el nombre de la aplicación y el progreso por pasos |
+| `widgets/hero_header.*` | Encabezado de cada página: banda de color con el título y el progreso por pasos |
+| `widgets/age_band.*` | Dibujo del grupo de edad del paciente (ayuda visual, no interviene en el cálculo) |
 | `widgets/ui.*` | Piezas comunes: encabezado de página, tarjeta, etiquetas de campo |
 | `app_paths.*` | Dónde están la base de conocimiento y el archivo de reportes |
 | `screenshot_tour.*` | Recorrido automático con capturas (prueba y manual) |
@@ -198,6 +199,9 @@ Reglas que sigue la interfaz:
 - **«Siguiente» se deshabilita** mientras haya una advertencia bloqueante.
 - **Los módulos de apoyo** se registran en `main.cpp` y sus observaciones se
   muestran al final del resultado, separadas y atribuidas.
+- **Gama del proyecto:** azul marino `#14213D`, azul `#1F4E79` y marfil
+  `#F6F3EE`, con un detalle fino en dorado. Solo los avisos (ámbar, rojo,
+  verde) usan colores fuera de ella.
 - **Un solo origen para los colores.** Widgets y resultado en HTML toman los
   colores de `theme()`; no se escriben colores en las páginas. El estilo
   Fusion de Qt da el mismo aspecto en Windows, macOS y Linux, y el tema sigue

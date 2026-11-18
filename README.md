@@ -102,6 +102,8 @@ filas a las hojas y se regenera la base. Ver [docs/guia_datos.md](docs/guia_dato
 |---|---|---|
 | [docs/arquitectura.md](docs/arquitectura.md) | Desarrolladores | Módulos, orden del cálculo, reglas de diseño y cómo extender (incluida IA) |
 | [docs/guia_datos.md](docs/guia_datos.md) | Equipo clínico y asistentes | Cómo llenar las hojas y qué significa cada columna |
+| [docs/instalacion.md](docs/instalacion.md) | Usuarios | Cómo instalar la calculadora en Windows, Mac y Linux |
+| [docs/empaquetado.md](docs/empaquetado.md) | Desarrolladores | Cómo se construyen los instaladores y cómo publicar una versión |
 | [docs/validacion_alfa.md](docs/validacion_alfa.md) | Equipo clínico | Cómo construir la matriz de validación con los dos casos tipo |
 
 Las cabeceras de `src/core/include/calc/` están comentadas en formato Doxygen

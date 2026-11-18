@@ -33,11 +33,10 @@ Tone toneOf(Severity severity) {
   return {t.info_text, t.info_bg, t.info_accent, QString()};
 }
 
-/// Aviso: franja de color a la izquierda y texto sobre fondo suave.
+/// Aviso: bloque de fondo suave con el texto del color de la gravedad.
 QString callout(const Tone& tone, const QString& body_html) {
-  return "<table width='100%' cellspacing='0' cellpadding='0' style='margin-top:6px'><tr>"
-         "<td width='4' bgcolor='" + tone.accent + "'></td>"
-         "<td bgcolor='" + tone.background + "' style='padding:7px 10px; color:" + tone.text +
+  return "<table width='100%' cellspacing='0' cellpadding='0' style='margin-top:8px'><tr>"
+         "<td bgcolor='" + tone.background + "' style='padding:9px 14px; color:" + tone.text +
          "'>" + body_html + "</td></tr></table>";
 }
 
@@ -97,7 +96,8 @@ QString administrationsHtml(const RegimenResult& result) {
             esc(administration.presentation) + "</td>"
             "<td align='right' style='padding:5px 0; border-top:1px solid " + t.border + "'>";
     if (administration.suitable) {
-      html += "<b>" + esc(describeAdministration(administration)) + "</b> por dosis";
+      html += "<span style='font-size:16px; font-weight:600; color:" + t.primary + "'>" +
+              esc(describeAdministration(administration)) + "</span> por dosis";
     } else {
       html += "<span style='color:" + t.muted + "'>no adecuada para esta dosis</span>";
     }
@@ -121,7 +121,7 @@ QString regimenHtml(const RegimenResult& result) {
             "'>No recomendado con esta función renal</p>";
   } else {
     // La dosis es lo primero que debe leer el usuario: va destacada.
-    html += "<p style='margin:4px 0 0 0; font-size:26px; font-weight:600; color:" + t.primary +
+    html += "<p style='margin:6px 0 0 0; font-size:28px; font-weight:600; color:" + t.text +
             "'>" + esc(describeDose(result)) + "</p>";
     const std::string duration = describeDuration(result);
     if (!duration.empty()) {
@@ -167,18 +167,17 @@ QString regimenHtml(const RegimenResult& result) {
 QString optionHtml(const OptionResult& option, const QString& accent) {
   const Theme& t = theme();
   QString html =
-      "<table width='100%' cellspacing='0' cellpadding='0' style='margin-top:10px; "
-      "border:1px solid " + t.border + "'><tr>"
-      "<td width='5' bgcolor='" + accent + "'></td>"
-      "<td bgcolor='" + t.surface + "' style='padding:12px 16px'>";
+      "<table width='100%' cellspacing='0' cellpadding='0' style='margin-top:10px'><tr>"
+      "<td style='padding:14px 4px 6px 4px; border-top:1px solid " + t.border + "'>";
 
   QString status;
   if (!option.components.empty()) {
     status = statusPill(option.components.front().status);
   }
   html += "<table width='100%' cellspacing='0' cellpadding='0'><tr>"
-          "<td style='font-size:12px; font-weight:600; color:" + t.muted + "'>OPCIÓN " +
-          QString::number(option.number) + " · " + esc(option.description) + "</td>"
+          "<td style='font-size:13px; color:" + t.muted + "'><span style='font-weight:600; color:" +
+          accent + "'>Opción " + QString::number(option.number) + "</span> · " +
+          esc(option.description) + "</td>"
           "<td align='right'>" + status + "</td></tr></table>"
           "<p style='margin:0; font-size:6px'>&nbsp;</p>";
 
@@ -212,8 +211,7 @@ QString summaryHtml(const CalculationRequest& request, const TreatmentPlan& plan
            "</p></td>";
   };
 
-  return "<table width='100%' cellspacing='0' cellpadding='0' style='border:1px solid " +
-         t.border + "'><tr><td bgcolor='" + t.window + "' style='padding:14px 16px'>"
+  return "<table width='100%' cellspacing='0' cellpadding='0'><tr><td style='padding:4px 4px 10px 4px'>"
          "<p style='margin:0; font-size:20px; font-weight:600'>" + esc(plan.disease_name) + "</p>"
          "<table cellspacing='0' cellpadding='0' style='margin-top:10px'><tr>" +
          cell("PACIENTE", patient) + cell("FUNCIÓN RENAL", esc(describeRenal(request.renal))) +
@@ -286,10 +284,8 @@ QString planHtml(const CalculationRequest& request, const TreatmentPlan& plan,
     return html + "</div>";
   }
   if (!plan.antibiotic_indicated) {
-    html += "<table width='100%' cellspacing='0' cellpadding='0' style='margin-top:10px; "
-            "border:1px solid " + t.border + "'><tr>"
-            "<td width='5' bgcolor='" + t.success_accent + "'></td>"
-            "<td bgcolor='" + t.surface + "' style='padding:14px 16px'>"
+    html += "<table width='100%' cellspacing='0' cellpadding='0' style='margin-top:12px'><tr>"
+            "<td bgcolor='" + t.success_bg + "' style='padding:18px 22px'>"
             "<p style='margin:0; font-size:20px; font-weight:600; color:" + t.success_text +
             "'>No se indica antibiótico</p><p style='margin:6px 0 0 0'>" + esc(plan.message) +
             "</p></td></tr></table>";
@@ -314,8 +310,8 @@ QString planHtml(const CalculationRequest& request, const TreatmentPlan& plan,
 
   for (const LineResult& line : plan.lines) {
     const QString accent = lineColor(line.kind);
-    html += "<p style='margin:20px 0 0 0; font-size:16px; font-weight:600; color:" + accent +
-            "'>" + esc(label(line.kind)) + "</p>";
+    html += "<p style='margin:22px 0 0 4px; font-size:18px; font-weight:600; color:" + t.text +
+            "'><span style='color:" + accent + "'>●</span>&nbsp; " + esc(label(line.kind)) + "</p>";
     for (const OptionResult& option : line.options) {
       html += optionHtml(option, accent);
     }

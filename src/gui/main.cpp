@@ -6,9 +6,11 @@
 ///   --capturas <carpeta>  recorrer el asistente, guardar una imagen de cada
 ///                         paso y salir (para el manual de usuario)
 ///   --tema <nombre>       claro, oscuro o sistema (por defecto, el del sistema)
+///   --exportar-icono <carpeta>  guardar el icono en PNG de varios tamaños y salir
 
 #include <QApplication>
 #include <QCommandLineParser>
+#include <QDir>
 #include <QLibraryInfo>
 #include <QLocale>
 #include <QMessageBox>
@@ -53,11 +55,24 @@ int main(int argc, char** argv) {
       "tema", "Aspecto: claro, oscuro o sistema (por defecto).", "nombre", "sistema");
   parser.addOption(kb_option);
   parser.addOption(tour_option);
+  const QCommandLineOption icon_option(
+      "exportar-icono", "Guardar el icono en varios tamaños (PNG) en la carpeta y salir.", "carpeta");
   parser.addOption(theme_option);
+  parser.addOption(icon_option);
   parser.process(app);
 
   // Colores, tipografía e icono; antes de crear cualquier ventana.
   applyTheme(app, themeChoiceFromText(parser.value(theme_option)));
+
+  // Los iconos de los instaladores (.icns, .ico, .png) salen de este dibujo.
+  if (parser.isSet(icon_option)) {
+    const QDir folder(parser.value(icon_option));
+    bool saved = QDir().mkpath(folder.path());
+    for (const int size : {16, 32, 48, 64, 128, 256, 512, 1024}) {
+      saved = renderAppIcon(size).save(folder.filePath(QString("icono_%1.png").arg(size))) && saved;
+    }
+    return saved ? 0 : 1;
+  }
 
   // --- Base de conocimiento: sin ella no hay nada que mostrar ---
   const QString kb_path = locateKnowledgeBase(parser.value(kb_option));

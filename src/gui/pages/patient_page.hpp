@@ -15,6 +15,8 @@ class QSpinBox;
 
 namespace calc::gui {
 
+class AgeBandWidget;
+
 class PatientPage final : public QWizardPage {
   Q_OBJECT
 
@@ -45,6 +47,8 @@ class PatientPage final : public QWizardPage {
   QLabel* weight_in_kg_ = nullptr;
   QDoubleSpinBox* height_ = nullptr;
   QComboBox* sex_ = nullptr;
+  AgeBandWidget* age_band_ = nullptr;
+  QLabel* expected_weight_ = nullptr;
   QLabel* messages_ = nullptr;
   bool complete_ = false;
 };

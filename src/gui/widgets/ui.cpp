@@ -1,5 +1,7 @@
 #include "widgets/ui.hpp"
 
+#include "widgets/hero_header.hpp"
+
 #include <QFrame>
 #include <QLabel>
 #include <QStyle>
@@ -8,25 +10,9 @@
 
 namespace calc::gui {
 
-QWidget* makePageHeader(const QString& step, const QString& title, const QString& subtitle,
+QWidget* makePageHeader(int step, const QString& title, const QString& subtitle,
                         QWidget* parent) {
-  auto* header = new QWidget(parent);
-  auto* layout = new QVBoxLayout(header);
-  layout->setContentsMargins(0, 0, 0, 8);
-  layout->setSpacing(2);
-
-  auto* step_label = new QLabel(step.toUpper(), header);
-  step_label->setObjectName("fieldLabel");
-  auto* title_label = new QLabel(title, header);
-  title_label->setObjectName("pageTitle");
-  auto* subtitle_label = new QLabel(subtitle, header);
-  subtitle_label->setObjectName("pageSubtitle");
-  subtitle_label->setWordWrap(true);
-
-  layout->addWidget(step_label);
-  layout->addWidget(title_label);
-  layout->addWidget(subtitle_label);
-  return header;
+  return new HeroHeader(step, title, subtitle, parent);
 }
 
 QFrame* makeCard(QWidget* parent, const char* object_name) {
