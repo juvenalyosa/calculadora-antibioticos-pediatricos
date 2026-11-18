@@ -7,6 +7,9 @@ dosis. No se requieren permisos de administrador.
 > **Prototipo académico.** El contenido clínico está en borrador y sin
 > verificación clínica. No usar para decisiones clínicas.
 
+Los instaladores se descargan de la página de publicaciones del repositorio,
+[Releases → última versión](https://github.com/juvenalyosa/calculadora-antibioticos-pediatricos/releases/latest),
+iniciando sesión en GitHub con una cuenta que tenga acceso al repositorio.
 Elija el archivo según su computador:
 
 | Sistema | Archivo |
