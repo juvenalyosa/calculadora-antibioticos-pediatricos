@@ -167,28 +167,41 @@ double applyCapsWithTrace(const Regimen& regimen, const Drug& drug, double per_d
     addWarning(result, Severity::Info, "TOPE_MAXIMO_APLICADO",
                "La dosis calculada por peso superaba el máximo; se aplicó el tope de la guía.");
   }
+
+  // Sin tope registrado, la dosis por kilogramo crece con el peso sin límite:
+  // en un adolescente puede superar la del adulto. Se avisa siempre.
+  const bool weight_based =
+      regimen.basis == DoseBasis::PerKgPerDay || regimen.basis == DoseBasis::PerKgPerDose;
+  if (weight_based && !regimen.max_per_dose && !regimen.max_per_day) {
+    addWarning(result, Severity::Caution, "SIN_TOPE_MAXIMO",
+               "La fuente no define una dosis máxima para este esquema. En pacientes de mayor "
+               "peso la dosis por kilogramo puede superar la del adulto: verifíquela.");
+  }
   return capped.per_dose;
 }
 
 // --- Paso 3: ajuste renal ----------------------------------------------------
 
-void applyRenalAdjustment(const RenalFunction& renal, const Drug& drug, double& per_dose,
-                          std::optional<int>& interval, RegimenResult& result) {
+void applyRenalAdjustment(const RenalFunction& renal, const Drug& drug, double weight_kg,
+                          double& per_dose, std::optional<int>& interval, RegimenResult& result) {
   if (!renal.gfr) {
     return;  // Función renal no evaluada: se informa a nivel de plan.
   }
   const double gfr = renal.gfr->value();
   const std::string gfr_text = "TFG " + formatNumber(gfr, 1) + " mL/min/1,73 m²";
   const RenalAdjustment& adjustment = drug.renal;
+  const std::string drug_note = adjustment.note.empty() ? "" : " " + adjustment.note;
 
   if (adjustment.kind == RenalAdjustmentKind::NoData) {
     if (gfr < limits::kReducedGfrThreshold) {
       addStep(result, "Ajuste renal",
-              gfr_text + ": la base de conocimiento aún no tiene el ajuste de " + drug.name + ".");
+              gfr_text + ": la base de conocimiento aún no tiene el ajuste de " + drug.name + "." +
+                  drug_note);
       addWarning(result, Severity::Caution, "SIN_DATO_AJUSTE_RENAL",
                  "No hay información de ajuste renal para " + drug.name +
                      " en la base de conocimiento. La dosis mostrada NO está ajustada; "
-                     "consulte una referencia farmacológica.");
+                     "consulte una referencia farmacológica." +
+                     drug_note);
     }
     return;
   }
@@ -200,7 +213,8 @@ void applyRenalAdjustment(const RenalFunction& renal, const Drug& drug, double& 
   }
 
   if (adjustment.kind == RenalAdjustmentKind::NotRequired) {
-    addStep(result, "Ajuste renal", drug.name + " no requiere ajuste por función renal.");
+    addStep(result, "Ajuste renal",
+            drug.name + " no requiere ajuste por función renal." + drug_note);
     return;
   }
 
@@ -222,11 +236,34 @@ void applyRenalAdjustment(const RenalFunction& renal, const Drug& drug, double& 
     return;
   }
 
-  const double adjusted_dose = per_dose * band->dose_factor;
+  // La aclaración de la banda se muestra siempre, cambie o no la dosis.
+  if (!band->note.empty()) {
+    addWarning(result, Severity::Caution, "NOTA_AJUSTE_RENAL", band->note);
+  }
+
+  // Orden: dosis de reemplazo (si la banda la define), fracción, tope de la banda.
+  double adjusted_dose = per_dose;
+  std::string detail = band_text + ": ";
+  if (band->replacement_dose_per_kg) {
+    adjusted_dose = *band->replacement_dose_per_kg * weight_kg;
+    detail += "dosis de reemplazo " + formatNumber(*band->replacement_dose_per_kg) + " " +
+              std::string(symbol(drug.unit)) + "/kg × " + formatNumber(weight_kg) + " kg = " +
+              formatAmount(adjusted_dose, drug.unit) + " por toma; ";
+  }
+  if (band->dose_factor != 1.0) {
+    adjusted_dose *= band->dose_factor;
+    detail += "dosis por toma × " + formatNumber(band->dose_factor) + "; ";
+  }
+  if (band->max_per_dose && exceeds(adjusted_dose, *band->max_per_dose)) {
+    adjusted_dose = *band->max_per_dose;
+    detail += "tope de " + formatAmount(*band->max_per_dose, drug.unit) + " por toma; ";
+  }
+
   std::optional<int> adjusted_interval = interval;
   if (interval && band->min_interval_hours) {
     // Se toma el mayor: un ajuste renal nunca aumenta la frecuencia.
     adjusted_interval = std::max(*interval, *band->min_interval_hours);
+    detail += "intervalo mínimo " + std::to_string(*band->min_interval_hours) + " h; ";
   }
 
   const bool changed = adjusted_dose != per_dose || adjusted_interval != interval;
@@ -235,22 +272,15 @@ void applyRenalAdjustment(const RenalFunction& renal, const Drug& drug, double& 
     return;
   }
 
-  std::string detail = band_text + ": ";
-  if (band->dose_factor != 1.0) {
-    detail += "dosis por toma × " + formatNumber(band->dose_factor) + "; ";
-  }
-  if (band->min_interval_hours) {
-    detail += "intervalo mínimo " + std::to_string(*band->min_interval_hours) + " h; ";
-  }
   detail += "resultado: " + formatAmount(adjusted_dose, drug.unit) + " " +
-            describeInterval(adjusted_interval) + "." + note;
+            describeInterval(adjusted_interval) + "." + note + drug_note;
   addStep(result, "Ajuste renal", detail);
   addWarning(result, Severity::Info, "AJUSTE_RENAL_APLICADO",
              "La dosis se ajustó por función renal (" + gfr_text + ").");
 
+  result.renal_adjustment_applied = true;
   per_dose = adjusted_dose;
   interval = adjusted_interval;
-  result.renal_adjustment_applied = true;
 }
 
 // --- Paso 4: conversión a presentación ---------------------------------------
@@ -283,8 +313,8 @@ Administration administer(const Presentation& presentation, const Regimen& regim
   std::string detail = formatAmount(per_dose, drug.unit) + " ÷ " +
                        formatAmount(presentation.amount_per_unit, drug.unit) + "/" +
                        presentation.dispensing_unit + " = " +
-                       formatNumber(administration.exact_quantity) + " " +
-                       presentation.dispensing_unit;
+                       describeQuantity(administration.exact_quantity,
+                                        presentation.dispensing_unit);
   if (std::abs(rounded - administration.exact_quantity) > 1e-6) {
     const double percent = administration.deviation * 100.0;
     detail += " → se redondea a " + describeAdministration(administration) + " (entrega " +
@@ -377,16 +407,22 @@ RegimenResult DoseEngine::calculate(const Patient& patient, const RenalFunction&
         applyCaps(regimen, basePerDose(regimen, regimen.dose_min, weight_kg)).per_dose;
     result.range_max_per_dose =
         applyCaps(regimen, basePerDose(regimen, regimen.dose_max, weight_kg)).per_dose;
+    // Un tope puede igualar los dos extremos: entonces se dice una sola cifra.
+    const bool capped_flat =
+        std::abs(*result.range_max_per_dose - *result.range_min_per_dose) < 1e-9;
     addStep(result, "Rango de la guía",
             formatNumber(regimen.dose_min) + " a " + formatNumber(regimen.dose_max) + " " +
                 basisUnit(regimen.basis, drug.unit) + " → " +
-                formatAmount(*result.range_min_per_dose, drug.unit) + " a " +
-                formatAmount(*result.range_max_per_dose, drug.unit) + " por toma");
+                (capped_flat
+                     ? formatAmount(*result.range_max_per_dose, drug.unit) +
+                           " por toma en todo el rango, por el tope máximo"
+                     : formatAmount(*result.range_min_per_dose, drug.unit) + " a " +
+                           formatAmount(*result.range_max_per_dose, drug.unit) + " por toma"));
   }
 
   // 3) Ajuste renal.
   std::optional<int> interval = regimen.interval_hours;
-  applyRenalAdjustment(renal, drug, per_dose, interval, result);
+  applyRenalAdjustment(renal, drug, weight_kg, per_dose, interval, result);
 
   result.dose_per_administration = per_dose;
   result.interval_hours = interval;

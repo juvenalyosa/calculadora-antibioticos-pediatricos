@@ -5,7 +5,7 @@
 
 #include <QComboBox>
 #include <QDialogButtonBox>
-#include <QFormLayout>
+#include <QFrame>
 #include <QLabel>
 #include <QMessageBox>
 #include <QPlainTextEdit>
@@ -13,19 +13,14 @@
 #include <QVBoxLayout>
 
 #include "html.hpp"
+#include "widgets/ui.hpp"
 
 namespace calc::gui {
 
 ReportDialog::ReportDialog(ErrorReport report, ReportSink& sink, QWidget* parent)
     : QDialog(parent), report_(std::move(report)), sink_(sink) {
   setWindowTitle("Reportar un error");
-  setMinimumWidth(480);
-
-  auto* intro = new QLabel(
-      "Describa qué encontró. Los datos del cálculo se adjuntan automáticamente; "
-      "no se guarda ningún dato que identifique al paciente.",
-      this);
-  intro->setWordWrap(true);
+  setMinimumWidth(560);
 
   category_ = new QComboBox(this);
   category_->addItem("La dosis calculada parece incorrecta",
@@ -38,7 +33,7 @@ ReportDialog::ReportDialog(ErrorReport report, ReportSink& sink, QWidget* parent
 
   comment_ = new QPlainTextEdit(this);
   comment_->setPlaceholderText("Por ejemplo: «La guía indica 80 mg/kg/día y aquí aparece 90».");
-  comment_->setMinimumHeight(90);
+  comment_->setMinimumHeight(96);
 
   // Lo que se adjunta, a la vista del usuario antes de guardar.
   QString attached = "Paso: " + toQString(report_.step) + "\nVersión de la aplicación: " +
@@ -51,20 +46,35 @@ ReportDialog::ReportDialog(ErrorReport report, ReportSink& sink, QWidget* parent
   attached_view->setReadOnly(true);
   attached_view->setMaximumHeight(170);
 
-  auto* form = new QFormLayout;
-  form->addRow("Tipo de problema:", category_);
-  form->addRow("Comentario:", comment_);
-  form->addRow("Se adjunta:", attached_view);
+  auto* card = makeCard(this);
+  auto* form = new QVBoxLayout(card);
+  form->setContentsMargins(20, 16, 20, 18);
+  form->setSpacing(6);
+  form->addWidget(makeFieldLabel("TIPO DE PROBLEMA", card));
+  form->addWidget(category_);
+  form->addSpacing(8);
+  form->addWidget(makeFieldLabel("COMENTARIO", card));
+  form->addWidget(comment_);
+  form->addSpacing(8);
+  form->addWidget(makeFieldLabel("SE ADJUNTA AUTOMÁTICAMENTE", card));
+  form->addWidget(attached_view);
 
   auto* buttons = new QDialogButtonBox(QDialogButtonBox::Save | QDialogButtonBox::Cancel, this);
   buttons->button(QDialogButtonBox::Save)->setText("Guardar reporte");
+  buttons->button(QDialogButtonBox::Save)->setDefault(true);
   buttons->button(QDialogButtonBox::Cancel)->setText("Cancelar");
   connect(buttons, &QDialogButtonBox::accepted, this, &ReportDialog::save);
   connect(buttons, &QDialogButtonBox::rejected, this, &QDialog::reject);
 
   auto* layout = new QVBoxLayout(this);
-  layout->addWidget(intro);
-  layout->addLayout(form);
+  layout->setContentsMargins(24, 22, 24, 20);
+  layout->setSpacing(12);
+  layout->addWidget(makePageHeader(
+      "Formato de reporte", "Reportar un error",
+      "Describa qué encontró. Los datos del cálculo se adjuntan automáticamente; no se guarda "
+      "ningún dato que identifique al paciente.",
+      this));
+  layout->addWidget(card);
   layout->addWidget(buttons);
 }
 

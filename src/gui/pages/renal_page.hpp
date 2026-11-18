@@ -9,6 +9,7 @@
 
 class QComboBox;
 class QDoubleSpinBox;
+class QFrame;
 class QLabel;
 class QRadioButton;
 
@@ -47,6 +48,9 @@ class RenalPage final : public QWizardPage {
   QComboBox* creatinine_unit_ = nullptr;
   QLabel* formula_label_ = nullptr;
   QComboBox* formula_ = nullptr;
+  QFrame* not_evaluated_card_ = nullptr;
+  QFrame* enter_gfr_card_ = nullptr;
+  QFrame* estimate_card_ = nullptr;
   QLabel* messages_ = nullptr;
   bool complete_ = true;
 };

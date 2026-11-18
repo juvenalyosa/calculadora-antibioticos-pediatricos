@@ -9,9 +9,10 @@ renal (TFG), convierte a la presentación del medicamento y muestra el cálculo
 desglosado con su fuente.
 
 > **Estado: prototipo en desarrollo. NO usar para decisiones clínicas.**
-> La base de conocimiento incluida es una **muestra** para desarrollo: sus
-> valores no han sido verificados por el equipo clínico y el programa lo
-> advierte en cada resultado.
+> La base de conocimiento incluida está en **borrador**: los esquemas, los
+> topes y el ajuste renal se extrajeron de guías colombianas e internacionales
+> y de fichas técnicas, pero todavía no tienen la doble verificación clínica,
+> y el programa lo advierte en cada resultado.
 
 ## Inicio rápido
 
@@ -50,8 +51,10 @@ open build/dev/src/gui/CalculadoraAntibioticos.app            # macOS
 ```
 
 Los pasos son paciente → función renal → enfermedad → resultado, y en todos
-hay un botón «Reportar un error…». Las imágenes de `docs/capturas/` se
-regeneran con la opción `--capturas <carpeta>` del ejecutable.
+hay un botón «Reportar un error…». La interfaz sigue el modo claro u oscuro
+del sistema; se puede forzar con `--tema claro` o `--tema oscuro`. Las
+imágenes de `docs/capturas/` se regeneran con `--tema claro --capturas
+<carpeta>`.
 
 | | |
 |---|---|

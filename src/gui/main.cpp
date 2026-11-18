@@ -5,6 +5,7 @@
 ///   --kb <archivo>        usar esta base de conocimiento
 ///   --capturas <carpeta>  recorrer el asistente, guardar una imagen de cada
 ///                         paso y salir (para el manual de usuario)
+///   --tema <nombre>       claro, oscuro o sistema (por defecto, el del sistema)
 
 #include <QApplication>
 #include <QCommandLineParser>
@@ -21,6 +22,7 @@
 #include "calculator_wizard.hpp"
 #include "html.hpp"
 #include "screenshot_tour.hpp"
+#include "theme.hpp"
 
 int main(int argc, char** argv) {
   using namespace calc;
@@ -47,9 +49,15 @@ int main(int argc, char** argv) {
   const QCommandLineOption kb_option("kb", "Archivo de la base de conocimiento.", "archivo");
   const QCommandLineOption tour_option(
       "capturas", "Guardar una imagen de cada paso en la carpeta y salir.", "carpeta");
+  const QCommandLineOption theme_option(
+      "tema", "Aspecto: claro, oscuro o sistema (por defecto).", "nombre", "sistema");
   parser.addOption(kb_option);
   parser.addOption(tour_option);
+  parser.addOption(theme_option);
   parser.process(app);
+
+  // Colores, tipografía e icono; antes de crear cualquier ventana.
+  applyTheme(app, themeChoiceFromText(parser.value(theme_option)));
 
   // --- Base de conocimiento: sin ella no hay nada que mostrar ---
   const QString kb_path = locateKnowledgeBase(parser.value(kb_option));

@@ -100,6 +100,11 @@ struct RenalBand {
   /// Intervalo mínimo entre tomas. El motor usa el mayor entre este y el del
   /// esquema, de modo que un ajuste renal nunca aumenta la frecuencia.
   std::optional<int> min_interval_hours;
+  /// Dosis de reemplazo por toma, por kilogramo de peso: sustituye a la del
+  /// esquema (p. ej. «15 mg/kg cada 12 h»). Vacío = se conserva la del esquema.
+  std::optional<double> replacement_dose_per_kg;
+  /// Tope por toma propio de la banda; se aplica después del ajuste.
+  std::optional<double> max_per_dose;
   /// El medicamento debe evitarse en esta banda.
   bool avoid = false;
   std::string note;

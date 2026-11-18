@@ -1,13 +1,19 @@
 #include "pages/renal_page.hpp"
 
+#include <QButtonGroup>
 #include <QComboBox>
 #include <QDoubleSpinBox>
+#include <QFrame>
 #include <QGridLayout>
+#include <QHBoxLayout>
 #include <QLabel>
 #include <QRadioButton>
 #include <QVBoxLayout>
 
+#include "calc/text.hpp"
 #include "html.hpp"
+#include "theme.hpp"
+#include "widgets/ui.hpp"
 
 namespace calc::gui {
 
@@ -17,18 +23,21 @@ enum CreatinineUnit { kMgPerDl = 0, kMicromolPerL = 1 };
 }  // namespace
 
 RenalPage::RenalPage(Session& session, QWidget* parent) : QWizardPage(parent), session_(session) {
-  setTitle("Paso 2 de 4 · Función renal");
-  setSubTitle("Indique la tasa de filtración glomerular (TFG) para ajustar las dosis que lo requieran.");
-
-  not_evaluated_ = new QRadioButton("No evaluada (calcular sin ajuste renal)", this);
-  enter_gfr_ = new QRadioButton("Conozco la TFG:", this);
-  estimate_ = new QRadioButton("Estimarla con la creatinina sérica:", this);
+  not_evaluated_ = new QRadioButton("No evaluada", this);
+  enter_gfr_ = new QRadioButton("Conozco la TFG", this);
+  estimate_ = new QRadioButton("Estimarla con la creatinina sérica", this);
   not_evaluated_->setChecked(true);
+  // Cada botón vive en su propia tarjeta: sin un grupo no serían excluyentes.
+  auto* options = new QButtonGroup(this);
+  for (QRadioButton* option : {not_evaluated_, enter_gfr_, estimate_}) {
+    options->addButton(option);
+  }
 
   gfr_ = new QDoubleSpinBox(this);
   gfr_->setRange(0.0, limits::kMaxPlausibleGfr);
   gfr_->setDecimals(1);
   gfr_->setSuffix(" mL/min/1,73 m²");
+  gfr_->setMinimumWidth(200);
 
   creatinine_ = new QDoubleSpinBox(this);
   creatinine_unit_ = new QComboBox(this);
@@ -36,11 +45,13 @@ RenalPage::RenalPage(Session& session, QWidget* parent) : QWizardPage(parent), s
   creatinine_->setDecimals(2);
   creatinine_->setRange(0.0, limits::kMaxPlausibleCreatinineMgDl);
   creatinine_->setSingleStep(0.1);
+  creatinine_->setMinimumWidth(110);
+  creatinine_unit_->setMinimumWidth(90);
 
   // Selector de fórmula, en el orden del catálogo del núcleo (kGfrFormulas).
-  formula_label_ = new QLabel("Fórmula:", this);
-  formula_label_->setAlignment(Qt::AlignRight | Qt::AlignVCenter);
+  formula_label_ = makeFieldLabel("FÓRMULA", this);
   formula_ = new QComboBox(this);
+  formula_->setMinimumWidth(240);
   for (const GfrFormula formula : kGfrFormulas) {
     QString text = toQString(makeGfrEstimator(formula)->name());
     if (formula == GfrFormula::CkidU25) {
@@ -52,24 +63,58 @@ RenalPage::RenalPage(Session& session, QWidget* parent) : QWizardPage(parent), s
     }
   }
 
-  auto* grid = new QGridLayout;
-  grid->addWidget(not_evaluated_, 0, 0, 1, 3);
-  grid->addWidget(enter_gfr_, 1, 0);
-  grid->addWidget(gfr_, 1, 1);
-  grid->addWidget(estimate_, 2, 0);
-  grid->addWidget(creatinine_, 2, 1);
-  grid->addWidget(creatinine_unit_, 2, 2);
-  grid->addWidget(formula_label_, 3, 0);
-  grid->addWidget(formula_, 3, 1, 1, 2);
-  grid->setColumnStretch(3, 1);
+  // Una tarjeta por opción: el botón de radio, una línea de ayuda y sus campos.
+  const auto option_card = [this](QRadioButton* radio, const QString& hint, QLayout* fields) {
+    QFrame* card = makeCard(this, "optionCard");
+    auto* box = new QVBoxLayout(card);
+    box->setContentsMargins(16, 12, 16, 12);
+    box->setSpacing(6);
+    box->addWidget(radio);
+    QLabel* help = makeHint(hint, card);
+    help->setContentsMargins(26, 0, 0, 0);
+    box->addWidget(help);
+    if (fields != nullptr) {
+      fields->setContentsMargins(26, 4, 0, 0);
+      box->addLayout(fields);
+    }
+    return card;
+  };
+
+  auto* gfr_fields = new QHBoxLayout;
+  gfr_fields->addWidget(gfr_);
+  gfr_fields->addStretch();
+
+  auto* estimate_fields = new QGridLayout;
+  estimate_fields->setHorizontalSpacing(10);
+  estimate_fields->setVerticalSpacing(8);
+  estimate_fields->addWidget(makeFieldLabel("CREATININA", this), 0, 0);
+  estimate_fields->addWidget(creatinine_, 0, 1);
+  estimate_fields->addWidget(creatinine_unit_, 0, 2);
+  estimate_fields->addWidget(formula_label_, 1, 0);
+  estimate_fields->addWidget(formula_, 1, 1, 1, 2);
+  estimate_fields->setColumnStretch(3, 1);
+
+  not_evaluated_card_ = option_card(
+      not_evaluated_, "Las dosis se calculan sin ajuste renal y el resultado lo advierte.", nullptr);
+  enter_gfr_card_ = option_card(
+      enter_gfr_, "Digite la tasa de filtración glomerular ya calculada.", gfr_fields);
+  estimate_card_ = option_card(
+      estimate_, "Usa la talla (y el sexo, según la fórmula) registrados en el paso anterior.",
+      estimate_fields);
 
   messages_ = new QLabel(this);
   messages_->setWordWrap(true);
   messages_->setTextFormat(Qt::RichText);
 
   auto* layout = new QVBoxLayout(this);
-  layout->addLayout(grid);
-  layout->addSpacing(12);
+  layout->setSpacing(10);
+  layout->addWidget(makePageHeader(
+      "Paso 2 de 4", "Función renal",
+      "Indique la tasa de filtración glomerular (TFG) para ajustar las dosis que lo requieran.",
+      this));
+  layout->addWidget(not_evaluated_card_);
+  layout->addWidget(enter_gfr_card_);
+  layout->addWidget(estimate_card_);
   layout->addWidget(messages_);
   layout->addStretch();
 
@@ -143,6 +188,11 @@ void RenalPage::refresh() {
   formula_label_->setEnabled(estimate_->isChecked());
   formula_->setEnabled(estimate_->isChecked());
 
+  // La tarjeta de la opción elegida se resalta.
+  setStyleProperty(not_evaluated_card_, "selected", not_evaluated_->isChecked());
+  setStyleProperty(enter_gfr_card_, "selected", enter_gfr_->isChecked());
+  setStyleProperty(estimate_card_, "selected", estimate_->isChecked());
+
   QString html;
   session_.renal = RenalFunction::assumedNormal();
   complete_ = true;
@@ -152,7 +202,7 @@ void RenalPage::refresh() {
     complete_ = false;
     if (gfr.value() > 0.0) {
       const std::vector<Warning> warnings = validateGfr(gfr);
-      html = warningsHtml(warnings, palette());
+      html = warningsHtml(warnings);
       if (!hasBlocking(warnings)) {
         session_.renal = RenalFunction::entered(gfr);
         complete_ = true;
@@ -164,11 +214,20 @@ void RenalPage::refresh() {
     if (creatinine_->value() > 0.0) {
       const std::unique_ptr<GfrEstimator> estimator = makeGfrEstimator(formula);
       const GfrEstimate estimate = estimator->estimate(session_.patient, creatinineInMgDl());
-      html = warningsHtml(estimate.warnings, palette());
+      html = warningsHtml(estimate.warnings);
       if (estimate.gfr) {
         session_.renal = RenalFunction::estimated(*estimate.gfr, estimator->name());
-        html = "<p><b>TFG estimada (" + toQString(estimator->name()).toHtmlEscaped() +
-               "):</b> " + toQString(estimate.formula).toHtmlEscaped() + "</p>" + html;
+        // El valor estimado va destacado; debajo, la cuenta para rehacerla a mano.
+        const Theme& t = theme();
+        html = "<table width='100%' cellspacing='0' cellpadding='0' style='border:1px solid " +
+               t.border + "'><tr><td width='5' bgcolor='" + t.primary + "'></td><td bgcolor='" +
+               t.surface + "' style='padding:10px 14px'>"
+               "<p style='margin:0; font-size:11px; font-weight:600; color:" + t.muted +
+               "'>TFG ESTIMADA · " + toQString(estimator->name()).toUpper().toHtmlEscaped() +
+               "</p><p style='margin:2px 0 0 0; font-size:22px; font-weight:600; color:" +
+               t.primary + "'>" + toQString(formatNumber(estimate.gfr->value(), 1)) +
+               " mL/min/1,73 m²</p><p style='margin:4px 0 0 0; color:" + t.muted + "'>" +
+               toQString(estimate.formula).toHtmlEscaped() + "</p></td></tr></table>" + html;
         complete_ = true;
       }
     } else {
@@ -183,7 +242,7 @@ void RenalPage::refresh() {
                            "La ecuación CKiD U25 necesita el sexo: regístrelo en el paso "
                            "anterior o elija la fórmula de Schwartz."});
       }
-      html = warningsHtml(missing, palette());
+      html = warningsHtml(missing);
     }
   }
 

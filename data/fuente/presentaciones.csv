@@ -1,12 +1,48 @@
 id,medicamento_id,descripcion,via,tipo,cantidad,volumen_ml,unidad,divisible,paso_redondeo
 amox_susp_250,amoxicilina,Suspensión 250 mg/5 mL,oral,liquido,250,5,,,
+amox_susp_500,amoxicilina,Suspensión 500 mg/5 mL,oral,liquido,500,5,,,
+amox_susp_750,amoxicilina,Suspensión 750 mg/5 mL,oral,liquido,750,5,,,
 amox_cap_500,amoxicilina,Cápsula 500 mg,oral,solido,500,,cápsula,no,
 amoxclav_susp_600,amoxicilina_clavulanato,"Suspensión 600 mg + 42,9 mg/5 mL",oral,liquido,600,5,,,
 ceftriaxona_vial_im,ceftriaxona,Vial 1 g reconstituido a 250 mg/mL,im,liquido,250,1,,,"0,1"
+ceftriaxona_vial_iv,ceftriaxona,Vial 1 g reconstituido a 100 mg/mL,iv,liquido,100,1,,,"0,1"
 cefuroxima_susp_250,cefuroxima,Suspensión 250 mg/5 mL,oral,liquido,250,5,,,
 cefuroxima_tab_250,cefuroxima,Tableta 250 mg,oral,solido,250,,tableta,no,
+cefuroxima_tab_500,cefuroxima,Tableta 500 mg,oral,solido,500,,tableta,no,
 cefalexina_susp_250,cefalexina,Suspensión 250 mg/5 mL,oral,liquido,250,5,,,
 cefalexina_cap_500,cefalexina,Cápsula 500 mg,oral,solido,500,,cápsula,no,
+cefdinir_susp_125,cefdinir,Suspensión 125 mg/5 mL,oral,liquido,125,5,,,
+cefdinir_susp_250,cefdinir,Suspensión 250 mg/5 mL,oral,liquido,250,5,,,
+cefpodoxima_susp_40,cefpodoxima,Suspensión 40 mg/5 mL,oral,liquido,40,5,,,
+cefpodoxima_tab_100,cefpodoxima,Tableta 100 mg,oral,solido,100,,tableta,no,
 azitro_susp_200,azitromicina,Suspensión 200 mg/5 mL,oral,liquido,200,5,,,
 azitro_tab_500,azitromicina,Tableta 500 mg,oral,solido,500,,tableta,no,
 benzatinica_vial_1200000,penicilina_benzatinica,Vial 1 200 000 UI,im,solido,1200000,,vial,si,
+clari_susp_125,claritromicina,Suspensión 125 mg/5 mL,oral,liquido,125,5,,,
+clari_susp_250,claritromicina,Suspensión 250 mg/5 mL,oral,liquido,250,5,,,
+clari_tab_500,claritromicina,Tableta 500 mg,oral,solido,500,,tableta,no,
+doxi_cap_100,doxiciclina,Cápsula 100 mg,oral,solido,100,,cápsula,no,
+cipro_tab_500,ciprofloxacina,Tableta 500 mg,oral,solido,500,,tableta,no,
+cipro_iv_200,ciprofloxacina,Solución para infusión 200 mg/100 mL,iv,liquido,200,100,,,1
+metro_susp_250,metronidazol,Suspensión 250 mg/5 mL,oral,liquido,250,5,,,
+metro_tab_500,metronidazol,Tableta 500 mg,oral,solido,500,,tableta,no,
+vanco_cap_125,vancomicina,Cápsula 125 mg,oral,solido,125,,cápsula,no,
+vanco_cap_250,vancomicina,Cápsula 250 mg,oral,solido,250,,cápsula,no,
+tmpsmx_susp_40,trimetoprim_sulfametoxazol,Suspensión 40 mg de trimetoprim + 200 mg de sulfametoxazol/5 mL,oral,liquido,40,5,,,
+tmpsmx_tab_80,trimetoprim_sulfametoxazol,Tableta 80 mg de trimetoprim + 400 mg de sulfametoxazol,oral,solido,80,,tableta,no,
+tmpsmx_tab_160,trimetoprim_sulfametoxazol,Tableta 160 mg de trimetoprim + 800 mg de sulfametoxazol,oral,solido,160,,tableta,no,
+clinda_cap_300,clindamicina,Cápsula 300 mg,oral,solido,300,,cápsula,no,
+amoxclav71_susp_400,amoxicilina_clavulanato_7_1,Suspensión 400 mg + 57 mg/5 mL,oral,liquido,400,5,,,
+amoxclav71_tab_875,amoxicilina_clavulanato_7_1,Tableta 875 mg + 125 mg,oral,solido,875,,tableta,no,
+nitrofurantoina_cap_100,nitrofurantoina,Cápsula 100 mg,oral,solido,100,,cápsula,no,
+dicloxacilina_susp_250,dicloxacilina,Suspensión 250 mg/5 mL,oral,liquido,250,5,,,
+dicloxacilina_cap_500,dicloxacilina,Cápsula 500 mg,oral,solido,500,,cápsula,no,
+amikacina_amp_100,amikacina,Ampolla 100 mg/2 mL,iv,liquido,100,2,,,"0,1"
+amikacina_amp_500,amikacina,Ampolla 500 mg/2 mL,iv,liquido,500,2,,,"0,1"
+gentamicina_amp_80,gentamicina,Ampolla 80 mg/2 mL,iv,liquido,80,2,,,"0,1"
+gentamicina_amp_160,gentamicina,Ampolla 160 mg/2 mL,iv,liquido,160,2,,,"0,1"
+albendazol_susp_100,albendazol,Suspensión 100 mg/5 mL,oral,liquido,100,5,,,
+albendazol_susp_200,albendazol,Suspensión 200 mg/5 mL,oral,liquido,200,5,,,
+albendazol_tab_200,albendazol,Tableta 200 mg,oral,solido,200,,tableta,no,
+mebendazol_susp_100,mebendazol,Suspensión 100 mg/5 mL,oral,liquido,100,5,,,
+clinda_amp_600,clindamicina,Ampolla 600 mg/4 mL,iv,liquido,600,4,,,"0,1"

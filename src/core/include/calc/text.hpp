@@ -7,6 +7,7 @@
 
 #include <optional>
 #include <string>
+#include <string_view>
 
 #include "calc/dose_engine.hpp"
 #include "calc/knowledge_base.hpp"
@@ -31,7 +32,11 @@ namespace calc {
 /// Duración: "10 días", "5 a 10 días" o cadena vacía si no está definida.
 [[nodiscard]] std::string describeDuration(const RegimenResult& result);
 
-/// Cantidad a administrar: "9 mL", "0,5 vial", "2 tabletas".
+/// Cantidad con su unidad, en plural cuando corresponde: "9 mL", "0,5 vial",
+/// "1,5 cápsulas", "2 tabletas".
+[[nodiscard]] std::string describeQuantity(double quantity, std::string_view dispensing_unit);
+
+/// Cantidad a administrar ya redondeada: "9 mL", "0,5 vial", "2 tabletas".
 [[nodiscard]] std::string describeAdministration(const Administration& administration);
 
 /// Función renal: "TFG 77,4 mL/min/1,73 m² (Schwartz de cabecera)".

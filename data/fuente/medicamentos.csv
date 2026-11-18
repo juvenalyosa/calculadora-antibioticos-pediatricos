@@ -1,8 +1,32 @@
 id,nombre,unidad,ajuste_renal_tipo,ajuste_renal_nota,ajuste_renal_fuente_id,ajuste_renal_estado
-amoxicilina,Amoxicilina,mg,por_bandas,Bandas ilustrativas para probar el motor: falta definir la referencia farmacológica.,,muestra
-amoxicilina_clavulanato,Amoxicilina-clavulanato,mg,sin_dato,,,muestra
-ceftriaxona,Ceftriaxona,mg,sin_dato,,,muestra
-cefuroxima,Cefuroxima axetil,mg,sin_dato,,,muestra
-cefalexina,Cefalexina,mg,sin_dato,,,muestra
-azitromicina,Azitromicina,mg,sin_dato,,,muestra
-penicilina_benzatinica,Penicilina G benzatínica,UI,sin_dato,,,muestra
+amoxicilina,Amoxicilina,mg,por_bandas,"Regla de la ficha técnica europea, escrita con TFG en mL/min sin normalizar. El Kinderformularium (2026) no ajusta con TFG de 10 o más y la ficha de la FDA no da regla para menores de 40 kg.",ema_amoxil,borrador
+amoxicilina_clavulanato,Amoxicilina-clavulanato (14:1),mg,por_bandas,"Regla de la ficha técnica europea, con depuración de creatinina en mL/min.",ema_augmentin,borrador
+ampicilina,Ampicilina,mg,sin_dato,,,borrador
+ceftriaxona,Ceftriaxona,mg,por_bandas,No requiere reducción si la función hepática es normal.,ema_rocephin,borrador
+cefuroxima,Cefuroxima axetil (oral),mg,por_bandas,La ficha técnica advierte que la seguridad y la eficacia en insuficiencia renal no están establecidas.,ema_zinnat,borrador
+cefuroxima_sodica,Cefuroxima sódica (intravenosa),mg,por_bandas,Regla pediátrica del Kinderformularium. Las fichas técnicas ajustan desde 20 mL/min y solo dan dosis de adulto.,kinderformularium,borrador
+cefalexina,Cefalexina,mg,por_bandas,"Regla pediátrica del Kinderformularium, extrapolada de adultos. Las fichas técnicas no dan regla para menores de 15 años y sus umbrales no coinciden.",kinderformularium,borrador
+cefdinir,Cefdinir,mg,sin_dato,,,borrador
+cefpodoxima,Cefpodoxima proxetilo,mg,sin_dato,,,borrador
+azitromicina,Azitromicina,mg,por_bandas,,aemps_fichas_tecnicas,borrador
+claritromicina,Claritromicina,mg,por_bandas,El Kinderformularium no da recomendación con TFG menor de 10.,aemps_fichas_tecnicas,borrador
+doxiciclina,Doxiciclina,mg,no_requiere,,aemps_fichas_tecnicas,borrador
+penicilina_benzatinica,Penicilina G benzatínica,UI,sin_dato,Solo la ficha técnica española da porcentajes (75 % con depuración de 10 a 50 mL/min; 20 a 50 % si es menor de 10); la FDA y el Kinderformularium no dan regla.,,borrador
+penicilina_g,Penicilina G cristalina,UI,sin_dato,Las fuentes no coinciden: las fichas de la FDA y de España dan una dosis de carga y luego la mitad a intervalos más largos; la ficha británica da otra tabla; el Kinderformularium no da recomendación con TFG menor de 30.,,borrador
+ciprofloxacina,Ciprofloxacina,mg,por_bandas,Regla pediátrica del Kinderformularium. Las fichas técnicas declaran que el ajuste renal en niños no se ha estudiado.,kinderformularium,borrador
+metronidazol,Metronidazol,mg,por_bandas,,kinderformularium,borrador
+vancomicina,Vancomicina (oral),mg,no_requiere,Por vía oral casi no se absorbe. Vigilar los niveles séricos si hay colitis grave con insuficiencia renal. No aplicar las reglas de la vancomicina intravenosa.,ema_vancomicina,borrador
+trimetoprim_sulfametoxazol,Trimetoprim-sulfametoxazol,mg,por_bandas,Las fichas europeas limitan esta tabla a mayores de 12 años; el Kinderformularium contraindica con TFG menor de 10.,fda_fichas_tecnicas,borrador
+clindamicina,Clindamicina,mg,no_requiere,,fda_fichas_tecnicas,borrador
+mupirocina,Mupirocina al 2 %,mg,sin_dato,,,borrador
+amoxicilina_clavulanato_7_1,Amoxicilina-clavulanato (7:1),mg,por_bandas,"Regla de la ficha técnica europea, con depuración de creatinina en mL/min.",ema_augmentin,borrador
+nitrofurantoina,Nitrofurantoína,mg,sin_dato,,,borrador
+dicloxacilina,Dicloxacilina,mg,sin_dato,,,borrador
+oxacilina,Oxacilina,mg,sin_dato,,,borrador
+cefazolina,Cefazolina,mg,sin_dato,,,borrador
+amikacina,Amikacina,mg,sin_dato,Los aminoglucósidos se eliminan por el riñón y son nefrotóxicos: con función renal reducida el ajuste es indispensable.,,borrador
+gentamicina,Gentamicina,mg,sin_dato,Los aminoglucósidos se eliminan por el riñón y son nefrotóxicos: con función renal reducida el ajuste es indispensable.,,borrador
+albendazol,Albendazol,mg,sin_dato,,,borrador
+mebendazol,Mebendazol,mg,sin_dato,,,borrador
+ciprofloxacina_otica,"Ciprofloxacina ótica al 0,3 %",mg,sin_dato,,,borrador
+gentamicina_oftalmica,"Gentamicina oftálmica al 0,3 %",mg,sin_dato,,,borrador

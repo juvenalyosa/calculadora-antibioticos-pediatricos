@@ -41,6 +41,11 @@ TEST_CASE("texto: cantidades, intervalos y administración") {
 
   administration.dispensing_unit = "vial";
   CHECK(describeAdministration(administration) == "2 viales");
+
+  // La cantidad exacta del desglose usa el mismo plural.
+  CHECK(describeQuantity(1.5, "cápsula") == "1,5 cápsulas");
+  CHECK(describeQuantity(0.75, "tableta") == "0,75 tableta");
+  CHECK(describeQuantity(26.67, "mL") == "26,67 mL");
 }
 
 TEST_CASE("texto: dosis y duración") {

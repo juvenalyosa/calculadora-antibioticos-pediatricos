@@ -1,3 +1,18 @@
-medicamento_id,tfg_min,tfg_max,factor_dosis,intervalo_minimo_horas,evitar,nota
-amoxicilina,10,30,1,12,no,
-amoxicilina,0,10,1,24,no,
+medicamento_id,tfg_min,tfg_max,factor_dosis,intervalo_minimo_horas,dosis_por_kg,max_por_dosis,evitar,nota
+amoxicilina,10,30,,12,15,500,no,La ficha técnica indica que en la mayoría de estos casos se prefiere la vía parenteral.
+amoxicilina,0,10,,24,15,500,no,La ficha técnica indica que en la mayoría de estos casos se prefiere la vía parenteral.
+amoxicilina_clavulanato,0,30,,,,,si,"Las presentaciones 7:1, 8:1 y 14:1 no se recomiendan con depuración menor de 30 mL/min; solo la 4:1 tiene dosis ajustada."
+ceftriaxona,0,10,,,,2000,no,Con depuración menor de 10 mL/min la dosis no debe superar 2 g al día.
+cefuroxima,10,30,,24,,,no,
+cefuroxima,0,10,,48,,,no,
+cefuroxima_sodica,10,30,,12,,,no,
+cefuroxima_sodica,0,10,,24,,,no,
+cefalexina,10,50,,12,,,no,
+cefalexina,0,10,,24,,,no,
+azitromicina,0,10,,,,,no,Con TFG menor de 10 se debe usar con precaución; ninguna fuente da una dosis.
+claritromicina,0,30,,24,,,no,Mitad de la dosis diaria (una toma al día) y no más de 14 días.
+ciprofloxacina,0,30,,24,,,no,
+metronidazol,0,10,,,,,no,Con TFG menor de 10 las fuentes discrepan: sin reducción (fichas británica y de la FDA) o la mitad de la dosis (Pediamécum).
+trimetoprim_sulfametoxazol,15,30,"0,5",,,,no,
+trimetoprim_sulfametoxazol,0,15,,,,,si,No se recomienda con depuración menor de 15 mL/min.
+amoxicilina_clavulanato_7_1,0,30,,,,,si,"Las presentaciones 7:1, 8:1 y 14:1 no se recomiendan con depuración menor de 30 mL/min; solo la 4:1 tiene dosis ajustada."

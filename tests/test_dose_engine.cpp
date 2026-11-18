@@ -114,6 +114,15 @@ TEST_CASE("motor: tope diario en el adolescente (caso tipo 2)") {
   // El rango también respeta el tope.
   CHECK(result.range_min_per_dose.value() == doctest::Approx(500.0));
   CHECK(result.range_max_per_dose.value() == doctest::Approx(500.0));
+  // Con los dos extremos iguales el desglose da una sola cifra, no «500 mg a 500 mg».
+  bool flat_range_explained = false;
+  for (const auto& step : result.trace) {
+    if (step.detail.find("500 mg por toma en todo el rango") != std::string::npos) {
+      flat_range_explained = true;
+    }
+    CHECK(step.detail.find("500 mg a 500 mg") == std::string::npos);
+  }
+  CHECK(flat_range_explained);
 
   CHECK(administrationOf(result, "a_susp").rounded_quantity == doctest::Approx(10.0));
   CHECK(administrationOf(result, "a_tab").rounded_quantity == doctest::Approx(1.0));
@@ -131,9 +140,12 @@ TEST_CASE("motor: tope por toma y terapia combinada") {
   CHECK(drug_a.dose_per_administration == doctest::Approx(500.0));
   CHECK(drug_a.daily_dose.value() == doctest::Approx(1000.0));
   CHECK(drug_a.max_cap_applied);
+  CHECK_FALSE(hasCode(drug_a.warnings, "SIN_TOPE_MAXIMO"));
 
   // Fármaco C: 10 mg/kg/dosis × 50 kg = 500 mg cada 24 h; sin presentaciones IV.
+  // El esquema no trae tope: la dosis no se limita y se avisa.
   const RegimenResult& drug_c = option.components[1];
+  CHECK(hasCode(drug_c.warnings, "SIN_TOPE_MAXIMO"));
   CHECK(drug_c.dose_per_administration == doctest::Approx(500.0));
   CHECK(drug_c.interval_hours == 24);
   CHECK(drug_c.administrations.empty());
@@ -247,6 +259,40 @@ TEST_CASE("motor: ajuste renal por bandas") {
     CHECK(hasBlocking(result.warnings));
     CHECK(result.administrations.empty());  // no se propone cómo administrarlo
   }
+}
+
+TEST_CASE("motor: ajuste renal con dosis de reemplazo y tope de la banda") {
+  const KnowledgeBase kb = testing::loadTestKb();
+  const DoseEngine engine(kb);
+  const auto regimen = [&](const Patient& patient, double gfr) {
+    const TreatmentPlan plan =
+        engine.plan({patient, RenalFunction::entered(Gfr(gfr)), "enfermedad_renal"});
+    return optionOf(lineOf(plan, TreatmentLineKind::First), 1).components.at(0);
+  };
+
+  // Sin compromiso renal: 90 mg/kg/día × 10 kg ÷ 3 = 300 mg cada 8 h.
+  const RegimenResult normal = regimen(testing::infantCase(), 100.0);
+  CHECK(normal.dose_per_administration == doctest::Approx(300.0));
+  CHECK(normal.interval_hours == 8);
+
+  // TFG 20: la banda reemplaza la dosis por 15 mg/kg × 10 kg = 150 mg, cada 12 h.
+  const RegimenResult infant = regimen(testing::infantCase(), 20.0);
+  CHECK(infant.dose_per_administration == doctest::Approx(150.0));
+  CHECK(infant.interval_hours == 12);
+  CHECK(infant.daily_dose.value() == doctest::Approx(300.0));
+  CHECK(hasCode(infant.warnings, "AJUSTE_RENAL_APLICADO"));
+
+  // En el adolescente 15 × 50 = 750 mg supera el tope de la banda: 500 mg.
+  const RegimenResult adolescent = regimen(testing::adolescentCase(), 20.0);
+  CHECK(adolescent.dose_per_administration == doctest::Approx(500.0));
+  CHECK(adolescent.interval_hours == 12);
+
+  // TFG 5: la banda no cambia la dosis, pero su nota se muestra como aviso.
+  const RegimenResult severe = regimen(testing::infantCase(), 5.0);
+  CHECK(severe.dose_per_administration == doctest::Approx(300.0));
+  CHECK(severe.interval_hours == 8);
+  CHECK(hasCode(severe.warnings, "NOTA_AJUSTE_RENAL"));
+  CHECK_FALSE(hasCode(severe.warnings, "AJUSTE_RENAL_APLICADO"));
 }
 
 TEST_CASE("motor: medicamento sin dato o sin necesidad de ajuste renal") {

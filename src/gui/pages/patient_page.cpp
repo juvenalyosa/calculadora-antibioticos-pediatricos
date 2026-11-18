@@ -2,7 +2,8 @@
 
 #include <QComboBox>
 #include <QDoubleSpinBox>
-#include <QFormLayout>
+#include <QFrame>
+#include <QGridLayout>
 #include <QHBoxLayout>
 #include <QLabel>
 #include <QSpinBox>
@@ -10,6 +11,7 @@
 
 #include "calc/text.hpp"
 #include "html.hpp"
+#include "widgets/ui.hpp"
 
 namespace calc::gui {
 
@@ -22,18 +24,15 @@ enum SexChoice { kSexNotRecorded = 0, kSexMale = 1, kSexFemale = 2 };
 
 PatientPage::PatientPage(Session& session, QWidget* parent)
     : QWizardPage(parent), session_(session) {
-  setTitle("Paso 1 de 4 · Paciente");
-  setSubTitle(
-      "Ingrese la edad y el peso. La talla y el sexo solo se necesitan para estimar la función "
-      "renal.");
-
   // --- Edad ---
   years_ = new QSpinBox(this);
   years_->setRange(0, 17);
   years_->setSuffix(" años");
+  years_->setMinimumWidth(120);
   months_ = new QSpinBox(this);
   months_->setRange(0, 11);
   months_->setSuffix(" meses");
+  months_->setMinimumWidth(120);
   auto* age_row = new QHBoxLayout;
   age_row->addWidget(years_);
   age_row->addWidget(months_);
@@ -41,9 +40,12 @@ PatientPage::PatientPage(Session& session, QWidget* parent)
 
   // --- Peso, con selector de unidad ---
   weight_ = new QDoubleSpinBox(this);
+  weight_->setMinimumWidth(120);
   weight_unit_ = new QComboBox(this);
   weight_unit_->addItems({"kg", "lb", "g"});
-  weight_in_kg_ = new QLabel(this);
+  weight_unit_->setMinimumWidth(70);
+  weight_in_kg_ = makeHint(QString(), this);
+  weight_in_kg_->setWordWrap(false);
   auto* weight_row = new QHBoxLayout;
   weight_row->addWidget(weight_);
   weight_row->addWidget(weight_unit_);
@@ -57,6 +59,7 @@ PatientPage::PatientPage(Session& session, QWidget* parent)
   height_->setDecimals(1);
   height_->setSuffix(" cm");
   height_->setSpecialValueText("No registrada");  // se muestra cuando vale 0
+  height_->setMinimumWidth(160);
   auto* height_row = new QHBoxLayout;
   height_row->addWidget(height_);
   height_row->addStretch();
@@ -64,15 +67,41 @@ PatientPage::PatientPage(Session& session, QWidget* parent)
   // --- Sexo (opcional; lo usa la ecuación CKiD U25) ---
   sex_ = new QComboBox(this);
   sex_->addItems({"No registrado", "Masculino", "Femenino"});
+  sex_->setMinimumWidth(160);
   auto* sex_row = new QHBoxLayout;
   sex_row->addWidget(sex_);
   sex_row->addStretch();
 
-  auto* form = new QFormLayout;
-  form->addRow("Edad:", age_row);
-  form->addRow("Peso:", weight_row);
-  form->addRow("Talla:", height_row);
-  form->addRow("Sexo:", sex_row);
+  // Tarjeta con dos bloques: lo obligatorio y lo que solo sirve para la TFG.
+  auto* card = makeCard(this);
+  auto* grid = new QGridLayout(card);
+  grid->setContentsMargins(20, 18, 20, 18);
+  grid->setHorizontalSpacing(16);
+  grid->setVerticalSpacing(12);
+  grid->setColumnMinimumWidth(0, 70);
+  grid->setColumnStretch(1, 1);
+
+  auto* required_title = new QLabel("Datos para calcular la dosis", card);
+  required_title->setObjectName("cardTitle");
+  auto* optional_title = new QLabel("Datos para estimar la función renal", card);
+  optional_title->setObjectName("cardTitle");
+  auto* separator = new QFrame(card);
+  separator->setObjectName("separator");
+
+  int row = 0;
+  grid->addWidget(required_title, row++, 0, 1, 2);
+  grid->addWidget(makeFieldLabel("EDAD", card), row, 0);
+  grid->addLayout(age_row, row++, 1);
+  grid->addWidget(makeFieldLabel("PESO", card), row, 0);
+  grid->addLayout(weight_row, row++, 1);
+  grid->addWidget(separator, row++, 0, 1, 2);
+  grid->addWidget(optional_title, row++, 0, 1, 2);
+  grid->addWidget(makeHint("Opcionales. Solo se usan si en el paso siguiente estima la TFG con "
+                           "la creatinina.", card), row++, 0, 1, 2);
+  grid->addWidget(makeFieldLabel("TALLA", card), row, 0);
+  grid->addLayout(height_row, row++, 1);
+  grid->addWidget(makeFieldLabel("SEXO", card), row, 0);
+  grid->addLayout(sex_row, row++, 1);
 
   messages_ = new QLabel(this);
   messages_->setWordWrap(true);
@@ -80,14 +109,19 @@ PatientPage::PatientPage(Session& session, QWidget* parent)
 
   // Aviso permanente en la primera pantalla.
   auto* disclaimer = new QLabel(
-      "Herramienta de apoyo académico. No reemplaza el juicio clínico ni la verificación de la "
-      "dosis antes de formular. No se guarda ningún dato que identifique al paciente.",
+      noticeHtml(Severity::Info,
+                 "Herramienta de apoyo académico. No reemplaza el juicio clínico ni la "
+                 "verificación de la dosis antes de formular. No se guarda ningún dato que "
+                 "identifique al paciente."),
       this);
   disclaimer->setWordWrap(true);
+  disclaimer->setTextFormat(Qt::RichText);
 
   auto* layout = new QVBoxLayout(this);
-  layout->addLayout(form);
-  layout->addSpacing(12);
+  layout->setSpacing(10);
+  layout->addWidget(makePageHeader("Paso 1 de 4", "Paciente",
+                                   "Ingrese la edad y el peso del paciente.", this));
+  layout->addWidget(card);
   layout->addWidget(messages_);
   layout->addStretch();
   layout->addWidget(disclaimer);
@@ -152,6 +186,10 @@ void PatientPage::applyWeightUnit() {
 void PatientPage::refresh() {
   const double kg = weightInKilograms();
 
+  // «1 año», «2 años»; «1 mes», «2 meses».
+  years_->setSuffix(years_->value() == 1 ? " año" : " años");
+  months_->setSuffix(months_->value() == 1 ? " mes" : " meses");
+
   session_.patient.age = Age::fromYearsAndMonths(years_->value(), months_->value());
   session_.patient.weight = Kilograms(kg);
   if (height_->value() > 0.0) {
@@ -181,7 +219,7 @@ void PatientPage::refresh() {
     complete_ = false;
   } else {
     const std::vector<Warning> warnings = validatePatient(session_.patient);
-    messages_->setText(warningsHtml(warnings, palette()));
+    messages_->setText(warningsHtml(warnings));
     complete_ = !hasBlocking(warnings);
   }
   emit completeChanged();

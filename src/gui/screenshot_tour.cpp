@@ -25,7 +25,7 @@ bool runScreenshotTour(CalculatorWizard& wizard, ReportSink& sink, const QString
   if (!QDir().mkpath(folder)) {
     return false;
   }
-  wizard.resize(820, 700);
+  wizard.resize(1080, 760);
   wizard.show();
   bool ok = true;
 

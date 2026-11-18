@@ -17,6 +17,9 @@ __pycache__/
 # Reportes de error generados localmente al probar
 *.jsonl
 
+# Artículos y guías de referencia: son PDF de editoriales, no se redistribuyen.
+/papers/
+
 # Documento de radicación: contiene datos personales (cédula, correo).
 # Se conserva fuera del control de versiones.
 /RADICACIÓN*.pdf

@@ -51,7 +51,9 @@ TEST_CASE("renal: Schwartz advierte fuera del rango de edad en que se derivó") 
 
 // --- CKiD U25 ----------------------------------------------------------------
 //
-// Valores esperados calculados aparte con la tabla de Pierce et al. 2021:
+// Constantes cotejadas con la tabla 2 de Pierce et al., Kidney Int 2021;99:948-956
+// (manuscrito en PubMed Central, PMC9083470) y con la página del NIDDK.
+// Valores esperados calculados aparte con esa tabla:
 //   k = base × crecimiento^(edad − 12);  TFG = k × talla (m) ÷ creatinina.
 
 TEST_CASE("renal: CKiD U25 con los casos tipo, por sexo") {
@@ -63,7 +65,10 @@ TEST_CASE("renal: CKiD U25 con los casos tipo, por sexo") {
   const GfrEstimate boy = estimator.estimate(infant, MgPerDl(0.4));
   REQUIRE(boy.gfr.has_value());
   CHECK(boy.gfr->value() == doctest::Approx(66.9885).epsilon(1e-5));
-  CHECK(boy.warnings.empty());
+  // Dentro del rango de edad solo queda el aviso informativo sobre la población.
+  REQUIRE(boy.warnings.size() == 1);
+  CHECK(boy.warnings.front().severity == Severity::Info);
+  CHECK(hasCode(boy.warnings, "CKID_U25_POBLACION"));
   CHECK(boy.formula ==
         "k (masculino, 1 año) = 39 × 1,008^(1 − 12) = 35,73; "
         "TFG = 35,73 × 0,75 m ÷ 0,4 mg/dL = 67 mL/min/1,73 m²");

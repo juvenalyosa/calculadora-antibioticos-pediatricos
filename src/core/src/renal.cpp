@@ -169,6 +169,13 @@ GfrEstimate CkidU25Estimator::estimate(const Patient& patient, MgPerDl serum_cre
                      " m ÷ " + formatNumber(creatinine) + " mg/dL = " + formatNumber(gfr, 1) +
                      " mL/min/1,73 m²";
 
+  // Pierce et al. 2021: «we cannot speak to the validity of our equations for
+  // estimating GFR in healthy patients». Se informa siempre.
+  estimate.warnings.push_back(
+      {Severity::Info, "CKID_U25_POBLACION",
+       "La ecuación CKiD U25 se desarrolló en niños y jóvenes con enfermedad renal crónica; sus "
+       "autores no la validaron en población sin enfermedad renal."});
+
   const int months = patient.age.totalMonths();
   if (months < kValidatedMinAgeMonths || months >= kValidatedMaxAgeMonthsExclusive) {
     estimate.warnings.push_back(

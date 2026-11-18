@@ -1,4 +1,42 @@
 id,nombre,grupo,requiere_antibiotico,mensaje,fuente_id
-oma,Otitis media aguda,Respiratorias altas,si,,aap_oma_2013
-faringoamigdalitis,Faringoamigdalitis estreptocócica,Respiratorias altas,si,,idsa_faringitis_2012
-bronquiolitis,Bronquiolitis,Respiratorias bajas,no,"La bronquiolitis es una infección viral: no se indican antibióticos, salvo coinfección bacteriana confirmada o fuertemente sospechada.",aap_bronquiolitis_2014
+oma,Otitis media aguda,Respiratorias altas,si,,acorl_oma_2024
+otitis_media_efusion,Otitis media con efusión,Respiratorias altas,no,"No se indican antibióticos ni corticoides. En el niño sin factores de riesgo la primera medida es la observación durante 3 meses; si la efusión persiste, se remite a otorrinolaringología. Con comorbilidades se actúa sin esperar.",codepeh_ome_2019
+faringoamigdalitis,Faringoamigdalitis estreptocócica (incluye la escarlatina),Respiratorias altas,si,,acorl_faringoamigdalitis_2024
+faringoamigdalitis_no_estreptococica,Faringoamigdalitis no estreptocócica,Respiratorias altas,no,En pacientes sin comorbilidades no se recomienda antibiótico cuando la faringoamigdalitis no es por estreptococo del grupo A: suele resolverse sola y el antibiótico no acorta los síntomas ni reduce las complicaciones.,consenso_italiano_faringitis_2024
+laringitis,Laringitis (crup),Respiratorias altas,no,"No se indican antibióticos. Se trata con corticoide oral y, en los casos graves, adrenalina nebulizada.",finlandia_vri_2023
+bronquitis_aguda,Bronquitis aguda (tos),Respiratorias bajas,no,No se indican antibióticos. Los antitusivos y los betaadrenérgicos tampoco son eficaces para la tos de la bronquitis.,finlandia_vri_2023
+bronquiolitis,Bronquiolitis,Respiratorias bajas,no,No se indican antibióticos (guía colombiana de 2014 y guía finlandesa de 2023).,minsalud_neumonia_2014
+bronquitis_sibilante,Bronquitis sibilante (sibilancias con infección viral),Respiratorias bajas,no,No se indican antibióticos.,finlandia_vri_2023
+neumonia,Neumonía adquirida en la comunidad (manejo ambulatorio),Respiratorias bajas,si,,minsalud_neumonia_2014
+neumonia_hospitalizada,Neumonía adquirida en la comunidad (hospitalizado),Respiratorias bajas,si,,minsalud_neumonia_2014
+neumonia_micoplasma,Neumonía por Mycoplasma pneumoniae,Respiratorias bajas,si,,china_micoplasma_2023
+tosferina,Tos ferina,Respiratorias bajas,si,,finlandia_vri_2023
+gastroenteritis_aguda,Gastroenteritis aguda (diarrea aguda),Gastrointestinales,no,"La gastroenteritis aguda es viral la mayoría de las veces y se resuelve sola: los antibióticos rara vez están indicados. Sí se tratan la shigelosis comprobada, las formas graves por Campylobacter, la fiebre tifoidea y la salmonelosis en niños de alto riesgo; en esos casos elija la enfermedad correspondiente.",francia_gastroenteritis_2017
+shigelosis,Disentería o diarrea por Shigella,Gastrointestinales,si,,francia_gastroenteritis_2017
+campylobacter,Diarrea por Campylobacter jejuni,Gastrointestinales,si,,francia_gastroenteritis_2017
+salmonelosis,Diarrea por Salmonella (solo pacientes de riesgo),Gastrointestinales,si,,francia_gastroenteritis_2017
+clostridioides_difficile,Infección por Clostridioides difficile,Gastrointestinales,si,,francia_gastroenteritis_2017
+giardiasis,Giardiasis,Gastrointestinales,si,,francia_gastroenteritis_2017
+amebiasis,Amebiasis intestinal (Entamoeba histolytica),Gastrointestinales,si,,francia_gastroenteritis_2017
+impetigo,Impétigo,Piel y tejidos blandos,si,,acin_piel_2023
+piel_sarm,Infección de piel por S. aureus resistente a meticilina de la comunidad,Piel y tejidos blandos,si,,idsa_piel_2014
+resfriado_comun,Resfriado común y rinosinusitis viral,Respiratorias altas,no,"No se recomienda el uso de antibióticos. Solo están indicados en la rinosinusitis con síntomas persistentes (10 días o más sin mejoría), con síntomas graves desde el inicio o complicada.",acorl_rinosinusitis_2024
+rinosinusitis,Rinosinusitis bacteriana aguda,Respiratorias altas,si,,acorl_rinosinusitis_2024
+otitis_externa,Otitis externa aguda,Respiratorias altas,si,,acorl_otitis_externa_2024
+otitis_media_cronica,Otitis media crónica supurativa (oído que supura 14 días o más),Respiratorias altas,si,,aiepi_2012
+mastoiditis,Mastoiditis (primera dosis antes de remitir),Respiratorias altas,si,,aiepi_2012
+bacteriuria_asintomatica,Bacteriuria asintomática,Urinarias,no,Un urocultivo positivo sin síntomas urinarios no requiere antibiótico ni estudios adicionales.,consenso_colombiano_itu_2023
+ivu_baja,Infección urinaria baja (cistitis),Urinarias,si,,consenso_colombiano_itu_2023
+ivu_alta,Pielonefritis: tratamiento oral,Urinarias,si,,consenso_colombiano_itu_2023
+ivu_alta_iv,Pielonefritis: tratamiento intravenoso,Urinarias,si,,consenso_colombiano_itu_2023
+geohelmintos,Parásitos intestinales: desparasitación (geohelmintos),Gastrointestinales,si,,aiepi_2012
+celulitis,Celulitis y erisipela leves,Piel y tejidos blandos,si,,acin_piel_2023
+celulitis_hospital,Celulitis moderada (tratamiento intravenoso),Piel y tejidos blandos,si,,acin_piel_2023
+absceso_cutaneo,Absceso cutáneo,Piel y tejidos blandos,no,"El absceso que no drena solo se trata con incisión y drenaje. El antibiótico sistémico se reserva para la celulitis extensa alrededor de la lesión, los síntomas sistémicos o el absceso grande, y debe cubrir S. aureus resistente a meticilina: en ese caso use la entrada de infección de piel por S. aureus resistente a meticilina.",acin_piel_2023
+mordeduras,Mordeduras de animales o de personas,Piel y tejidos blandos,si,,oms_aware_2022
+dolor_dental,Dolor dental o caries sin absceso,Boca y dientes,no,No requiere antibiótico: acetaminofén para el dolor y remisión a odontología en las siguientes 24 horas.,aiepi_2012
+absceso_dental,Absceso dental (enfermedad bucal grave),Boca y dientes,si,,aiepi_2012
+celulitis_facial_dental,Celulitis facial de origen dental (remisión urgente),Boca y dientes,si,,aiepi_2012
+fiebre_sin_foco,Fiebre sin foco en el niño con buen aspecto,Fiebre y enfermedad grave,no,"Si el niño está bien para irse a su casa y no tiene causa clara de la fiebre, no se inician antibióticos: los antibióticos no son antipiréticos.",aiepi_2012
+fiebre_alto_riesgo,Enfermedad febril de alto riesgo (primera dosis antes de remitir),Fiebre y enfermedad grave,si,,aiepi_2012
+conjuntivitis,Conjuntivitis bacteriana,Ojos,si,,oms_aware_2022

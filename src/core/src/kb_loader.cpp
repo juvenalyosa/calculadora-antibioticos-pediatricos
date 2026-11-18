@@ -279,6 +279,8 @@ class Loader {
       band.gfr_max = requiredNumber(band_item, "tfg_max", where + ".bandas");
       band.dose_factor = optionalNumber(band_item, "factor_dosis", where + ".bandas").value_or(1.0);
       band.min_interval_hours = optionalInt(band_item, "intervalo_minimo_horas", where + ".bandas");
+      band.replacement_dose_per_kg = optionalNumber(band_item, "dosis_por_kg", where + ".bandas");
+      band.max_per_dose = optionalNumber(band_item, "max_por_dosis", where + ".bandas");
       band.avoid = optionalBool(band_item, "evitar", where + ".bandas", false);
       band.note = optionalString(band_item, "nota", where + ".bandas");
       renal.bands.push_back(std::move(band));
@@ -456,6 +458,12 @@ class Loader {
       }
       if (band.min_interval_hours && *band.min_interval_hours <= 0) {
         issue(where, "«intervalo_minimo_horas» debe ser mayor que 0");
+      }
+      if (band.replacement_dose_per_kg && !(*band.replacement_dose_per_kg > 0.0)) {
+        issue(where, "«dosis_por_kg» de la banda debe ser mayor que 0");
+      }
+      if (band.max_per_dose && !(*band.max_per_dose > 0.0)) {
+        issue(where, "«max_por_dosis» de la banda debe ser mayor que 0");
       }
     }
 

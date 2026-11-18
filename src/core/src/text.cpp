@@ -90,15 +90,19 @@ std::string describeDuration(const RegimenResult& result) {
   return "";
 }
 
-std::string describeAdministration(const Administration& administration) {
-  std::string unit = administration.dispensing_unit;
+std::string describeQuantity(double quantity, std::string_view dispensing_unit) {
+  std::string unit(dispensing_unit);
   // Plural en español para unidades contables ("mL" es un símbolo: no cambia).
-  if (unit != "mL" && administration.rounded_quantity > 1.0 && !unit.empty()) {
+  if (unit != "mL" && quantity > 1.0 && !unit.empty()) {
     const char last = unit.back();
     const bool vowel = last == 'a' || last == 'e' || last == 'i' || last == 'o' || last == 'u';
     unit += vowel ? "s" : "es";
   }
-  return formatNumber(administration.rounded_quantity) + " " + unit;
+  return formatNumber(quantity) + " " + unit;
+}
+
+std::string describeAdministration(const Administration& administration) {
+  return describeQuantity(administration.rounded_quantity, administration.dispensing_unit);
 }
 
 std::string describeRenal(const RenalFunction& renal) {

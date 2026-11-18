@@ -21,6 +21,12 @@ qt_add_executable(calc-gui MACOSX_BUNDLE WIN32
   screenshot_tour.cpp
   screenshot_tour.hpp
   session.hpp
+  theme.cpp
+  theme.hpp
+  widgets/step_sidebar.cpp
+  widgets/step_sidebar.hpp
+  widgets/ui.cpp
+  widgets/ui.hpp
   pages/disease_page.cpp
   pages/disease_page.hpp
   pages/patient_page.cpp

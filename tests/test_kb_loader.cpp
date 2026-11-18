@@ -48,8 +48,8 @@ TEST_CASE("cargador: la base sintética se lee completa") {
   CHECK(kb.schema_version == 1);
   CHECK(kb.version == "prueba");
   CHECK(kb.sources.size() == 1);
-  CHECK(kb.drugs.size() == 3);
-  CHECK(kb.diseases.size() == 2);
+  CHECK(kb.drugs.size() == 4);
+  CHECK(kb.diseases.size() == 3);
 
   const Drug& drug = kb.drug("farmaco_a");
   CHECK(drug.unit == DrugUnit::Milligram);

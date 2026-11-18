@@ -83,9 +83,9 @@ respetarlas.
    No hay aleatoriedad, red ni reloj dentro del motor.
 2. **Transparente.** Todo resultado trae el desglose y la fuente, para que el
    usuario pueda rehacer la cuenta a mano.
-3. **Sin fallos silenciosos.** Tope aplicado, ajuste renal, dato no
-   verificado, falta de información o redondeo excesivo generan una
-   advertencia con código estable (`TOPE_MAXIMO_APLICADO`,
+3. **Sin fallos silenciosos.** Tope aplicado, esquema sin tope, ajuste renal,
+   dato no verificado, falta de información o redondeo excesivo generan una
+   advertencia con código estable (`TOPE_MAXIMO_APLICADO`, `SIN_TOPE_MAXIMO`,
    `SIN_DATO_AJUSTE_RENAL`, `DATOS_NO_VERIFICADOS`...).
 4. **Una sola puerta para los datos.** Todo dato clínico entra por
    `kb_loader`, que valida y reporta todos los problemas de una vez.
@@ -183,6 +183,9 @@ Asistente por pasos con Qt Widgets (`QWizard`), todo en C++:
 | `pages/*_page.*` | Una clase por paso |
 | `report_dialog.*` | Formato semiautomatizado de reporte de error |
 | `html.*` | Resultado del núcleo → HTML (usa `text.hpp`, igual que la consola) |
+| `theme.*` | Aspecto visual: tabla de colores (clara y oscura), hoja de estilo e icono |
+| `widgets/step_sidebar.*` | Barra lateral con el nombre de la aplicación y el progreso por pasos |
+| `widgets/ui.*` | Piezas comunes: encabezado de página, tarjeta, etiquetas de campo |
 | `app_paths.*` | Dónde están la base de conocimiento y el archivo de reportes |
 | `screenshot_tour.*` | Recorrido automático con capturas (prueba y manual) |
 
@@ -195,6 +198,13 @@ Reglas que sigue la interfaz:
 - **«Siguiente» se deshabilita** mientras haya una advertencia bloqueante.
 - **Los módulos de apoyo** se registran en `main.cpp` y sus observaciones se
   muestran al final del resultado, separadas y atribuidas.
+- **Un solo origen para los colores.** Widgets y resultado en HTML toman los
+  colores de `theme()`; no se escriben colores en las páginas. El estilo
+  Fusion de Qt da el mismo aspecto en Windows, macOS y Linux, y el tema sigue
+  el modo claro u oscuro del sistema (se puede forzar con `--tema`).
+- **Tipografía Helvetica.** Se usa la primera instalada de esta lista:
+  Helvetica Neue, Helvetica, Arial, Nimbus Sans, Liberation Sans. Windows no
+  trae Helvetica y su licencia no permite distribuirla: allí se ve en Arial.
 
 Para agregar un paso: crear la página en `pages/`, darle un identificador en
 `CalculatorWizard::PageId`, registrarla con `setPage` y añadir su nombre en
@@ -223,11 +233,16 @@ Valores que hoy son supuestos razonables del desarrollo y deben confirmarse:
 | Desviación máxima aceptable por redondeo | 10 % | `limits::kMaxRoundingDeviation` |
 | TFG bajo la cual se avisa si falta el dato de ajuste renal | 90 | `limits::kReducedGfrThreshold` |
 | Fórmula de TFG por defecto | CKiD U25 | `kDefaultGfrFormula` en `renal.hpp` |
-| Constantes de CKiD U25 | tomadas de fuentes secundarias (NIDDK); cotejar con el artículo original | `renal.cpp` |
+| Constantes de CKiD U25 | cotejadas con la tabla 2 de Pierce et al. 2021 y con el NIDDK; la ecuación solo se validó en enfermedad renal crónica | `renal.cpp` |
 | Rango de edad en que se considera válida la fórmula de Schwartz | 1 a 16 años | `BedsideSchwartzEstimator` |
 | Peso «poco plausible» para la edad | fuera de 0,5 a 2,5 veces el esperado | `limits` en `patient.hpp` |
 | Paso de redondeo de líquidos por defecto | 0,5 mL | `kb_loader.cpp` |
-| Referencia farmacológica para el ajuste renal | por definir | hoja `medicamentos` |
+| Referencia farmacológica para el ajuste renal | por medicamento: fichas técnicas europeas (EMA, AEMPS) o Kinderformularium; las fuentes no siempre coinciden | hojas `medicamentos` y `ajuste_renal` |
+| Unidad de la TFG en las bandas | se comparan con mL/min/1,73 m², aunque algunas fichas escriben mL/min sin normalizar | hoja `ajuste_renal` |
+| Valor con el que se calcula cuando la guía da un rango | el extremo superior (se muestra el rango completo) | columna `dosis_usual` de `esquemas` |
+| Topes tomados de otra fuente | amoxicilina 4 g/día (PIDS/IDSA 2011), cefuroxima oral 1 g/día (FDA), dosis de adulto de IDSA para clindamicina y trimetoprim-sulfametoxazol; cada uno está escrito en la nota del esquema | columnas `max_por_dosis` y `max_por_dia` |
+| Dosis de amoxicilina en neumonía | 90 mg/kg/día (guía colombiana, PIDS/IDSA) frente a 40 a 45 mg/kg/día (guía finlandesa): están las dos | hoja `esquemas` |
+| Presentaciones comerciales | confirmadas en el registro del INVIMA (noviembre de 2026); el registro no garantiza disponibilidad | hoja `presentaciones` |
 
 ## Pruebas
 

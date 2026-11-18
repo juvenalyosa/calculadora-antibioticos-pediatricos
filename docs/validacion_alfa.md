@@ -60,7 +60,16 @@ normal y con ajuste renal = 8 filas, más las alternativas en alergia.
 
 ## Estado actual
 
-Las 19 filas incluidas corresponden a la base de **muestra** y las calculó el
-desarrollo para comprobar el mecanismo (`calculado_por` = «desarrollo
-(muestra)»). No constituyen validación clínica: deben reemplazarse por los
-cálculos del equipo clínico a medida que se verifique cada enfermedad.
+Las 321 filas incluidas cubren los dos casos tipo en todos los esquemas de la
+base en **borrador**, con función renal normal y con TFG de 40, 20 y 5 en los
+medicamentos que tienen bandas de ajuste. Las calculó el desarrollo con un segundo programa,
+independiente del motor y escrito a partir de las reglas de la guía de datos
+(`tools/verificacion_cruzada.py`, que regenera la matriz)
+(`calculado_por` = «desarrollo (verificación cruzada; falta cálculo
+clínico)»). Sirven para detectar errores del motor, pero no constituyen
+validación clínica: deben reemplazarse por los cálculos a mano del equipo
+clínico a medida que se verifique cada enfermedad.
+
+Las bandas de ajuste renal salen de fichas técnicas y del Kinderformularium,
+no de las guías clínicas, y están en borrador. Las bandas que indican «evitar»
+no tienen fila: la matriz no puede expresar ese resultado.

@@ -98,16 +98,29 @@ Una fila por banda de TFG. Solo para medicamentos con `ajuste_renal_tipo` =
 | `tfg_max` | Sí | Límite superior de la banda (excluido) |
 | `factor_dosis` | No | Fracción de la dosis por toma que se conserva: 1 = igual, 0,5 = la mitad |
 | `intervalo_minimo_horas` | No | Intervalo mínimo entre tomas en esa banda |
+| `dosis_por_kg` | No | Dosis de reemplazo por toma, por kilogramo: sustituye a la del esquema en esa banda |
+| `max_por_dosis` | No | Tope por toma propio de la banda |
 | `evitar` | No | `si` si el medicamento debe evitarse en esa banda |
 | `nota` | No | Aclaración que verá el usuario |
 
-Cómo se aplica: con una TFG dentro de la banda, la dosis por toma se multiplica
-por `factor_dosis` y el intervalo pasa a ser **el mayor** entre el del esquema
-y `intervalo_minimo_horas`. Las bandas no pueden solaparse. Una TFG que no cae
+Cómo se aplica, en este orden, con una TFG dentro de la banda:
+
+1. Si la banda trae `dosis_por_kg`, la dosis por toma pasa a ser esa dosis por
+   el peso, sea cual sea la del esquema.
+2. La dosis por toma se multiplica por `factor_dosis`.
+3. Si supera el `max_por_dosis` de la banda, se usa ese tope.
+4. El intervalo pasa a ser **el mayor** entre el del esquema y
+   `intervalo_minimo_horas`.
+
+Una banda con solo `nota` no cambia la dosis, pero muestra la nota como aviso. Las bandas no pueden solaparse. Una TFG que no cae
 en ninguna banda no recibe ajuste.
 
 Ejemplo: «TFG 10 a 29: misma dosis cada 12 h; menor de 10: cada 24 h» son dos
-filas: `10, 30, 1, 12` y `0, 10, 1, 24`.
+filas con `factor_dosis` 1 e `intervalo_minimo_horas` 12 y 24.
+
+Ejemplo con dosis de reemplazo: «TFG 10 a 30: 15 mg/kg cada 12 h, máximo 500 mg
+por toma» es una fila con `dosis_por_kg` 15, `max_por_dosis` 500 e
+`intervalo_minimo_horas` 12.
 
 ## Hoja `enfermedades`
 

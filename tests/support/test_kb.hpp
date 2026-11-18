@@ -11,6 +11,8 @@
 ///                   tableta ranurada de 500 mg.
 ///   Fármaco B (UI)  sin dato de ajuste renal. Vial divisible de 1 200 000 UI.
 ///   Fármaco C (mg)  no requiere ajuste renal. Sin presentaciones.
+///   Fármaco D (mg)  ajuste renal con dosis de reemplazo: 10–30 → 15 mg/kg por
+///                   toma (tope 500 mg), mínimo cada 12 h · <10 solo una nota.
 #pragma once
 
 #include <string>
@@ -56,6 +58,18 @@ inline const char* const kTestKbJson = R"json({
     {
       "id": "farmaco_c", "nombre": "Fármaco C", "unidad": "mg",
       "ajuste_renal": {"tipo": "no_requiere", "estado": "verificado", "fuente_id": "guia_prueba"},
+      "presentaciones": []
+    },
+    {
+      "id": "farmaco_d", "nombre": "Fármaco D", "unidad": "mg",
+      "ajuste_renal": {
+        "tipo": "por_bandas", "estado": "verificado", "fuente_id": "guia_prueba",
+        "bandas": [
+          {"tfg_min": 10, "tfg_max": 30, "dosis_por_kg": 15, "max_por_dosis": 500,
+           "intervalo_minimo_horas": 12},
+          {"tfg_min": 0, "tfg_max": 10, "nota": "Usar con precaución."}
+        ]
+      },
       "presentaciones": []
     }
   ],
@@ -152,6 +166,23 @@ inline const char* const kTestKbJson = R"json({
     {
       "id": "enfermedad_viral", "nombre": "Enfermedad viral",
       "requiere_antibiotico": false, "mensaje": "No requiere antibiótico."
+    },
+    {
+      "id": "enfermedad_renal", "nombre": "Enfermedad con dosis de reemplazo",
+      "requiere_antibiotico": true, "fuente_id": "guia_prueba",
+      "lineas": [{
+        "linea": "primera",
+        "opciones": [{
+          "numero": 1, "descripcion": "Fármaco D",
+          "componentes": [{
+            "medicamento_id": "farmaco_d", "via": "oral", "base": "mg_kg_dia",
+            "dosis": {"min": 90, "usual": 90, "max": 90},
+            "intervalo_horas": 8, "max_por_dia": 4000,
+            "fuente_id": "guia_prueba",
+            "estado": "verificado", "verificado_por": ["AB", "CD"]
+          }]
+        }]
+      }]
     }
   ]
 })json";

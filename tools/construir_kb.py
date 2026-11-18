@@ -51,7 +51,7 @@ COLUMNAS = {
     ],
     "ajuste_renal": [
         "medicamento_id", "tfg_min", "tfg_max", "factor_dosis",
-        "intervalo_minimo_horas", "evitar", "nota",
+        "intervalo_minimo_horas", "dosis_por_kg", "max_por_dosis", "evitar", "nota",
     ],
     "enfermedades": [
         "id", "nombre", "grupo", "requiere_antibiotico", "mensaje", "fuente_id",
@@ -161,6 +161,8 @@ def construir_medicamentos(carpeta: Path) -> list[dict]:
                     "tfg_max": numero(b, "tfg_max"),
                     "factor_dosis": numero(b, "factor_dosis"),
                     "intervalo_minimo_horas": numero(b, "intervalo_minimo_horas"),
+                    "dosis_por_kg": numero(b, "dosis_por_kg"),
+                    "max_por_dosis": numero(b, "max_por_dosis"),
                     "evitar": si_no(b, "evitar"),
                     "nota": b["nota"],
                 })

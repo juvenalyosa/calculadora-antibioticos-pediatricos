@@ -9,6 +9,7 @@
 #include "calc/knowledge_base.hpp"
 #include "session.hpp"
 
+class QLabel;
 class QLineEdit;
 class QTreeWidget;
 
@@ -30,8 +31,12 @@ class DiseasePage final : public QWizardPage {
   void applyFilter(const QString& text);
   /// Selección del árbol → sesión.
   void onSelectionChanged();
+  /// Muestra la ficha de la enfermedad elegida.
+  void updatePreview();
 
   Session& session_;
+  const KnowledgeBase& kb_;
+  QLabel* preview_ = nullptr;
   QLineEdit* filter_ = nullptr;
   QTreeWidget* tree_ = nullptr;
 };
