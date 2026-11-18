@@ -1,0 +1,6 @@
+# Archivos intermedios de la compilación de LaTeX
+*.log
+*.blg
+*.aux
+*.bbl
+*.out
