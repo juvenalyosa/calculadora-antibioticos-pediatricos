@@ -20,7 +20,7 @@ comprobar que arranca y encuentra su base.
 
 1. Actualizar `VERSION` en `CMakeLists.txt` y, si cambió el contenido clínico,
    `data/fuente/metadatos.json`.
-2. Crear y subir una etiqueta: `git tag v0.2.0 && git push origin v0.2.0`.
+2. Crear y subir una etiqueta: `git tag v0.3.0 && git push origin v0.3.0`.
 3. El flujo deja un **borrador** de publicación en GitHub con los instaladores.
    Revisarlo y publicarlo es una decisión manual.
 

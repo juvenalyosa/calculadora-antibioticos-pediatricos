@@ -11,7 +11,7 @@
 cmake_minimum_required(VERSION 3.21)
 
 project(CalculadoraAntibioticos
-  VERSION 0.2.0
+  VERSION 0.3.0
   DESCRIPTION "Calculadora de dosis de antibióticos pediátricos (UMNG)"
   LANGUAGES CXX)
 

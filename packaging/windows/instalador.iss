@@ -2,7 +2,7 @@
 ;
 ; Se instala para el usuario actual, sin permisos de administrador: la carpeta
 ; por defecto queda dentro de su perfil. Uso:
-;   ISCC.exe /DVersion=0.2.0 packaging\windows\instalador.iss
+;   ISCC.exe /DVersion=0.3.0 packaging\windows\instalador.iss
 ; Espera el programa ya desplegado (con las bibliotecas de Qt) en dist\.
 
 #ifndef Version
