@@ -11,6 +11,7 @@
 
 #include "calc/text.hpp"
 #include "html.hpp"
+#include "widgets/age_band.hpp"
 #include "widgets/ui.hpp"
 
 namespace calc::gui {
@@ -34,6 +35,7 @@ PatientPage::PatientPage(Session& session, QWidget* parent)
   months_->setSuffix(" meses");
   months_->setMinimumWidth(120);
   auto* age_row = new QHBoxLayout;
+  age_row->setSpacing(8);
   age_row->addWidget(years_);
   age_row->addWidget(months_);
   age_row->addStretch();
@@ -47,6 +49,7 @@ PatientPage::PatientPage(Session& session, QWidget* parent)
   weight_in_kg_ = makeHint(QString(), this);
   weight_in_kg_->setWordWrap(false);
   auto* weight_row = new QHBoxLayout;
+  weight_row->setSpacing(8);
   weight_row->addWidget(weight_);
   weight_row->addWidget(weight_unit_);
   weight_row->addWidget(weight_in_kg_);
@@ -104,24 +107,44 @@ PatientPage::PatientPage(Session& session, QWidget* parent)
   grid->addLayout(sex_row, row++, 1);
 
   messages_ = new QLabel(this);
+  messages_->setObjectName("messages");
   messages_->setWordWrap(true);
   messages_->setTextFormat(Qt::RichText);
 
   // Aviso permanente en la primera pantalla.
   auto* disclaimer = new QLabel(
-      noticeHtml(Severity::Info,
-                 "Herramienta de apoyo académico. No reemplaza el juicio clínico ni la "
-                 "verificación de la dosis antes de formular. No se guarda ningún dato que "
-                 "identifique al paciente."),
+      "Herramienta de apoyo académico. No reemplaza el juicio clínico ni la verificación de la "
+      "dosis antes de formular. No se guarda ningún dato que identifique al paciente.",
       this);
+  disclaimer->setObjectName("notice");
   disclaimer->setWordWrap(true);
-  disclaimer->setTextFormat(Qt::RichText);
 
   auto* layout = new QVBoxLayout(this);
   layout->setSpacing(10);
-  layout->addWidget(makePageHeader("Paso 1 de 4", "Paciente",
+  layout->addWidget(makePageHeader(0, "Paciente",
                                    "Ingrese la edad y el peso del paciente.", this));
-  layout->addWidget(card);
+  // A la derecha, el grupo de edad y el peso esperado: ayudan a notar a
+  // simple vista una edad o un peso mal digitados.
+  auto* age_card = makeCard(this);
+  age_card->setMinimumWidth(320);
+  auto* age_layout = new QVBoxLayout(age_card);
+  age_layout->setContentsMargins(20, 18, 20, 18);
+  age_layout->setSpacing(6);
+  auto* age_title = new QLabel("Grupo de edad", age_card);
+  age_title->setObjectName("cardTitle");
+  age_band_ = new AgeBandWidget(age_card);
+  expected_weight_ = makeHint(QString(), age_card);
+  age_layout->addWidget(age_title);
+  age_layout->addWidget(age_band_);
+  age_layout->addWidget(expected_weight_);
+  age_layout->addStretch();
+
+  auto* columns = new QHBoxLayout;
+  columns->setSpacing(12);
+  columns->addWidget(card, 3);
+  columns->addWidget(age_card, 2);
+
+  layout->addLayout(columns);
   layout->addWidget(messages_);
   layout->addStretch();
   layout->addWidget(disclaimer);
@@ -209,6 +232,17 @@ void PatientPage::refresh() {
       break;
   }
 
+  const int total_months = session_.patient.age.totalMonths();
+  age_band_->setAgeMonths(total_months);
+  if (total_months >= limits::kMinAgeMonths) {
+    expected_weight_->setText(
+        "<b>" + AgeBandWidget::bandName(total_months) + ".</b> Peso esperado para la edad: cerca de " +
+        toQString(formatNumber(expectedWeightForAge(session_.patient.age).value(), 1)) +
+        " kg (valor orientativo).");
+  } else {
+    expected_weight_->setText("La calculadora no cubre a los menores de 1 mes.");
+  }
+
   // Si la unidad no es kg, mostrar la conversión para que el usuario la vea.
   const bool show_conversion = weight_unit_->currentIndex() != kKilograms && kg > 0.0;
   weight_in_kg_->setText(show_conversion ? "= " + toQString(formatNumber(kg)) + " kg" : QString());
@@ -216,10 +250,12 @@ void PatientPage::refresh() {
   if (kg <= 0.0) {
     // Aún no se ha digitado el peso: no mostrar errores antes de tiempo.
     messages_->setText(QString());
+    messages_->setVisible(!messages_->text().isEmpty());
     complete_ = false;
   } else {
     const std::vector<Warning> warnings = validatePatient(session_.patient);
     messages_->setText(warningsHtml(warnings));
+    messages_->setVisible(!messages_->text().isEmpty());
     complete_ = !hasBlocking(warnings);
   }
   emit completeChanged();

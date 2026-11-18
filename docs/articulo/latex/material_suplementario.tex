@@ -1,0 +1,369 @@
+% Material suplementario del artículo.
+%
+% Compilar con: tectonic material_suplementario.tex
+% Las tablas de datos/*.tex se generan con docs/articulo/tabla_busqueda.py y
+% docs/articulo/tabla_incluidos.py; no editarlas a mano.
+
+\documentclass[10pt,a4paper]{article}
+
+\usepackage{fontspec}
+\setmainfont{texgyretermes}[
+  Extension = .otf, UprightFont = *-regular, BoldFont = *-bold,
+  ItalicFont = *-italic, BoldItalicFont = *-bolditalic]
+\setsansfont{texgyreheros}[
+  Extension = .otf, UprightFont = *-regular, BoldFont = *-bold,
+  ItalicFont = *-italic, BoldItalicFont = *-bolditalic]
+\usepackage[spanish,es-noshorthands,es-tabla,es-nodecimaldot]{babel}
+\usepackage{microtype}
+\usepackage[a4paper,margin=2.2cm,headheight=14pt]{geometry}
+\usepackage{booktabs,tabularx,longtable,array}
+\usepackage[font=small,labelfont=bf,labelsep=period,justification=raggedright,singlelinecheck=false]{caption}
+\usepackage{siunitx}
+\sisetup{output-decimal-marker={,}, group-separator={\,}, group-minimum-digits=4, detect-all}
+\usepackage{amsmath}
+\usepackage{xcolor}
+\definecolor{gris}{HTML}{5A6478}
+\usepackage{titlesec}
+\titleformat{\section}{\sffamily\large\bfseries}{\thesection.}{0.5em}{}
+\titlespacing*{\section}{0pt}{1.4em}{0.5em}
+\renewcommand{\thesection}{S\arabic{section}}
+\renewcommand{\thetable}{S\arabic{table}}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\sffamily\footnotesize\color{gris}Guías y calculadora de dosis de antibióticos pediátricos}
+\fancyhead[R]{\sffamily\footnotesize\color{gris}Material suplementario}
+\fancyfoot[C]{\sffamily\footnotesize\thepage}
+\renewcommand{\headrulewidth}{0.3pt}
+\usepackage[numbers,sort&compress,square]{natbib}
+\setlength{\bibsep}{1.5pt}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xurl}
+% \input no es expandible dentro de tabular; la primitiva sí.
+\makeatletter\newcommand{\insertar}[1]{\@@input #1 }\makeatother
+\newcommand{\archivo}[1]{\texttt{\small #1}}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\setlength{\emergencystretch}{2.5em}
+
+\begin{document}
+
+\begin{flushleft}
+{\sffamily\small\color{gris}Material suplementario}\\[4pt]
+{\sffamily\Large\bfseries Dosificación de antibióticos para infecciones prevalentes en la infancia en Colombia: revisión de alcance de guías de práctica clínica y verificación computacional de una calculadora de dosis\par}
+\end{flushleft}
+
+\vspace{2pt}
+\noindent Este documento amplía los métodos y resultados del artículo. Sus referencias se numeran de forma independiente.
+
+% =============================================================================
+\section{Estrategias de búsqueda}
+
+La búsqueda se ejecutó el 18 de noviembre de 2026 con un programa que registra la ecuación, la fecha y el número de resultados de cada consulta. Se usaron cuatro estrategias para cada uno de los once grupos de infecciones: PubMed con filtro de guías, PubMed con términos de Colombia y de los países latinoamericanos, OpenAlex restringido a autores de instituciones colombianas (filtro \archivo{authorships.institutions.country\_code:CO}, tipo artículo, desde 2010) y DOAJ con términos en español. LILACS y SciELO rechazaron las consultas automatizadas con un error de acceso (HTTP 403); no se intentó eludir ese bloqueo. La tabla~S1 resume los registros recuperados y a continuación se reproducen las 44 ecuaciones tal como se ejecutaron.
+
+\begin{table}[htbp]
+\centering
+\caption{Registros recuperados por grupo de infecciones y estrategia.}
+\small
+\begin{tabular}{@{}lrrrrr@{}}
+\toprule
+Grupo de infecciones & PubMed, guías & PubMed, región & OpenAlex & DOAJ & Total \\
+\midrule
+\insertar{datos/busqueda_resumen.tex}
+\bottomrule
+\end{tabular}
+\end{table}
+
+{\small
+\begin{longtable}{@{}L{2.6cm}L{1.8cm}r L{9.5cm}@{}}
+\caption*{\textbf{Ecuaciones de búsqueda.} Registros: número de registros recuperados por la consulta.}\\
+\toprule
+Grupo & Estrategia & Registros & Ecuación \\
+\midrule
+\endfirsthead
+\toprule
+Grupo & Estrategia & Registros & Ecuación \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+\insertar{datos/busqueda_ecuaciones.tex}
+\end{longtable}
+}
+% La longtable sin número igual incrementa el contador de tablas.
+\addtocounter{table}{-1}
+
+% =============================================================================
+\section{Selección y obtención de los textos}
+
+\begin{table}[htbp]
+\centering
+\caption{Motivos de exclusión en el cribado por título y resumen (E) y en la lectura a texto completo (T). Se asignó un motivo por registro.}
+\small
+\begin{tabularx}{\textwidth}{@{}lX@{}}
+\toprule
+Código & Motivo \\
+\midrule
+E1 & No es guía (estudio primario, ensayo, revisión narrativa, editorial, auditoría de adherencia) \\
+E2 & Sin contenido de tratamiento (diagnóstico, imágenes, cirugía, prevención o vacunas únicamente) \\
+E3 & Población fuera del alcance (solo adultos, solo neonatos o solo huéspedes especiales) \\
+E4 & Infección fuera del alcance \\
+E5 & Versión reemplazada por otra del mismo organismo presente entre los registros \\
+E6 & No es un documento recuperable (fe de erratas, comentario, resumen de otra guía incluida) \\
+\midrule
+T1 & Sin dosis pediátricas utilizables \\
+T2 & No es una guía al leerla completa \\
+T3 & Duplicado o resumen de otro documento incluido \\
+T4 & Población fuera del alcance \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+\caption{Obtención del texto completo de los 175 documentos que superaron el cribado, por grupo temático.}
+\small
+\begin{tabular}{@{}lrrrrr@{}}
+\toprule
+Resultado & G1 & G2 & G3 & G4 & Total \\
+\midrule
+PubMed Central & 14 & 12 & 12 & 7 & 45 \\
+Copia de acceso abierto (PDF o HTML) & 6 & 4 & 13 & 0 & 23 \\
+Acceso abierto declarado, descarga rechazada & 14 & 11 & 7 & 8 & 40 \\
+Acceso cerrado & 14 & 13 & 12 & 8 & 47 \\
+Sin identificador utilizable & 5 & 6 & 6 & 3 & 20 \\
+\midrule
+Total cribado & 53 & 46 & 50 & 26 & 175 \\
+Evaluados a texto completo\textsuperscript{a} & 26 & 17 & 25 & 9 & 77 \\
+Incluidos en la síntesis & 19 & 15 & 19 & 5 & 58 \\
+\bottomrule
+\end{tabular}
+
+\vspace{2pt}
+\begin{minipage}{0.9\textwidth}\footnotesize
+G1: vías respiratorias altas, boca y ojos. G2: vías respiratorias bajas. G3: infección urinaria, piel, parásitos, fiebre y meningitis. G4: diarrea. \textsuperscript{a}Incluye 9 documentos obtenidos del archivo del grupo de investigación; por eso no coincide con la suma de las dos primeras filas.
+\end{minipage}
+\end{table}
+
+Entre los documentos no obtenidos figuran la guía de meningitis del NICE de 2024, la guía de meningitis de la OMS de 2025, la actualización de 2026 de la guía de neumonía de IDSA/PIDS (parte 1), el consenso español de 2025 sobre el tratamiento etiológico de la gastroenteritis, la guía ESPGHAN/ESPID de 2014 sobre gastroenteritis, la guía de infección urinaria de la AAP de 2026 y la guía colombiana de enfermedad diarreica aguda publicada en 2015~\citep{florez2015}, cuyo servidor rechazó la descarga; para esta última se usó la guía del Ministerio de Salud de 2013 de la que procede~\citep{gpc8}.
+
+% =============================================================================
+\section{Documentos incluidos}
+
+{\small
+\begin{longtable}{@{}l L{7.9cm} l L{4.4cm}@{}}
+\caption{Documentos incluidos en la síntesis (n = 58), por grupo temático y año. El ámbito sigue la clasificación del diagrama de flujo.}\\
+\toprule
+Año & Organismo o autores y tema & Ámbito & DOI o PMID \\
+\midrule
+\endfirsthead
+\toprule
+Año & Organismo o autores y tema & Ámbito & DOI o PMID \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+\insertar{datos/incluidos.tex}
+\end{longtable}
+}
+
+% =============================================================================
+\section{Variabilidad de la dosis de amoxicilina}
+
+{\small
+\begin{longtable}{@{}L{3.0cm}L{6.1cm}L{3.6cm}L{2.4cm}@{}}
+\caption{Dosis diaria de amoxicilina oral recomendada, por indicación y documento.}\\
+\toprule
+Indicación & Documento & mg/kg/día & Tomas al día \\
+\midrule
+\endfirsthead
+\toprule
+Indicación & Documento & mg/kg/día & Tomas al día \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+Otitis media aguda & ACORL 2024, Colombia~\citep{acorloma2024} & 90 & 2 \\
+& AIEPI 2012, Colombia~\citep{aiepi2012} & 90 & 2 \\
+& Hospital Infantil de México 2022~\citep{mexicooma2022} & 90 & No indicado \\
+& Sociedad Chilena de Infectología 2019~\citep{chileoma2019} & 40--50 & 2 \\
+& Consenso italiano 2025~\citep{castelli2025} & 80--90 & 3 \\
+& Sociedad Italiana de Pediatría 2019~\citep{marchisio2019} & 80--90 & 3 \\
+& AAP 2013, Estados Unidos~\citep{lieberthal2013} & 80--90 & 2 \\
+& AAFP 2019, Estados Unidos~\citep{gaddey2019} & 80--90 & 2 \\
+& OMS 2022~\citep{aware2022} & 80--90 & 2 o 3 \\
+& Sakulchit y Goldman 2017, Canadá~\citep{sakulchit2017} & 45--60 o 75--90 & 3 o 2 \\
+& Guía israelí descrita por Rothman 2018~\citep{rothman2018} & 60--80 & 2 o 3 \\
+\midrule
+Neumonía de manejo ambulatorio & Guía 42, Colombia 2014~\citep{gpc42} & 90 & No indicado \\
+& AIEPI 2012, Colombia~\citep{aiepi2012} & 90 & 2 \\
+& Sociedad Chilena de Infectología 2019~\citep{chilenac2019} & 50 & 2 \\
+& Sociedad Argentina de Pediatría 2021~\citep{sapiras2021} & 80--90 & 2 o 3 \\
+& PIDS/IDSA 2011, Estados Unidos~\citep{bradley2011} & 90 & 2 \\
+& OMS 2014~\citep{who2014} & 80 & 2 \\
+& Guía finlandesa 2023, dosis habitual~\citep{backman2025} & 40--45 & 3 \\
+& Guía finlandesa 2023, dosis alta~\citep{backman2025} & 80--90 & 3 \\
+\midrule
+Rinosinusitis bacteriana & ACORL 2024, Colombia~\citep{acorlrs2024} & 80--90 & 2 o 3 \\
+& Sociedad Chilena de Infectología 2019~\citep{chilers2019} & 50 & 2 \\
+& Asociación Brasileña de Otorrinolaringología 2025~\citep{brasilrs2025} & 25--50 (90 si se sospecha resistencia) & 2 o 3 \\
+& AAP 2013, Estados Unidos~\citep{wald2013} & 45 o 80--90 & 2 \\
+\midrule
+Faringoamigdalitis estreptocócica & ACORL 2024, Colombia~\citep{acorlfaa2024} & 50 & 1 o 2 \\
+& Sociedad Chilena de Infectología 2019~\citep{chilefaa2019} & 50 & 1 o 2 \\
+& IDSA 2012, Estados Unidos~\citep{shulman2012} & 50 & 1 o 2 \\
+& Consenso italiano 2024~\citep{chiappini2024} & 50 & 2 \\
+& OMS 2022~\citep{aware2022} & 80--90 & 2 o 3 \\
+\end{longtable}
+}
+
+% =============================================================================
+\section{Integración en la base de conocimiento}
+
+\begin{table}[htbp]
+\centering
+\caption{Cambios incorporados a la base de conocimiento.}
+\footnotesize
+\begin{tabularx}{\textwidth}{@{}L{4.4cm}L{4.2cm}X@{}}
+\toprule
+Cambio & Fuente & Motivo \\
+\midrule
+Tope por medicamento y vía (28 topes, 23 medicamentos) & \citep{backman2025,bradley2011,lesaux2014,niceng111,buettcher2021,stevens2014,sappiel2014,mcdonald2018,cohen2017}; ficha técnica & La verificación mostró dosis superiores a las de un adulto en adolescentes de mayor peso cuando el esquema no tiene tope \\
+Meningitis bacteriana (nueva) & OMS 2022~\citep{aware2022}; Sociedad Canadiense de Pediatría 2014~\citep{lesaux2014} & El lineamiento colombiano es ambiguo en la dosis de ceftriaxona \\
+Neumonía complicada (nueva) & SADI 2024~\citep{sadi2024}; SAP 2021~\citep{sapiras2021} & No se encontró guía colombiana \\
+Rinosinusitis grave hospitalizada (nueva) & ACORL 2024~\citep{acorlrs2024} & Esquemas parenterales de la guía colombiana no cargados \\
+Infección grave de piel por SARM (nueva) & Guía colombiana 2023~\citep{acin2023} & Esquemas intravenosos de la guía colombiana no cargados \\
+Yersiniosis (nueva) & Guía francesa 2017~\citep{cohen2017} & Figuraba en una guía ya utilizada \\
+\emph{C. difficile}: dosis por toma y enfermedad grave & IDSA/SHEA 2017~\citep{mcdonald2018} & Dosis y topes más recientes \\
+Shigelosis: ceftriaxona (2 meses a 5 años) & AIEPI 2012~\citep{aiepi2012} & Único esquema colombiano dosificado con un medicamento registrado \\
+Faringoamigdalitis: cefadroxilo en alergia & IDSA 2012~\citep{shulman2012}; Chile 2019~\citep{chilefaa2019} & Alternativa con registro sanitario \\
+Otitis media aguda: clindamicina en alergia de tipo I & ACORL 2024~\citep{acorloma2024} la recomienda; dosis de AAP 2013~\citep{lieberthal2013} & La guía colombiana no indica la dosis \\
+Gotas de ciprofloxacina en la otitis media crónica (nota) & Guía australiana 2021~\citep{leach2021} & AIEPI no indica el número de gotas \\
+Seis medicamentos nuevos & Ampicilina-sulbactam, cefotaxima, levofloxacina, vancomicina intravenosa, linezolid, cefadroxilo & Todos con registro sanitario vigente \\
+\bottomrule
+\end{tabularx}
+
+\vspace{2pt}
+\begin{minipage}{0.95\textwidth}\footnotesize
+SARM: \emph{Staphylococcus aureus} resistente a meticilina.
+\end{minipage}
+\end{table}
+
+\paragraph{No incorporado.} La amoxicilina a 40--50~mg/kg/día de la guía chilena en otitis y sinusitis (responde a la epidemiología chilena y existe guía colombiana); las alternativas de Brasil y México para otitis y sinusitis (existe guía colombiana); la combinación de amoxicilina-clavulanato 7:1 con amoxicilina del consenso italiano de 2025 (existe guía colombiana; se registra como discrepancia); los esquemas neonatales (fuera del alcance de la calculadora); la daptomicina y la ceftarolina (dosis por tramos de edad, uso especializado y registro sanitario no verificado); el cólera (dosis única por peso con topes de adulto no comprobados); el ácido nalidíxico, la cefixima y el clioquinol (sin registro sanitario vigente o sin disponibilidad en Colombia); los esquemas periodontales (manejo odontológico especializado), y los esquemas de tos ferina de la guía china de 2024 (coinciden en lo esencial con los cargados y difieren en duración). Para daptomicina, cefazolina, oxacilina, dicloxacilina, ampicilina-sulbactam, cefdinir y gentamicina la revisión no encontró una dosis máxima con fuente.
+
+% =============================================================================
+\section{Población modelada}
+
+\begin{table}[htbp]
+\centering
+\caption{Rejilla de la población modelada.}
+\small
+\begin{tabularx}{\textwidth}{@{}lX@{}}
+\toprule
+Dimensión & Valores \\
+\midrule
+Edad & 27 edades: 1, 2, 3, 4, 6, 9, 12, 15, 18, 24, 30, 36, 48, 60, 72, 84, 96, 108, 120, 132, 144, 156, 168, 180, 192, 204 y 215 meses \\
+Sexo & Masculino y femenino \\
+Peso & Puntaje $z$ de $-3$, $-2$, 0, $+2$ y $+3$ \\
+Talla & Mediana para la edad y el sexo \\
+Función renal & No evaluada; filtración de 75, 45, 20 y 5~mL/min/1,73~m² \\
+Enfermedades & Las 46 de la base de conocimiento \\
+\midrule
+Total & $27 \times 2 \times 5 \times 5 = \num{1350}$ pacientes virtuales; peso de 2,72 a 109,82~kg \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+Hasta los 60 meses el peso procede del patrón de peso para la edad de la OMS~\citep{mgrs2006} y la talla, de la mediana de longitud o talla para la edad. Desde los 61 meses el peso se obtuvo del índice de masa corporal para la edad~\citep{deonis2007} y de la talla mediana. Las tablas de parámetros LMS son las publicadas por la OMS para ambos patrones.
+
+% =============================================================================
+\section{Conjunto de referencia}
+
+El conjunto de referencia está formado por 31 documentos reunidos por el equipo clínico del proyecto antes del estudio, sin una estrategia de búsqueda documentada. Se clasificaron por diseño y se compararon con los registros de la búsqueda mediante el solapamiento de palabras del título (tabla~S8).
+
+\begin{table}[htbp]
+\centering
+\caption{Diseño de los documentos del conjunto de referencia y su recuperación por la búsqueda.}
+\small
+\begin{tabular}{@{}lrr@{}}
+\toprule
+Diseño & Documentos & Recuperados \\
+\midrule
+Guía, consenso o recomendación de sociedad científica & 7 & 7 \\
+Revisión sistemática con metaanálisis & 5 & 0 \\
+Ensayo clínico aleatorizado & 2 & 0 \\
+Protocolo de ensayo clínico & 1 & 0 \\
+Estudio observacional o cuasiexperimental & 6 & 1 \\
+Revisión narrativa o de evidencia & 7 & 1 \\
+Serie de casos & 1 & 0 \\
+Otros (hoja informativa; desarrollo de una aplicación) & 2 & 0 \\
+\midrule
+Total & 31 & 9 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Las revisiones sistemáticas y los ensayos del conjunto de referencia no forman parte de la síntesis de guías, pero sus estimaciones son pertinentes para la duración y la elección del tratamiento. La tabla~S9 las presenta como fueron publicadas; no se combinaron porque las preguntas, poblaciones y desenlaces difieren y ninguna pregunta contaba con más de dos ensayos primarios en el conjunto. Donde el texto aportaba los conteos, la medida de efecto se recalculó (riesgo relativo con intervalo por el método logarítmico; diferencia de riesgos con intervalo de Wald). El recálculo reprodujo el riesgo relativo de retratamiento de Kuitunen (1,07; IC~95~\%: 0,74 a 1,55) y dos de las tres comparaciones de un solo estudio de Lin; en la tercera (cefdinir frente a cefalexina; 25/32 frente a 32/42) se obtuvo 1,03 (0,80 a 1,32), frente al 1,00 (0,73 a 1,38) publicado. Para Skoog Ståhlgren la diferencia de curación clínica fue de $-3{,}7$ puntos con un intervalo de Wald de $-9{,}2$ a 1,7, más estrecho que el publicado, que usa otro método.
+
+\begin{table}[htbp]
+\centering
+\caption{Estimaciones publicadas en las revisiones sistemáticas y ensayos del conjunto de referencia.}
+\scriptsize
+\begin{tabularx}{\textwidth}{@{}lXlX@{}}
+\toprule
+Estudio & Comparación y población & Estudios (participantes) & Resultado principal, como fue publicado \\
+\midrule
+Kuitunen 2023~\citep{kuitunen2023} & Curso corto (3--5 días) frente a largo (7--10 días); neumonía ambulatoria, 6 meses o más & 4 (\num{1541}) & Fracaso: 7,9~\% frente a 8,0~\%; diferencia de riesgos 0,00 (IC~95~\%: $-0{,}03$ a 0,02) \\
+Lassi 2021~\citep{lassi2021} & Amoxicilina frente a placebo; neumonía no grave con sibilancias, 2 a 59 meses & 3 (\num{3222}) & Fracaso: RR 0,80 (IC~95~\%: 0,68 a 0,94); certeza baja \\
+Hedin 2023~\citep{hedin2023} & Cefalosporinas frente a penicilina; faringitis estreptocócica & 5 (\num{2018}) & Sin resolución de síntomas: OR 0,79 (0,55 a 1,12); certeza baja \\
+Hedin 2023~\citep{hedin2023} & Macrólidos frente a penicilina; faringitis estreptocócica & 6 (\num{1728}) & Resolución de síntomas: OR 1,11 (0,92 a 1,35); certeza baja \\
+Dawit 2021~\citep{dawit2021} & Azitromicina frente a amoxicilina-clavulanato; otitis media & 14 & Eficacia al terminar: OR 0,75 (0,62 a 0,91)\textsuperscript{a} \\
+Lin 2021~\citep{lin2021} & Antibióticos orales entre sí; foliculitis y forúnculos & 18 (\num{1300}) & Sin diferencias demostradas; certeza baja o muy baja \\
+Skoog Ståhlgren 2019~\citep{skoog2019} & Penicilina V 5 frente a 10 días; faringoamigdalitis estreptocócica, 6 años o más & 1 (433) & Curación clínica 89,6~\% frente a 93,3~\% (IC~95~\% de la diferencia: $-9{,}7$ a 2,2); erradicación 80,4~\% frente a 90,7~\% \\
+Hullegie 2024~\citep{hullegie2024} & Gotas óticas frente a amoxicilina oral; otitis media con otorrea & 1 (58 de 350 previstos) & Resolución a 3 días: 42~\% frente a 65~\%; terminado antes de tiempo, no concluyente \\
+\bottomrule
+\end{tabularx}
+
+\vspace{2pt}
+\begin{minipage}{0.95\textwidth}\footnotesize
+OR: razón de momios; RR: riesgo relativo. \textsuperscript{a}El intervalo excluye el 1, pero el resumen describe el resultado como una diferencia no significativa.
+\end{minipage}
+\end{table}
+
+% =============================================================================
+\section{Archivos para reproducir los resultados}
+
+\begin{table}[htbp]
+\centering
+\caption{Archivos del repositorio que contienen los datos y generan cada cifra.}
+\small
+\begin{tabularx}{\textwidth}{@{}lX@{}}
+\toprule
+Archivo & Contenido \\
+\midrule
+\archivo{docs/revision/protocolo.md} & Protocolo de la revisión \\
+\archivo{docs/revision/buscar.py} & Búsqueda; escribe \archivo{bitacora\_busqueda.json} y \archivo{registros.csv} \\
+\archivo{docs/revision/cribado.csv} & Decisión y motivo para cada uno de los \num{1872} registros \\
+\archivo{docs/revision/recuperar.py} & Obtención de textos de acceso abierto; escribe \archivo{recuperacion.csv} \\
+\archivo{docs/revision/texto\_completo\_G*.csv} & Decisión a texto completo por documento \\
+\archivo{docs/revision/esquemas\_G*.csv} & 413 esquemas con cita textual y página \\
+\archivo{docs/revision/maximos\_G*.csv} & 111 dosis máximas con cita textual \\
+\archivo{docs/revision/integrar.py} & Aplicación de la jerarquía a la base de conocimiento \\
+\archivo{docs/revision/decisiones\_integracion.md} & Cambios incorporados y no incorporados, con su motivo \\
+\archivo{docs/revision/prisma.py} & Cifras del diagrama de flujo \\
+\archivo{docs/articulo/concordancia.py} & Razón $R$ entre guías \\
+\archivo{docs/articulo/analisis.py} & Composición de la base de conocimiento \\
+\archivo{docs/articulo/tabla\_busqueda.py} & Tabla~S1 y ecuaciones de búsqueda \\
+\archivo{docs/articulo/tabla\_incluidos.py} & Tabla~S4 \\
+\archivo{docs/validacion/oms/} & Tablas LMS de la OMS \\
+\archivo{docs/validacion/poblacion.py} & Generación de los \num{1350} pacientes virtuales \\
+\archivo{docs/validacion/verificar.py} & Comprobaciones A a E; escribe \archivo{informe.json} \\
+\archivo{tools/verificacion\_cruzada.py} & Implementación independiente (382 escenarios) \\
+\archivo{data/fuente/*.csv} & Hojas de datos de la base de conocimiento \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\bibliographystyle{vancouver-es}
+\bibliography{referencias}
+
+\end{document}

@@ -61,17 +61,41 @@ struct CappedDose {
   bool capped_by_day = false;
 };
 
+/// Topes que rigen un esquema: los suyos y, para el tipo que no tenga, el del
+/// medicamento en esa vía.
+struct EffectiveCaps {
+  std::optional<double> per_dose;
+  std::optional<double> per_day;
+  bool per_dose_from_drug = false;
+  bool per_day_from_drug = false;
+};
+
+EffectiveCaps effectiveCaps(const Regimen& regimen, const Drug& drug) noexcept {
+  EffectiveCaps caps{regimen.max_per_dose, regimen.max_per_day, false, false};
+  if (const DrugCap* cap = drug.capFor(regimen.route)) {
+    if (!caps.per_dose && cap->max_per_dose) {
+      caps.per_dose = cap->max_per_dose;
+      caps.per_dose_from_drug = true;
+    }
+    if (!caps.per_day && cap->max_per_day) {
+      caps.per_day = cap->max_per_day;
+      caps.per_day_from_drug = true;
+    }
+  }
+  return caps;
+}
+
 /// Aplica el tope por toma y luego el tope diario.
-CappedDose applyCaps(const Regimen& regimen, double per_dose) noexcept {
+CappedDose applyCaps(const Regimen& regimen, const EffectiveCaps& caps, double per_dose) noexcept {
   CappedDose capped{per_dose, false, false};
-  if (regimen.max_per_dose && exceeds(capped.per_dose, *regimen.max_per_dose)) {
-    capped.per_dose = *regimen.max_per_dose;
+  if (caps.per_dose && exceeds(capped.per_dose, *caps.per_dose)) {
+    capped.per_dose = *caps.per_dose;
     capped.capped_by_dose = true;
   }
-  if (regimen.max_per_day && regimen.interval_hours) {
+  if (caps.per_day && regimen.interval_hours) {
     const double daily = capped.per_dose * 24.0 / *regimen.interval_hours;
-    if (exceeds(daily, *regimen.max_per_day)) {
-      capped.per_dose = *regimen.max_per_day * (*regimen.interval_hours) / 24.0;
+    if (exceeds(daily, *caps.per_day)) {
+      capped.per_dose = *caps.per_day * (*regimen.interval_hours) / 24.0;
       capped.capped_by_day = true;
     }
   }
@@ -145,37 +169,50 @@ double computeBaseDose(const Regimen& regimen, const Drug& drug, double weight_k
 
 double applyCapsWithTrace(const Regimen& regimen, const Drug& drug, double per_dose,
                           RegimenResult& result) {
-  const CappedDose capped = applyCaps(regimen, per_dose);
+  const EffectiveCaps caps = effectiveCaps(regimen, drug);
+  const CappedDose capped = applyCaps(regimen, caps, per_dose);
+  const std::string from_drug = " (tope del medicamento por esta vía)";
 
   if (capped.capped_by_dose) {
     addStep(result, "Tope por toma",
             formatAmount(per_dose, drug.unit) + " supera el máximo de " +
-                formatAmount(*regimen.max_per_dose, drug.unit) + " por toma; se usa " +
-                formatAmount(*regimen.max_per_dose, drug.unit) + ".");
+                formatAmount(*caps.per_dose, drug.unit) + " por toma" +
+                (caps.per_dose_from_drug ? from_drug : std::string()) + "; se usa " +
+                formatAmount(*caps.per_dose, drug.unit) + ".");
   }
   if (capped.capped_by_day) {
-    const double uncapped_daily = (capped.capped_by_dose ? *regimen.max_per_dose : per_dose) *
-                                  24.0 / *regimen.interval_hours;
+    const double uncapped_daily = (capped.capped_by_dose ? *caps.per_dose : per_dose) * 24.0 /
+                                  *regimen.interval_hours;
     addStep(result, "Tope diario",
             formatAmount(uncapped_daily, drug.unit) + "/día supera el máximo de " +
-                formatAmount(*regimen.max_per_day, drug.unit) + "/día; se usa " +
-                formatAmount(*regimen.max_per_day, drug.unit) + "/día (" +
+                formatAmount(*caps.per_day, drug.unit) + "/día" +
+                (caps.per_day_from_drug ? from_drug : std::string()) + "; se usa " +
+                formatAmount(*caps.per_day, drug.unit) + "/día (" +
                 formatAmount(capped.per_dose, drug.unit) + " por toma).");
   }
   if (capped.capped_by_dose || capped.capped_by_day) {
     result.max_cap_applied = true;
-    addWarning(result, Severity::Info, "TOPE_MAXIMO_APLICADO",
-               "La dosis calculada por peso superaba el máximo; se aplicó el tope de la guía.");
+    const bool from_drug_cap = (capped.capped_by_dose && caps.per_dose_from_drug) ||
+                               (capped.capped_by_day && caps.per_day_from_drug);
+    if (from_drug_cap) {
+      addWarning(result, Severity::Caution, "TOPE_DEL_MEDICAMENTO_APLICADO",
+                 "La guía no fija dosis máxima para este esquema; se aplicó la dosis máxima del "
+                 "medicamento por esta vía. Verifique la dosis.");
+    } else {
+      addWarning(result, Severity::Info, "TOPE_MAXIMO_APLICADO",
+                 "La dosis calculada por peso superaba el máximo; se aplicó el tope de la guía.");
+    }
   }
 
-  // Sin tope registrado, la dosis por kilogramo crece con el peso sin límite:
-  // en un adolescente puede superar la del adulto. Se avisa siempre.
+  // Sin ningún tope, la dosis por kilogramo crece con el peso sin límite: en
+  // un adolescente puede superar la del adulto. Se avisa siempre.
   const bool weight_based =
       regimen.basis == DoseBasis::PerKgPerDay || regimen.basis == DoseBasis::PerKgPerDose;
-  if (weight_based && !regimen.max_per_dose && !regimen.max_per_day) {
+  if (weight_based && !caps.per_dose && !caps.per_day) {
     addWarning(result, Severity::Caution, "SIN_TOPE_MAXIMO",
-               "La fuente no define una dosis máxima para este esquema. En pacientes de mayor "
-               "peso la dosis por kilogramo puede superar la del adulto: verifíquela.");
+               "Ni la fuente ni la base de conocimiento definen una dosis máxima para este "
+               "esquema. En pacientes de mayor peso la dosis por kilogramo puede superar la del "
+               "adulto: verifíquela.");
   }
   return capped.per_dose;
 }
@@ -183,7 +220,8 @@ double applyCapsWithTrace(const Regimen& regimen, const Drug& drug, double per_d
 // --- Paso 3: ajuste renal ----------------------------------------------------
 
 void applyRenalAdjustment(const RenalFunction& renal, const Drug& drug, double weight_kg,
-                          double& per_dose, std::optional<int>& interval, RegimenResult& result) {
+                          double& per_dose, std::optional<int>& interval,
+                          std::optional<double>& band_max_per_dose, RegimenResult& result) {
   if (!renal.gfr) {
     return;  // Función renal no evaluada: se informa a nivel de plan.
   }
@@ -254,6 +292,8 @@ void applyRenalAdjustment(const RenalFunction& renal, const Drug& drug, double w
     adjusted_dose *= band->dose_factor;
     detail += "dosis por toma × " + formatNumber(band->dose_factor) + "; ";
   }
+  // El tope de la banda también limita el redondeo a la presentación.
+  band_max_per_dose = band->max_per_dose;
   if (band->max_per_dose && exceeds(adjusted_dose, *band->max_per_dose)) {
     adjusted_dose = *band->max_per_dose;
     detail += "tope de " + formatAmount(*band->max_per_dose, drug.unit) + " por toma; ";
@@ -285,7 +325,8 @@ void applyRenalAdjustment(const RenalFunction& renal, const Drug& drug, double w
 
 // --- Paso 4: conversión a presentación ---------------------------------------
 
-Administration administer(const Presentation& presentation, const Regimen& regimen, const Drug& drug,
+Administration administer(const Presentation& presentation, std::optional<double> max_per_dose,
+                          const Drug& drug,
                           double per_dose, RegimenResult& result) {
   Administration administration;
   administration.presentation_id = presentation.id;
@@ -298,8 +339,7 @@ Administration administer(const Presentation& presentation, const Regimen& regim
   double rounded = std::round(administration.exact_quantity / step) * step;
 
   // El redondeo hacia arriba no puede sobrepasar el tope por toma.
-  if (regimen.max_per_dose &&
-      exceeds(rounded * presentation.amount_per_unit, *regimen.max_per_dose)) {
+  if (max_per_dose && exceeds(rounded * presentation.amount_per_unit, *max_per_dose)) {
     rounded = std::floor(administration.exact_quantity / step + kRelativeTolerance) * step;
   }
 
@@ -328,11 +368,13 @@ Administration administer(const Presentation& presentation, const Regimen& regim
   return administration;
 }
 
-void computeAdministrations(const Regimen& regimen, const Drug& drug, double per_dose,
+void computeAdministrations(const Regimen& regimen, std::optional<double> max_per_dose,
+                            const Drug& drug, double per_dose,
                             RegimenResult& result) {
   for (const Presentation& presentation : drug.presentations) {
     if (presentation.route == regimen.route) {
-      result.administrations.push_back(administer(presentation, regimen, drug, per_dose, result));
+      result.administrations.push_back(
+          administer(presentation, max_per_dose, drug, per_dose, result));
     }
   }
 
@@ -404,9 +446,9 @@ RegimenResult DoseEngine::calculate(const Patient& patient, const RenalFunction&
   // Rango de la guía (mismos pasos 1 y 2 con los extremos), como referencia.
   if (regimen.dose_min != regimen.dose_max) {
     result.range_min_per_dose =
-        applyCaps(regimen, basePerDose(regimen, regimen.dose_min, weight_kg)).per_dose;
+        applyCaps(regimen, effectiveCaps(regimen, drug), basePerDose(regimen, regimen.dose_min, weight_kg)).per_dose;
     result.range_max_per_dose =
-        applyCaps(regimen, basePerDose(regimen, regimen.dose_max, weight_kg)).per_dose;
+        applyCaps(regimen, effectiveCaps(regimen, drug), basePerDose(regimen, regimen.dose_max, weight_kg)).per_dose;
     // Un tope puede igualar los dos extremos: entonces se dice una sola cifra.
     const bool capped_flat =
         std::abs(*result.range_max_per_dose - *result.range_min_per_dose) < 1e-9;
@@ -422,7 +464,8 @@ RegimenResult DoseEngine::calculate(const Patient& patient, const RenalFunction&
 
   // 3) Ajuste renal.
   std::optional<int> interval = regimen.interval_hours;
-  applyRenalAdjustment(renal, drug, weight_kg, per_dose, interval, result);
+  std::optional<double> band_max_per_dose;
+  applyRenalAdjustment(renal, drug, weight_kg, per_dose, interval, band_max_per_dose, result);
 
   result.dose_per_administration = per_dose;
   result.interval_hours = interval;
@@ -432,7 +475,11 @@ RegimenResult DoseEngine::calculate(const Patient& patient, const RenalFunction&
 
   // 4) Conversión a cada presentación compatible con la vía.
   if (!result.not_recommended) {
-    computeAdministrations(regimen, drug, per_dose, result);
+    std::optional<double> max_per_dose = effectiveCaps(regimen, drug).per_dose;
+    if (band_max_per_dose) {
+      max_per_dose = max_per_dose ? std::min(*max_per_dose, *band_max_per_dose) : band_max_per_dose;
+    }
+    computeAdministrations(regimen, max_per_dose, drug, per_dose, result);
   }
   return result;
 }

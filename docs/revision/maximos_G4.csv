@@ -1,0 +1,21 @@
+medicamento_id,via,max_por_dosis,max_por_dia,unidad,poblacion,clave,pagina,cita
+azitromicina,oral,,500,mg,pediátrica (Shigella y Campylobacter),doi:10.1016/s0929-693x(17)30515-8,Tabla 1 (p. S28),Azithromycin (oral) 20 mg/kg/day in once-daily dose (maximum 500 mg/ day)
+ciprofloxacina,oral,,1500,mg,"pediátrica (Salmonella, Shigella, Campylobacter, Yersinia)",doi:10.1016/s0929-693x(17)30515-8,Tabla 1 (p. S28),Ciprofloxacin (oral) 20 to 30 mg/kg/ day in 2 divided doses (maximum 1500 mg/day)
+ceftriaxona,iv,,2000,mg,pediátrica (Salmonella y Shigella; IV o IM),doi:10.1016/s0929-693x(17)30515-8,Tabla 1 (p. S28),Ceftriaxone (IV or IM) 50 mg/kg/day IV or IM in once daily dose (maximum 2 g/day)
+metronidazol,oral,,1500,mg,pediátrica (C. difficile),doi:10.1016/s0929-693x(17)30515-8,Tabla 1 (p. S28),Metronidazole (oral) 30 mg/kg/day in 2 divided doses (maximum 1.5 g/ day)
+doxiciclina,oral,,200,mg,"pediátrica, desde los 8 años (Yersinia)",doi:10.1016/s0929-693x(17)30515-8,Tabla 1 (p. S28),Doxycycline (oral) (after 8 years of age) 4 mg/kg in 2 divided doses (maximum 200 mg/day)
+metronidazol,oral,500,,mg,"pediátrica (C. difficile no grave, 3 o 4 dosis al día)",doi:10.1093/cid/cix1085,Tabla 2,Metronidazole × 10 days (PO) | 7.5 mg/kg/dose tid or qid | 500 mg tid or qid
+vancomicina,oral,125,,mg,pediátrica (C. difficile no grave y pauta descendente),doi:10.1093/cid/cix1085,Tabla 2,Vancomycin × 10 days (PO) | 10 mg/kg/dose qid | 125 mg qid
+vancomicina,oral,500,,mg,pediátrica (C. difficile grave o fulminante; oral o rectal),doi:10.1093/cid/cix1085,Tabla 2,Vancomycin × 10 days (PO or PR) [...] | 10 mg/kg/dose qid | 500 mg qid
+metronidazol,iv,500,,mg,"pediátrica (C. difficile grave o fulminante, junto a vancomicina)",doi:10.1093/cid/cix1085,Tabla 2,metronidazole × 10 days (IV)a | 10 mg/kg/dose tid | 500 mg tid
+rifaximina,oral,400,,mg,"columna de dosis máxima de la tabla pediátrica; sin dosis pediátrica, no aprobada en menores de 12 años (medicamento nuevo)",doi:10.1093/cid/cix1085,Tabla 2 (nota c),Vancomycin: 10 mg/kg/dose qid; rifaximin: no pediatric dosing | Vancomycin: 500 mg qid; rifaximin: 400 mg tid
+metronidazol,oral,500,,mg,"pediátrica (C. difficile no grave, cada 8 h)",doi:10.4102/sajid.v35i1.219,"Sección F, tabla 5",Metronidazole 7.5 mg/kg/dose 8 hourly (maximum dose 500 mg) orally for 10 days
+vancomicina,oral,125,,mg,pediátrica (C. difficile no grave y pauta descendente),doi:10.4102/sajid.v35i1.219,"Sección F, tabla 5",Vancomycin 10 mg/kg/dose 6 hourly (maximum dose 125 mg) orally for 10 days
+vancomicina,oral,500,,mg,pediátrica (C. difficile grave o fulminante),doi:10.4102/sajid.v35i1.219,"Sección F, tabla 5",Vancomycin 10 mg/kg/dose 6 hourly (maximum dose 500 mg) orally for 10 days
+ciprofloxacina,oral,500,,mg,pediátrica (Shigella); dato de Therapeutic Guidelines Australia 2014 citado por la revisión,doi:10.1080/20469047.2017.1409454,Tabla 4,Ciprofloxacin 500 mg (12.5 mg/kg up to 500 mg) PO bd for 5 days
+trimetoprim_sulfametoxazol,oral,160,,mg,pediátrica (Shigella); tope en trimetoprim (800 mg de sulfametoxazol); Therapeutic Guidelines Australia 2014 citado,doi:10.1080/20469047.2017.1409454,Tabla 4,TMP-SMZ 160 + 800 mg (4 + 20 mg/kg up to 160 + 800 mg) PO bd for 5 days
+azitromicina,oral,500,,mg,"pediátrica (Shigella), día 1; Therapeutic Guidelines Australia 2014 citado",doi:10.1080/20469047.2017.1409454,Tabla 4,"Azithromycin 500 mg (10 mg/kg up to 500 mg) PO on day 1, then 250 mg (5 mg/kg up to 250 mg) PO daily for a further 4 days"
+azitromicina,oral,250,,mg,"pediátrica (Shigella), días 2 a 5; Therapeutic Guidelines Australia 2014 citado",doi:10.1080/20469047.2017.1409454,Tabla 4,then 250 mg (5 mg/kg up to 250 mg) PO daily for a further 4 days
+norfloxacina,oral,400,,mg,pediátrica (Shigella); Therapeutic Guidelines Australia 2014 y BMJ Clinical Evidence 2016 citados (medicamento nuevo),doi:10.1080/20469047.2017.1409454,Tabla 4,Norfloxacin 400 mg (10 mg/kg up to 400 mg) PO bd for 5 days
+ciprofloxacina,oral,500,,mg,pediátrica (Shigella); BMJ Clinical Evidence 2016 citado,doi:10.1080/20469047.2017.1409454,Tabla 4,Ciprofloxacin: 15 mg/kg (max 500 mg) PO bd
+ceftriaxona,im,,2000,mg,adultos (Shigella; 1-2 g IM una vez al día); BMJ Clinical Evidence 2016 citado,doi:10.1080/20469047.2017.1409454,Tabla 4,Ceftriaxone: 50–100 mg/kg IM once daily (adults: 1–2 g intramuscularly once daily)

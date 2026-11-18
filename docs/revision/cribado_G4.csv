@@ -1,0 +1,458 @@
+clave,decision,motivo,ambito,tipo_documento,infeccion,nota
+titulo:agudaprolongadaypersistenteenniosysudiferenciadeladiarreacrnica,excluir,E1,,otro,"diarrea aguda, prolongada y persistente",revisión narrativa (Medisan); registro sin año
+doi:10.1093/pch/15.8.519,excluir,E2,,guia,rotavirus (vacunación),posición de la Canadian Paediatric Society sobre vacuna; solo prevención
+doi:10.4161/gmic.1.6.13610,excluir,E2,,consenso,probióticos,consenso sobre ciencia de probióticos; sin antimicrobianos
+doi:10.1016/j.crohns.2010.07.004,excluir,E4,,consenso,enfermedad inflamatoria intestinal,consenso sobre EII; fuera de alcance
+doi:10.1016/j.crohns.2009.12.001,excluir,E4,,consenso,enfermedad inflamatoria intestinal,consenso sobre EII; fuera de alcance
+doi:10.1016/j.crohns.2009.09.009,excluir,E4,,consenso,enfermedad inflamatoria intestinal,consenso sobre EII; fuera de alcance
+doi:10.1016/j.crohns.2009.12.002,excluir,E4,,consenso,enfermedad inflamatoria intestinal,consenso sobre EII; fuera de alcance
+doi:10.1016/j.crohns.2009.12.003,excluir,E4,,consenso,enfermedad inflamatoria intestinal,consenso sobre EII; fuera de alcance
+doi:10.1093/tropej/fmq110,excluir,E4,,revision de guias,enterocolitis necrosante,revisión de evidencia para guía OMS sobre antibióticos en ECN del lactante pequeño; fuera de alcance
+pmid:20879699,excluir,E4,,guia,dolor abdominal (adultos),criterios ACR de imagen; fuera de alcance
+doi:10.1136/ebm1073,excluir,E6,,otro,diarrea aguda / gastroenteritis,comentario (Evid Based Med) sobre un ensayo de adherencia a guías
+pmid:20499455,excluir,E4,,consenso,síntomas gastrointestinales en autismo,fuera de alcance
+doi:10.1515/jpm.2010.064,excluir,E4,,guia,nutrición neonatal,guía de nutrición en neonatos/prematuros; fuera de alcance
+doi:10.1097/mcg.0b013e3181d47f5b,excluir,E1,,otro,probióticos,encuesta de opinión de médicos
+doi:10.1016/j.anpedi.2009.11.010,excluir,E5,,guia,diarrea aguda / gastroenteritis,guía Ibero-Latinoamericana 2010 de GEA; sustituida por la versión 2014 del mismo grupo: doi:10.1016/s1695-4033(14)75260-9; resumen consultado
+doi:10.1016/j.annemergmed.2009.10.004,excluir,E4,,guia,apendicitis,guía sobre apendicitis; fuera de alcance
+doi:10.1097/mpg.0b013e3181c92c53,excluir,E4,,guia,enfermedad inflamatoria intestinal,guía/recomendaciones sobre EII; fuera de alcance
+doi:10.2147/ceg.s6554,excluir,E1,,otro,diarrea aguda / gastroenteritis,revisión narrativa; resumen consultado
+doi:10.1016/j.jpeds.2009.07.065,excluir,E1,,otro,diarrea aguda / gastroenteritis,ensayo/estudio de intervención sobre aplicación o adherencia a guías
+doi:10.1016/j.virol.2009.12.016,excluir,E1,,otro,rotavirus y otros virus entéricos,estudio primario o revisión no vinculada a tratamiento
+doi:10.1139/w10-042,excluir,E1,,otro,astrovirus porcino,estudio de genómica
+doi:10.1089/vim.2009.0113,excluir,E1,,otro,rotavirus y otros virus entéricos,estudio primario o revisión no vinculada a tratamiento
+titulo:bacterialpathogensassociatedwithbloodydiarrheainuruguayanchildrenpatgenosbacteri,excluir,E1,,otro,diarrea bacteriana (etiología),"estudio primario de etiología, epidemiología o resistencia"
+pmid:22201080,excluir,E1,,otro,diarrea aguda / gastroenteritis,encuesta de adherencia a recomendaciones OMS (Georgia); resumen consultado
+doi:10.1186/1471-2296-12-134,incluir,,internacional (revisión de 8 guías internacionales; autores de Países Bajos),revision de guias,diarrea aguda / gastroenteritis,dudoso: revisión sistemática de guías de GEA pediátrica centrada en calidad y aplicabilidad; contenido sobre antibióticos incierto; resumen consultado
+pmid:22086321,incluir,,Latinoamerica (Perú; organismo emisor por confirmar),guia,diarrea aguda / gastroenteritis,GPC peruana 2011 de diarrea aguda infecciosa pediátrica; incluye antibióticos; resumen consultado
+doi:10.1097/mcg.0b013e318230928b,excluir,E2,,consenso,probióticos,recomendaciones de uso de probióticos; sin antimicrobianos
+doi:10.1016/j.ejim.2011.06.005,excluir,E1,,otro,diarrea infecciosa en adultos,estudio retrospectivo de etiología y sensibilidad (>14 años); resumen consultado
+doi:10.1002/ibd.21576,excluir,E4,,guia,enfermedad inflamatoria intestinal,guía/recomendaciones sobre EII; fuera de alcance
+doi:10.1007/s10156-010-0155-4,excluir,E4,,guia,enterocolitis necrosante / neonatos,guía sobre ECN o prematuros; fuera de alcance
+doi:10.1097/mpg.0b013e31821988a3,excluir,E4,,guia,enfermedad inflamatoria intestinal,guía/recomendaciones sobre EII; fuera de alcance
+pmid:21675449,excluir,E1,,otro,cáncer de nasofaringe,estudio de evaluación de guía
+doi:10.1186/1471-2458-11-462,excluir,E1,,otro,rotavirus (vacunación),estudio de costo-efectividad o impacto de vacunación
+doi:10.3109/00365521.2011.574734,excluir,E1,,otro,enfermedad inflamatoria intestinal,"estudio primario, auditoría o revisión narrativa"
+doi:10.1016/j.jaci.2011.02.040,excluir,E4,,consenso,esofagitis eosinofílica,consenso sobre esofagitis eosinofílica; fuera de alcance
+doi:10.1136/gut.2010.224154,excluir,E4,,guia,enfermedad inflamatoria intestinal,guía/recomendaciones sobre EII; fuera de alcance
+pmid:21368741,excluir,E2,,guia,norovirus (brotes),guía CDC de manejo de brotes y prevención; sin tratamiento antimicrobiano; resumen consultado
+doi:10.1038/ajg.2011.10,excluir,E1,,otro,esofagitis eosinofílica / esófago,estudio primario o revisión narrativa
+doi:10.1186/1471-2334-11-32,excluir,E1,,otro,diarrea aguda / gastroenteritis,auditoría de adherencia a guías
+doi:10.1038/ajg.2010.481,excluir,E4,,consenso,enfermedad inflamatoria intestinal,consenso sobre EII; fuera de alcance
+doi:10.1038/ajg.2010.464,excluir,E4,,consenso,enfermedad inflamatoria intestinal,consenso sobre EII; fuera de alcance
+doi:10.1097/mpg.0b013e3181e233ac,incluir,,internacional (revisión de 9 guías; autores de Italia/EE. UU.),revision de guias,diarrea aguda / gastroenteritis,"dudoso: evaluación AGREE de guías de GEA pediátrica; señala diferencias de tratamiento, contenido sobre antibióticos incierto; resumen consultado"
+doi:10.1111/j.1537-2995.2010.02823.x,excluir,E1,,otro,enterocolitis necrosante / neonatología,estudio primario o revisión narrativa
+doi:10.2143/acb.66.3.2062545,excluir,E1,,otro,diarrea bacteriana (etiología),"estudio primario de etiología, epidemiología o resistencia"
+doi:10.1016/s1413-8670(11)70158-1,excluir,E1,,otro,diarrea bacteriana (etiología),"estudio primario de etiología, epidemiología o resistencia"
+doi:10.1002/14651858.cd007683.pub2,excluir,E1,,otro,dolor abdominal bajo en mujeres,revisión Cochrane sobre laparoscopia
+titulo:pancreatitisennios,excluir,E1,,otro,otro,"artículo no relacionado con guías de diarrea infecciosa (caso, revisión o estudio primario)"
+doi:10.7705/biomedica.v31i0.504,excluir,E1,,otro,parásitos intestinales,estudio primario o resumen de congreso
+doi:10.7705/biomedica.v31i0.478,excluir,E1,,otro,parásitos intestinales,estudio primario o resumen de congreso
+pmid:22866342,incluir,,Latinoamerica (Perú; organismo emisor por confirmar),guia,diarrea aguda / gastroenteritis,"dudoso: segunda publicación (2012, 6 pág.) de la GPC peruana 2011; posible versión abreviada o duplicado de pmid:22086321; sin resumen en PubMed; resumen consultado"
+doi:10.1111/j.1553-2712.2012.01402.x,excluir,E1,,otro,apendicitis / infección intraabdominal,"estudio primario, auditoría o revisión"
+doi:10.7205/milmed-d-12-00032,incluir,,"internacional (EE. UU.; pediatras militares, Walter Reed)",otro,diarrea aguda / gastroenteritis,dudoso: revisión con recomendaciones de manejo de diarrea en operaciones médicas humanitarias; sin sociedad emisora evidente; resumen consultado
+doi:10.1097/mpg.0b013e3182662233,excluir,E4,,guia,enfermedad inflamatoria intestinal,guía/recomendaciones sobre EII; fuera de alcance
+doi:10.1177/0148607112449651,excluir,E4,,guia,enterocolitis necrosante / neonatos,guía sobre ECN o prematuros; fuera de alcance
+doi:10.1002/ibd.21859,excluir,E1,,otro,enfermedad inflamatoria intestinal,"estudio primario, auditoría o revisión narrativa"
+doi:10.1097/mpg.0b013e31825959b8,excluir,E4,,guia,enfermedad inflamatoria intestinal,guía/recomendaciones sobre EII; fuera de alcance
+doi:10.7196/samj.5243,incluir,,"internacional (Paediatric Management Group, Sudáfrica)",guia,diarrea aguda / gastroenteritis,guía sudafricana de GEA en lactantes; contenido sobre antibióticos por verificar en texto completo; resumen consultado
+doi:10.1097/mpg.0b013e318235b397,excluir,E4,,guia,enfermedad inflamatoria intestinal,guía/recomendaciones sobre EII; fuera de alcance
+doi:10.1002/ibd.21668,excluir,E1,,otro,enfermedad inflamatoria intestinal,"estudio primario, auditoría o revisión narrativa"
+doi:10.1111/j.1445-5994.2010.02328.x,excluir,E1,,otro,enfermedad inflamatoria intestinal,"estudio primario, auditoría o revisión narrativa"
+doi:10.1016/j.anaerobe.2012.10.002,excluir,E1,,otro,Clostridioides difficile,reporte de caso
+titulo:frecuenciaderotavirusenniosmenoresdecincoaoscondiarreaagudaprimerinformeestudioe,excluir,E1,,otro,rotavirus y otros virus entéricos,estudio primario o revisión no vinculada a tratamiento
+titulo:diarreadeorigenbacterianoescherichiacoliyersiniaenterocoliticacapilobacterjejuni,excluir,E1,,otro,diarrea bacteriana,revisión narrativa / memorias
+doi:10.1136/jclinpath-2013-201885,excluir,E4,,guia,enfermedad inflamatoria intestinal,guía/recomendaciones sobre EII; fuera de alcance
+doi:10.1007/s00103-013-1777-3,excluir,E2,,guia,rotavirus (vacunación),recomendación de vacunación; solo prevención
+doi:10.1016/j.pedneo.2013.03.019,excluir,E2,,guia,rotavirus (vacunación),recomendación de vacunación; solo prevención
+doi:10.1097/mpg.0b013e31828dc35d,excluir,E2,,guia,rotavirus (vacunación),recomendación de vacunación; solo prevención
+doi:10.1097/pec.0b013e31828e5718,excluir,E1,,otro,apendicitis / infección intraabdominal,"estudio primario, auditoría o revisión"
+doi:10.1111/1552-6909.12032,excluir,E4,,consenso,enterocolitis necrosante,consenso sobre ECN neonatal; fuera de alcance
+doi:10.1038/ajg.2013.71,excluir,E4,,guia,esofagitis eosinofílica,guía sobre esofagitis eosinofílica; fuera de alcance
+doi:10.1016/j.jpeds.2012.11.054,excluir,E4,,consenso,inmunonutrientes en prematuros,consenso sobre inmunonutrientes; fuera de alcance; resumen consultado
+doi:10.1186/1471-2334-13-54,excluir,E1,,otro,rotavirus (vacunación),estudio de costo-efectividad o impacto de vacunación
+doi:10.1097/mcg.0b013e31826df662,incluir,,internacional (World Gastroenterology Organisation),guia,diarrea aguda / gastroenteritis,guía global WGO de diarrea aguda en adultos y niños; sin resumen en PubMed; resumen consultado
+doi:10.1111/apt.12102,excluir,E4,,guia,enfermedad inflamatoria intestinal,guía/recomendaciones sobre EII; fuera de alcance
+doi:10.1016/j.puhe.2012.09.009,excluir,E1,,otro,diarrea aguda / gastroenteritis,encuesta de conocimiento de padres
+doi:10.4161/hv.25610,excluir,E1,,otro,rotavirus y otros virus entéricos,estudio primario o revisión no vinculada a tratamiento
+titulo:estadonutricionalporantropometradeniosniasyadolescentesentre2y18aosperteneciente,excluir,E1,,otro,otro,"artículo no relacionado con guías de diarrea infecciosa (caso, revisión o estudio primario)"
+doi:10.1016/j.eimc.2013.07.016,excluir,E1,,otro,parásitos intestinales,estudio primario o resumen de congreso
+titulo:crypstosporidiumsppusualoemergente,excluir,E1,,otro,parásitos intestinales,estudio primario o resumen de congreso
+doi:10.1128/microbiolspec.aid-0011-2013,excluir,E1,,otro,rotavirus y otros virus entéricos,estudio primario o revisión no vinculada a tratamiento
+doi:10.1159/000369587,excluir,E1,,otro,apendicitis / infección intraabdominal,"estudio primario, auditoría o revisión"
+pmid:25509205,excluir,E4,,guia,enfermedad inflamatoria intestinal,guía/recomendaciones sobre EII; fuera de alcance
+pmid:25340226,excluir,E4,,guia,alergia a fármacos,"guía NICE de alergia a fármacos; registro sin título, identificado por PMID; fuera de alcance; resumen consultado"
+doi:10.1016/j.anpedi.2014.06.020,excluir,E4,,guia,enterocolitis necrosante / neonatos,guía sobre ECN o prematuros; fuera de alcance
+doi:10.1177/15648265140352s111,excluir,E1,,otro,choque en desnutrición grave,revisión narrativa sobre fluidos; resumen consultado
+doi:10.1016/j.crohns.2014.04.005,excluir,E4,,guia,enfermedad inflamatoria intestinal,guía/recomendaciones sobre EII; fuera de alcance
+doi:10.1097/inf.0000000000000396,excluir,E1,,otro,diarrea aguda / gastroenteritis,auditoría de adherencia a guías
+doi:10.1136/archdischild-2013-305512,excluir,E4,,otro,enfermedad inflamatoria intestinal,reseña de guía NICE de colitis ulcerosa; fuera de alcance
+doi:10.1016/j.humpath.2013.12.013,excluir,E1,,otro,esofagitis eosinofílica / esófago,estudio primario o revisión narrativa
+doi:10.1097/mpg.0000000000000375,incluir,,"internacional (ESPGHAN/ESPID, Europa)",guia,diarrea aguda / gastroenteritis,"guía europea de GEA en niños, actualización 2014; incluye indicaciones de antibióticos"
+doi:10.1016/s1695-4033(14)75260-9,incluir,,"Latinoamerica (grupo Ibero-Latinoamericano, SLAGHNP)",guia,diarrea aguda / gastroenteritis,capítulo de tratamiento farmacológico de la GPC Ibero-Latinoamericana 2014 (<5 años); sin resumen en PubMed; resumen consultado
+doi:10.1016/s1695-4033(14)75259-2,excluir,E2,,guia,diarrea aguda / gastroenteritis,capítulo de hidratación y nutrición de la GPC Ibero-Latinoamericana 2014; el tratamiento farmacológico está en doi:10.1016/s1695-4033(14)75260-9; sin resumen en PubMed; resumen consultado
+doi:10.1016/s1695-4033(14)75258-0,excluir,E2,,guia,diarrea aguda / gastroenteritis,capítulo de criterios diagnósticos y de atención de la GPC Ibero-Latinoamericana 2014; el tratamiento farmacológico está en doi:10.1016/s1695-4033(14)75260-9; sin resumen en PubMed; resumen consultado
+doi:10.1097/anc.0000000000000043,excluir,E4,,guia,enterocolitis necrosante / neonatos,guía sobre ECN o prematuros; fuera de alcance
+doi:10.1097/mpg.0000000000000320,excluir,E2,,consenso,probióticos en gastroenteritis aguda,posición ESPGHAN solo sobre probióticos; resumen consultado
+doi:10.1016/j.crohns.2013.12.013,excluir,E3,,consenso,infecciones oportunistas en EII (incl. C. difficile),huéspedes especiales: pacientes con EII
+doi:10.1177/0884533614522834,excluir,E1,,otro,enterocolitis necrosante / neonatología,estudio primario o revisión narrativa
+doi:10.1586/17474086.2014.878225,excluir,E1,,otro,enterocolitis necrosante / neonatología,estudio primario o revisión narrativa
+doi:10.1007/s00428-014-1543-4,excluir,E4,,guia,enfermedad inflamatoria intestinal,guía/recomendaciones sobre EII; fuera de alcance
+doi:10.1053/j.gastro.2014.01.042,excluir,E4,,consenso,enfermedad inflamatoria intestinal,consenso sobre EII; fuera de alcance
+doi:10.1097/mpg.0b013e3182a80be1,excluir,E4,,guia,esofagitis eosinofílica,guía sobre esofagitis eosinofílica; fuera de alcance
+doi:10.1097/mpg.0000000000000239,excluir,E4,,consenso,enfermedad inflamatoria intestinal,consenso sobre EII; fuera de alcance
+doi:10.1016/j.crohns.2013.10.006,excluir,E1,,otro,enfermedad inflamatoria intestinal,"estudio primario, auditoría o revisión narrativa"
+doi:10.1016/j.ienj.2013.09.004,excluir,E1,,otro,diarrea aguda / gastroenteritis,estudio antes-después de guía de rehidratación
+doi:10.1002/phar.1489,excluir,E1,,otro,rotavirus,reporte de casos
+doi:10.1590/s0120-41572014000500018,excluir,E1,,otro,Helicobacter pylori,estudio primario
+doi:10.1002/14651858.cd007683.pub3,excluir,E1,,otro,dolor abdominal bajo en mujeres,revisión Cochrane sobre laparoscopia
+doi:10.1016/s1695-4033(14)75257-9,excluir,E2,,guia,diarrea aguda / gastroenteritis,"capítulo de enfoque, alcance y diseño (metodología) de la GPC Ibero-Latinoamericana 2014; el tratamiento farmacológico está en doi:10.1016/s1695-4033(14)75260-9; sin resumen en PubMed; resumen consultado"
+doi:10.19053/19092407.2970,excluir,E1,,otro,rotavirus y otros virus entéricos,estudio primario o revisión no vinculada a tratamiento
+titulo:prevalenciadesalmonellasppenniosdejardinesinfantilesdeunalocalidaddebogotcolombi,excluir,E1,,otro,Salmonella,estudio primario de prevalencia o genómica
+doi:10.24267/23897325.119,excluir,E1,,otro,rotavirus y otros virus entéricos,estudio primario o revisión no vinculada a tratamiento
+titulo:incidenceandriskfactorsassociatedwithacutediarrhealdiseasebyrotavirussantamarta2,excluir,E1,,otro,rotavirus y otros virus entéricos,estudio primario o revisión no vinculada a tratamiento
+doi:10.7416/ai.2015.2076,excluir,E2,,consenso,rotavirus (vacunación),consenso/posición sobre vacunación; solo prevención
+doi:10.17235/reed.2015.3921/2015,excluir,E4,,consenso,cápsula endoscópica,fuera de alcance
+doi:10.1097/mcg.0000000000000420,excluir,E2,,consenso,probióticos,recomendaciones de uso de probióticos; sin antimicrobianos
+doi:10.1097/mpg.0000000000000903,excluir,E4,,consenso,enfermedad inflamatoria intestinal,documento de posición sobre EII; fuera de alcance
+doi:10.1371/journal.pone.0132213,excluir,E1,,otro,diarrea aguda / gastroenteritis,ensayo/estudio de intervención sobre aplicación o adherencia a guías
+doi:10.1016/j.dld.2015.04.002,excluir,E4,,consenso,transición de cuidado en EII / gastroenterología,transición pediatría-adulto; fuera de alcance
+doi:10.1097/mib.0000000000000419,excluir,E1,,otro,enfermedad inflamatoria intestinal,"estudio primario, auditoría o revisión narrativa"
+doi:10.1136/archdischild-2014-307253,excluir,E6,,otro,diarrea aguda / gastroenteritis,"reseña/resumen de la guía ESPGHAN/ESPID 2014, ya incluida: doi:10.1097/mpg.0000000000000375; sin resumen en PubMed; resumen consultado"
+doi:10.1007/s40272-015-0124-6,excluir,E2,,consenso,probióticos,recomendaciones de expertos latinoamericanos solo sobre probióticos; resumen consultado
+doi:10.1016/j.jpedsurg.2015.02.040,excluir,E1,,otro,apendicitis / infección intraabdominal,"estudio primario, auditoría o revisión"
+doi:10.1016/j.dld.2015.01.156,excluir,E1,,otro,enfermedad inflamatoria intestinal,"estudio primario, auditoría o revisión narrativa"
+doi:10.1016/j.vaccine.2014.11.048,excluir,E2,,consenso,Shigella / ETEC (vacunas),recomendaciones para desarrollo de vacunas; solo prevención
+doi:10.1016/j.gastrohep.2014.10.002,excluir,E4,,guia,enfermedad inflamatoria intestinal,guía/recomendaciones sobre EII; fuera de alcance
+doi:10.1093/cid/ciu936,excluir,E2,,consenso,Clostridioides difficile en <2 años,panel de expertos sobre necesidad de ensayos (plan de investigación pediátrica); no fija pauta terapéutica; resumen consultado
+doi:10.1007/5584_2014_39,excluir,E1,,otro,enterocolitis necrosante / neonatología,estudio primario o revisión narrativa
+doi:10.1038/jp.2014.171,excluir,E1,,otro,enterocolitis necrosante / neonatología,estudio primario o revisión narrativa
+doi:10.7705/biomedica.v35i3.2622,excluir,E1,,otro,shigelosis,estudio de vigilancia o epidemiología molecular
+doi:10.1016/s1473-3099(15)00002-x,excluir,E1,,otro,shigelosis,estudio de vigilancia o epidemiología molecular
+doi:10.1097/mpg.0000000000000638,excluir,E1,,otro,diarrea aguda / gastroenteritis,evaluación económica (Colombia)
+doi:10.1016/j.rcpe.2015.07.005,incluir,,Colombia (GPC nacional de EDA en <5 años; publicada en la revista Pediatría),guia,diarrea aguda / gastroenteritis,"GPC colombiana de enfermedad diarreica aguda en menores de 5 años, diagnóstico y tratamiento; sin PMID, decidido por título"
+doi:10.1016/j.vhri.2014.11.001,excluir,E1,,otro,diarrea aguda / gastroenteritis,evaluación económica (Colombia)
+doi:10.22267/rus.151702.5,excluir,E1,,otro,diarrea aguda / gastroenteritis (epidemiología y prácticas),"estudio primario, epidemiológico o de prácticas; no es guía"
+titulo:patotiposdiarreagnicosemergentesdeescherichiacoliencolombia,excluir,E1,,otro,diarrea bacteriana (etiología),"estudio primario de etiología, epidemiología o resistencia"
+doi:10.22463/17948231.461,excluir,E1,,otro,diarrea aguda / gastroenteritis (epidemiología y prácticas),"estudio primario, epidemiológico o de prácticas; no es guía"
+doi:10.1016/j.pedhc.2016.04.012,incluir,,"internacional (EE. UU.; autores, J Pediatr Health Care)",guia,diarrea aguda / gastroenteritis,dudoso: GPC ambulatoria de GEA centrada en rehidratación y ondansetrón; sin sociedad emisora evidente; contenido sobre antibióticos incierto; resumen consultado
+doi:10.1016/j.autrev.2016.07.014,excluir,E4,,otro,enfermedades reumáticas en embarazo,revisión crítica de recomendaciones; fuera de alcance
+doi:10.1159/000445284,excluir,E1,,otro,enterocolitis necrosante / neonatología,estudio primario o revisión narrativa
+doi:10.1111/apa.13432,incluir,,internacional (grupo internacional de expertos),consenso,diarrea aguda / gastroenteritis,dudoso: consenso con algoritmo de manejo de diarrea del lactante basado en ESPGHAN/ESPID; contenido sobre antibióticos incierto; resumen consultado
+doi:10.1111/imj.13027,excluir,E5,,guia,Clostridioides difficile,guía ASID 2016; sustituida por la versión 2025: doi:10.1111/imj.16638; resumen consultado
+doi:10.1001/jamasurg.2016.0193,excluir,E6,,otro,apendicitis,comentario editorial
+doi:10.1097/mpg.0000000000001188,excluir,E4,,guia,infecciones en EII con anti-TNF,vigilancia y prevención de infecciones en EII pediátrica; fuera de alcance
+doi:10.1001/jamasurg.2016.0194,excluir,E1,,otro,apendicitis / infección intraabdominal,"estudio primario, auditoría o revisión"
+doi:10.1016/j.clp.2015.11.009,excluir,E1,,otro,enterocolitis necrosante / neonatología,estudio primario o revisión narrativa
+doi:10.1097/mpg.0000000000001133,incluir,,internacional (revisión de 15 guías; grupo FISPGHAN),revision de guias,diarrea aguda / gastroenteritis,revisión sistemática que compara recomendaciones de GPC de GEA pediátrica; el uso rutinario de antibióticos se desaconseja; resumen consultado
+doi:10.1093/jpids/piv037,excluir,E1,,otro,shigelosis,estudio de desempeño de guías sindrómicas (Kenia)
+doi:10.15446/rsap.v18n2.42186,excluir,E1,,otro,diarrea aguda / gastroenteritis (epidemiología y prácticas),"estudio primario, epidemiológico o de prácticas; no es guía"
+doi:10.18359/rmed.2642,excluir,E1,,otro,diarrea aguda / gastroenteritis,evaluación económica (Colombia)
+doi:10.20320/rfcsudes.v3i1.s1.p012,excluir,E1,,otro,rotavirus y otros virus entéricos,estudio primario o revisión no vinculada a tratamiento
+doi:10.21615/cesmedicina.30.1.4,excluir,E1,,otro,otro,"artículo no relacionado con guías de diarrea infecciosa (caso, revisión o estudio primario)"
+doi:10.1016/j.acci.2016.10.003,excluir,E1,,otro,otro,"artículo no relacionado con guías de diarrea infecciosa (caso, revisión o estudio primario)"
+doi:10.17533/udea.rfnsp.26563,excluir,E1,,otro,rotavirus (vacunación),estudio de costo-efectividad o impacto de vacunación
+doi:10.17533/udea.iatreia.v29n4a13,excluir,E1,,otro,otro,"artículo no relacionado con guías de diarrea infecciosa (caso, revisión o estudio primario)"
+doi:10.1093/pch/pxx072,excluir,E2,,guia,rotavirus (vacunación),posición de la Canadian Paediatric Society sobre vacuna; solo prevención
+doi:10.1007/s12664-017-0804-y,excluir,E4,,consenso,enfermedad inflamatoria intestinal,documento de posición sobre EII; fuera de alcance
+doi:10.1016/s0929-693x(17)30515-8,incluir,,"internacional (GPIP/Sociedad Francesa de Pediatría, Francia)",guia,"diarrea aguda bacteriana (Shigella, Campylobacter, Salmonella, cólera)",guía francesa de tratamiento antimicrobiano de diarrea/GEA en niños; resumen consultado
+doi:10.3748/wjg.v23.i45.7952,excluir,E2,,consenso,probióticos,recomendaciones Asia-Pacífico solo sobre probióticos
+doi:10.1093/jac/dkx268,excluir,E1,,otro,shigelosis,estudio transversal de sensibilidad antimicrobiana; resumen consultado
+doi:10.1097/mpg.0000000000001574,excluir,E1,,otro,esofagitis eosinofílica / esófago,estudio primario o revisión narrativa
+doi:10.1007/s10096-017-3018-4,excluir,E1,,otro,Clostridioides difficile,estudio de adherencia a guías
+doi:10.1111/jpc.13585,incluir,,internacional (Australia/Nueva Zelanda; autores),otro,Salmonella no tifoidea,"dudoso: revisión con recomendaciones de tratamiento de autores, sin sociedad emisora evidente; única fuente específica de Salmonella no tifoidea; resumen consultado"
+doi:10.1097/spc.0000000000000264,excluir,E4,,otro,efectos gastrointestinales en oncología pediátrica,revisión de guías de soporte oncológico; fuera de alcance
+doi:10.1016/j.rgmx.2016.07.005,excluir,E4,,consenso,enfermedad inflamatoria intestinal,consenso sobre EII; fuera de alcance
+doi:10.1016/j.jaip.2016.12.026,excluir,E4,,guia,esofagitis eosinofílica,guía sobre esofagitis eosinofílica; fuera de alcance
+doi:10.1097/mpg.0000000000001562,excluir,E4,,guia,enfermedad inflamatoria intestinal,guía/recomendaciones sobre EII; fuera de alcance
+doi:10.1093/ecco-jcc/jjx010,excluir,E4,,consenso,transición de cuidado en EII / gastroenterología,transición pediatría-adulto; fuera de alcance
+doi:10.1007/s00383-017-4065-8,excluir,E4,,guia,enterocolitis asociada a Hirschsprung,fuera de alcance
+doi:10.1016/j.clnu.2016.12.027,excluir,E4,,guia,enfermedad inflamatoria intestinal,guía/recomendaciones sobre EII; fuera de alcance
+doi:10.1016/j.earlhumdev.2016.12.002,excluir,E4,,guia,enterocolitis necrosante / neonatos,guía sobre ECN o prematuros; fuera de alcance
+doi:10.1080/00365521.2017.1278785,excluir,E1,,otro,enfermedad inflamatoria intestinal,"estudio primario, auditoría o revisión narrativa"
+doi:10.1016/j.rgmx.2016.08.004,excluir,E2,,consenso,probióticos,consenso mexicano solo sobre probióticos
+doi:10.1089/sur.2016.163,excluir,E1,,otro,enterocolitis necrosante / neonatología,estudio primario o revisión narrativa
+doi:10.1016/j.jpedsurg.2016.11.024,excluir,E1,,otro,enterocolitis necrosante / neonatología,estudio primario o revisión narrativa
+doi:10.1016/j.gie.2016.11.013,excluir,E1,,otro,enfermedad inflamatoria intestinal,"estudio primario, auditoría o revisión narrativa"
+doi:10.1053/j.semperi.2016.09.013,excluir,E1,,otro,enterocolitis necrosante / neonatología,estudio primario o revisión narrativa
+doi:10.1007/s00330-016-4615-9,excluir,E4,,consenso,imagen intestinal (Crohn),consenso de técnica de imagen; fuera de alcance
+doi:10.1097/sla.0000000000001946,excluir,E1,,otro,apendicitis / infección intraabdominal,"estudio primario, auditoría o revisión"
+doi:10.1136/bmjspcare-2014-000804,excluir,E4,,guia,mucositis oral en cáncer,fuera de alcance
+doi:10.1111/1462-2920.13873,excluir,E1,,otro,diarrea persistente,artículo de revisión/hipótesis
+doi:10.20320/rfcsudes.v4i2.s1.r18,excluir,E1,,otro,rotavirus y otros virus entéricos,estudio primario o revisión no vinculada a tratamiento
+doi:10.18273/revmed.v30n1-2017002,excluir,E1,,otro,diarrea aguda / gastroenteritis (epidemiología y prácticas),"estudio primario, epidemiológico o de prácticas; no es guía"
+doi:10.21897/rmvz.1061,excluir,E1,,otro,diarrea bacteriana (etiología),"estudio primario de etiología, epidemiología o resistencia"
+doi:10.1007/s12602-017-9277-7,excluir,E1,,otro,rotavirus y otros virus entéricos,estudio primario o revisión no vinculada a tratamiento
+doi:10.18566/medupb.v36n1.a04,excluir,E1,,otro,diarrea aguda / gastroenteritis (epidemiología y prácticas),"estudio primario, epidemiológico o de prácticas; no es guía"
+doi:10.25176/rfmh.v15i1.983,excluir,E1,,otro,rotavirus y otros virus entéricos,estudio primario o revisión no vinculada a tratamiento
+doi:10.1007/s10916-018-1117-0,excluir,E1,,otro,apendicitis / infección intraabdominal,"estudio primario, auditoría o revisión"
+doi:10.1155/2018/2589826,excluir,E2,,consenso,patógenos entéricos (diagnóstico),consenso Delphi de interpretación diagnóstica; solo diagnóstico; resumen consultado
+doi:10.1007/s12519-018-0190-2,excluir,E5,,guia,diarrea aguda / gastroenteritis,GPC china 2018; sustituida por la edición 2024: doi:10.1007/s12519-025-00894-7; resumen consultado
+doi:10.1200/jco.18.00407,excluir,E3,,guia,Clostridioides difficile,huéspedes especiales: niños con cáncer o trasplante hematopoyético
+doi:10.1097/mpg.0000000000002092,excluir,E4,,consenso,enfermedad inflamatoria intestinal,documento de posición sobre EII; fuera de alcance
+doi:10.1097/mpg.0000000000002036,excluir,E4,,guia,enfermedad inflamatoria intestinal,guía/recomendaciones sobre EII; fuera de alcance
+doi:10.1097/mpg.0000000000002035,excluir,E4,,guia,enfermedad inflamatoria intestinal,guía/recomendaciones sobre EII; fuera de alcance
+doi:10.1053/j.gastro.2018.07.009,excluir,E4,,consenso,esofagitis eosinofílica,consenso sobre esofagitis eosinofílica; fuera de alcance
+doi:10.1097/mpg.0000000000002053,incluir,,internacional (FISPGHAN),consenso,diarrea aguda / gastroenteritis,recomendaciones universales para diarrea aguda en niños de 1 mes a 18 años no desnutridos; resumen consultado
+doi:10.1080/20469047.2017.1409454,incluir,,OMS-OPS (revisión de la evidencia que sustenta la guía OMS),revision de guias,disentería / shigelosis,revisión sistemática de evidencia y de guías internacionales sobre tratamiento de disentería (shigelosis) en niños; resumen consultado
+doi:10.1097/meg.0000000000001171,excluir,E1,,otro,enfermedad inflamatoria intestinal,"estudio primario, auditoría o revisión narrativa"
+doi:10.1093/dote/doy029,excluir,E1,,otro,esofagitis eosinofílica / esófago,estudio primario o revisión narrativa
+doi:10.1016/j.ijantimicag.2018.04.010,excluir,E1,,otro,apendicitis / infección intraabdominal,"estudio primario, auditoría o revisión"
+doi:10.1159/000486751,excluir,E1,,otro,enterocolitis necrosante / neonatología,estudio primario o revisión narrativa
+doi:10.1007/s11882-018-0767-9,excluir,E4,,otro,FPIES,resumen/revisión de guía de enterocolitis por proteínas alimentarias; fuera de alcance
+doi:10.1002/ncp.10083,excluir,E1,,otro,enterocolitis necrosante / neonatología,estudio primario o revisión narrativa
+doi:10.1093/cid/ciy249,excluir,E6,,otro,Clostridioides difficile,carta-comentario sobre la guía IDSA/SHEA (doi:10.1093/cid/cix1085)
+doi:10.1097/mpg.0000000000001896,excluir,E4,,consenso,enfermedad inflamatoria intestinal,documento de posición sobre EII; fuera de alcance
+doi:10.1093/cid/ciy149,excluir,E6,,guia,Clostridioides difficile,resumen ejecutivo (duplicado) de la guía IDSA/SHEA 2017 incluida: doi:10.1093/cid/cix1085; resumen consultado
+doi:10.1016/j.bjm.2017.01.014,excluir,E1,,otro,shigelosis,estudio de vigilancia o epidemiología molecular
+doi:10.1093/cid/cix1085,incluir,,"internacional (IDSA/SHEA, EE. UU.)",guia,Clostridioides difficile,"guía IDSA/SHEA 2017, texto completo; incluye recomendaciones pediátricas; resumen consultado"
+doi:10.1016/j.apnr.2017.11.021,excluir,E4,,consenso,enterocolitis necrosante,consenso sobre ECN neonatal; fuera de alcance
+doi:10.1053/j.gastro.2017.11.274,excluir,E4,,consenso,imagen intestinal (Crohn),consenso de técnica de imagen; fuera de alcance
+doi:10.1097/mpg.0000000000001890,excluir,E4,,guia,enfermedad inflamatoria intestinal,guía/recomendaciones sobre EII; fuera de alcance
+doi:10.1148/radiol.2018171737,excluir,E4,,consenso,imagen intestinal (Crohn),consenso de técnica de imagen; fuera de alcance
+doi:10.1093/ecco-jcc/jjx161,excluir,E4,,consenso,enfermedad inflamatoria intestinal,consenso sobre EII; fuera de alcance
+doi:10.1016/j.vaccine.2017.11.041,excluir,E1,,otro,rotavirus (vacunación),estudio de costo-efectividad o impacto de vacunación
+doi:10.1080/08941939.2017.1338317,excluir,E1,,otro,apendicitis / infección intraabdominal,"estudio primario, auditoría o revisión"
+doi:10.1016/j.anpedi.2017.05.012,excluir,E1,,otro,Clostridioides difficile,carta con datos tras implementar un documento de consenso; sin resumen en PubMed; resumen consultado
+pmid:30540730,excluir,E1,,otro,apendicitis / infección intraabdominal,"estudio primario, auditoría o revisión"
+doi:10.22516/25007440.230,excluir,E1,,otro,probióticos,revisión narrativa (Rev Colomb Gastroenterol)
+titulo:mastocitosiscutneadifusareportedeunpacientepeditrico,excluir,E1,,otro,otro,"artículo no relacionado con guías de diarrea infecciosa (caso, revisión o estudio primario)"
+doi:10.1016/j.ijid.2018.06.006,excluir,E1,,otro,rotavirus y otros virus entéricos,estudio primario o revisión no vinculada a tratamiento
+doi:10.12804/revistas.urosario.edu.co/revsalud/a.6768,excluir,E1,,otro,diarrea aguda / gastroenteritis (epidemiología y prácticas),"estudio primario, epidemiológico o de prácticas; no es guía"
+titulo:unpuebloenfermo,excluir,E1,,otro,otro,"artículo no relacionado con guías de diarrea infecciosa (caso, revisión o estudio primario)"
+titulo:probiticosendiarreaagudaasociadaaantibiticosynosocomialevidenciaenpediatra,excluir,E1,,otro,probióticos,revisión narrativa (Rev Colomb Gastroenterol)
+doi:10.35383/cietna.v2i2.145,excluir,E1,,otro,diarrea aguda / gastroenteritis (epidemiología y prácticas),"estudio primario, epidemiológico o de prácticas; no es guía"
+doi:10.1093/cid/ciz892,excluir,E2,,consenso,Shigella (modelo de infección humana),consenso sobre modelo de infección controlada para investigación de vacunas; sin tratamiento
+doi:10.1093/cid/ciz909,excluir,E2,,consenso,Shigella (modelo de infección humana),consenso sobre modelo de infección controlada para investigación de vacunas; sin tratamiento
+doi:10.1136/gutjnl-2019-318484,excluir,E4,,consenso,enfermedad inflamatoria intestinal,consenso sobre EII; fuera de alcance
+doi:10.1016/j.dld.2019.07.016,excluir,E4,,consenso,pH-impedancia esofágica,fuera de alcance
+doi:10.1016/j.ctim.2019.04.001,excluir,E2,,consenso,diarrea aguda / gastroenteritis,guía de consenso de terapia antroposófica; sin contenido antimicrobiano; resumen consultado
+doi:10.1053/j.gastro.2019.03.022,excluir,E4,,guia,enfermedad inflamatoria intestinal,guía/recomendaciones sobre EII; fuera de alcance
+doi:10.1016/j.anpedi.2019.06.001,excluir,E2,,guia,rotavirus (vacunación),recomendación de vacunación; solo prevención
+doi:10.1080/23744235.2019.1602285,excluir,E1,,otro,Clostridioides difficile,estudio de adherencia a guías
+doi:10.1016/j.jacr.2019.02.022,excluir,E4,,guia,apendicitis,guía sobre apendicitis; fuera de alcance
+doi:10.1007/s00247-019-04375-8,excluir,E4,,consenso,enfermedad inflamatoria intestinal,documento de posición sobre EII; fuera de alcance
+doi:10.5694/mja2.12071,excluir,E4,,otro,FPIES,resumen/revisión de guía de enterocolitis por proteínas alimentarias; fuera de alcance
+doi:10.1007/s00508-019-1448-y,excluir,E4,,consenso,enfermedad inflamatoria intestinal,consenso sobre EII; fuera de alcance
+doi:10.1093/cid/ciy1021,excluir,E1,,otro,patógenos entéricos (diagnóstico),estudio de desempeño de recomendaciones de coprocultivo
+doi:10.1097/dcr.0000000000001240,excluir,E1,,otro,diverticulitis,estudio primario
+doi:10.1097/mpg.0000000000002141,excluir,E4,,consenso,enfermedad inflamatoria intestinal,documento de posición sobre EII; fuera de alcance
+doi:10.1007/s00261-018-1743-5,excluir,E1,,otro,enfermedad inflamatoria intestinal,"estudio primario, auditoría o revisión narrativa"
+doi:10.7705/biomedica.4774,excluir,E1,,otro,apendicitis / infección intraabdominal,"estudio primario, auditoría o revisión"
+doi:10.3748/wjg.v25.i32.4598,excluir,E1,,otro,esofagitis eosinofílica / esófago,estudio primario o revisión narrativa
+doi:10.1155/2019/1902732,excluir,E1,,otro,Campylobacter,estudio primario microbiológico o de cohorte
+doi:10.1590/1984-0462/;2019;37;4;00013,excluir,E1,,otro,apendicitis / infección intraabdominal,"estudio primario, auditoría o revisión"
+doi:10.1016/j.anaerobe.2019.03.002,excluir,E1,,otro,Clostridioides difficile,estudio epidemiológico o microbiológico
+doi:10.18041/1900-7841/rcslibre.2019v14n2.6772,excluir,E1,,otro,diarrea aguda / gastroenteritis (epidemiología y prácticas),"estudio primario, epidemiológico o de prácticas; no es guía"
+doi:10.4102/sajid.v35i1.219,incluir,,"internacional (SASCM, Sudáfrica)",guia,Clostridioides difficile,guía sudafricana; incluye opciones de tratamiento pediátrico; resumen consultado
+doi:10.1016/s2589-7500(20)30062-5,excluir,E1,,otro,diarrea aguda / gastroenteritis,ensayo/estudio de intervención sobre aplicación o adherencia a guías
+doi:10.1186/s40794-020-00120-4,excluir,E2,,consenso,probióticos (Bacillus clausii),consenso de expertos asiáticos solo sobre probiótico
+doi:10.1097/meg.0000000000001885,excluir,E4,,consenso,enfermedad inflamatoria intestinal,consenso sobre EII; fuera de alcance
+doi:10.32641/rchped.v91i2.1289,excluir,E4,,guia,esofagitis cáustica,guía Ibero-Latinoamericana de esofagitis cáustica; fuera de alcance
+doi:10.32641/rchped.v91i1.1288,excluir,E4,,guia,esofagitis cáustica,guía Ibero-Latinoamericana de esofagitis cáustica; fuera de alcance
+doi:10.1542/hpeds.2020-0117,excluir,E6,,otro,diarrea aguda / gastroenteritis,comentario editorial
+doi:10.1016/j.anpedi.2020.04.007,excluir,E4,,guia,esofagitis eosinofílica,guía sobre esofagitis eosinofílica; fuera de alcance
+doi:10.1186/s12889-020-08850-y,excluir,E1,,otro,enfermedad inflamatoria intestinal,"estudio primario, auditoría o revisión narrativa"
+doi:10.1016/j.jacr.2020.01.030,excluir,E4,,guia,enfermedad inflamatoria intestinal,guía/recomendaciones sobre EII; fuera de alcance
+doi:10.1053/j.gastro.2020.02.039,excluir,E4,,guia,esofagitis eosinofílica,guía sobre esofagitis eosinofílica; fuera de alcance
+doi:10.3390/ijms21082941,excluir,E4,,guia,déficit de zinc,guía japonesa de déficit de zinc; fuera de alcance
+doi:10.3390/pathogens9040291,excluir,E1,,otro,Clostridioides difficile,revisión narrativa de recomendaciones en pediatría; no emite guía; resumen consultado
+doi:10.1186/s13017-020-00306-3,excluir,E4,,guia,apendicitis,guía sobre apendicitis; fuera de alcance
+doi:10.1016/j.jmii.2020.02.002,incluir,,"internacional (IDST, Taiwán)",guia,Clostridioides difficile,guía taiwanesa; incluye recomendaciones para CDI pediátrica; resumen consultado
+doi:10.1007/s00431-020-03608-5,excluir,E2,,consenso,rotavirus (vacunación),consenso/posición sobre vacunación; solo prevención
+doi:10.1007/s00520-019-05256-4,excluir,E4,,guia,mucositis oral en cáncer,fuera de alcance
+doi:10.1097/sga.0000000000000467,excluir,E1,,otro,enfermedad inflamatoria intestinal,"estudio primario, auditoría o revisión narrativa"
+doi:10.1093/ibd/izaa006,excluir,E6,,otro,EII,carta-comentario
+doi:10.1002/jpen.1726,excluir,E1,,otro,enterocolitis necrosante / neonatología,estudio primario o revisión narrativa
+doi:10.1016/j.jaad.2019.08.049,excluir,E4,,guia,psoriasis pediátrica,fuera de alcance
+doi:10.1097/mpg.0000000000002539,excluir,E6,,otro,EII,comentario editorial
+doi:10.12788/jhm.3312,excluir,E6,,otro,Clostridioides difficile,resumen para hospitalistas de la guía IDSA/SHEA 2017 incluida: doi:10.1093/cid/cix1085; resumen consultado
+doi:10.1097/mpg.0000000000002499,excluir,E4,,guia,enfermedad inflamatoria intestinal,guía/recomendaciones sobre EII; fuera de alcance
+doi:10.1016/j.cgh.2019.08.060,excluir,E1,,otro,esofagitis eosinofílica / esófago,estudio primario o revisión narrativa
+doi:10.1016/j.jpedsurg.2019.07.004,excluir,E1,,otro,apendicitis / infección intraabdominal,"estudio primario, auditoría o revisión"
+doi:10.1016/j.cgh.2019.04.063,excluir,E4,,consenso,transición de cuidado en EII / gastroenterología,transición pediatría-adulto; fuera de alcance
+doi:10.1111/ans.15099,excluir,E1,,otro,apendicitis / infección intraabdominal,"estudio primario, auditoría o revisión"
+doi:10.1016/j.anaerobe.2020.102267,excluir,E1,,otro,Clostridioides difficile,estudio epidemiológico o microbiológico
+doi:10.1007/s11908-020-0713-6,excluir,E1,,otro,diarrea aguda / gastroenteritis,revisión narrativa de autores colombianos con tabla de indicaciones de antimicrobianos; no es guía ni documento nacional; resumen consultado
+doi:10.1016/j.enfcli.2019.08.007,excluir,E1,,otro,diarrea aguda / gastroenteritis (epidemiología y prácticas),"estudio primario, epidemiológico o de prácticas; no es guía"
+doi:10.22463/17949831.2230,excluir,E1,,otro,diarrea aguda / gastroenteritis (epidemiología y prácticas),"estudio primario, epidemiológico o de prácticas; no es guía"
+doi:10.1371/journal.pntd.0008375,excluir,E1,,otro,diarrea aguda / gastroenteritis (etiología),"estudio de casos y controles de etiología (Bucaramanga, Colombia)"
+doi:10.32997/rcb-2015-2964,excluir,E1,,otro,otro,"artículo no relacionado con guías de diarrea infecciosa (caso, revisión o estudio primario)"
+doi:10.22516/25007440.379,excluir,E1,,otro,otro,"artículo no relacionado con guías de diarrea infecciosa (caso, revisión o estudio primario)"
+doi:10.18359/rmed.3658,excluir,E1,,otro,otro,"artículo no relacionado con guías de diarrea infecciosa (caso, revisión o estudio primario)"
+titulo:genotipificacinyvariabilidadgenticadeespeciesdecryptosporidiumenaisladoshumanosc,excluir,E1,,otro,parásitos intestinales,estudio primario o resumen de congreso
+titulo:conceptodeungrupodemadresdeniosmenoresde5aossobreenfermedaddiarrica,excluir,E1,,otro,diarrea aguda / gastroenteritis (epidemiología y prácticas),"estudio primario, epidemiológico o de prácticas; no es guía"
+doi:10.1016/j.vaccine.2021.11.033,excluir,E2,,consenso,patógenos entéricos (carga de enfermedad),grupo de trabajo OMS sobre medición de morbilidad; epidemiología; resumen consultado
+pmid:34464040,incluir,,"internacional (NICE, Reino Unido)",guia,Clostridioides difficile,"NICE NG199 (2021), prescripción antimicrobiana en CDI; adultos, jóvenes y niños desde 72 h; registro sin título, identificado por PMID; resumen consultado"
+doi:10.1503/cjs.005420,excluir,E1,,otro,apendicitis / infección intraabdominal,"estudio primario, auditoría o revisión"
+doi:10.1016/j.vaccine.2021.05.086,excluir,E1,,otro,mortalidad por diarrea (modelos),recomendaciones metodológicas para estimaciones; no es guía clínica
+doi:10.1111/jcpt.13422,excluir,E4,,revision de guias,enfermedad inflamatoria intestinal,revisión de guías sobre EII; fuera de alcance
+doi:10.7759/cureus.13433,excluir,E1,,otro,diarrea aguda / gastroenteritis,auditoría de adherencia a guías
+doi:10.1053/j.gastro.2020.12.079,excluir,E4,,guia,enfermedad inflamatoria intestinal,guía/recomendaciones sobre EII; fuera de alcance
+doi:10.1053/j.gastro.2021.02.035,excluir,E4,,consenso,enfermedad inflamatoria intestinal,consenso sobre EII; fuera de alcance
+doi:10.1016/j.jviscsurg.2020.11.013,excluir,E4,,guia,apendicitis,guía sobre apendicitis; fuera de alcance
+doi:10.1097/mpg.0000000000003027,excluir,E4,,guia,enfermedad inflamatoria intestinal,guía/recomendaciones sobre EII; fuera de alcance
+doi:10.3399/bjgpopen20x101154,excluir,E1,,otro,diarrea aguda / gastroenteritis,ensayo/estudio de intervención sobre aplicación o adherencia a guías
+doi:10.1017/ice.2020.1237,excluir,E1,,otro,Clostridioides difficile,estudio de adherencia a guías
+doi:10.1136/archdischild-2020-319469,excluir,E4,,consenso,nutrición neonatal,consenso de desenlaces para ensayo neonatal; fuera de alcance
+doi:10.1016/j.jss.2020.08.056,excluir,E4,,revision de guias,apendicitis,revisión de guías de apendicitis; fuera de alcance
+doi:10.1053/j.gastro.2020.07.065,excluir,E4,,consenso,enfermedad inflamatoria intestinal,consenso sobre EII; fuera de alcance
+doi:10.1053/j.gastro.2020.07.066,excluir,E4,,consenso,enfermedad inflamatoria intestinal,consenso sobre EII; fuera de alcance
+doi:10.1136/gutjnl-2020-322449,excluir,E4,,consenso,enfermedad inflamatoria intestinal,consenso sobre EII; fuera de alcance
+doi:10.1177/0003134820942186,excluir,E1,,otro,apendicitis / infección intraabdominal,"estudio primario, auditoría o revisión"
+doi:10.1016/j.jss.2020.07.042,excluir,E1,,otro,apendicitis / infección intraabdominal,"estudio primario, auditoría o revisión"
+doi:10.1080/08941939.2020.1740360,excluir,E4,,consenso,apendicitis,consenso sobre apendicitis; fuera de alcance
+doi:10.3389/fmicb.2021.787451,excluir,E1,,otro,Clostridioides difficile,estudio epidemiológico o microbiológico
+doi:10.7705/biomedica.5113,excluir,E1,,otro,shigelosis,estudio de vigilancia o epidemiología molecular
+doi:10.1016/j.bjid.2020.11.005,excluir,E1,,otro,Clostridioides difficile,estudio epidemiológico o microbiológico
+doi:10.14482/sun.36.1.616.21,excluir,E1,,otro,diarrea aguda / gastroenteritis (epidemiología y prácticas),"estudio primario, epidemiológico o de prácticas; no es guía"
+doi:10.15517/psm.v0i19.48037,excluir,E1,,otro,diarrea bacteriana (etiología),"estudio primario de etiología, epidemiología o resistencia"
+doi:10.1111/jcpt.13817,excluir,E4,,revision de guias,enfermedad inflamatoria intestinal,revisión de guías sobre EII; fuera de alcance
+doi:10.1080/14737140.2022.2131544,excluir,E4,,consenso,soporte en leucemia mieloide aguda,recomendaciones de expertos; fuera de alcance
+doi:10.1002/hsr2.827,excluir,E1,,otro,diarrea aguda / gastroenteritis (rehidratación oral),revisión narrativa; resumen consultado
+doi:10.1155/2022/4456232,incluir,,"internacional (Jordanian Paediatric Society, Jordania)",consenso,diarrea aguda / gastroenteritis,consenso nacional jordano de GEA pediátrica; desaconseja antibiótico rutinario; resumen consultado
+doi:10.1016/j.clnu.2022.07.003,excluir,E4,,guia,obesidad en enfermedades digestivas y hepáticas,fuera de alcance
+doi:10.1002/ueg2.12280,excluir,E4,,guia,obesidad en enfermedades digestivas y hepáticas,fuera de alcance
+doi:10.1111/ped.15241,excluir,E4,,consenso,transición de cuidado en EII / gastroenterología,transición pediatría-adulto; fuera de alcance
+doi:10.1016/j.asjsur.2022.05.131,excluir,E4,,revision de guias,apendicitis,revisión de guías de apendicitis; fuera de alcance
+doi:10.1016/j.anpede.2021.04.011,excluir,E2,,guia,diarrea aguda / gastroenteritis (rehidratación IV),documento de recomendaciones solo sobre rehidratación intravenosa rápida (España); resumen consultado
+doi:10.1053/j.gastro.2022.03.025,excluir,E4,,consenso,esofagitis eosinofílica,consenso sobre esofagitis eosinofílica; fuera de alcance
+doi:10.1016/j.jaci.2022.03.015,excluir,E4,,consenso,esofagitis eosinofílica,consenso sobre esofagitis eosinofílica; fuera de alcance
+doi:10.1136/gutjnl-2022-327326,excluir,E4,,guia,esofagitis eosinofílica,guía sobre esofagitis eosinofílica; fuera de alcance
+doi:10.1016/j.gastrohep.2022.03.012,excluir,E4,,guia,enfermedad inflamatoria intestinal,guía/recomendaciones sobre EII; fuera de alcance
+doi:10.1016/j.jacr.2022.02.020,excluir,E4,,guia,enfermedad inflamatoria intestinal,guía/recomendaciones sobre EII; fuera de alcance
+pmid:35273131,excluir,E2,,consenso,probióticos en diarrea,guía de consenso IAP (India) solo sobre probióticos; resumen consultado
+doi:10.1016/j.jtct.2022.02.013,excluir,E3,,guia,Clostridioides difficile,huéspedes especiales: receptores de trasplante hematopoyético
+doi:10.1016/j.jpeds.2022.01.029,excluir,E1,,otro,enterocolitis necrosante / neonatología,estudio primario o revisión narrativa
+doi:10.1038/s41372-022-01324-6,excluir,E1,,otro,enterocolitis necrosante / neonatología,estudio primario o revisión narrativa
+doi:10.20960/nh.03857,excluir,E4,,guia,enfermedad inflamatoria intestinal,guía/recomendaciones sobre EII; fuera de alcance
+doi:10.1097/mpg.0000000000003301,excluir,E1,,otro,enfermedad inflamatoria intestinal,"estudio primario, auditoría o revisión narrativa"
+doi:10.14202/vetworld.2022.1557-1565,excluir,E1,,otro,Salmonella,estudio primario de prevalencia o genómica
+doi:10.18273/revmed.v35n2-2022009,excluir,E1,,otro,otro,"artículo no relacionado con guías de diarrea infecciosa (caso, revisión o estudio primario)"
+doi:10.21615/cesenferm.7146,excluir,E1,,otro,diarrea aguda / gastroenteritis (epidemiología y prácticas),"estudio primario, epidemiológico o de prácticas; no es guía"
+doi:10.1136/bmjopen-2023-072360,excluir,E4,,consenso,enfermedad inflamatoria intestinal,consenso sobre EII; fuera de alcance
+doi:10.1002/jpen.2550,excluir,E4,,guia,nutrición neonatal,guía de nutrición en neonatos/prematuros; fuera de alcance
+doi:10.1097/mpg.0000000000003913,excluir,E1,,otro,enfermedad inflamatoria intestinal,"estudio primario, auditoría o revisión narrativa"
+doi:10.1016/j.clp.2023.04.009,excluir,E1,,otro,enterocolitis necrosante / neonatología,estudio primario o revisión narrativa
+doi:10.1016/s2468-1253(23)00154-1,excluir,E4,,consenso,enfermedad inflamatoria intestinal,consenso sobre EII; fuera de alcance
+doi:10.54847/cp.2023.03.12,excluir,E1,,otro,apendicitis / infección intraabdominal,"estudio primario, auditoría o revisión"
+doi:10.1111/jpc.16454,excluir,E2,,revision de guias,"fiebre, gastroenteritis y estreñimiento (diagnóstico)",calidad de guías diagnósticas en atención primaria; solo diagnóstico; resumen consultado
+doi:10.1186/s12913-023-09639-6,excluir,E1,,otro,enfermedad inflamatoria intestinal,"estudio primario, auditoría o revisión narrativa"
+doi:10.1016/j.sempedsurg.2023.151304,excluir,E1,,otro,enterocolitis necrosante / neonatología,estudio primario o revisión narrativa
+doi:10.1016/j.clnu.2023.03.021,excluir,E4,,guia,obesidad en enfermedades digestivas y hepáticas,fuera de alcance
+doi:10.1007/s12519-023-00691-0,excluir,E4,,consenso,enfermedad inflamatoria intestinal,consenso sobre EII; fuera de alcance
+doi:10.1007/s00431-023-04944-y,excluir,E1,,otro,Clostridioides difficile,revisión sistemática y metaanálisis de estudios primarios (metronidazol vs vancomicina); resumen consultado
+doi:10.1590/s0004-2803.2022005s1-04,excluir,E4,,consenso,enfermedad inflamatoria intestinal,consenso sobre EII; fuera de alcance
+doi:10.1007/s00068-022-02208-2,excluir,E1,,otro,apendicitis / infección intraabdominal,"estudio primario, auditoría o revisión"
+doi:10.1016/s2468-1253(22)00337-5,excluir,E4,,guia,enfermedad inflamatoria intestinal,guía/recomendaciones sobre EII; fuera de alcance
+doi:10.1186/s12879-022-07916-z,excluir,E1,,otro,uso de antimicrobianos (PROA pediátrico),estudio descriptivo de canales endémicos; resumen consultado
+doi:10.1007/s00535-022-01953-w,excluir,E4,,consenso,enfermedad inflamatoria intestinal,consenso sobre EII; fuera de alcance
+doi:10.1016/j.semperi.2022.151698,excluir,E1,,otro,enterocolitis necrosante / neonatología,estudio primario o revisión narrativa
+doi:10.1016/j.cgh.2022.12.018,excluir,E4,,guia,esofagitis eosinofílica,guía sobre esofagitis eosinofílica; fuera de alcance
+doi:10.1097/mpg.0000000000003649,excluir,E4,,consenso,enfermedad inflamatoria intestinal,consenso sobre EII; fuera de alcance
+doi:10.1093/ibd/izac129,excluir,E1,,otro,enfermedad inflamatoria intestinal,"estudio primario, auditoría o revisión narrativa"
+doi:10.1007/s00383-023-05570-3,excluir,E1,,otro,apendicitis / infección intraabdominal,"estudio primario, auditoría o revisión"
+doi:10.32641/andespediatr.v94i3.4417,excluir,E1,,otro,probióticos,reporte de caso
+doi:10.1007/s00284-023-03499-3,excluir,E1,,otro,Clostridioides difficile,estudio epidemiológico o microbiológico
+doi:10.1016/j.gastrohep.2022.10.020,excluir,E1,,otro,enfermedad inflamatoria intestinal,"estudio primario, auditoría o revisión narrativa"
+doi:10.22463/17949831.3690,excluir,E1,,otro,diarrea aguda / gastroenteritis (epidemiología y prácticas),"estudio primario, epidemiológico o de prácticas; no es guía"
+doi:10.1007/s00431-022-04798-w,excluir,E1,,otro,otro,"artículo no relacionado con guías de diarrea infecciosa (caso, revisión o estudio primario)"
+doi:10.21149/15050,excluir,E1,,otro,diarrea aguda / gastroenteritis (epidemiología y prácticas),"estudio primario, epidemiológico o de prácticas; no es guía"
+doi:10.47895/amp.vi0.8371,excluir,E1,,otro,diarrea aguda / gastroenteritis,auditoría de adherencia a guías
+doi:10.1002/ueg2.12697,excluir,E4,,revision de guias,enfermedad inflamatoria intestinal,revisión de guías sobre EII; fuera de alcance
+doi:10.47895/amp.v58i16.7513,excluir,E1,,otro,diarrea aguda / gastroenteritis,auditoría de adherencia a guías
+doi:10.3238/arztebl.m2024.0168,excluir,E1,,otro,enfermedad inflamatoria intestinal,"estudio primario, auditoría o revisión narrativa"
+doi:10.1016/j.arcped.2024.03.006,excluir,E4,,guia,nutrición neonatal,guía de nutrición en neonatos/prematuros; fuera de alcance
+doi:10.1016/j.cgh.2024.04.039,excluir,E4,,guia,enfermedad inflamatoria intestinal,guía/recomendaciones sobre EII; fuera de alcance
+doi:10.1093/cid/ciae348,excluir,E4,,guia,apendicitis,guía sobre apendicitis; fuera de alcance
+doi:10.1093/cid/ciae350,excluir,E4,,guia,diverticulitis,guía IDSA de imagen en diverticulitis; fuera de alcance
+doi:10.52787/agl.v54i2.395,excluir,E2,,guia,probióticos,guía colombiana solo sobre probióticos en enfermedades pediátricas; sin antimicrobianos
+doi:10.1002/jpn3.12188,excluir,E4,,guia,esofagitis eosinofílica,guía sobre esofagitis eosinofílica; fuera de alcance
+doi:10.1007/s00464-024-10813-y,excluir,E4,,guia,apendicitis,guía sobre apendicitis; fuera de alcance
+doi:10.1016/j.eclinm.2024.102604,excluir,E3,,guia,Clostridioides difficile,huéspedes especiales: niños con cáncer o trasplante hematopoyético
+doi:10.1016/j.ctim.2024.103042,excluir,E1,,otro,diarrea aguda / gastroenteritis,serie de casos que evalúa guía antroposófica
+doi:10.1002/jhm.13354,excluir,E4,,otro,trastornos eosinofílicos gastrointestinales,resumen de guía sobre trastornos eosinofílicos; fuera de alcance
+doi:10.1016/j.dld.2024.02.016,excluir,E4,,guia,enfermedad inflamatoria intestinal,guía/recomendaciones sobre EII; fuera de alcance
+doi:10.3390/nu16050589,excluir,E4,,otro,proctocolitis alérgica,revisión de recomendaciones; fuera de alcance
+doi:10.1111/hex.14009,excluir,E4,,consenso,enfermedad inflamatoria intestinal,consenso sobre EII; fuera de alcance
+doi:10.1016/j.dld.2024.02.005,excluir,E4,,consenso,esofagitis eosinofílica,consenso sobre esofagitis eosinofílica; fuera de alcance
+doi:10.1016/j.alit.2024.01.006,excluir,E4,,otro,FPIES,resumen/revisión de guía de enterocolitis por proteínas alimentarias; fuera de alcance
+doi:10.1097/mpg.0000000000003877,excluir,E4,,guia,trastornos eosinofílicos gastrointestinales,guía ESPGHAN/NASPGHAN; fuera de alcance
+doi:10.1053/j.gastro.2023.11.303,excluir,E4,,guia,enfermedad inflamatoria intestinal,guía/recomendaciones sobre EII; fuera de alcance
+doi:10.1186/s12887-023-04483-3,excluir,E1,,otro,esofagitis eosinofílica / esófago,estudio primario o revisión narrativa
+doi:10.1007/s00247-023-05819-y,excluir,E4,,consenso,apendicitis,consenso sobre apendicitis; fuera de alcance
+doi:10.1111/jpc.16519,excluir,E1,,otro,enfermedad inflamatoria intestinal,"estudio primario, auditoría o revisión narrativa"
+pmid:37793338,excluir,E1,,otro,diarrea aguda / gastroenteritis,ensayo de cuidados de enfermería
+doi:10.1093/ibd/izad134,excluir,E4,,guia,enfermedad inflamatoria intestinal,guía/recomendaciones sobre EII; fuera de alcance
+doi:10.7189/jogh.14.04135,excluir,E1,,otro,Clostridioides difficile,estudio epidemiológico o microbiológico
+doi:10.1093/ofid/ofad651,excluir,E1,,otro,shigelosis,estudio de vigilancia o epidemiología molecular
+doi:10.1016/j.gastrohep.2023.09.013,excluir,E1,,otro,enfermedad inflamatoria intestinal,"estudio primario, auditoría o revisión narrativa"
+doi:10.1016/j.rgmxen.2023.05.001,excluir,E1,,otro,enfermedad inflamatoria intestinal,"estudio primario, auditoría o revisión narrativa"
+doi:10.1128/msphere.00342-24,excluir,E1,,otro,Campylobacter,estudio primario microbiológico o de cohorte
+doi:10.1177/2333794x241231133,excluir,E1,,otro,otro,"artículo no relacionado con guías de diarrea infecciosa (caso, revisión o estudio primario)"
+doi:10.1016/s2214-109x(24)00094-9,excluir,E1,,otro,diarrea aguda / gastroenteritis (epidemiología y prácticas),"estudio primario, epidemiológico o de prácticas; no es guía"
+doi:10.24875/bmhim.m25000043,excluir,E2,,guia,probióticos,"guía Ibero-Latinoamericana de bióticos, capítulo de probióticos; sin antimicrobianos"
+doi:10.1111/pai.70264,excluir,E4,,consenso,proctocolitis alérgica,documento de posición; fuera de alcance
+doi:10.1590/s0004-2803.24612025-079,excluir,E4,,guia,esofagitis eosinofílica,guía sobre esofagitis eosinofílica; fuera de alcance
+doi:10.1016/j.anpede.2025.503984,incluir,,"internacional (SEIP/AEPap/SEPEAP/SEGHNP/SEUP, España)",consenso,diarrea aguda / gastroenteritis (tratamiento etiológico),consenso español 2025 de diagnóstico y tratamiento etiológico de GEA infecciosa; indicaciones de antibioterapia empírica y dirigida; resumen consultado
+doi:10.1093/ecco-jcc/jjaf129,excluir,E4,,consenso,enfermedad inflamatoria intestinal,consenso sobre EII; fuera de alcance
+doi:10.1016/j.cgh.2025.04.005,excluir,E4,,consenso,enfermedad inflamatoria intestinal,consenso sobre EII; fuera de alcance
+doi:10.1111/apt.70290,excluir,E4,,consenso,enfermedad inflamatoria intestinal,consenso sobre EII; fuera de alcance
+doi:10.1093/ibd/izaf171,excluir,E4,,consenso,enfermedad inflamatoria intestinal,consenso sobre EII; fuera de alcance
+doi:10.3748/wjg.v31.i27.107138,excluir,E4,,consenso,Helicobacter pylori,fuera de alcance
+doi:10.1186/s13052-025-02056-x,excluir,E4,,guia,esofagitis eosinofílica,guía sobre esofagitis eosinofílica; fuera de alcance
+doi:10.1002/jpn3.70158,excluir,E4,,consenso,enfermedad inflamatoria intestinal,documento de posición sobre EII; fuera de alcance
+doi:10.1002/jpn3.70097,excluir,E4,,guia,enfermedad inflamatoria intestinal,guía/recomendaciones sobre EII; fuera de alcance
+doi:10.1007/s00535-025-02271-7,excluir,E4,,consenso,enfermedad inflamatoria intestinal,consenso sobre EII; fuera de alcance
+doi:10.1002/jpn3.70096,excluir,E4,,guia,enfermedad inflamatoria intestinal,guía/recomendaciones sobre EII; fuera de alcance
+doi:10.1016/j.dld.2025.05.020,excluir,E4,,consenso,enfermedad inflamatoria intestinal,consenso sobre EII; fuera de alcance
+doi:10.1007/s12519-025-00894-7,incluir,,internacional (China),guia,diarrea aguda / gastroenteritis,GPC china 2024 de diarrea infecciosa aguda en niños; actualiza la edición 2018; incluye antibióticos; resumen consultado
+doi:10.1186/s12887-025-05735-0,excluir,E1,,otro,enterocolitis necrosante / neonatología,estudio primario o revisión narrativa
+doi:10.1007/s00431-025-06168-8,excluir,E4,,consenso,enterocolitis necrosante,consenso sobre ECN neonatal; fuera de alcance
+doi:10.1093/bjsopen/zrae165,excluir,E4,,guia,apendicitis,guía sobre apendicitis; fuera de alcance
+doi:10.1093/dote/doaf022,excluir,E1,,otro,esofagitis eosinofílica / esófago,estudio primario o revisión narrativa
+doi:10.1099/acmi.0.000947.v3,excluir,E1,,otro,Campylobacter,estudio primario microbiológico o de cohorte
+doi:10.1111/imj.16638,incluir,,"internacional (ASID, Australia/Nueva Zelanda)",guia,Clostridioides difficile,guía ASID 2025 de CDI en adultos y niños; actualiza la de 2016; resumen consultado
+doi:10.1159/000542540,excluir,E4,,guia,enterocolitis necrosante / neonatos,guía sobre ECN o prematuros; fuera de alcance
+doi:10.1016/j.cgh.2024.12.011,excluir,E4,,guia,enfermedad inflamatoria intestinal,guía/recomendaciones sobre EII; fuera de alcance
+doi:10.1007/s13312-025-3361-y,excluir,E4,,otro,trastornos eosinofílicos gastrointestinales,resumen de guía sobre trastornos eosinofílicos; fuera de alcance
+doi:10.14309/ajg.0000000000003194,excluir,E4,,guia,esofagitis eosinofílica,guía sobre esofagitis eosinofílica; fuera de alcance
+doi:10.1002/jpn3.12378,excluir,E4,,consenso,enfermedad inflamatoria intestinal,documento de posición sobre EII; fuera de alcance
+doi:10.1093/ibd/izae298,excluir,E1,,otro,enfermedad inflamatoria intestinal,"estudio primario, auditoría o revisión narrativa"
+doi:10.4103/sjg.sjg_171_24,excluir,E4,,consenso,enfermedad inflamatoria intestinal,consenso sobre EII; fuera de alcance
+doi:10.1093/ibd/izae087,excluir,E4,,consenso,transición de cuidado en EII / gastroenterología,transición pediatría-adulto; fuera de alcance
+doi:10.24875/ciru.23000575,excluir,E1,,otro,apendicitis / infección intraabdominal,"estudio primario, auditoría o revisión"
+pmid:41530079,excluir,E1,,otro,enfermedad inflamatoria intestinal,"estudio primario, auditoría o revisión narrativa"
+doi:10.1016/j.rgmxen.2025.10.003,excluir,E1,,otro,esofagitis eosinofílica / esófago,estudio primario o revisión narrativa
+doi:10.1002/14651858.cd014497.pub2,excluir,E1,,otro,enfermedad inflamatoria intestinal,"estudio primario, auditoría o revisión narrativa"
+doi:10.1002/jpn3.70121,excluir,E4,,consenso,enfermedad inflamatoria intestinal,documento de posición sobre EII; fuera de alcance
+doi:10.3390/idr17020031,excluir,E1,,otro,Clostridioides difficile,estudio epidemiológico o microbiológico
+doi:10.24875/bmhim.24000085,incluir,,Colombia (autores de Universidad de La Sabana y Sociedad Colombiana de Pediatría; no es documento oficial),revision de guias,disentería,dudoso: revisión panorámica sobre antibióticos en disentería en <5 años que incluye documentos de referencia internacional; no es revisión formal de guías; resumen consultado
+doi:10.1016/j.arcmed.2024.103171,excluir,E1,,otro,Clostridioides difficile,estudio epidemiológico o microbiológico
+doi:10.1371/journal.pntd.0012801,excluir,E1,,otro,Salmonella,estudio primario de prevalencia o genómica
+doi:10.32870/rayca.vi1.150,excluir,E1,,otro,diarrea aguda / gastroenteritis (epidemiología y prácticas),"estudio primario, epidemiológico o de prácticas; no es guía"
+doi:10.33610/28059611.187,excluir,E1,,otro,diarrea aguda / gastroenteritis (epidemiología y prácticas),"estudio primario, epidemiológico o de prácticas; no es guía"
+doi:10.55633/s3me/027.2025,excluir,E1,,otro,diarrea aguda / gastroenteritis (rehidratación),resumen de revisión Cochrane
+doi:10.54589/aol.38/1/29,excluir,E1,,otro,otro,"artículo no relacionado con guías de diarrea infecciosa (caso, revisión o estudio primario)"
+doi:10.1038/s41598-025-95256-8,excluir,E1,,otro,rotavirus y otros virus entéricos,estudio primario o revisión no vinculada a tratamiento
+doi:10.5281/zenodo.15594422,excluir,E1,,otro,diarrea aguda / gastroenteritis (epidemiología y prácticas),"estudio primario, epidemiológico o de prácticas; no es guía"
+doi:10.1590/s0004-2803.24612026-011,excluir,E4,,consenso,enfermedad inflamatoria intestinal,consenso sobre EII; fuera de alcance
+doi:10.5223/pghn.2026.29.5.390,excluir,E1,,otro,diarrea aguda / gastroenteritis,encuesta de práctica tras la GPC tailandesa 2019; resumen consultado
+doi:10.1093/ecco-jcc/jjag084,excluir,E4,,guia,enfermedad inflamatoria intestinal,guía/recomendaciones sobre EII; fuera de alcance
+doi:10.3390/v18070727,excluir,E1,,otro,rotavirus y otros virus entéricos,estudio primario o revisión no vinculada a tratamiento
+doi:10.1016/j.eplepsyres.2026.107843,excluir,E1,,otro,enfermedad inflamatoria intestinal,"estudio primario, auditoría o revisión narrativa"
+doi:10.3389/fped.2026.1773341,excluir,E2,,consenso,diarrea aguda / gastroenteritis (vómito),consenso Delphi italiano solo sobre antieméticos; resumen consultado
+doi:10.1200/cci-25-00326,excluir,E1,,otro,oncología pediátrica,estudio primario o metaanálisis
+doi:10.1001/jamasurg.2025.6218,excluir,E4,,guia,apendicitis,guía sobre apendicitis; fuera de alcance
+doi:10.1016/j.gie.2025.10.032,excluir,E4,,consenso,esofagitis eosinofílica,consenso sobre esofagitis eosinofílica; fuera de alcance
+doi:10.1136/gutjnl-2025-336402,excluir,E4,,consenso,enfermedad inflamatoria intestinal,consenso sobre EII; fuera de alcance
+doi:10.14309/ajg.0000000000003651,excluir,E4,,consenso,enfermedad inflamatoria intestinal,consenso sobre EII; fuera de alcance
+doi:10.3389/fped.2026.1941872,excluir,E1,,otro,probióticos en gastroenteritis aguda,revisión sistemática de ensayos
+doi:10.1016/j.anaerobe.2026.103068,excluir,E1,,otro,Clostridioides difficile,estudio epidemiológico o microbiológico
+doi:10.1016/j.ajic.2026.05.020,excluir,E1,,otro,Clostridioides difficile,estudio epidemiológico o microbiológico
+doi:10.1007/s00383-026-06450-2,excluir,E1,,otro,apendicitis / infección intraabdominal,"estudio primario, auditoría o revisión"
+doi:10.1007/s00431-026-07010-5,excluir,E1,,otro,oncología pediátrica,estudio primario o metaanálisis
+doi:10.1590/s0004-2803.24612025-044,excluir,E1,,otro,enfermedad inflamatoria intestinal,"estudio primario, auditoría o revisión narrativa"
+doi:10.1136/bmjpo-2025-004041,excluir,E1,,otro,esofagitis eosinofílica / esófago,estudio primario o revisión narrativa
+doi:10.1007/s00431-026-07213-w,excluir,E1,,otro,diarrea aguda / gastroenteritis (epidemiología y prácticas),"estudio primario, epidemiológico o de prácticas; no es guía"
+doi:10.14482/sun.01.512.228,excluir,E1,,otro,rotavirus y otros virus entéricos,estudio primario o revisión no vinculada a tratamiento

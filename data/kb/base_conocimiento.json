@@ -1,7 +1,7 @@
 {
   "esquema_version": 1,
-  "version": "0.4.0-borrador",
-  "fecha": "2026-11-17",
+  "version": "0.5.0-borrador",
+  "fecha": "2026-11-18",
   "fuentes": [
     {
       "id": "acorl_oma_2024",
@@ -204,6 +204,68 @@
       "organizacion": "Organización Mundial de la Salud",
       "anio": 2022,
       "url": "https://iris.who.int/handle/10665/365237"
+    },
+    {
+      "id": "cps_meningitis_2014",
+      "titulo": "Guidelines for the management of suspected and confirmed bacterial meningitis in Canadian children older than one month of age",
+      "organizacion": "Canadian Paediatric Society (Paediatr Child Health 19(3):141-146)",
+      "anio": 2014,
+      "url": "https://doi.org/10.1093/pch/19.3.141"
+    },
+    {
+      "id": "nice_ng111_2018",
+      "titulo": "Pyelonephritis (acute): antimicrobial prescribing (NG111)",
+      "organizacion": "National Institute for Health and Care Excellence (Reino Unido)",
+      "anio": 2018,
+      "url": "https://www.nice.org.uk/guidance/ng111"
+    },
+    {
+      "id": "consenso_suizo_itu_2021",
+      "titulo": "Swiss consensus recommendations on urinary tract infections in children",
+      "organizacion": "Grupo de consenso suizo (Eur J Pediatr)",
+      "anio": 2021,
+      "url": "https://doi.org/10.1007/s00431-020-03714-4"
+    },
+    {
+      "id": "sap_piel_2014",
+      "titulo": "Infecciones de piel y partes blandas en pediatría: consenso sobre diagnóstico y tratamiento",
+      "organizacion": "Sociedad Argentina de Pediatría, Comité Nacional de Infectología (Arch Argent Pediatr 112(2):183-191)",
+      "anio": 2014,
+      "url": "https://doi.org/10.5546/aap.2014.183"
+    },
+    {
+      "id": "sochinf_faringoamigdalitis_2019",
+      "titulo": "Recomendaciones para el diagnóstico y tratamiento etiológico de la faringoamigdalitis aguda estreptocócica en pediatría",
+      "organizacion": "Sociedad Chilena de Infectología (Rev Chilena Infectol 36(1):69-77)",
+      "anio": 2019,
+      "url": "https://doi.org/10.4067/s0716-10182019000100069"
+    },
+    {
+      "id": "sadi_neumonia_complicada_2024",
+      "titulo": "Recomendaciones sobre neumonías complicadas en pediatría",
+      "organizacion": "Sociedad Argentina de Infectología (Actualizaciones en Sida e Infectología 32(116))",
+      "anio": 2024,
+      "url": "https://doi.org/10.52226/revista.v32i116.345"
+    },
+    {
+      "id": "aap_oma_2013",
+      "titulo": "The Diagnosis and Management of Acute Otitis Media",
+      "organizacion": "American Academy of Pediatrics (Pediatrics 131(3):e964-e999)",
+      "anio": 2013,
+      "url": "https://doi.org/10.1542/peds.2012-3488"
+    },
+    {
+      "id": "sochinf_itu_2022",
+      "titulo": "Recomendaciones para el diagnóstico y tratamiento de la infección del tracto urinario en pediatría (parte 1)",
+      "organizacion": "Sociedad Chilena de Infectología (Rev Chilena Infectol 39(2))",
+      "anio": 2022
+    },
+    {
+      "id": "australia_otitis_media_2021",
+      "titulo": "Otitis media guidelines for Australian Aboriginal and Torres Strait Islander children",
+      "organizacion": "Grupo de guías de otitis media (Med J Aust)",
+      "anio": 2021,
+      "url": "https://doi.org/10.5694/mja2.50953"
     }
   ],
   "medicamentos": [
@@ -237,6 +299,15 @@
           }
         ]
       },
+      "topes": [
+        {
+          "via": "oral",
+          "max_por_dia": 4000,
+          "fuente_id": "finlandia_vri_2023",
+          "pagina": "Tabla 3 (p. 253)",
+          "nota": "Coincide con PIDS/IDSA 2011, tabla 7."
+        }
+      ],
       "presentaciones": [
         {
           "id": "amox_susp_250",
@@ -291,6 +362,15 @@
           }
         ]
       },
+      "topes": [
+        {
+          "via": "oral",
+          "max_por_dia": 4000,
+          "fuente_id": "pids_idsa_neumonia_2011",
+          "pagina": "Tabla 7",
+          "nota": "En amoxicilina."
+        }
+      ],
       "presentaciones": [
         {
           "id": "amoxclav_susp_600",
@@ -310,6 +390,14 @@
         "tipo": "sin_dato",
         "estado": "borrador"
       },
+      "topes": [
+        {
+          "via": "iv",
+          "max_por_dia": 12000,
+          "fuente_id": "cps_meningitis_2014",
+          "pagina": "Tabla 2"
+        }
+      ],
       "presentaciones": []
     },
     {
@@ -331,6 +419,22 @@
           }
         ]
       },
+      "topes": [
+        {
+          "via": "iv",
+          "max_por_dia": 4000,
+          "fuente_id": "finlandia_vri_2023",
+          "pagina": "Tabla 3 (p. 253)",
+          "nota": "Igual en la Sociedad Canadiense de Pediatría 2014 y en NICE NG111. La OMS (AWaRe 2022) da 3 g en niños."
+        },
+        {
+          "via": "im",
+          "max_por_dia": 4000,
+          "fuente_id": "nice_ng111_2018",
+          "pagina": "Tabla 3",
+          "nota": "NICE lo da para la vía intravenosa o intramuscular."
+        }
+      ],
       "presentaciones": [
         {
           "id": "ceftriaxona_vial_im",
@@ -376,6 +480,15 @@
           }
         ]
       },
+      "topes": [
+        {
+          "via": "oral",
+          "max_por_dia": 1000,
+          "fuente_id": "consenso_suizo_itu_2021",
+          "pagina": "Tabla 2",
+          "nota": "Dosis máxima diaria de SwissPedDose."
+        }
+      ],
       "presentaciones": [
         {
           "id": "cefuroxima_susp_250",
@@ -429,6 +542,14 @@
           }
         ]
       },
+      "topes": [
+        {
+          "via": "iv",
+          "max_por_dia": 6000,
+          "fuente_id": "finlandia_vri_2023",
+          "pagina": "Tabla 3 (p. 253)"
+        }
+      ],
       "presentaciones": []
     },
     {
@@ -455,6 +576,16 @@
           }
         ]
       },
+      "topes": [
+        {
+          "via": "oral",
+          "max_por_dosis": 1000,
+          "max_por_dia": 4000,
+          "fuente_id": "nice_ng111_2018",
+          "pagina": "Tabla 3",
+          "nota": "Máximo para infecciones graves."
+        }
+      ],
       "presentaciones": [
         {
           "id": "cefalexina_susp_250",
@@ -483,6 +614,7 @@
         "tipo": "sin_dato",
         "estado": "borrador"
       },
+      "topes": [],
       "presentaciones": [
         {
           "id": "cefdinir_susp_125",
@@ -510,6 +642,14 @@
         "tipo": "sin_dato",
         "estado": "borrador"
       },
+      "topes": [
+        {
+          "via": "oral",
+          "max_por_dia": 400,
+          "fuente_id": "consenso_suizo_itu_2021",
+          "pagina": "Tabla 2"
+        }
+      ],
       "presentaciones": [
         {
           "id": "cefpodoxima_susp_40",
@@ -547,6 +687,15 @@
           }
         ]
       },
+      "topes": [
+        {
+          "via": "oral",
+          "max_por_dia": 500,
+          "fuente_id": "finlandia_vri_2023",
+          "pagina": "Tabla 3 (p. 253)",
+          "nota": "Igual en PIDS/IDSA 2011."
+        }
+      ],
       "presentaciones": [
         {
           "id": "azitro_susp_200",
@@ -586,6 +735,15 @@
           }
         ]
       },
+      "topes": [
+        {
+          "via": "oral",
+          "max_por_dia": 1000,
+          "fuente_id": "finlandia_vri_2023",
+          "pagina": "Tabla 3 (p. 253)",
+          "nota": "Igual en PIDS/IDSA 2011."
+        }
+      ],
       "presentaciones": [
         {
           "id": "clari_susp_125",
@@ -623,6 +781,16 @@
         "estado": "borrador",
         "fuente_id": "aemps_fichas_tecnicas"
       },
+      "topes": [
+        {
+          "via": "oral",
+          "max_por_dosis": 100,
+          "max_por_dia": 200,
+          "fuente_id": "finlandia_vri_2023",
+          "pagina": "Tabla 3 (p. 253)",
+          "nota": "El máximo por toma es de la guía china de micoplasma (p. 7)."
+        }
+      ],
       "presentaciones": [
         {
           "id": "doxi_cap_100",
@@ -644,6 +812,7 @@
         "estado": "borrador",
         "nota": "Solo la ficha técnica española da porcentajes (75 % con depuración de 10 a 50 mL/min; 20 a 50 % si es menor de 10); la FDA y el Kinderformularium no dan regla."
       },
+      "topes": [],
       "presentaciones": [
         {
           "id": "benzatinica_vial_1200000",
@@ -665,6 +834,15 @@
         "estado": "borrador",
         "nota": "Las fuentes no coinciden: las fichas de la FDA y de España dan una dosis de carga y luego la mitad a intervalos más largos; la ficha británica da otra tabla; el Kinderformularium no da recomendación con TFG menor de 30."
       },
+      "topes": [
+        {
+          "via": "iv",
+          "max_por_dia": 24000000,
+          "fuente_id": "finlandia_vri_2023",
+          "pagina": "Tabla 3 (p. 253)",
+          "nota": "Igual en la Sociedad Canadiense de Pediatría 2014."
+        }
+      ],
       "presentaciones": []
     },
     {
@@ -685,6 +863,20 @@
           }
         ]
       },
+      "topes": [
+        {
+          "via": "oral",
+          "max_por_dia": 1500,
+          "fuente_id": "francia_gastroenteritis_2017",
+          "pagina": "Tabla 1 (p. S28)"
+        },
+        {
+          "via": "iv",
+          "max_por_dosis": 400,
+          "fuente_id": "fda_fichas_tecnicas",
+          "pagina": "Ficha técnica de ciprofloxacina intravenosa"
+        }
+      ],
       "presentaciones": [
         {
           "id": "cipro_tab_500",
@@ -723,6 +915,20 @@
           }
         ]
       },
+      "topes": [
+        {
+          "via": "oral",
+          "max_por_dosis": 500,
+          "fuente_id": "idsa_shea_cdifficile_2017",
+          "pagina": "Tabla 2"
+        },
+        {
+          "via": "iv",
+          "max_por_dosis": 500,
+          "fuente_id": "idsa_shea_cdifficile_2017",
+          "pagina": "Tabla 2"
+        }
+      ],
       "presentaciones": [
         {
           "id": "metro_susp_250",
@@ -753,6 +959,15 @@
         "nota": "Por vía oral casi no se absorbe. Vigilar los niveles séricos si hay colitis grave con insuficiencia renal. No aplicar las reglas de la vancomicina intravenosa.",
         "fuente_id": "ema_vancomicina"
       },
+      "topes": [
+        {
+          "via": "oral",
+          "max_por_dosis": 500,
+          "fuente_id": "idsa_shea_cdifficile_2017",
+          "pagina": "Tabla 2",
+          "nota": "Máximo de la enfermedad grave; en la no grave es 125 mg."
+        }
+      ],
       "presentaciones": [
         {
           "id": "vanco_cap_125",
@@ -798,6 +1013,15 @@
           }
         ]
       },
+      "topes": [
+        {
+          "via": "oral",
+          "max_por_dosis": 320,
+          "fuente_id": "idsa_piel_2014",
+          "pagina": "Tabla 2",
+          "nota": "En trimetoprim; dosis de adulto (1 a 2 tabletas dobles)."
+        }
+      ],
       "presentaciones": [
         {
           "id": "tmpsmx_susp_40",
@@ -836,6 +1060,22 @@
         "estado": "borrador",
         "fuente_id": "fda_fichas_tecnicas"
       },
+      "topes": [
+        {
+          "via": "oral",
+          "max_por_dosis": 450,
+          "fuente_id": "idsa_piel_2014",
+          "pagina": "Tabla 2",
+          "nota": "Dosis de adulto de la misma tabla (300 a 450 mg cuatro veces al día)."
+        },
+        {
+          "via": "iv",
+          "max_por_dosis": 900,
+          "fuente_id": "sap_piel_2014",
+          "pagina": "p. 188",
+          "nota": "Dosis de adulto (900 mg cada 8 horas)."
+        }
+      ],
       "presentaciones": [
         {
           "id": "clinda_cap_300",
@@ -865,6 +1105,7 @@
         "tipo": "sin_dato",
         "estado": "borrador"
       },
+      "topes": [],
       "presentaciones": []
     },
     {
@@ -885,6 +1126,15 @@
           }
         ]
       },
+      "topes": [
+        {
+          "via": "oral",
+          "max_por_dia": 4000,
+          "fuente_id": "pids_idsa_neumonia_2011",
+          "pagina": "Tabla 7",
+          "nota": "En amoxicilina. PIDS/IDSA da el máximo para la amoxicilina-clavulanato sin precisar la relación."
+        }
+      ],
       "presentaciones": [
         {
           "id": "amoxclav71_susp_400",
@@ -913,6 +1163,14 @@
         "tipo": "sin_dato",
         "estado": "borrador"
       },
+      "topes": [
+        {
+          "via": "oral",
+          "max_por_dosis": 100,
+          "fuente_id": "consenso_suizo_itu_2021",
+          "pagina": "Tabla 2"
+        }
+      ],
       "presentaciones": [
         {
           "id": "nitrofurantoina_cap_100",
@@ -933,6 +1191,7 @@
         "tipo": "sin_dato",
         "estado": "borrador"
       },
+      "topes": [],
       "presentaciones": [
         {
           "id": "dicloxacilina_susp_250",
@@ -961,6 +1220,7 @@
         "tipo": "sin_dato",
         "estado": "borrador"
       },
+      "topes": [],
       "presentaciones": []
     },
     {
@@ -971,6 +1231,7 @@
         "tipo": "sin_dato",
         "estado": "borrador"
       },
+      "topes": [],
       "presentaciones": []
     },
     {
@@ -982,6 +1243,15 @@
         "estado": "borrador",
         "nota": "Los aminoglucósidos se eliminan por el riñón y son nefrotóxicos: con función renal reducida el ajuste es indispensable."
       },
+      "topes": [
+        {
+          "via": "iv",
+          "max_por_dia": 1500,
+          "fuente_id": "consenso_suizo_itu_2021",
+          "pagina": "Tabla 2",
+          "nota": "El consenso colombiano de infección urinaria da 1 g al día."
+        }
+      ],
       "presentaciones": [
         {
           "id": "amikacina_amp_100",
@@ -1012,6 +1282,7 @@
         "estado": "borrador",
         "nota": "Los aminoglucósidos se eliminan por el riñón y son nefrotóxicos: con función renal reducida el ajuste es indispensable."
       },
+      "topes": [],
       "presentaciones": [
         {
           "id": "gentamicina_amp_80",
@@ -1041,6 +1312,7 @@
         "tipo": "sin_dato",
         "estado": "borrador"
       },
+      "topes": [],
       "presentaciones": [
         {
           "id": "albendazol_susp_100",
@@ -1077,6 +1349,7 @@
         "tipo": "sin_dato",
         "estado": "borrador"
       },
+      "topes": [],
       "presentaciones": [
         {
           "id": "mebendazol_susp_100",
@@ -1096,6 +1369,7 @@
         "tipo": "sin_dato",
         "estado": "borrador"
       },
+      "topes": [],
       "presentaciones": []
     },
     {
@@ -1106,7 +1380,140 @@
         "tipo": "sin_dato",
         "estado": "borrador"
       },
+      "topes": [],
       "presentaciones": []
+    },
+    {
+      "id": "ampicilina_sulbactam",
+      "nombre": "Ampicilina-sulbactam",
+      "unidad": "mg",
+      "ajuste_renal": {
+        "tipo": "sin_dato",
+        "estado": "borrador"
+      },
+      "topes": [],
+      "presentaciones": []
+    },
+    {
+      "id": "cefotaxima",
+      "nombre": "Cefotaxima",
+      "unidad": "mg",
+      "ajuste_renal": {
+        "tipo": "sin_dato",
+        "estado": "borrador"
+      },
+      "topes": [
+        {
+          "via": "iv",
+          "max_por_dia": 12000,
+          "fuente_id": "cps_meningitis_2014",
+          "pagina": "Tabla 2",
+          "nota": "La guía da 8 a 12 g al día."
+        }
+      ],
+      "presentaciones": []
+    },
+    {
+      "id": "levofloxacina",
+      "nombre": "Levofloxacina",
+      "unidad": "mg",
+      "ajuste_renal": {
+        "tipo": "sin_dato",
+        "estado": "borrador"
+      },
+      "topes": [
+        {
+          "via": "iv",
+          "max_por_dia": 750,
+          "fuente_id": "pids_idsa_neumonia_2011",
+          "pagina": "Tabla 7"
+        }
+      ],
+      "presentaciones": []
+    },
+    {
+      "id": "vancomicina_iv",
+      "nombre": "Vancomicina (intravenosa)",
+      "unidad": "mg",
+      "ajuste_renal": {
+        "tipo": "sin_dato",
+        "estado": "borrador",
+        "nota": "Se elimina por el riñón: la dosis se ajusta según los niveles séricos y la función renal."
+      },
+      "topes": [],
+      "presentaciones": []
+    },
+    {
+      "id": "linezolid",
+      "nombre": "Linezolid",
+      "unidad": "mg",
+      "ajuste_renal": {
+        "tipo": "no_requiere",
+        "estado": "borrador",
+        "fuente_id": "kinderformularium"
+      },
+      "topes": [
+        {
+          "via": "iv",
+          "max_por_dosis": 600,
+          "fuente_id": "sap_piel_2014",
+          "pagina": "Figura 4 (p. 185)"
+        },
+        {
+          "via": "oral",
+          "max_por_dosis": 600,
+          "fuente_id": "sap_piel_2014",
+          "pagina": "Figura 4 (p. 185)"
+        }
+      ],
+      "presentaciones": [
+        {
+          "id": "linezolid_tab_600",
+          "descripcion": "Tableta 600 mg",
+          "via": "oral",
+          "tipo": "solido",
+          "cantidad": 600,
+          "unidad": "tableta",
+          "divisible": false
+        }
+      ]
+    },
+    {
+      "id": "cefadroxilo",
+      "nombre": "Cefadroxilo",
+      "unidad": "mg",
+      "ajuste_renal": {
+        "tipo": "sin_dato",
+        "estado": "borrador"
+      },
+      "topes": [],
+      "presentaciones": [
+        {
+          "id": "cefadroxilo_susp_250",
+          "descripcion": "Suspensión 250 mg/5 mL",
+          "via": "oral",
+          "tipo": "liquido",
+          "cantidad": 250,
+          "volumen_ml": 5
+        },
+        {
+          "id": "cefadroxilo_susp_500",
+          "descripcion": "Suspensión 500 mg/5 mL",
+          "via": "oral",
+          "tipo": "liquido",
+          "cantidad": 500,
+          "volumen_ml": 5
+        },
+        {
+          "id": "cefadroxilo_cap_500",
+          "descripcion": "Cápsula 500 mg",
+          "via": "oral",
+          "tipo": "solido",
+          "cantidad": 500,
+          "unidad": "cápsula",
+          "divisible": false
+        }
+      ]
     }
   ],
   "enfermedades": [
@@ -1326,6 +1733,27 @@
                   "nota": "La guía italiana de 2019 indica 2 tomas al día y no fija la duración. La guía colombiana ACORL 2024 recomienda clindamicina o macrólidos en la alergia de tipo I. AAP 2013 advierte que los macrólidos tienen eficacia limitada en la otitis. Tope de 1 g al día tomado de PIDS/IDSA 2011.",
                   "fuente_id": "sip_oma_2019",
                   "pagina": "Recomendación 9 (p. S16)",
+                  "estado": "borrador"
+                }
+              ]
+            },
+            {
+              "numero": 5,
+              "descripcion": "Clindamicina (alergia de tipo I a la penicilina)",
+              "componentes": [
+                {
+                  "medicamento_id": "clindamicina",
+                  "via": "oral",
+                  "base": "mg_kg_dia",
+                  "dosis": {
+                    "min": 30,
+                    "usual": 40,
+                    "max": 40
+                  },
+                  "intervalo_horas": 8,
+                  "nota": "La guía colombiana ACORL 2024 recomienda clindamicina en la alergia de tipo I sin dar la dosis; la dosis es de AAP 2013. No hay suspensión de clindamicina en Colombia.",
+                  "fuente_id": "aap_oma_2013",
+                  "pagina": "Tabla 5 (p. e983)",
                   "estado": "borrador"
                 }
               ]
@@ -1580,6 +2008,32 @@
                   "nota": "Segunda línea de la guía colombiana en caso de alergia, intolerancia o falta de disponibilidad.",
                   "fuente_id": "acorl_faringoamigdalitis_2024",
                   "pagina": "Tabla 6 (p. 547)",
+                  "estado": "borrador"
+                }
+              ]
+            },
+            {
+              "numero": 6,
+              "descripcion": "Cefadroxilo",
+              "componentes": [
+                {
+                  "medicamento_id": "cefadroxilo",
+                  "via": "oral",
+                  "base": "mg_kg_dia",
+                  "dosis": {
+                    "min": 30,
+                    "usual": 30,
+                    "max": 30
+                  },
+                  "intervalo_horas": 24,
+                  "max_por_dia": 1000,
+                  "duracion_dias": {
+                    "min": 10,
+                    "max": 10
+                  },
+                  "nota": "Evitar si hubo hipersensibilidad inmediata a la penicilina. Igual en la Sociedad Chilena de Infectología 2019 (tabla 5, p. 73).",
+                  "fuente_id": "idsa_faringitis_2012",
+                  "pagina": "Tabla 2",
                   "estado": "borrador"
                 }
               ]
@@ -2183,6 +2637,35 @@
                   "estado": "borrador"
                 }
               ]
+            },
+            {
+              "numero": 3,
+              "descripcion": "Ceftriaxona (AIEPI Colombia, 2 meses a 5 años)",
+              "componentes": [
+                {
+                  "medicamento_id": "ceftriaxona",
+                  "via": "iv",
+                  "base": "mg_kg_dia",
+                  "dosis": {
+                    "min": 100,
+                    "usual": 100,
+                    "max": 100
+                  },
+                  "intervalo_horas": 24,
+                  "duracion_dias": {
+                    "min": 5,
+                    "max": 5
+                  },
+                  "edad_meses": {
+                    "min": 2,
+                    "max": 60
+                  },
+                  "nota": "Uso hospitalario. AIEPI y la guía del Ministerio de 2013 dan como primera opción el ácido nalidíxico, que no tiene registro sanitario vigente.",
+                  "fuente_id": "aiepi_2012",
+                  "pagina": "Sección 6.3.5 (p. 529)",
+                  "estado": "borrador"
+                }
+              ]
             }
           ]
         }
@@ -2389,6 +2872,32 @@
                   "estado": "borrador"
                 }
               ]
+            },
+            {
+              "numero": 2,
+              "descripcion": "Metronidazol oral (IDSA/SHEA)",
+              "componentes": [
+                {
+                  "medicamento_id": "metronidazol",
+                  "via": "oral",
+                  "base": "mg_kg_dosis",
+                  "dosis": {
+                    "min": 7.5,
+                    "usual": 7.5,
+                    "max": 7.5
+                  },
+                  "intervalo_horas": 8,
+                  "max_por_dosis": 500,
+                  "duracion_dias": {
+                    "min": 10,
+                    "max": 10
+                  },
+                  "nota": "Primer episodio no grave. La guía lo da 3 o 4 veces al día; se calcula cada 8 horas.",
+                  "fuente_id": "idsa_shea_cdifficile_2017",
+                  "pagina": "Tabla 2",
+                  "estado": "borrador"
+                }
+              ]
             }
           ]
         },
@@ -2415,6 +2924,32 @@
                     "max": 10
                   },
                   "nota": "Equivale a los 40 mg/kg/día en 4 dosis de la guía francesa de 2017, que la da como alternativa. El tope de 125 mg por dosis es para la enfermedad no grave; en la grave o fulminante es de 500 mg por dosis.",
+                  "fuente_id": "idsa_shea_cdifficile_2017",
+                  "pagina": "Tabla 2",
+                  "estado": "borrador"
+                }
+              ]
+            },
+            {
+              "numero": 2,
+              "descripcion": "Vancomicina oral (enfermedad grave o fulminante)",
+              "componentes": [
+                {
+                  "medicamento_id": "vancomicina",
+                  "via": "oral",
+                  "base": "mg_kg_dosis",
+                  "dosis": {
+                    "min": 10,
+                    "usual": 10,
+                    "max": 10
+                  },
+                  "intervalo_horas": 6,
+                  "max_por_dosis": 500,
+                  "duracion_dias": {
+                    "min": 10,
+                    "max": 10
+                  },
+                  "nota": "Con o sin metronidazol intravenoso (10 mg/kg por dosis cada 8 horas, máximo 500 mg).",
                   "fuente_id": "idsa_shea_cdifficile_2017",
                   "pagina": "Tabla 2",
                   "estado": "borrador"
@@ -2964,7 +3499,7 @@
                   "medicamento_id": "ciprofloxacina_otica",
                   "via": "topica",
                   "base": "sin_calculo",
-                  "nota": "Gotas óticas de quinolona (ciprofloxacina u ofloxacina) durante al menos 2 semanas, después de secar el oído con mecha. No dar antibiótico oral. La guía no indica el número de gotas. Remitir a especialista y controlar a los 14 días",
+                  "nota": "Gotas óticas de quinolona (ciprofloxacina u ofloxacina) durante al menos 2 semanas, después de secar el oído con mecha. No dar antibiótico oral. La guía no indica el número de gotas. Remitir a especialista y controlar a los 14 días La guía australiana de 2021 (niños aborígenes de alto riesgo) indica 5 gotas de ciprofloxacina cada 12 horas.",
                   "fuente_id": "aiepi_2012",
                   "pagina": "Otitis media crónica (p. 550)",
                   "estado": "borrador"
@@ -3054,7 +3589,7 @@
                   "edad_meses": {
                     "min": 3
                   },
-                  "nota": "La guía no dice a qué componente se refiere la dosis: se toma en trimetoprim, como la OMS y NICE: confirmar. Tope de 160 mg de trimetoprim por toma: ficha técnica de la FDA. Elegir según la sensibilidad antimicrobiana local.",
+                  "nota": "La guía no dice a qué componente se refiere la dosis: se toma en trimetoprim, como la OMS y NICE: confirmar. Tope de 160 mg de trimetoprim por toma: ficha técnica de la FDA. Elegir según la sensibilidad antimicrobiana local. La Sociedad Chilena de Infectología (2022) expresa la dosis en trimetoprim.",
                   "fuente_id": "consenso_colombiano_itu_2023",
                   "pagina": "Tabla 2 (p. 1262)",
                   "estado": "borrador"
@@ -3245,7 +3780,7 @@
                   "edad_meses": {
                     "min": 3
                   },
-                  "nota": "La guía no dice a qué componente se refiere la dosis: se toma en trimetoprim, como la OMS y NICE: confirmar. Tope de 160 mg de trimetoprim por toma: ficha técnica de la FDA. Preferir la vía oral cuando el estado clínico lo permite. Se hospitaliza al menor de 3 meses y a quien tiene aspecto tóxico, vómito o fiebre que persiste tras 48 horas de tratamiento.",
+                  "nota": "La guía no dice a qué componente se refiere la dosis: se toma en trimetoprim, como la OMS y NICE: confirmar. Tope de 160 mg de trimetoprim por toma: ficha técnica de la FDA. Preferir la vía oral cuando el estado clínico lo permite. Se hospitaliza al menor de 3 meses y a quien tiene aspecto tóxico, vómito o fiebre que persiste tras 48 horas de tratamiento. La Sociedad Chilena de Infectología (2022) expresa la dosis en trimetoprim.",
                   "fuente_id": "consenso_colombiano_itu_2023",
                   "pagina": "Tabla 2 (p. 1262)",
                   "estado": "borrador"
@@ -3896,6 +4431,585 @@
                   "nota": "1 gota en el ojo afectado cada 6 horas. La mayoría de las conjuntivitis infecciosas son virales y se resuelven solas. No se encontró guía colombiana para mayores de 2 meses",
                   "fuente_id": "oms_aware_2022",
                   "pagina": "Tabla 10.3 (p. 122)",
+                  "estado": "borrador"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "requiere_antibiotico": true
+    },
+    {
+      "id": "meningitis_bacteriana",
+      "nombre": "Meningitis bacteriana: tratamiento empírico (hospital)",
+      "grupo": "Fiebre y enfermedad grave",
+      "fuente_id": "oms_aware_2022",
+      "lineas": [
+        {
+          "linea": "primera",
+          "opciones": [
+            {
+              "numero": 1,
+              "descripcion": "Ceftriaxona (OMS)",
+              "componentes": [
+                {
+                  "medicamento_id": "ceftriaxona",
+                  "via": "iv",
+                  "base": "mg_kg_dosis",
+                  "dosis": {
+                    "min": 100,
+                    "usual": 100,
+                    "max": 100
+                  },
+                  "intervalo_horas": 24,
+                  "max_por_dia": 3000,
+                  "duracion_dias": {
+                    "min": 10,
+                    "max": 10
+                  },
+                  "edad_meses": {
+                    "min": 1
+                  },
+                  "nota": "Uso hospitalario. 10 días si no se conoce el germen (meningococo 5 a 7; neumococo 10 a 14). Tope de 3 g al día de la OMS para niños. El lineamiento colombiano de enfermedad meningocócica (2018) escribe «100 mg/kg cada 12 horas» sin aclarar si es por día o por dosis: no se cargó hasta aclararlo.",
+                  "fuente_id": "oms_aware_2022",
+                  "pagina": "Tabla 26.4 (p. 358) y tabla 50.1 (p. 645)",
+                  "estado": "borrador"
+                }
+              ]
+            },
+            {
+              "numero": 2,
+              "descripcion": "Cefotaxima (OMS)",
+              "componentes": [
+                {
+                  "medicamento_id": "cefotaxima",
+                  "via": "iv",
+                  "base": "mg_kg_dosis",
+                  "dosis": {
+                    "min": 50,
+                    "usual": 50,
+                    "max": 50
+                  },
+                  "intervalo_horas": 8,
+                  "duracion_dias": {
+                    "min": 10,
+                    "max": 10
+                  },
+                  "edad_meses": {
+                    "min": 1
+                  },
+                  "nota": "Uso hospitalario.",
+                  "fuente_id": "oms_aware_2022",
+                  "pagina": "Tabla 26.4 (p. 358)",
+                  "estado": "borrador"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "linea": "segunda",
+          "opciones": [
+            {
+              "numero": 1,
+              "descripcion": "Ceftriaxona más vancomicina (Sociedad Canadiense de Pediatría)",
+              "componentes": [
+                {
+                  "medicamento_id": "ceftriaxona",
+                  "via": "iv",
+                  "base": "mg_kg_dia",
+                  "dosis": {
+                    "min": 100,
+                    "usual": 100,
+                    "max": 100
+                  },
+                  "intervalo_horas": 12,
+                  "max_por_dia": 4000,
+                  "edad_meses": {
+                    "min": 1
+                  },
+                  "nota": "Uso hospitalario. Recomendado como tratamiento empírico en Canadá, donde se cubre el neumococo resistente a cefalosporinas.",
+                  "fuente_id": "cps_meningitis_2014",
+                  "pagina": "Tablas 1 y 2",
+                  "estado": "borrador"
+                },
+                {
+                  "medicamento_id": "vancomicina_iv",
+                  "via": "iv",
+                  "base": "mg_kg_dia",
+                  "dosis": {
+                    "min": 60,
+                    "usual": 60,
+                    "max": 60
+                  },
+                  "intervalo_horas": 6,
+                  "edad_meses": {
+                    "min": 1
+                  },
+                  "nota": "Ajustar según los niveles séricos (valle de 10 a 15 mg/L).",
+                  "fuente_id": "cps_meningitis_2014",
+                  "pagina": "Tablas 1 y 2",
+                  "estado": "borrador"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "requiere_antibiotico": true
+    },
+    {
+      "id": "neumonia_complicada",
+      "nombre": "Neumonía complicada: derrame pleural o empiema (hospital)",
+      "grupo": "Respiratorias bajas",
+      "fuente_id": "sadi_neumonia_complicada_2024",
+      "lineas": [
+        {
+          "linea": "primera",
+          "opciones": [
+            {
+              "numero": 1,
+              "descripcion": "Ampicilina (mayores de 3 meses)",
+              "componentes": [
+                {
+                  "medicamento_id": "ampicilina",
+                  "via": "iv",
+                  "base": "mg_kg_dia",
+                  "dosis": {
+                    "min": 300,
+                    "usual": 300,
+                    "max": 300
+                  },
+                  "intervalo_horas": 6,
+                  "duracion_dias": {
+                    "min": 14
+                  },
+                  "edad_meses": {
+                    "min": 3
+                  },
+                  "nota": "Uso hospitalario. Al menos 2 semanas, según la evolución. Igual en la Sociedad Argentina de Pediatría 2021 (p. S187).",
+                  "fuente_id": "sadi_neumonia_complicada_2024",
+                  "pagina": "Tabla 2 (p. 13), tabla 4 y sección D (p. 14)",
+                  "estado": "borrador"
+                }
+              ]
+            },
+            {
+              "numero": 2,
+              "descripcion": "Cefotaxima más ampicilina (1 a 3 meses)",
+              "componentes": [
+                {
+                  "medicamento_id": "cefotaxima",
+                  "via": "iv",
+                  "base": "mg_kg_dia",
+                  "dosis": {
+                    "min": 100,
+                    "usual": 150,
+                    "max": 150
+                  },
+                  "intervalo_horas": 8,
+                  "duracion_dias": {
+                    "min": 14
+                  },
+                  "edad_meses": {
+                    "min": 1,
+                    "max": 3
+                  },
+                  "nota": "Uso hospitalario. La guía la da cada 6 a 8 horas; se calcula cada 8.",
+                  "fuente_id": "sadi_neumonia_complicada_2024",
+                  "pagina": "Tabla 2 (p. 13) y tabla 4 (p. 14)",
+                  "estado": "borrador"
+                },
+                {
+                  "medicamento_id": "ampicilina",
+                  "via": "iv",
+                  "base": "mg_kg_dia",
+                  "dosis": {
+                    "min": 300,
+                    "usual": 300,
+                    "max": 300
+                  },
+                  "intervalo_horas": 6,
+                  "duracion_dias": {
+                    "min": 14
+                  },
+                  "edad_meses": {
+                    "min": 1,
+                    "max": 3
+                  },
+                  "fuente_id": "sadi_neumonia_complicada_2024",
+                  "pagina": "Tabla 2 (p. 13) y tabla 4 (p. 14)",
+                  "estado": "borrador"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "linea": "segunda",
+          "opciones": [
+            {
+              "numero": 1,
+              "descripcion": "Clindamicina (sospecha de S. aureus)",
+              "componentes": [
+                {
+                  "medicamento_id": "clindamicina",
+                  "via": "iv",
+                  "base": "mg_kg_dia",
+                  "dosis": {
+                    "min": 30,
+                    "usual": 30,
+                    "max": 30
+                  },
+                  "intervalo_horas": 8,
+                  "nota": "Uso hospitalario.",
+                  "fuente_id": "sadi_neumonia_complicada_2024",
+                  "pagina": "Tabla 2 (p. 13) y tablas 3 y 4 (p. 14)",
+                  "estado": "borrador"
+                }
+              ]
+            },
+            {
+              "numero": 2,
+              "descripcion": "Vancomicina (sospecha de S. aureus resistente)",
+              "componentes": [
+                {
+                  "medicamento_id": "vancomicina_iv",
+                  "via": "iv",
+                  "base": "mg_kg_dia",
+                  "dosis": {
+                    "min": 60,
+                    "usual": 60,
+                    "max": 60
+                  },
+                  "intervalo_horas": 6,
+                  "nota": "Uso hospitalario. La guía la da cada 6 a 8 horas; se calcula cada 6. Ajustar según los niveles séricos.",
+                  "fuente_id": "sadi_neumonia_complicada_2024",
+                  "pagina": "Tabla 2 (p. 13) y tabla 4 (p. 14)",
+                  "estado": "borrador"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "requiere_antibiotico": true
+    },
+    {
+      "id": "rinosinusitis_hospitalizada",
+      "nombre": "Rinosinusitis grave que requiere hospitalización",
+      "grupo": "Respiratorias altas",
+      "fuente_id": "acorl_rinosinusitis_2024",
+      "lineas": [
+        {
+          "linea": "primera",
+          "opciones": [
+            {
+              "numero": 1,
+              "descripcion": "Ampicilina-sulbactam",
+              "componentes": [
+                {
+                  "medicamento_id": "ampicilina_sulbactam",
+                  "via": "iv",
+                  "base": "mg_kg_dia",
+                  "dosis": {
+                    "min": 200,
+                    "usual": 400,
+                    "max": 400
+                  },
+                  "intervalo_horas": 6,
+                  "duracion_dias": {
+                    "min": 5,
+                    "max": 10
+                  },
+                  "nota": "Uso hospitalario. Duración usual de 7 días. La guía no dice a qué componente se refiere la dosis; se toma en ampicilina: confirmar.",
+                  "fuente_id": "acorl_rinosinusitis_2024",
+                  "pagina": "Tabla 5 (p. 625) y p. 624",
+                  "estado": "borrador"
+                }
+              ]
+            },
+            {
+              "numero": 2,
+              "descripcion": "Ceftriaxona",
+              "componentes": [
+                {
+                  "medicamento_id": "ceftriaxona",
+                  "via": "iv",
+                  "base": "mg_kg_dia",
+                  "dosis": {
+                    "min": 50,
+                    "usual": 50,
+                    "max": 50
+                  },
+                  "intervalo_horas": 12,
+                  "duracion_dias": {
+                    "min": 5,
+                    "max": 10
+                  },
+                  "nota": "Uso hospitalario. La guía la da cada 12 horas, que es poco habitual para la ceftriaxona: confirmar.",
+                  "fuente_id": "acorl_rinosinusitis_2024",
+                  "pagina": "Tabla 5 (p. 625) y p. 624",
+                  "estado": "borrador"
+                }
+              ]
+            },
+            {
+              "numero": 3,
+              "descripcion": "Cefotaxima",
+              "componentes": [
+                {
+                  "medicamento_id": "cefotaxima",
+                  "via": "iv",
+                  "base": "mg_kg_dia",
+                  "dosis": {
+                    "min": 100,
+                    "usual": 200,
+                    "max": 200
+                  },
+                  "intervalo_horas": 6,
+                  "duracion_dias": {
+                    "min": 5,
+                    "max": 10
+                  },
+                  "nota": "Uso hospitalario.",
+                  "fuente_id": "acorl_rinosinusitis_2024",
+                  "pagina": "Tabla 5 (p. 625) y p. 624",
+                  "estado": "borrador"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "linea": "segunda",
+          "opciones": [
+            {
+              "numero": 1,
+              "descripcion": "Levofloxacina",
+              "componentes": [
+                {
+                  "medicamento_id": "levofloxacina",
+                  "via": "iv",
+                  "base": "mg_kg_dia",
+                  "dosis": {
+                    "min": 10,
+                    "usual": 20,
+                    "max": 20
+                  },
+                  "intervalo_horas": 12,
+                  "duracion_dias": {
+                    "min": 5,
+                    "max": 10
+                  },
+                  "nota": "Uso hospitalario. La guía la da cada 12 a 24 horas; se calcula cada 12.",
+                  "fuente_id": "acorl_rinosinusitis_2024",
+                  "pagina": "Tabla 5 (p. 625)",
+                  "estado": "borrador"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "requiere_antibiotico": true
+    },
+    {
+      "id": "piel_sarm_grave",
+      "nombre": "Infección grave de piel por S. aureus resistente a meticilina (hospital)",
+      "grupo": "Piel y tejidos blandos",
+      "fuente_id": "acin_piel_2023",
+      "lineas": [
+        {
+          "linea": "primera",
+          "opciones": [
+            {
+              "numero": 1,
+              "descripcion": "Vancomicina",
+              "componentes": [
+                {
+                  "medicamento_id": "vancomicina_iv",
+                  "via": "iv",
+                  "base": "mg_kg_dia",
+                  "dosis": {
+                    "min": 40,
+                    "usual": 60,
+                    "max": 60
+                  },
+                  "intervalo_horas": 6,
+                  "nota": "Uso hospitalario. Indicada en infección grave o bacteriemia; considerar dosis de carga en casos graves. Ajustar según los niveles séricos.",
+                  "fuente_id": "acin_piel_2023",
+                  "pagina": "Tabla 3 (p. 120)",
+                  "estado": "borrador"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "linea": "segunda",
+          "opciones": [
+            {
+              "numero": 1,
+              "descripcion": "Clindamicina",
+              "componentes": [
+                {
+                  "medicamento_id": "clindamicina",
+                  "via": "iv",
+                  "base": "mg_kg_dia",
+                  "dosis": {
+                    "min": 30,
+                    "usual": 40,
+                    "max": 40
+                  },
+                  "intervalo_horas": 8,
+                  "nota": "Uso hospitalario. La guía la da en 3 o 4 dosis; se calcula cada 8 horas. No se recomienda si se sospecha bacteriemia.",
+                  "fuente_id": "acin_piel_2023",
+                  "pagina": "Tabla 3 (p. 120)",
+                  "estado": "borrador"
+                }
+              ]
+            },
+            {
+              "numero": 2,
+              "descripcion": "Linezolid",
+              "componentes": [
+                {
+                  "medicamento_id": "linezolid",
+                  "via": "iv",
+                  "base": "mg_kg_dia",
+                  "dosis": {
+                    "min": 30,
+                    "usual": 30,
+                    "max": 30
+                  },
+                  "intervalo_horas": 8,
+                  "nota": "Uso hospitalario. Alternativa a la clindamicina cuando se sospecha un mecanismo de toxinas. La guía también da daptomicina y ceftarolina por edad, que no se cargaron (uso especializado).",
+                  "fuente_id": "acin_piel_2023",
+                  "pagina": "Tabla 3 (p. 120)",
+                  "estado": "borrador"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "requiere_antibiotico": true
+    },
+    {
+      "id": "yersiniosis",
+      "nombre": "Diarrea por Yersinia",
+      "grupo": "Gastrointestinales",
+      "fuente_id": "francia_gastroenteritis_2017",
+      "lineas": [
+        {
+          "linea": "primera",
+          "opciones": [
+            {
+              "numero": 1,
+              "descripcion": "Trimetoprim-sulfametoxazol",
+              "componentes": [
+                {
+                  "medicamento_id": "trimetoprim_sulfametoxazol",
+                  "via": "oral",
+                  "base": "mg_kg_dia",
+                  "dosis": {
+                    "min": 6,
+                    "usual": 6,
+                    "max": 6
+                  },
+                  "intervalo_horas": 12,
+                  "duracion_dias": {
+                    "min": 5,
+                    "max": 5
+                  },
+                  "nota": "La guía da 30 mg/kg/día de sulfametoxazol, equivalentes a 6 mg/kg/día de trimetoprim (relación 5:1).",
+                  "fuente_id": "francia_gastroenteritis_2017",
+                  "pagina": "Tabla 1 (p. S28)",
+                  "estado": "borrador"
+                }
+              ]
+            },
+            {
+              "numero": 2,
+              "descripcion": "Ceftriaxona",
+              "componentes": [
+                {
+                  "medicamento_id": "ceftriaxona",
+                  "via": "iv",
+                  "base": "mg_kg_dia",
+                  "dosis": {
+                    "min": 50,
+                    "usual": 50,
+                    "max": 50
+                  },
+                  "intervalo_horas": 24,
+                  "duracion_dias": {
+                    "min": 5,
+                    "max": 5
+                  },
+                  "nota": "También puede darse por vía intramuscular.",
+                  "fuente_id": "francia_gastroenteritis_2017",
+                  "pagina": "Tabla 1 (p. S28)",
+                  "estado": "borrador"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "linea": "segunda",
+          "opciones": [
+            {
+              "numero": 1,
+              "descripcion": "Doxiciclina (8 años o más)",
+              "componentes": [
+                {
+                  "medicamento_id": "doxiciclina",
+                  "via": "oral",
+                  "base": "mg_kg_dia",
+                  "dosis": {
+                    "min": 4,
+                    "usual": 4,
+                    "max": 4
+                  },
+                  "intervalo_horas": 12,
+                  "max_por_dia": 200,
+                  "duracion_dias": {
+                    "min": 5,
+                    "max": 5
+                  },
+                  "edad_meses": {
+                    "min": 96
+                  },
+                  "fuente_id": "francia_gastroenteritis_2017",
+                  "pagina": "Tabla 1 (p. S28)",
+                  "estado": "borrador"
+                }
+              ]
+            },
+            {
+              "numero": 2,
+              "descripcion": "Ciprofloxacina",
+              "componentes": [
+                {
+                  "medicamento_id": "ciprofloxacina",
+                  "via": "oral",
+                  "base": "mg_kg_dia",
+                  "dosis": {
+                    "min": 20,
+                    "usual": 30,
+                    "max": 30
+                  },
+                  "intervalo_horas": 12,
+                  "max_por_dia": 1500,
+                  "duracion_dias": {
+                    "min": 5,
+                    "max": 5
+                  },
+                  "fuente_id": "francia_gastroenteritis_2017",
+                  "pagina": "Tabla 1 (p. S28)",
                   "estado": "borrador"
                 }
               ]

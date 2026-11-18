@@ -4,6 +4,7 @@
 
 add_executable(calc-dosis
   main.cpp
+  batch.cpp
   plan_printer.cpp)
 
 target_link_libraries(calc-dosis PRIVATE calc::core)

@@ -83,9 +83,9 @@ respetarlas.
    No hay aleatoriedad, red ni reloj dentro del motor.
 2. **Transparente.** Todo resultado trae el desglose y la fuente, para que el
    usuario pueda rehacer la cuenta a mano.
-3. **Sin fallos silenciosos.** Tope aplicado, esquema sin tope, ajuste renal,
+3. **Sin fallos silenciosos.** Tope aplicado (de la guía o del medicamento), esquema sin tope, ajuste renal,
    dato no verificado, falta de información o redondeo excesivo generan una
-   advertencia con código estable (`TOPE_MAXIMO_APLICADO`, `SIN_TOPE_MAXIMO`,
+   advertencia con código estable (`TOPE_MAXIMO_APLICADO`, `TOPE_DEL_MEDICAMENTO_APLICADO`, `SIN_TOPE_MAXIMO`,
    `SIN_DATO_AJUSTE_RENAL`, `DATOS_NO_VERIFICADOS`...).
 4. **Una sola puerta para los datos.** Todo dato clínico entra por
    `kb_loader`, que valida y reporta todos los problemas de una vez.
@@ -184,7 +184,8 @@ Asistente por pasos con Qt Widgets (`QWizard`), todo en C++:
 | `report_dialog.*` | Formato semiautomatizado de reporte de error |
 | `html.*` | Resultado del núcleo → HTML (usa `text.hpp`, igual que la consola) |
 | `theme.*` | Aspecto visual: tabla de colores (clara y oscura), hoja de estilo e icono |
-| `widgets/step_sidebar.*` | Barra lateral con el nombre de la aplicación y el progreso por pasos |
+| `widgets/hero_header.*` | Encabezado de cada página: banda de color con el título y el progreso por pasos |
+| `widgets/age_band.*` | Dibujo del grupo de edad del paciente (ayuda visual, no interviene en el cálculo) |
 | `widgets/ui.*` | Piezas comunes: encabezado de página, tarjeta, etiquetas de campo |
 | `app_paths.*` | Dónde están la base de conocimiento y el archivo de reportes |
 | `screenshot_tour.*` | Recorrido automático con capturas (prueba y manual) |
@@ -198,6 +199,9 @@ Reglas que sigue la interfaz:
 - **«Siguiente» se deshabilita** mientras haya una advertencia bloqueante.
 - **Los módulos de apoyo** se registran en `main.cpp` y sus observaciones se
   muestran al final del resultado, separadas y atribuidas.
+- **Gama del proyecto:** azul marino `#14213D`, azul `#1F4E79` y marfil
+  `#F6F3EE`, con un detalle fino en dorado. Solo los avisos (ámbar, rojo,
+  verde) usan colores fuera de ella.
 - **Un solo origen para los colores.** Widgets y resultado en HTML toman los
   colores de `theme()`; no se escriben colores en las páginas. El estilo
   Fusion de Qt da el mismo aspecto en Windows, macOS y Linux, y el tema sigue
@@ -240,6 +244,7 @@ Valores que hoy son supuestos razonables del desarrollo y deben confirmarse:
 | Referencia farmacológica para el ajuste renal | por medicamento: fichas técnicas europeas (EMA, AEMPS) o Kinderformularium; las fuentes no siempre coinciden | hojas `medicamentos` y `ajuste_renal` |
 | Unidad de la TFG en las bandas | se comparan con mL/min/1,73 m², aunque algunas fichas escriben mL/min sin normalizar | hoja `ajuste_renal` |
 | Valor con el que se calcula cuando la guía da un rango | el extremo superior (se muestra el rango completo) | columna `dosis_usual` de `esquemas` |
+| Tope por medicamento y vía (dosis máxima del adulto) | 28 topes con fuente (hoja `topes_medicamento`); sin tope con fuente para cefazolina, oxacilina, dicloxacilina, ampicilina-sulbactam, cefdinir, gentamicina y vancomicina intravenosa | `docs/revision/decisiones_integracion.md` |
 | Topes tomados de otra fuente | amoxicilina 4 g/día (PIDS/IDSA 2011), cefuroxima oral 1 g/día (FDA), dosis de adulto de IDSA para clindamicina y trimetoprim-sulfametoxazol; cada uno está escrito en la nota del esquema | columnas `max_por_dosis` y `max_por_dia` |
 | Dosis de amoxicilina en neumonía | 90 mg/kg/día (guía colombiana, PIDS/IDSA) frente a 40 a 45 mg/kg/día (guía finlandesa): están las dos | hoja `esquemas` |
 | Presentaciones comerciales | confirmadas en el registro del INVIMA (noviembre de 2026); el registro no garantiza disponibilidad | hoja `presentaciones` |

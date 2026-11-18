@@ -9,7 +9,6 @@
 #include "pages/renal_page.hpp"
 #include "pages/result_page.hpp"
 #include "report_dialog.hpp"
-#include "widgets/step_sidebar.hpp"
 
 namespace calc::gui {
 
@@ -18,8 +17,9 @@ CalculatorWizard::CalculatorWizard(const KnowledgeBase& kb, ReportSink& report_s
     : QWizard(parent), kb_(kb), report_sink_(report_sink) {
   setWindowTitle(toQString(kAppName) + " " + toQString(kAppVersion) + " — base " +
                  toQString(kb.version));
-  // Mismo aspecto en Windows, macOS y Linux.
-  setWizardStyle(QWizard::ModernStyle);
+  // Estilo clásico: toda la ventana usa el color de fondo del tema. El
+  // progreso por pasos lo dibuja el encabezado de cada página.
+  setWizardStyle(QWizard::ClassicStyle);
   setOption(QWizard::NoBackButtonOnStartPage);
   setOption(QWizard::NoCancelButton);
   setOption(QWizard::HaveCustomButton1);
@@ -33,13 +33,6 @@ CalculatorWizard::CalculatorWizard(const KnowledgeBase& kb, ReportSink& report_s
   // «Reportar un error» a la izquierda; la navegación, a la derecha.
   setButtonLayout({QWizard::CustomButton1, QWizard::Stretch, QWizard::BackButton,
                    QWizard::NextButton, QWizard::FinishButton});
-
-  // Barra lateral con la identidad de la aplicación y el progreso.
-  sidebar_ = new StepSidebar({"Paciente", "Función renal", "Enfermedad", "Resultado"},
-                             toQString(kAppVersion), toQString(kb.version), this);
-  setSideWidget(sidebar_);
-  connect(this, &QWizard::currentIdChanged, this,
-          [this](int id) { sidebar_->setCurrentStep(id < 0 ? 0 : id); });
 
   patient_page_ = new PatientPage(session_, this);
   renal_page_ = new RenalPage(session_, this);

@@ -5,7 +5,7 @@ clínica para que la calculadora la use. No hace falta saber programar.
 
 ## Cómo se trabaja
 
-1. La información se registra en **seis hojas** (archivos CSV en `data/fuente/`).
+1. La información se registra en **siete hojas** (archivos CSV en `data/fuente/`).
    Se pueden abrir y editar con Excel o Google Sheets; al terminar se exportan
    de nuevo como CSV con el mismo nombre.
 2. Un desarrollador ejecuta `python3 tools/construir_kb.py`, que genera la base
@@ -121,6 +121,26 @@ filas con `factor_dosis` 1 e `intervalo_minimo_horas` 12 y 24.
 Ejemplo con dosis de reemplazo: «TFG 10 a 30: 15 mg/kg cada 12 h, máximo 500 mg
 por toma» es una fila con `dosis_por_kg` 15, `max_por_dosis` 500 e
 `intervalo_minimo_horas` 12.
+
+## Hoja `topes_medicamento`
+
+Dosis máxima de cada medicamento por vía, sin importar la enfermedad: en la
+práctica, la dosis máxima del adulto. El programa la aplica a los esquemas que
+no traen su propio tope de ese tipo (por toma o por día), para que una dosis
+por kilogramo no crezca sin límite en los pacientes de mayor peso. El
+resultado lo advierte con `TOPE_DEL_MEDICAMENTO_APLICADO`.
+
+| Columna | Obligatoria | Descripción |
+|---|---|---|
+| `medicamento_id` | Sí | `id` del medicamento |
+| `via` | Sí | `oral`, `iv`, `im` o `topica`; una fila por vía |
+| `max_por_dosis` | Uno de los dos | Máximo por toma |
+| `max_por_dia` | Uno de los dos | Máximo diario |
+| `fuente_id` | Sí | `id` de la fuente que da el máximo |
+| `pagina` | No | Página o tabla |
+| `nota` | No | Aclaración |
+
+Si el esquema de una guía trae su propio tope, ese manda.
 
 ## Hoja `enfermedades`
 

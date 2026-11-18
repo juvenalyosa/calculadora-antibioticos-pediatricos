@@ -103,13 +103,14 @@ RenalPage::RenalPage(Session& session, QWidget* parent) : QWizardPage(parent), s
       estimate_fields);
 
   messages_ = new QLabel(this);
+  messages_->setObjectName("messages");
   messages_->setWordWrap(true);
   messages_->setTextFormat(Qt::RichText);
 
   auto* layout = new QVBoxLayout(this);
   layout->setSpacing(10);
   layout->addWidget(makePageHeader(
-      "Paso 2 de 4", "Función renal",
+      1, "Función renal",
       "Indique la tasa de filtración glomerular (TFG) para ajustar las dosis que lo requieran.",
       this));
   layout->addWidget(not_evaluated_card_);
@@ -219,9 +220,7 @@ void RenalPage::refresh() {
         session_.renal = RenalFunction::estimated(*estimate.gfr, estimator->name());
         // El valor estimado va destacado; debajo, la cuenta para rehacerla a mano.
         const Theme& t = theme();
-        html = "<table width='100%' cellspacing='0' cellpadding='0' style='border:1px solid " +
-               t.border + "'><tr><td width='5' bgcolor='" + t.primary + "'></td><td bgcolor='" +
-               t.surface + "' style='padding:10px 14px'>"
+        html = "<table width='100%' cellspacing='0' cellpadding='0'><tr><td style='padding:6px 4px'>"
                "<p style='margin:0; font-size:11px; font-weight:600; color:" + t.muted +
                "'>TFG ESTIMADA · " + toQString(estimator->name()).toUpper().toHtmlEscaped() +
                "</p><p style='margin:2px 0 0 0; font-size:22px; font-weight:600; color:" +
@@ -247,6 +246,7 @@ void RenalPage::refresh() {
   }
 
   messages_->setText(html);
+  messages_->setVisible(!messages_->text().isEmpty());
   emit completeChanged();
 }
 

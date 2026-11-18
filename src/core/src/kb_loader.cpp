@@ -300,6 +300,16 @@ class Loader {
     for (const json& presentation : arrayOf(item, "presentaciones", where)) {
       drug.presentations.push_back(readPresentation(presentation, where));
     }
+    for (const json& cap_item : arrayOf(item, "topes", where)) {
+      DrugCap cap;
+      cap.route = readRoute(cap_item, where + ".topes");
+      cap.max_per_dose = optionalNumber(cap_item, "max_por_dosis", where + ".topes");
+      cap.max_per_day = optionalNumber(cap_item, "max_por_dia", where + ".topes");
+      cap.source_id = optionalString(cap_item, "fuente_id", where + ".topes");
+      cap.page = optionalString(cap_item, "pagina", where + ".topes");
+      cap.note = optionalString(cap_item, "nota", where + ".topes");
+      drug.caps.push_back(std::move(cap));
+    }
     if (const json* renal = field(item, "ajuste_renal")) {
       drug.renal = readRenal(*renal, where);
     } else {
@@ -420,11 +430,32 @@ class Loader {
       all_presentations.insert(all_presentations.end(), drug.presentations.begin(),
                                drug.presentations.end());
       validateRenal(drug, source_ids);
+      validateCaps(drug, source_ids);
     }
     uniqueIds(all_presentations, "presentaciones");
 
     for (const Disease& disease : kb.diseases) {
       validateDisease(kb, disease, source_ids);
+    }
+  }
+
+  void validateCaps(const Drug& drug, const std::set<std::string>& source_ids) {
+    const std::string where = "medicamentos[" + drug.id + "].topes";
+    std::set<Route> routes;
+    for (const DrugCap& cap : drug.caps) {
+      if (!routes.insert(cap.route).second) {
+        issue(where, "hay más de un tope para la misma vía");
+      }
+      if (!cap.max_per_dose && !cap.max_per_day) {
+        issue(where, "un tope debe tener «max_por_dosis» o «max_por_dia»");
+      }
+      if ((cap.max_per_dose && !(*cap.max_per_dose > 0.0)) ||
+          (cap.max_per_day && !(*cap.max_per_day > 0.0))) {
+        issue(where, "los topes deben ser mayores que 0");
+      }
+      if (cap.source_id.empty() || source_ids.count(cap.source_id) == 0) {
+        issue(where, "cada tope debe citar una fuente existente");
+      }
     }
   }
 

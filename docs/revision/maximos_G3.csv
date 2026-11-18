@@ -1,0 +1,44 @@
+medicamento_id,via,max_por_dosis,max_por_dia,unidad,poblacion,clave,pagina,cita
+ceftarolina,iv,600,,mg,niños de más de 33 kg (400 mg cada 8 h o 600 mg cada 12 h),doi:10.22354/24223794.1131,Tabla 3 (p. 120),> 33 kg: 400 mg/dosis E.V. dividido en 3 dosis o 600 mg/dosis en 2 dosis.
+linezolid,oral/iv,600,,mg,niños,doi:10.5546/aap.2014.183,Figura 4 (p. 185),Linezolid 600 mg VO 2 veces por día o 10 mg/kg/dosis VO c/8 horas; no se debe exceder 600 mg/dosis
+clindamicina,oral/iv,,40 mg/kg/día,mg/kg/día,niños,doi:10.5546/aap.2014.183,Figura 4 (p. 185),Clindamicina 600 mg VO/IV c/8 horas o 10–13 mg/kg/dosis c/6- 8 horas; no se debe exceder 40 mg/kg/día VO/IV.
+doxiciclina,oral,100,,mg,adultos y niños de 45 kg o más,doi:10.5546/aap.2014.183,Figura 4 (p. 185),Doxiciclina 100 mg VO 2 veces por día; en < 45 kg: 2 mg/kg/dosis c/12 horas.
+penicilina_g,iv,,12000000,UI,adultos (fascitis necrotizante),doi:10.5546/aap.2014.183,p. 188,"P e n i c i l i n a G: 150 000 U/kg/día o 12 000 000/día dividida en 4-6 dosis,"
+clindamicina,iv,900,,mg,adultos (fascitis necrotizante),doi:10.5546/aap.2014.183,p. 188,clindamicina (40 mg/kg/día dividida en 4 dosis o 900 mg cada 8 h o 600 mg cada 6 h)
+metronidazol,iv,500,,mg,adultos (fascitis necrotizante),doi:10.5546/aap.2014.183,p. 188,metronidazol (30 mg/kg/día cada 6-8 h o 500 mg cada 6 h)
+amikacina,iv,,1000,mg,niños (ITU),doi:10.4067/s0716-10182022000200174,Tabla 4 (p. 181),Amikacina 15 1 g c/24 h
+ampicilina,iv,,8000,mg,niños (ITU),doi:10.4067/s0716-10182022000200174,Tabla 4 (p. 181),Ampicilina 100 8 g c/6 h
+cefotaxima,iv,,6000,mg,niños (ITU),doi:10.4067/s0716-10182022000200174,Tabla 4 (p. 181),Cefotaxima 100 6 g c/ 6 h
+ceftazidima,iv,,6000,mg,niños (ITU),doi:10.4067/s0716-10182022000200174,Tabla 4 (p. 181),Ceftazidima 100 6 g c/8-12 h
+ceftriaxona,iv,,2000,mg,niños (ITU),doi:10.4067/s0716-10182022000200174,Tabla 4 (p. 181),Ceftriaxona 50 2 g c/24 h
+ciprofloxacina,iv,,1500,mg,niños (ITU),doi:10.4067/s0716-10182022000200174,Tabla 4 (p. 181),"Ciprofloxacina 20 1,5 g c/12 h"
+fosfomicina,oral,3000,,mg,"adolescentes (1 g lactantes, 2 g escolares)",doi:10.4067/s0716-10182022000200174,Tabla 3 (p. 180),De 1 a 3 g 1 g en lactantes 2 g en escolares 3 g en adolescentes c/24 h
+ceftriaxona,iv,,4000,mg,niños mayores de 1 mes (meningitis),doi:10.1093/pch/19.3.141,Tabla 2,Maximum dose 4 g/day
+cefotaxima,iv,,12000,mg,niños mayores de 1 mes (meningitis),doi:10.1093/pch/19.3.141,Tabla 2,Cefotaxime | 300 mg/kg/day in 4 divided doses administered every 6 h  Maximum dose 8 g/day to 12 g/day
+penicilina_g,iv,,24000000,UI,niños mayores de 1 mes (meningitis),doi:10.1093/pch/19.3.141,Tabla 2,Maximum dose 24 million units/day
+ampicilina,iv,,12000,mg,niños mayores de 1 mes (meningitis),doi:10.1093/pch/19.3.141,Tabla 2,Ampicillin | 300 mg/kg/day [...] Maximum dose 12 g/day
+meropenem,iv,,6000,mg,niños mayores de 1 mes (meningitis),doi:10.1093/pch/19.3.141,Tabla 2,Meropenem | 120 mg/kg/day [...] Maximum dose 6 g/day
+ceftriaxona,iv/im,,3000,mg,"niños (dosis alta, meningitis)",oms_aware_2022,Tabla 50.1 (p. 645),Ceftriaxone IV/IM: Lower dose: 80 mg/kg/dose given once daily Higher dose: 100 mg/kg/dose given once daily Up to a maximum daily dose of 3 g
+cefotaxima,iv,,12000,mg,niños de 50 kg o más,minsalud_meningococo_2018,Tabla 3 (p. 30-31 del PDF),dosis maxima 12 gramos al día
+ceftriaxona,iv,2000,4000,mg,mayores de 18 años (meningitis),minsalud_meningococo_2018,Tabla 8 (p. 42 del PDF),> 18 años ceftriaxona 2 g/iv cada 12 horas.
+rifampicina,oral,600,,mg,mayores de 1 mes (quimioprofilaxis),minsalud_meningococo_2018,Tabla 6 (p. 32 del PDF),"10mg/kg (máximo 600mg), vía oral cada 12 horas"
+azitromicina,oral,500,,mg,"quimioprofilaxis, dosis única",minsalud_meningococo_2018,Tabla 6 (p. 32 del PDF),Azitromicina 10 mg/kg vía oral (máximo 500 mg)
+ciprofloxacina,oral,500,,mg,"quimioprofilaxis, dosis única",minsalud_meningococo_2018,Tabla 6 (p. 32 del PDF),Ciprofloxacina* > 1 mes [...] 20mg/kg (máximo 500mg)
+trimetoprima,oral,200,,mg,niños de 3 meses a 15 años (ITU baja),nice_ng109,"Tabla 4 (NG109, 2018)",4 mg/kg (maximum 200 mg per dose)
+ceftriaxona,iv,,4000,mg,niños de 3 meses a 11 años hasta 50 kg,nice_ng111,"Tabla 3 (NG111, 2018)",50 mg/kg to 80 mg/kg once a day (maximum 4 g per day)
+cefuroxima_sodica,iv,750,,mg,niños (dosis usual),nice_ng111,"Tabla 3 (NG111, 2018)",20 mg/kg three times a day (maximum 750 mg per dose)
+cefuroxima_sodica,iv,1500,,mg,niños (infección grave),nice_ng111,"Tabla 3 (NG111, 2018)",increased to 50 mg/kg to 60 mg/kg three or four times a day (maximum 1.5 g per dose) for severe infections
+cefalexina,oral,1000,4000,mg,niños (infección grave),nice_ng111,"Tabla 3 (NG111, 2018)",25 mg/kg two to four times a day [maximum 1 g per dose four times a day] for severe infections
+amoxicilina_clavulanato_iv,iv,1200,,mg,niños de 3 meses a 15 años,nice_ng111,"Tabla 3 (NG111, 2018)",30 mg/kg three times a day (maximum 1.2 g three times a day)
+amikacina,iv,1500,,mg,adultos (16 años o más),nice_ng111,Tabla 1 (NG111),"Initially 15 mg/kg once a day (maximum per dose 1.5 g once a day), subsequent doses adjusted according to serum amikacin concentration (maximum 15 g per course)"
+amoxicilina_clavulanato_7_1,oral,,3000,mg,niños (ITU; dosis máxima diaria de SwissPedDose),doi:10.1007/s00431-020-03714-4,Tabla 2,Amoxicillin/clavulanate | | 40 mg/kg/dose 2× daily p.o. | | 3 g
+cefpodoxima,oral,,400,mg,niños (ITU; dosis máxima diaria de SwissPedDose),doi:10.1007/s00431-020-03714-4,Tabla 2,Cefpodoxime | | 4 mg/kg/dose 2× daily p.o. | | 400 mg
+cefuroxima,oral,,1000,mg,niños (ITU; dosis máxima diaria de SwissPedDose),doi:10.1007/s00431-020-03714-4,Tabla 2,Cefuroxime | | 15 mg/kg/dose 2× daily p.o. | | 1 g
+amoxicilina,oral,,4000,mg,niños (ITU; dosis máxima diaria de SwissPedDose),doi:10.1007/s00431-020-03714-4,Tabla 2,Amoxicillin | | 25 mg/kg/dose 2× daily p.o. | | 4 g
+amoxicilina_iv,iv,,12000,mg,niños (ITU; dosis máxima diaria de SwissPedDose),doi:10.1007/s00431-020-03714-4,Tabla 2,Amoxicillin | | 25–50 mg/kg/dose 3–4× daily iv. | | 12 g
+amikacina,iv/im,,1500,mg,niños (ITU; dosis máxima diaria de SwissPedDose),doi:10.1007/s00431-020-03714-4,Tabla 2,Amikacin | | 15 mg/kg/dose 1× daily i.v./i.m. | | 1.5 g
+ceftriaxona,iv/im,,2000,mg,niños (ITU; dosis máxima diaria de SwissPedDose),doi:10.1007/s00431-020-03714-4,Tabla 2,Ceftriaxone | | 50 mg/kg/dose 1× daily i.v./i.m. | | 2 g
+cefuroxima_sodica,iv/im,,4500,mg,niños (ITU; dosis máxima diaria de SwissPedDose),doi:10.1007/s00431-020-03714-4,Tabla 2,Cefuroxime | | 33 mg/kg/dose 3× daily i.v. / i.m. | | 4.5 g
+trimetoprim_sulfametoxazol,oral,,320,mg,niños (ITU; dosis máxima diaria de SwissPedDose),doi:10.1007/s00431-020-03714-4,Tabla 2,Trimethoprim-sulfamethoxazole | | 3–5 mg/kg/dose 2× daily p.o. | | 320 mg | | Based on trimethoprim
+nitrofurantoina,oral,100,,mg,niños (ITU; dosis máxima diaria de SwissPedDose),doi:10.1007/s00431-020-03714-4,Tabla 2,Nitrofurantoin | | 1 mg/kg/dose 2× daily or 2 mg/kg/dose 1× daily (evening) | | 100 mg/dose
+tobramicina,iv/im,,"7,5 mg/kg/día",mg/kg,niños (ITU),doi:10.1007/s00431-020-03714-4,Tabla 2,Tobramycin | | 4–6 mg/kg/dose 1× daily i.v./i.m. | | 7.5 mg/kg

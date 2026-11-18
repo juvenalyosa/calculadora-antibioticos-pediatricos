@@ -14,6 +14,29 @@ desglosado con su fuente.
 > y de fichas técnicas, pero todavía no tienen la doble verificación clínica,
 > y el programa lo advierte en cada resultado.
 
+## Descargar los instaladores
+
+Los instaladores están en la página de publicaciones del repositorio:
+**[Releases → última versión](https://github.com/juvenalyosa/calculadora-antibioticos-pediatricos/releases/latest)**.
+El repositorio es privado: para descargarlos hay que iniciar sesión en GitHub
+con una cuenta que tenga acceso.
+
+| Sistema | Archivo |
+|---|---|
+| Windows 10 u 11 (64 bits) | `CalculadoraAntibioticos-<versión>-windows-instalador.exe` o, sin instalar, `...-windows-portatil.zip` |
+| Mac (Intel o Apple Silicon), macOS 12 o posterior | `CalculadoraAntibioticos-<versión>-macos.dmg` |
+| Linux de 64 bits | `CalculadoraAntibioticos-<versión>-linux-x86_64.AppImage` |
+
+Los pasos de instalación de cada sistema, incluido cómo abrirla la primera
+vez (todavía no tiene firma digital), están en
+[docs/instalacion.md](docs/instalacion.md).
+
+Cada vez que cambia el empaquetado, el flujo *Paquetes* de la pestaña
+[Actions](https://github.com/juvenalyosa/calculadora-antibioticos-pediatricos/actions/workflows/paquetes.yml)
+también deja los instaladores como artefactos de esa ejecución (se borran a
+los 90 días). Cómo se construyen y cómo publicar una versión nueva:
+[docs/empaquetado.md](docs/empaquetado.md).
+
 ## Inicio rápido
 
 Requisitos: CMake 3.21 o superior, un compilador de C++17 (clang, GCC o MSVC)
@@ -102,6 +125,10 @@ filas a las hojas y se regenera la base. Ver [docs/guia_datos.md](docs/guia_dato
 |---|---|---|
 | [docs/arquitectura.md](docs/arquitectura.md) | Desarrolladores | Módulos, orden del cálculo, reglas de diseño y cómo extender (incluida IA) |
 | [docs/guia_datos.md](docs/guia_datos.md) | Equipo clínico y asistentes | Cómo llenar las hojas y qué significa cada columna |
+| [docs/revision/protocolo.md](docs/revision/protocolo.md) | Equipo clínico e investigadores | Revisión de alcance de guías: búsqueda, cribado, extracción e integración ([flujo PRISMA](docs/revision/flujo_prisma.md)) |
+| [docs/validacion/LEEME.md](docs/validacion/LEEME.md) | Equipo clínico y desarrolladores | Prueba exhaustiva con población modelada con los patrones de la OMS |
+| [docs/instalacion.md](docs/instalacion.md) | Usuarios | Cómo instalar la calculadora en Windows, Mac y Linux |
+| [docs/empaquetado.md](docs/empaquetado.md) | Desarrolladores | Cómo se construyen los instaladores y cómo publicar una versión |
 | [docs/validacion_alfa.md](docs/validacion_alfa.md) | Equipo clínico | Cómo construir la matriz de validación con los dos casos tipo |
 
 Las cabeceras de `src/core/include/calc/` están comentadas en formato Doxygen

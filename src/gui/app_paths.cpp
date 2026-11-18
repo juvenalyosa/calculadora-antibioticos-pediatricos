@@ -23,7 +23,8 @@ QString locateKnowledgeBase(const QString& explicit_path) {
   const QStringList candidates = {
       qEnvironmentVariable("CALC_KB_FILE"),
       app_dir + "/../Resources/" + kKbFileName,  // paquete .app de macOS
-      app_dir + "/data/kb/" + kKbFileName,       // instalación en Windows y Linux
+      app_dir + "/data/kb/" + kKbFileName,       // instalación en Windows
+      app_dir + "/../share/calculadora-antibioticos/" + kKbFileName,  // Linux (AppImage, /usr)
       QStringLiteral(CALC_DEV_KB_FILE),          // árbol de fuentes
   };
   for (const QString& candidate : candidates) {

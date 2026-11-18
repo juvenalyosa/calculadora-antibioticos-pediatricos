@@ -20,7 +20,6 @@ class DiseasePage;
 class PatientPage;
 class RenalPage;
 class ResultPage;
-class StepSidebar;
 
 class CalculatorWizard final : public QWizard {
   Q_OBJECT
@@ -54,7 +53,6 @@ class CalculatorWizard final : public QWizard {
   const KnowledgeBase& kb_;
   ReportSink& report_sink_;
   Session session_;
-  StepSidebar* sidebar_ = nullptr;
   PatientPage* patient_page_ = nullptr;
   RenalPage* renal_page_ = nullptr;
   DiseasePage* disease_page_ = nullptr;

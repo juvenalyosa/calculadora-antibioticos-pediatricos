@@ -1,0 +1,5131 @@
+{
+ "escenarios": 1350,
+ "filas": 166250,
+ "conteos": {
+  "filas": 166250,
+  "calculado": 127510,
+  "A_dosis_comprobadas": 127510,
+  "A_presentaciones_comprobadas": 214230,
+  "C1_comprobadas": 124060,
+  "C5_sin_tope": 13300,
+  "sin_antibiotico": 16200,
+  "no_aplica": 13100,
+  "sin_calculo": 4950,
+  "sin_dato_renal_esperado": 25280,
+  "no_recomendado": 4490,
+  "C4_evitar": 4490,
+  "C3_comparaciones": 101110,
+  "C7_series": 25572
+ },
+ "fallos": {},
+ "determinismo": true,
+ "concordancia_publicada": {
+  "aiepi_2012_amoxicilina": {
+   "comparaciones": 423,
+   "dentro_de_10_por_ciento": 284,
+   "dentro_de_20_por_ciento": 394,
+   "diferencia_relativa_maxima": 0.333,
+   "mg_kg_dia_implicita_min": 64.9,
+   "mg_kg_dia_implicita_max": 119.9,
+   "detalle": [
+    {
+     "peso_kg": 4.45,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 5,
+     "ml_calculadora": 4.0,
+     "diferencia_ml": -1.0,
+     "mg_kg_dia_aiepi": 112.4
+    },
+    {
+     "peso_kg": 4.45,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 2.5,
+     "ml_calculadora": 2.0,
+     "diferencia_ml": -0.5,
+     "mg_kg_dia_aiepi": 112.4
+    },
+    {
+     "peso_kg": 4.45,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 1.5,
+     "ml_calculadora": 1.5,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 101.1
+    },
+    {
+     "peso_kg": 5.78,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 5,
+     "ml_calculadora": 5.0,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 86.5
+    },
+    {
+     "peso_kg": 5.78,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 2.5,
+     "ml_calculadora": 2.5,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 86.5
+    },
+    {
+     "peso_kg": 5.78,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 1.5,
+     "ml_calculadora": 1.5,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 77.9
+    },
+    {
+     "peso_kg": 6.54,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 5,
+     "ml_calculadora": 6.0,
+     "diferencia_ml": 1.0,
+     "mg_kg_dia_aiepi": 76.5
+    },
+    {
+     "peso_kg": 6.54,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 2.5,
+     "ml_calculadora": 3.0,
+     "diferencia_ml": 0.5,
+     "mg_kg_dia_aiepi": 76.5
+    },
+    {
+     "peso_kg": 6.54,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 1.5,
+     "ml_calculadora": 2.0,
+     "diferencia_ml": 0.5,
+     "mg_kg_dia_aiepi": 68.8
+    },
+    {
+     "peso_kg": 4.17,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 5,
+     "ml_calculadora": 4.0,
+     "diferencia_ml": -1.0,
+     "mg_kg_dia_aiepi": 119.9
+    },
+    {
+     "peso_kg": 4.17,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 2.5,
+     "ml_calculadora": 2.0,
+     "diferencia_ml": -0.5,
+     "mg_kg_dia_aiepi": 119.9
+    },
+    {
+     "peso_kg": 4.17,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 1.5,
+     "ml_calculadora": 1.5,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 107.9
+    },
+    {
+     "peso_kg": 5.46,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 5,
+     "ml_calculadora": 5.0,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 91.6
+    },
+    {
+     "peso_kg": 5.46,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 2.5,
+     "ml_calculadora": 2.5,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 91.6
+    },
+    {
+     "peso_kg": 5.46,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 1.5,
+     "ml_calculadora": 1.5,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 82.4
+    },
+    {
+     "peso_kg": 6.21,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 5,
+     "ml_calculadora": 5.5,
+     "diferencia_ml": 0.5,
+     "mg_kg_dia_aiepi": 80.5
+    },
+    {
+     "peso_kg": 6.21,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 2.5,
+     "ml_calculadora": 3.0,
+     "diferencia_ml": 0.5,
+     "mg_kg_dia_aiepi": 80.5
+    },
+    {
+     "peso_kg": 6.21,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 1.5,
+     "ml_calculadora": 2.0,
+     "diferencia_ml": 0.5,
+     "mg_kg_dia_aiepi": 72.5
+    },
+    {
+     "peso_kg": 4.32,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 5,
+     "ml_calculadora": 4.0,
+     "diferencia_ml": -1.0,
+     "mg_kg_dia_aiepi": 115.7
+    },
+    {
+     "peso_kg": 4.32,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 2.5,
+     "ml_calculadora": 2.0,
+     "diferencia_ml": -0.5,
+     "mg_kg_dia_aiepi": 115.7
+    },
+    {
+     "peso_kg": 4.32,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 1.5,
+     "ml_calculadora": 1.5,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 104.2
+    },
+    {
+     "peso_kg": 5.57,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 5,
+     "ml_calculadora": 5.0,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 89.8
+    },
+    {
+     "peso_kg": 5.57,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 2.5,
+     "ml_calculadora": 2.5,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 89.8
+    },
+    {
+     "peso_kg": 5.57,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 1.5,
+     "ml_calculadora": 1.5,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 80.8
+    },
+    {
+     "peso_kg": 7.1,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 7,
+     "ml_calculadora": 6.5,
+     "diferencia_ml": -0.5,
+     "mg_kg_dia_aiepi": 98.6
+    },
+    {
+     "peso_kg": 7.1,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 3.5,
+     "ml_calculadora": 3.0,
+     "diferencia_ml": -0.5,
+     "mg_kg_dia_aiepi": 98.6
+    },
+    {
+     "peso_kg": 7.1,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 2.5,
+     "ml_calculadora": 2.0,
+     "diferencia_ml": -0.5,
+     "mg_kg_dia_aiepi": 105.6
+    },
+    {
+     "peso_kg": 7.97,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 7,
+     "ml_calculadora": 7.0,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 87.8
+    },
+    {
+     "peso_kg": 7.97,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 3.5,
+     "ml_calculadora": 3.5,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 87.8
+    },
+    {
+     "peso_kg": 7.97,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 2.5,
+     "ml_calculadora": 2.5,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 94.1
+    },
+    {
+     "peso_kg": 5.13,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 5,
+     "ml_calculadora": 4.5,
+     "diferencia_ml": -0.5,
+     "mg_kg_dia_aiepi": 97.5
+    },
+    {
+     "peso_kg": 5.13,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 2.5,
+     "ml_calculadora": 2.5,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 97.5
+    },
+    {
+     "peso_kg": 5.13,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 1.5,
+     "ml_calculadora": 1.5,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 87.7
+    },
+    {
+     "peso_kg": 6.63,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 5,
+     "ml_calculadora": 6.0,
+     "diferencia_ml": 1.0,
+     "mg_kg_dia_aiepi": 75.4
+    },
+    {
+     "peso_kg": 6.63,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 2.5,
+     "ml_calculadora": 3.0,
+     "diferencia_ml": 0.5,
+     "mg_kg_dia_aiepi": 75.4
+    },
+    {
+     "peso_kg": 6.63,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 1.5,
+     "ml_calculadora": 2.0,
+     "diferencia_ml": 0.5,
+     "mg_kg_dia_aiepi": 67.9
+    },
+    {
+     "peso_kg": 7.52,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 7,
+     "ml_calculadora": 7.0,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 93.1
+    },
+    {
+     "peso_kg": 7.52,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 3.5,
+     "ml_calculadora": 3.5,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 93.1
+    },
+    {
+     "peso_kg": 7.52,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 2.5,
+     "ml_calculadora": 2.5,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 99.7
+    },
+    {
+     "peso_kg": 4.43,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 5,
+     "ml_calculadora": 4.0,
+     "diferencia_ml": -1.0,
+     "mg_kg_dia_aiepi": 112.9
+    },
+    {
+     "peso_kg": 4.43,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 2.5,
+     "ml_calculadora": 2.0,
+     "diferencia_ml": -0.5,
+     "mg_kg_dia_aiepi": 112.9
+    },
+    {
+     "peso_kg": 4.43,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 1.5,
+     "ml_calculadora": 1.5,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 101.6
+    },
+    {
+     "peso_kg": 5.01,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 5,
+     "ml_calculadora": 4.5,
+     "diferencia_ml": -0.5,
+     "mg_kg_dia_aiepi": 99.8
+    },
+    {
+     "peso_kg": 5.01,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 2.5,
+     "ml_calculadora": 2.5,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 99.8
+    },
+    {
+     "peso_kg": 5.01,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 1.5,
+     "ml_calculadora": 1.5,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 89.8
+    },
+    {
+     "peso_kg": 6.37,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 5,
+     "ml_calculadora": 5.5,
+     "diferencia_ml": 0.5,
+     "mg_kg_dia_aiepi": 78.5
+    },
+    {
+     "peso_kg": 6.37,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 2.5,
+     "ml_calculadora": 3.0,
+     "diferencia_ml": 0.5,
+     "mg_kg_dia_aiepi": 78.5
+    },
+    {
+     "peso_kg": 6.37,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 1.5,
+     "ml_calculadora": 2.0,
+     "diferencia_ml": 0.5,
+     "mg_kg_dia_aiepi": 70.6
+    },
+    {
+     "peso_kg": 8.02,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 7,
+     "ml_calculadora": 7.0,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 87.3
+    },
+    {
+     "peso_kg": 8.02,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 3.5,
+     "ml_calculadora": 3.5,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 87.3
+    },
+    {
+     "peso_kg": 8.02,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 2.5,
+     "ml_calculadora": 2.5,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 93.5
+    },
+    {
+     "peso_kg": 8.96,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 7,
+     "ml_calculadora": 8.0,
+     "diferencia_ml": 1.0,
+     "mg_kg_dia_aiepi": 78.1
+    },
+    {
+     "peso_kg": 8.96,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 3.5,
+     "ml_calculadora": 4.0,
+     "diferencia_ml": 0.5,
+     "mg_kg_dia_aiepi": 78.1
+    },
+    {
+     "peso_kg": 8.96,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 2.5,
+     "ml_calculadora": 2.5,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 83.7
+    },
+    {
+     "peso_kg": 4.53,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 5,
+     "ml_calculadora": 4.0,
+     "diferencia_ml": -1.0,
+     "mg_kg_dia_aiepi": 110.4
+    },
+    {
+     "peso_kg": 4.53,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 2.5,
+     "ml_calculadora": 2.0,
+     "diferencia_ml": -0.5,
+     "mg_kg_dia_aiepi": 110.4
+    },
+    {
+     "peso_kg": 4.53,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 1.5,
+     "ml_calculadora": 1.5,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 99.3
+    },
+    {
+     "peso_kg": 5.84,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 5,
+     "ml_calculadora": 5.5,
+     "diferencia_ml": 0.5,
+     "mg_kg_dia_aiepi": 85.6
+    },
+    {
+     "peso_kg": 5.84,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 2.5,
+     "ml_calculadora": 2.5,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 85.6
+    },
+    {
+     "peso_kg": 5.84,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 1.5,
+     "ml_calculadora": 2.0,
+     "diferencia_ml": 0.5,
+     "mg_kg_dia_aiepi": 77.1
+    },
+    {
+     "peso_kg": 7.51,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 7,
+     "ml_calculadora": 7.0,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 93.2
+    },
+    {
+     "peso_kg": 7.51,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 3.5,
+     "ml_calculadora": 3.5,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 93.2
+    },
+    {
+     "peso_kg": 7.51,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 2.5,
+     "ml_calculadora": 2.5,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 99.9
+    },
+    {
+     "peso_kg": 8.5,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 7,
+     "ml_calculadora": 7.5,
+     "diferencia_ml": 0.5,
+     "mg_kg_dia_aiepi": 82.4
+    },
+    {
+     "peso_kg": 8.5,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 3.5,
+     "ml_calculadora": 4.0,
+     "diferencia_ml": 0.5,
+     "mg_kg_dia_aiepi": 82.4
+    },
+    {
+     "peso_kg": 8.5,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 2.5,
+     "ml_calculadora": 2.5,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 88.2
+    },
+    {
+     "peso_kg": 4.94,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 5,
+     "ml_calculadora": 4.5,
+     "diferencia_ml": -0.5,
+     "mg_kg_dia_aiepi": 101.2
+    },
+    {
+     "peso_kg": 4.94,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 2.5,
+     "ml_calculadora": 2.0,
+     "diferencia_ml": -0.5,
+     "mg_kg_dia_aiepi": 101.2
+    },
+    {
+     "peso_kg": 4.94,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 1.5,
+     "ml_calculadora": 1.5,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 91.1
+    },
+    {
+     "peso_kg": 5.57,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 5,
+     "ml_calculadora": 5.0,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 89.8
+    },
+    {
+     "peso_kg": 5.57,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 2.5,
+     "ml_calculadora": 2.5,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 89.8
+    },
+    {
+     "peso_kg": 5.57,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 1.5,
+     "ml_calculadora": 1.5,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 80.8
+    },
+    {
+     "peso_kg": 7.01,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 7,
+     "ml_calculadora": 6.5,
+     "diferencia_ml": -0.5,
+     "mg_kg_dia_aiepi": 99.9
+    },
+    {
+     "peso_kg": 7.01,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 3.5,
+     "ml_calculadora": 3.0,
+     "diferencia_ml": -0.5,
+     "mg_kg_dia_aiepi": 99.9
+    },
+    {
+     "peso_kg": 7.01,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 2.5,
+     "ml_calculadora": 2.0,
+     "diferencia_ml": -0.5,
+     "mg_kg_dia_aiepi": 107.0
+    },
+    {
+     "peso_kg": 8.75,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 7,
+     "ml_calculadora": 8.0,
+     "diferencia_ml": 1.0,
+     "mg_kg_dia_aiepi": 80.0
+    },
+    {
+     "peso_kg": 8.75,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 3.5,
+     "ml_calculadora": 4.0,
+     "diferencia_ml": 0.5,
+     "mg_kg_dia_aiepi": 80.0
+    },
+    {
+     "peso_kg": 8.75,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 2.5,
+     "ml_calculadora": 2.5,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 85.7
+    },
+    {
+     "peso_kg": 9.75,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 7,
+     "ml_calculadora": 9.0,
+     "diferencia_ml": 2.0,
+     "mg_kg_dia_aiepi": 71.8
+    },
+    {
+     "peso_kg": 9.75,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 3.5,
+     "ml_calculadora": 4.5,
+     "diferencia_ml": 1.0,
+     "mg_kg_dia_aiepi": 71.8
+    },
+    {
+     "peso_kg": 9.75,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 2.5,
+     "ml_calculadora": 3.0,
+     "diferencia_ml": 0.5,
+     "mg_kg_dia_aiepi": 76.9
+    },
+    {
+     "peso_kg": 4.43,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 5,
+     "ml_calculadora": 4.0,
+     "diferencia_ml": -1.0,
+     "mg_kg_dia_aiepi": 112.9
+    },
+    {
+     "peso_kg": 4.43,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 2.5,
+     "ml_calculadora": 2.0,
+     "diferencia_ml": -0.5,
+     "mg_kg_dia_aiepi": 112.9
+    },
+    {
+     "peso_kg": 4.43,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 1.5,
+     "ml_calculadora": 1.5,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 101.6
+    },
+    {
+     "peso_kg": 5.02,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 5,
+     "ml_calculadora": 4.5,
+     "diferencia_ml": -0.5,
+     "mg_kg_dia_aiepi": 99.6
+    },
+    {
+     "peso_kg": 5.02,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 2.5,
+     "ml_calculadora": 2.5,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 99.6
+    },
+    {
+     "peso_kg": 5.02,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 1.5,
+     "ml_calculadora": 1.5,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 89.6
+    },
+    {
+     "peso_kg": 6.43,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 5,
+     "ml_calculadora": 6.0,
+     "diferencia_ml": 1.0,
+     "mg_kg_dia_aiepi": 77.8
+    },
+    {
+     "peso_kg": 6.43,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 2.5,
+     "ml_calculadora": 3.0,
+     "diferencia_ml": 0.5,
+     "mg_kg_dia_aiepi": 77.8
+    },
+    {
+     "peso_kg": 6.43,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 1.5,
+     "ml_calculadora": 2.0,
+     "diferencia_ml": 0.5,
+     "mg_kg_dia_aiepi": 70.0
+    },
+    {
+     "peso_kg": 8.24,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 7,
+     "ml_calculadora": 7.5,
+     "diferencia_ml": 0.5,
+     "mg_kg_dia_aiepi": 85.0
+    },
+    {
+     "peso_kg": 8.24,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 3.5,
+     "ml_calculadora": 3.5,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 85.0
+    },
+    {
+     "peso_kg": 8.24,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 2.5,
+     "ml_calculadora": 2.5,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 91.0
+    },
+    {
+     "peso_kg": 9.33,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 7,
+     "ml_calculadora": 8.5,
+     "diferencia_ml": 1.5,
+     "mg_kg_dia_aiepi": 75.0
+    },
+    {
+     "peso_kg": 9.33,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 3.5,
+     "ml_calculadora": 4.0,
+     "diferencia_ml": 0.5,
+     "mg_kg_dia_aiepi": 75.0
+    },
+    {
+     "peso_kg": 9.33,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 2.5,
+     "ml_calculadora": 3.0,
+     "diferencia_ml": 0.5,
+     "mg_kg_dia_aiepi": 80.4
+    },
+    {
+     "peso_kg": 5.68,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 5,
+     "ml_calculadora": 5.0,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 88.0
+    },
+    {
+     "peso_kg": 5.68,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 2.5,
+     "ml_calculadora": 2.5,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 88.0
+    },
+    {
+     "peso_kg": 5.68,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 1.5,
+     "ml_calculadora": 1.5,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 79.2
+    },
+    {
+     "peso_kg": 6.36,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 5,
+     "ml_calculadora": 5.5,
+     "diferencia_ml": 0.5,
+     "mg_kg_dia_aiepi": 78.6
+    },
+    {
+     "peso_kg": 6.36,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 2.5,
+     "ml_calculadora": 3.0,
+     "diferencia_ml": 0.5,
+     "mg_kg_dia_aiepi": 78.6
+    },
+    {
+     "peso_kg": 6.36,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 1.5,
+     "ml_calculadora": 2.0,
+     "diferencia_ml": 0.5,
+     "mg_kg_dia_aiepi": 70.8
+    },
+    {
+     "peso_kg": 7.94,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 7,
+     "ml_calculadora": 7.0,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 88.2
+    },
+    {
+     "peso_kg": 7.94,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 3.5,
+     "ml_calculadora": 3.5,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 88.2
+    },
+    {
+     "peso_kg": 7.94,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 2.5,
+     "ml_calculadora": 2.5,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 94.5
+    },
+    {
+     "peso_kg": 9.85,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 7,
+     "ml_calculadora": 9.0,
+     "diferencia_ml": 2.0,
+     "mg_kg_dia_aiepi": 71.1
+    },
+    {
+     "peso_kg": 9.85,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 3.5,
+     "ml_calculadora": 4.5,
+     "diferencia_ml": 1.0,
+     "mg_kg_dia_aiepi": 71.1
+    },
+    {
+     "peso_kg": 9.85,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 2.5,
+     "ml_calculadora": 3.0,
+     "diferencia_ml": 0.5,
+     "mg_kg_dia_aiepi": 76.1
+    },
+    {
+     "peso_kg": 10.96,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 10,
+     "ml_calculadora": 10.0,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 91.2
+    },
+    {
+     "peso_kg": 10.96,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 5,
+     "ml_calculadora": 5.0,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 91.2
+    },
+    {
+     "peso_kg": 10.96,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 3.5,
+     "ml_calculadora": 3.5,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 95.8
+    },
+    {
+     "peso_kg": 5.09,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 5,
+     "ml_calculadora": 4.5,
+     "diferencia_ml": -0.5,
+     "mg_kg_dia_aiepi": 98.2
+    },
+    {
+     "peso_kg": 5.09,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 2.5,
+     "ml_calculadora": 2.5,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 98.2
+    },
+    {
+     "peso_kg": 5.09,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 1.5,
+     "ml_calculadora": 1.5,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 88.4
+    },
+    {
+     "peso_kg": 5.73,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 5,
+     "ml_calculadora": 5.0,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 87.3
+    },
+    {
+     "peso_kg": 5.73,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 2.5,
+     "ml_calculadora": 2.5,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 87.3
+    },
+    {
+     "peso_kg": 5.73,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 1.5,
+     "ml_calculadora": 1.5,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 78.5
+    },
+    {
+     "peso_kg": 7.3,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 7,
+     "ml_calculadora": 6.5,
+     "diferencia_ml": -0.5,
+     "mg_kg_dia_aiepi": 95.9
+    },
+    {
+     "peso_kg": 7.3,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 3.5,
+     "ml_calculadora": 3.5,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 95.9
+    },
+    {
+     "peso_kg": 7.3,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 2.5,
+     "ml_calculadora": 2.0,
+     "diferencia_ml": -0.5,
+     "mg_kg_dia_aiepi": 102.7
+    },
+    {
+     "peso_kg": 9.34,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 7,
+     "ml_calculadora": 8.5,
+     "diferencia_ml": 1.5,
+     "mg_kg_dia_aiepi": 74.9
+    },
+    {
+     "peso_kg": 9.34,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 3.5,
+     "ml_calculadora": 4.0,
+     "diferencia_ml": 0.5,
+     "mg_kg_dia_aiepi": 74.9
+    },
+    {
+     "peso_kg": 9.34,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 2.5,
+     "ml_calculadora": 3.0,
+     "diferencia_ml": 0.5,
+     "mg_kg_dia_aiepi": 80.3
+    },
+    {
+     "peso_kg": 10.58,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 10,
+     "ml_calculadora": 9.5,
+     "diferencia_ml": -0.5,
+     "mg_kg_dia_aiepi": 94.5
+    },
+    {
+     "peso_kg": 10.58,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 5,
+     "ml_calculadora": 5.0,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 94.5
+    },
+    {
+     "peso_kg": 10.58,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 3.5,
+     "ml_calculadora": 3.0,
+     "diferencia_ml": -0.5,
+     "mg_kg_dia_aiepi": 99.2
+    },
+    {
+     "peso_kg": 6.39,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 5,
+     "ml_calculadora": 6.0,
+     "diferencia_ml": 1.0,
+     "mg_kg_dia_aiepi": 78.2
+    },
+    {
+     "peso_kg": 6.39,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 2.5,
+     "ml_calculadora": 3.0,
+     "diferencia_ml": 0.5,
+     "mg_kg_dia_aiepi": 78.2
+    },
+    {
+     "peso_kg": 6.39,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 1.5,
+     "ml_calculadora": 2.0,
+     "diferencia_ml": 0.5,
+     "mg_kg_dia_aiepi": 70.4
+    },
+    {
+     "peso_kg": 7.15,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 7,
+     "ml_calculadora": 6.5,
+     "diferencia_ml": -0.5,
+     "mg_kg_dia_aiepi": 97.9
+    },
+    {
+     "peso_kg": 7.15,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 3.5,
+     "ml_calculadora": 3.0,
+     "diferencia_ml": -0.5,
+     "mg_kg_dia_aiepi": 97.9
+    },
+    {
+     "peso_kg": 7.15,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 2.5,
+     "ml_calculadora": 2.0,
+     "diferencia_ml": -0.5,
+     "mg_kg_dia_aiepi": 104.9
+    },
+    {
+     "peso_kg": 8.9,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 7,
+     "ml_calculadora": 8.0,
+     "diferencia_ml": 1.0,
+     "mg_kg_dia_aiepi": 78.7
+    },
+    {
+     "peso_kg": 8.9,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 3.5,
+     "ml_calculadora": 4.0,
+     "diferencia_ml": 0.5,
+     "mg_kg_dia_aiepi": 78.7
+    },
+    {
+     "peso_kg": 8.9,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 2.5,
+     "ml_calculadora": 2.5,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 84.3
+    },
+    {
+     "peso_kg": 11.04,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 10,
+     "ml_calculadora": 10.0,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 90.6
+    },
+    {
+     "peso_kg": 11.04,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 5,
+     "ml_calculadora": 5.0,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 90.6
+    },
+    {
+     "peso_kg": 11.04,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 3.5,
+     "ml_calculadora": 3.5,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 95.1
+    },
+    {
+     "peso_kg": 12.28,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 10,
+     "ml_calculadora": 11.0,
+     "diferencia_ml": 1.0,
+     "mg_kg_dia_aiepi": 81.4
+    },
+    {
+     "peso_kg": 12.28,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 5,
+     "ml_calculadora": 5.5,
+     "diferencia_ml": 0.5,
+     "mg_kg_dia_aiepi": 81.4
+    },
+    {
+     "peso_kg": 12.28,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 3.5,
+     "ml_calculadora": 3.5,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 85.5
+    },
+    {
+     "peso_kg": 5.76,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 5,
+     "ml_calculadora": 5.0,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 86.8
+    },
+    {
+     "peso_kg": 5.76,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 2.5,
+     "ml_calculadora": 2.5,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 86.8
+    },
+    {
+     "peso_kg": 5.76,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 1.5,
+     "ml_calculadora": 1.5,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 78.1
+    },
+    {
+     "peso_kg": 6.47,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 5,
+     "ml_calculadora": 6.0,
+     "diferencia_ml": 1.0,
+     "mg_kg_dia_aiepi": 77.3
+    },
+    {
+     "peso_kg": 6.47,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 2.5,
+     "ml_calculadora": 3.0,
+     "diferencia_ml": 0.5,
+     "mg_kg_dia_aiepi": 77.3
+    },
+    {
+     "peso_kg": 6.47,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 1.5,
+     "ml_calculadora": 2.0,
+     "diferencia_ml": 0.5,
+     "mg_kg_dia_aiepi": 69.6
+    },
+    {
+     "peso_kg": 8.23,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 7,
+     "ml_calculadora": 7.5,
+     "diferencia_ml": 0.5,
+     "mg_kg_dia_aiepi": 85.1
+    },
+    {
+     "peso_kg": 8.23,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 3.5,
+     "ml_calculadora": 3.5,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 85.1
+    },
+    {
+     "peso_kg": 8.23,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 2.5,
+     "ml_calculadora": 2.5,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 91.1
+    },
+    {
+     "peso_kg": 10.55,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 10,
+     "ml_calculadora": 9.5,
+     "diferencia_ml": -0.5,
+     "mg_kg_dia_aiepi": 94.8
+    },
+    {
+     "peso_kg": 10.55,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 5,
+     "ml_calculadora": 4.5,
+     "diferencia_ml": -0.5,
+     "mg_kg_dia_aiepi": 94.8
+    },
+    {
+     "peso_kg": 10.55,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 3.5,
+     "ml_calculadora": 3.0,
+     "diferencia_ml": -0.5,
+     "mg_kg_dia_aiepi": 99.5
+    },
+    {
+     "peso_kg": 11.99,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 10,
+     "ml_calculadora": 11.0,
+     "diferencia_ml": 1.0,
+     "mg_kg_dia_aiepi": 83.4
+    },
+    {
+     "peso_kg": 11.99,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 5,
+     "ml_calculadora": 5.5,
+     "diferencia_ml": 0.5,
+     "mg_kg_dia_aiepi": 83.4
+    },
+    {
+     "peso_kg": 11.99,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 3.5,
+     "ml_calculadora": 3.5,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 87.6
+    },
+    {
+     "peso_kg": 6.93,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 5,
+     "ml_calculadora": 6.0,
+     "diferencia_ml": 1.0,
+     "mg_kg_dia_aiepi": 72.2
+    },
+    {
+     "peso_kg": 6.93,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 2.5,
+     "ml_calculadora": 3.0,
+     "diferencia_ml": 0.5,
+     "mg_kg_dia_aiepi": 72.2
+    },
+    {
+     "peso_kg": 6.93,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 1.5,
+     "ml_calculadora": 2.0,
+     "diferencia_ml": 0.5,
+     "mg_kg_dia_aiepi": 64.9
+    },
+    {
+     "peso_kg": 7.74,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 7,
+     "ml_calculadora": 7.0,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 90.4
+    },
+    {
+     "peso_kg": 7.74,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 3.5,
+     "ml_calculadora": 3.5,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 90.4
+    },
+    {
+     "peso_kg": 7.74,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 2.5,
+     "ml_calculadora": 2.5,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 96.9
+    },
+    {
+     "peso_kg": 9.65,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 7,
+     "ml_calculadora": 8.5,
+     "diferencia_ml": 1.5,
+     "mg_kg_dia_aiepi": 72.5
+    },
+    {
+     "peso_kg": 9.65,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 3.5,
+     "ml_calculadora": 4.5,
+     "diferencia_ml": 1.0,
+     "mg_kg_dia_aiepi": 72.5
+    },
+    {
+     "peso_kg": 9.65,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 2.5,
+     "ml_calculadora": 3.0,
+     "diferencia_ml": 0.5,
+     "mg_kg_dia_aiepi": 77.7
+    },
+    {
+     "peso_kg": 11.98,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 10,
+     "ml_calculadora": 11.0,
+     "diferencia_ml": 1.0,
+     "mg_kg_dia_aiepi": 83.5
+    },
+    {
+     "peso_kg": 11.98,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 5,
+     "ml_calculadora": 5.5,
+     "diferencia_ml": 0.5,
+     "mg_kg_dia_aiepi": 83.5
+    },
+    {
+     "peso_kg": 11.98,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 3.5,
+     "ml_calculadora": 3.5,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 87.6
+    },
+    {
+     "peso_kg": 13.34,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 12.5,
+     "ml_calculadora": 12.0,
+     "diferencia_ml": -0.5,
+     "mg_kg_dia_aiepi": 93.7
+    },
+    {
+     "peso_kg": 13.34,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 6.5,
+     "ml_calculadora": 6.0,
+     "diferencia_ml": -0.5,
+     "mg_kg_dia_aiepi": 97.5
+    },
+    {
+     "peso_kg": 13.34,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 4.5,
+     "ml_calculadora": 4.0,
+     "diferencia_ml": -0.5,
+     "mg_kg_dia_aiepi": 101.2
+    },
+    {
+     "peso_kg": 6.27,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 5,
+     "ml_calculadora": 5.5,
+     "diferencia_ml": 0.5,
+     "mg_kg_dia_aiepi": 79.7
+    },
+    {
+     "peso_kg": 6.27,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 2.5,
+     "ml_calculadora": 3.0,
+     "diferencia_ml": 0.5,
+     "mg_kg_dia_aiepi": 79.7
+    },
+    {
+     "peso_kg": 6.27,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 1.5,
+     "ml_calculadora": 2.0,
+     "diferencia_ml": 0.5,
+     "mg_kg_dia_aiepi": 71.8
+    },
+    {
+     "peso_kg": 7.04,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 7,
+     "ml_calculadora": 6.5,
+     "diferencia_ml": -0.5,
+     "mg_kg_dia_aiepi": 99.4
+    },
+    {
+     "peso_kg": 7.04,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 3.5,
+     "ml_calculadora": 3.0,
+     "diferencia_ml": -0.5,
+     "mg_kg_dia_aiepi": 99.4
+    },
+    {
+     "peso_kg": 7.04,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 2.5,
+     "ml_calculadora": 2.0,
+     "diferencia_ml": -0.5,
+     "mg_kg_dia_aiepi": 106.5
+    },
+    {
+     "peso_kg": 8.95,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 7,
+     "ml_calculadora": 8.0,
+     "diferencia_ml": 1.0,
+     "mg_kg_dia_aiepi": 78.2
+    },
+    {
+     "peso_kg": 8.95,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 3.5,
+     "ml_calculadora": 4.0,
+     "diferencia_ml": 0.5,
+     "mg_kg_dia_aiepi": 78.2
+    },
+    {
+     "peso_kg": 8.95,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 2.5,
+     "ml_calculadora": 2.5,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 83.8
+    },
+    {
+     "peso_kg": 11.51,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 10,
+     "ml_calculadora": 10.5,
+     "diferencia_ml": 0.5,
+     "mg_kg_dia_aiepi": 86.9
+    },
+    {
+     "peso_kg": 11.51,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 5,
+     "ml_calculadora": 5.0,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 86.9
+    },
+    {
+     "peso_kg": 11.51,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 3.5,
+     "ml_calculadora": 3.5,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 91.2
+    },
+    {
+     "peso_kg": 13.11,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 12.5,
+     "ml_calculadora": 12.0,
+     "diferencia_ml": -0.5,
+     "mg_kg_dia_aiepi": 95.3
+    },
+    {
+     "peso_kg": 13.11,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 6.5,
+     "ml_calculadora": 6.0,
+     "diferencia_ml": -0.5,
+     "mg_kg_dia_aiepi": 99.2
+    },
+    {
+     "peso_kg": 13.11,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 4.5,
+     "ml_calculadora": 4.0,
+     "diferencia_ml": -0.5,
+     "mg_kg_dia_aiepi": 103.0
+    },
+    {
+     "peso_kg": 7.4,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 7,
+     "ml_calculadora": 6.5,
+     "diferencia_ml": -0.5,
+     "mg_kg_dia_aiepi": 94.6
+    },
+    {
+     "peso_kg": 7.4,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 3.5,
+     "ml_calculadora": 3.5,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 94.6
+    },
+    {
+     "peso_kg": 7.4,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 2.5,
+     "ml_calculadora": 2.0,
+     "diferencia_ml": -0.5,
+     "mg_kg_dia_aiepi": 101.4
+    },
+    {
+     "peso_kg": 8.27,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 7,
+     "ml_calculadora": 7.5,
+     "diferencia_ml": 0.5,
+     "mg_kg_dia_aiepi": 84.6
+    },
+    {
+     "peso_kg": 8.27,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 3.5,
+     "ml_calculadora": 3.5,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 84.6
+    },
+    {
+     "peso_kg": 8.27,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 2.5,
+     "ml_calculadora": 2.5,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 90.7
+    },
+    {
+     "peso_kg": 10.31,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 10,
+     "ml_calculadora": 9.5,
+     "diferencia_ml": -0.5,
+     "mg_kg_dia_aiepi": 97.0
+    },
+    {
+     "peso_kg": 10.31,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 5,
+     "ml_calculadora": 4.5,
+     "diferencia_ml": -0.5,
+     "mg_kg_dia_aiepi": 97.0
+    },
+    {
+     "peso_kg": 10.31,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 3.5,
+     "ml_calculadora": 3.0,
+     "diferencia_ml": -0.5,
+     "mg_kg_dia_aiepi": 101.8
+    },
+    {
+     "peso_kg": 12.84,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 10,
+     "ml_calculadora": 11.5,
+     "diferencia_ml": 1.5,
+     "mg_kg_dia_aiepi": 77.9
+    },
+    {
+     "peso_kg": 12.84,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 5,
+     "ml_calculadora": 6.0,
+     "diferencia_ml": 1.0,
+     "mg_kg_dia_aiepi": 77.9
+    },
+    {
+     "peso_kg": 12.84,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 3.5,
+     "ml_calculadora": 4.0,
+     "diferencia_ml": 0.5,
+     "mg_kg_dia_aiepi": 81.8
+    },
+    {
+     "peso_kg": 14.32,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 12.5,
+     "ml_calculadora": 13.0,
+     "diferencia_ml": 0.5,
+     "mg_kg_dia_aiepi": 87.3
+    },
+    {
+     "peso_kg": 14.32,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 6.5,
+     "ml_calculadora": 6.5,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 90.8
+    },
+    {
+     "peso_kg": 14.32,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 4.5,
+     "ml_calculadora": 4.5,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 94.3
+    },
+    {
+     "peso_kg": 6.74,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 5,
+     "ml_calculadora": 6.0,
+     "diferencia_ml": 1.0,
+     "mg_kg_dia_aiepi": 74.2
+    },
+    {
+     "peso_kg": 6.74,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 2.5,
+     "ml_calculadora": 3.0,
+     "diferencia_ml": 0.5,
+     "mg_kg_dia_aiepi": 74.2
+    },
+    {
+     "peso_kg": 6.74,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 1.5,
+     "ml_calculadora": 2.0,
+     "diferencia_ml": 0.5,
+     "mg_kg_dia_aiepi": 66.8
+    },
+    {
+     "peso_kg": 7.56,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 7,
+     "ml_calculadora": 7.0,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 92.6
+    },
+    {
+     "peso_kg": 7.56,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 3.5,
+     "ml_calculadora": 3.5,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 92.6
+    },
+    {
+     "peso_kg": 7.56,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 2.5,
+     "ml_calculadora": 2.5,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 99.2
+    },
+    {
+     "peso_kg": 9.6,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 7,
+     "ml_calculadora": 8.5,
+     "diferencia_ml": 1.5,
+     "mg_kg_dia_aiepi": 72.9
+    },
+    {
+     "peso_kg": 9.6,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 3.5,
+     "ml_calculadora": 4.5,
+     "diferencia_ml": 1.0,
+     "mg_kg_dia_aiepi": 72.9
+    },
+    {
+     "peso_kg": 9.6,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 2.5,
+     "ml_calculadora": 3.0,
+     "diferencia_ml": 0.5,
+     "mg_kg_dia_aiepi": 78.1
+    },
+    {
+     "peso_kg": 12.37,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 10,
+     "ml_calculadora": 11.0,
+     "diferencia_ml": 1.0,
+     "mg_kg_dia_aiepi": 80.8
+    },
+    {
+     "peso_kg": 12.37,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 5,
+     "ml_calculadora": 5.5,
+     "diferencia_ml": 0.5,
+     "mg_kg_dia_aiepi": 80.8
+    },
+    {
+     "peso_kg": 12.37,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 3.5,
+     "ml_calculadora": 3.5,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 84.9
+    },
+    {
+     "peso_kg": 14.13,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 12.5,
+     "ml_calculadora": 12.5,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 88.5
+    },
+    {
+     "peso_kg": 14.13,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 6.5,
+     "ml_calculadora": 6.5,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 92.0
+    },
+    {
+     "peso_kg": 14.13,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 4.5,
+     "ml_calculadora": 4.0,
+     "diferencia_ml": -0.5,
+     "mg_kg_dia_aiepi": 95.5
+    },
+    {
+     "peso_kg": 7.83,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 7,
+     "ml_calculadora": 7.0,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 89.4
+    },
+    {
+     "peso_kg": 7.83,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 3.5,
+     "ml_calculadora": 3.5,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 89.4
+    },
+    {
+     "peso_kg": 7.83,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 2.5,
+     "ml_calculadora": 2.5,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 95.8
+    },
+    {
+     "peso_kg": 8.75,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 7,
+     "ml_calculadora": 8.0,
+     "diferencia_ml": 1.0,
+     "mg_kg_dia_aiepi": 80.0
+    },
+    {
+     "peso_kg": 8.75,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 3.5,
+     "ml_calculadora": 4.0,
+     "diferencia_ml": 0.5,
+     "mg_kg_dia_aiepi": 80.0
+    },
+    {
+     "peso_kg": 8.75,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 2.5,
+     "ml_calculadora": 2.5,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 85.7
+    },
+    {
+     "peso_kg": 10.94,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 10,
+     "ml_calculadora": 10.0,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 91.4
+    },
+    {
+     "peso_kg": 10.94,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 5,
+     "ml_calculadora": 5.0,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 91.4
+    },
+    {
+     "peso_kg": 10.94,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 3.5,
+     "ml_calculadora": 3.5,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 96.0
+    },
+    {
+     "peso_kg": 13.66,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 12.5,
+     "ml_calculadora": 12.5,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 91.5
+    },
+    {
+     "peso_kg": 13.66,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 6.5,
+     "ml_calculadora": 6.0,
+     "diferencia_ml": -0.5,
+     "mg_kg_dia_aiepi": 95.2
+    },
+    {
+     "peso_kg": 13.66,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 4.5,
+     "ml_calculadora": 4.0,
+     "diferencia_ml": -0.5,
+     "mg_kg_dia_aiepi": 98.8
+    },
+    {
+     "peso_kg": 15.25,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 12.5,
+     "ml_calculadora": 13.5,
+     "diferencia_ml": 1.0,
+     "mg_kg_dia_aiepi": 82.0
+    },
+    {
+     "peso_kg": 15.25,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 6.5,
+     "ml_calculadora": 7.0,
+     "diferencia_ml": 0.5,
+     "mg_kg_dia_aiepi": 85.2
+    },
+    {
+     "peso_kg": 15.25,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 4.5,
+     "ml_calculadora": 4.5,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 88.5
+    },
+    {
+     "peso_kg": 7.19,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 7,
+     "ml_calculadora": 6.5,
+     "diferencia_ml": -0.5,
+     "mg_kg_dia_aiepi": 97.4
+    },
+    {
+     "peso_kg": 7.19,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 3.5,
+     "ml_calculadora": 3.0,
+     "diferencia_ml": -0.5,
+     "mg_kg_dia_aiepi": 97.4
+    },
+    {
+     "peso_kg": 7.19,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 2.5,
+     "ml_calculadora": 2.0,
+     "diferencia_ml": -0.5,
+     "mg_kg_dia_aiepi": 104.3
+    },
+    {
+     "peso_kg": 8.06,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 7,
+     "ml_calculadora": 7.5,
+     "diferencia_ml": 0.5,
+     "mg_kg_dia_aiepi": 86.8
+    },
+    {
+     "peso_kg": 8.06,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 3.5,
+     "ml_calculadora": 3.5,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 86.8
+    },
+    {
+     "peso_kg": 8.06,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 2.5,
+     "ml_calculadora": 2.5,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 93.1
+    },
+    {
+     "peso_kg": 10.23,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 10,
+     "ml_calculadora": 9.0,
+     "diferencia_ml": -1.0,
+     "mg_kg_dia_aiepi": 97.8
+    },
+    {
+     "peso_kg": 10.23,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 5,
+     "ml_calculadora": 4.5,
+     "diferencia_ml": -0.5,
+     "mg_kg_dia_aiepi": 97.8
+    },
+    {
+     "peso_kg": 10.23,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 3.5,
+     "ml_calculadora": 3.0,
+     "diferencia_ml": -0.5,
+     "mg_kg_dia_aiepi": 102.6
+    },
+    {
+     "peso_kg": 13.2,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 12.5,
+     "ml_calculadora": 12.0,
+     "diferencia_ml": -0.5,
+     "mg_kg_dia_aiepi": 94.7
+    },
+    {
+     "peso_kg": 13.2,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 6.5,
+     "ml_calculadora": 6.0,
+     "diferencia_ml": -0.5,
+     "mg_kg_dia_aiepi": 98.5
+    },
+    {
+     "peso_kg": 13.2,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 4.5,
+     "ml_calculadora": 4.0,
+     "diferencia_ml": -0.5,
+     "mg_kg_dia_aiepi": 102.3
+    },
+    {
+     "peso_kg": 15.09,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 12.5,
+     "ml_calculadora": 13.5,
+     "diferencia_ml": 1.0,
+     "mg_kg_dia_aiepi": 82.8
+    },
+    {
+     "peso_kg": 15.09,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 6.5,
+     "ml_calculadora": 7.0,
+     "diferencia_ml": 0.5,
+     "mg_kg_dia_aiepi": 86.1
+    },
+    {
+     "peso_kg": 15.09,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 4.5,
+     "ml_calculadora": 4.5,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 89.5
+    },
+    {
+     "peso_kg": 8.63,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 7,
+     "ml_calculadora": 8.0,
+     "diferencia_ml": 1.0,
+     "mg_kg_dia_aiepi": 81.1
+    },
+    {
+     "peso_kg": 8.63,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 3.5,
+     "ml_calculadora": 4.0,
+     "diferencia_ml": 0.5,
+     "mg_kg_dia_aiepi": 81.1
+    },
+    {
+     "peso_kg": 8.63,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 2.5,
+     "ml_calculadora": 2.5,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 86.9
+    },
+    {
+     "peso_kg": 9.67,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 7,
+     "ml_calculadora": 8.5,
+     "diferencia_ml": 1.5,
+     "mg_kg_dia_aiepi": 72.4
+    },
+    {
+     "peso_kg": 9.67,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 3.5,
+     "ml_calculadora": 4.5,
+     "diferencia_ml": 1.0,
+     "mg_kg_dia_aiepi": 72.4
+    },
+    {
+     "peso_kg": 9.67,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 2.5,
+     "ml_calculadora": 3.0,
+     "diferencia_ml": 0.5,
+     "mg_kg_dia_aiepi": 77.6
+    },
+    {
+     "peso_kg": 12.15,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 10,
+     "ml_calculadora": 11.0,
+     "diferencia_ml": 1.0,
+     "mg_kg_dia_aiepi": 82.3
+    },
+    {
+     "peso_kg": 12.15,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 5,
+     "ml_calculadora": 5.5,
+     "diferencia_ml": 0.5,
+     "mg_kg_dia_aiepi": 82.3
+    },
+    {
+     "peso_kg": 12.15,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 3.5,
+     "ml_calculadora": 3.5,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 86.4
+    },
+    {
+     "peso_kg": 15.27,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 12.5,
+     "ml_calculadora": 13.5,
+     "diferencia_ml": 1.0,
+     "mg_kg_dia_aiepi": 81.9
+    },
+    {
+     "peso_kg": 15.27,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 6.5,
+     "ml_calculadora": 7.0,
+     "diferencia_ml": 0.5,
+     "mg_kg_dia_aiepi": 85.1
+    },
+    {
+     "peso_kg": 15.27,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 4.5,
+     "ml_calculadora": 4.5,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 88.4
+    },
+    {
+     "peso_kg": 17.13,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 14.5,
+     "ml_calculadora": 15.5,
+     "diferencia_ml": 1.0,
+     "mg_kg_dia_aiepi": 84.6
+    },
+    {
+     "peso_kg": 17.13,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 7.5,
+     "ml_calculadora": 7.5,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 87.6
+    },
+    {
+     "peso_kg": 17.13,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 5,
+     "ml_calculadora": 5.0,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 87.6
+    },
+    {
+     "peso_kg": 8.06,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 7,
+     "ml_calculadora": 7.5,
+     "diferencia_ml": 0.5,
+     "mg_kg_dia_aiepi": 86.8
+    },
+    {
+     "peso_kg": 8.06,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 3.5,
+     "ml_calculadora": 3.5,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 86.8
+    },
+    {
+     "peso_kg": 8.06,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 2.5,
+     "ml_calculadora": 2.5,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 93.1
+    },
+    {
+     "peso_kg": 9.03,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 7,
+     "ml_calculadora": 8.0,
+     "diferencia_ml": 1.0,
+     "mg_kg_dia_aiepi": 77.5
+    },
+    {
+     "peso_kg": 9.03,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 3.5,
+     "ml_calculadora": 4.0,
+     "diferencia_ml": 0.5,
+     "mg_kg_dia_aiepi": 77.5
+    },
+    {
+     "peso_kg": 9.03,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 2.5,
+     "ml_calculadora": 2.5,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 83.1
+    },
+    {
+     "peso_kg": 11.47,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 10,
+     "ml_calculadora": 10.5,
+     "diferencia_ml": 0.5,
+     "mg_kg_dia_aiepi": 87.2
+    },
+    {
+     "peso_kg": 11.47,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 5,
+     "ml_calculadora": 5.0,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 87.2
+    },
+    {
+     "peso_kg": 11.47,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 3.5,
+     "ml_calculadora": 3.5,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 91.5
+    },
+    {
+     "peso_kg": 14.84,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 12.5,
+     "ml_calculadora": 13.5,
+     "diferencia_ml": 1.0,
+     "mg_kg_dia_aiepi": 84.2
+    },
+    {
+     "peso_kg": 14.84,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 6.5,
+     "ml_calculadora": 6.5,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 87.6
+    },
+    {
+     "peso_kg": 14.84,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 4.5,
+     "ml_calculadora": 4.5,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 91.0
+    },
+    {
+     "peso_kg": 17.01,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 14.5,
+     "ml_calculadora": 15.5,
+     "diferencia_ml": 1.0,
+     "mg_kg_dia_aiepi": 85.2
+    },
+    {
+     "peso_kg": 17.01,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 7.5,
+     "ml_calculadora": 7.5,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 88.2
+    },
+    {
+     "peso_kg": 17.01,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 5,
+     "ml_calculadora": 5.0,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 88.2
+    },
+    {
+     "peso_kg": 9.36,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 7,
+     "ml_calculadora": 8.5,
+     "diferencia_ml": 1.5,
+     "mg_kg_dia_aiepi": 74.8
+    },
+    {
+     "peso_kg": 9.36,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 3.5,
+     "ml_calculadora": 4.0,
+     "diferencia_ml": 0.5,
+     "mg_kg_dia_aiepi": 74.8
+    },
+    {
+     "peso_kg": 9.36,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 2.5,
+     "ml_calculadora": 3.0,
+     "diferencia_ml": 0.5,
+     "mg_kg_dia_aiepi": 80.1
+    },
+    {
+     "peso_kg": 10.52,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 10,
+     "ml_calculadora": 9.5,
+     "diferencia_ml": -0.5,
+     "mg_kg_dia_aiepi": 95.1
+    },
+    {
+     "peso_kg": 10.52,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 5,
+     "ml_calculadora": 4.5,
+     "diferencia_ml": -0.5,
+     "mg_kg_dia_aiepi": 95.1
+    },
+    {
+     "peso_kg": 10.52,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 3.5,
+     "ml_calculadora": 3.0,
+     "diferencia_ml": -0.5,
+     "mg_kg_dia_aiepi": 99.8
+    },
+    {
+     "peso_kg": 13.3,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 12.5,
+     "ml_calculadora": 12.0,
+     "diferencia_ml": -0.5,
+     "mg_kg_dia_aiepi": 94.0
+    },
+    {
+     "peso_kg": 13.3,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 6.5,
+     "ml_calculadora": 6.0,
+     "diferencia_ml": -0.5,
+     "mg_kg_dia_aiepi": 97.7
+    },
+    {
+     "peso_kg": 13.3,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 4.5,
+     "ml_calculadora": 4.0,
+     "diferencia_ml": -0.5,
+     "mg_kg_dia_aiepi": 101.5
+    },
+    {
+     "peso_kg": 16.85,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 14.5,
+     "ml_calculadora": 15.0,
+     "diferencia_ml": 0.5,
+     "mg_kg_dia_aiepi": 86.1
+    },
+    {
+     "peso_kg": 16.85,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 7.5,
+     "ml_calculadora": 7.5,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 89.0
+    },
+    {
+     "peso_kg": 16.85,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 5,
+     "ml_calculadora": 5.0,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 89.0
+    },
+    {
+     "peso_kg": 18.99,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 14.5,
+     "ml_calculadora": 17.0,
+     "diferencia_ml": 2.5,
+     "mg_kg_dia_aiepi": 76.4
+    },
+    {
+     "peso_kg": 18.99,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 7.5,
+     "ml_calculadora": 8.5,
+     "diferencia_ml": 1.0,
+     "mg_kg_dia_aiepi": 79.0
+    },
+    {
+     "peso_kg": 18.99,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 5,
+     "ml_calculadora": 5.5,
+     "diferencia_ml": 0.5,
+     "mg_kg_dia_aiepi": 79.0
+    },
+    {
+     "peso_kg": 8.89,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 7,
+     "ml_calculadora": 8.0,
+     "diferencia_ml": 1.0,
+     "mg_kg_dia_aiepi": 78.7
+    },
+    {
+     "peso_kg": 8.89,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 3.5,
+     "ml_calculadora": 4.0,
+     "diferencia_ml": 0.5,
+     "mg_kg_dia_aiepi": 78.7
+    },
+    {
+     "peso_kg": 8.89,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 2.5,
+     "ml_calculadora": 2.5,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 84.4
+    },
+    {
+     "peso_kg": 9.97,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 7,
+     "ml_calculadora": 9.0,
+     "diferencia_ml": 2.0,
+     "mg_kg_dia_aiepi": 70.2
+    },
+    {
+     "peso_kg": 9.97,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 3.5,
+     "ml_calculadora": 4.5,
+     "diferencia_ml": 1.0,
+     "mg_kg_dia_aiepi": 70.2
+    },
+    {
+     "peso_kg": 9.97,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 2.5,
+     "ml_calculadora": 3.0,
+     "diferencia_ml": 0.5,
+     "mg_kg_dia_aiepi": 75.2
+    },
+    {
+     "peso_kg": 12.7,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 10,
+     "ml_calculadora": 11.5,
+     "diferencia_ml": 1.5,
+     "mg_kg_dia_aiepi": 78.7
+    },
+    {
+     "peso_kg": 12.7,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 5,
+     "ml_calculadora": 5.5,
+     "diferencia_ml": 0.5,
+     "mg_kg_dia_aiepi": 78.7
+    },
+    {
+     "peso_kg": 12.7,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 3.5,
+     "ml_calculadora": 4.0,
+     "diferencia_ml": 0.5,
+     "mg_kg_dia_aiepi": 82.7
+    },
+    {
+     "peso_kg": 16.51,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 14.5,
+     "ml_calculadora": 15.0,
+     "diferencia_ml": 0.5,
+     "mg_kg_dia_aiepi": 87.8
+    },
+    {
+     "peso_kg": 16.51,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 7.5,
+     "ml_calculadora": 7.5,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 90.9
+    },
+    {
+     "peso_kg": 16.51,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 5,
+     "ml_calculadora": 5.0,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 90.9
+    },
+    {
+     "peso_kg": 18.98,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 14.5,
+     "ml_calculadora": 17.0,
+     "diferencia_ml": 2.5,
+     "mg_kg_dia_aiepi": 76.4
+    },
+    {
+     "peso_kg": 18.98,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 7.5,
+     "ml_calculadora": 8.5,
+     "diferencia_ml": 1.0,
+     "mg_kg_dia_aiepi": 79.0
+    },
+    {
+     "peso_kg": 18.98,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 5,
+     "ml_calculadora": 5.5,
+     "diferencia_ml": 0.5,
+     "mg_kg_dia_aiepi": 79.0
+    },
+    {
+     "peso_kg": 10.02,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 10,
+     "ml_calculadora": 9.0,
+     "diferencia_ml": -1.0,
+     "mg_kg_dia_aiepi": 99.8
+    },
+    {
+     "peso_kg": 10.02,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 5,
+     "ml_calculadora": 4.5,
+     "diferencia_ml": -0.5,
+     "mg_kg_dia_aiepi": 99.8
+    },
+    {
+     "peso_kg": 10.02,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 3.5,
+     "ml_calculadora": 3.0,
+     "diferencia_ml": -0.5,
+     "mg_kg_dia_aiepi": 104.8
+    },
+    {
+     "peso_kg": 11.28,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 10,
+     "ml_calculadora": 10.0,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 88.7
+    },
+    {
+     "peso_kg": 11.28,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 5,
+     "ml_calculadora": 5.0,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 88.7
+    },
+    {
+     "peso_kg": 11.28,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 3.5,
+     "ml_calculadora": 3.5,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 93.1
+    },
+    {
+     "peso_kg": 14.34,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 12.5,
+     "ml_calculadora": 13.0,
+     "diferencia_ml": 0.5,
+     "mg_kg_dia_aiepi": 87.2
+    },
+    {
+     "peso_kg": 14.34,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 6.5,
+     "ml_calculadora": 6.5,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 90.7
+    },
+    {
+     "peso_kg": 14.34,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 4.5,
+     "ml_calculadora": 4.5,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 94.1
+    },
+    {
+     "peso_kg": 18.31,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 14.5,
+     "ml_calculadora": 16.5,
+     "diferencia_ml": 2.0,
+     "mg_kg_dia_aiepi": 79.2
+    },
+    {
+     "peso_kg": 18.31,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 7.5,
+     "ml_calculadora": 8.0,
+     "diferencia_ml": 0.5,
+     "mg_kg_dia_aiepi": 81.9
+    },
+    {
+     "peso_kg": 18.31,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 5,
+     "ml_calculadora": 5.5,
+     "diferencia_ml": 0.5,
+     "mg_kg_dia_aiepi": 81.9
+    },
+    {
+     "peso_kg": 20.73,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 18,
+     "ml_calculadora": 18.5,
+     "diferencia_ml": 0.5,
+     "mg_kg_dia_aiepi": 86.8
+    },
+    {
+     "peso_kg": 20.73,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 9,
+     "ml_calculadora": 9.5,
+     "diferencia_ml": 0.5,
+     "mg_kg_dia_aiepi": 86.8
+    },
+    {
+     "peso_kg": 20.73,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 6,
+     "ml_calculadora": 6.0,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 86.8
+    },
+    {
+     "peso_kg": 9.61,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 7,
+     "ml_calculadora": 8.5,
+     "diferencia_ml": 1.5,
+     "mg_kg_dia_aiepi": 72.8
+    },
+    {
+     "peso_kg": 9.61,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 3.5,
+     "ml_calculadora": 4.5,
+     "diferencia_ml": 1.0,
+     "mg_kg_dia_aiepi": 72.8
+    },
+    {
+     "peso_kg": 9.61,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 2.5,
+     "ml_calculadora": 3.0,
+     "diferencia_ml": 0.5,
+     "mg_kg_dia_aiepi": 78.0
+    },
+    {
+     "peso_kg": 10.81,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 10,
+     "ml_calculadora": 9.5,
+     "diferencia_ml": -0.5,
+     "mg_kg_dia_aiepi": 92.5
+    },
+    {
+     "peso_kg": 10.81,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 5,
+     "ml_calculadora": 5.0,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 92.5
+    },
+    {
+     "peso_kg": 10.81,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 3.5,
+     "ml_calculadora": 3.0,
+     "diferencia_ml": -0.5,
+     "mg_kg_dia_aiepi": 97.1
+    },
+    {
+     "peso_kg": 13.85,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 12.5,
+     "ml_calculadora": 12.5,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 90.3
+    },
+    {
+     "peso_kg": 13.85,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 6.5,
+     "ml_calculadora": 6.0,
+     "diferencia_ml": -0.5,
+     "mg_kg_dia_aiepi": 93.9
+    },
+    {
+     "peso_kg": 13.85,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 4.5,
+     "ml_calculadora": 4.0,
+     "diferencia_ml": -0.5,
+     "mg_kg_dia_aiepi": 97.5
+    },
+    {
+     "peso_kg": 18.14,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 14.5,
+     "ml_calculadora": 16.5,
+     "diferencia_ml": 2.0,
+     "mg_kg_dia_aiepi": 79.9
+    },
+    {
+     "peso_kg": 18.14,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 7.5,
+     "ml_calculadora": 8.0,
+     "diferencia_ml": 0.5,
+     "mg_kg_dia_aiepi": 82.7
+    },
+    {
+     "peso_kg": 18.14,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 5,
+     "ml_calculadora": 5.5,
+     "diferencia_ml": 0.5,
+     "mg_kg_dia_aiepi": 82.7
+    },
+    {
+     "peso_kg": 20.95,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 18,
+     "ml_calculadora": 19.0,
+     "diferencia_ml": 1.0,
+     "mg_kg_dia_aiepi": 85.9
+    },
+    {
+     "peso_kg": 20.95,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 9,
+     "ml_calculadora": 9.5,
+     "diferencia_ml": 0.5,
+     "mg_kg_dia_aiepi": 85.9
+    },
+    {
+     "peso_kg": 20.95,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 6,
+     "ml_calculadora": 6.5,
+     "diferencia_ml": 0.5,
+     "mg_kg_dia_aiepi": 85.9
+    },
+    {
+     "peso_kg": 11.24,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 10,
+     "ml_calculadora": 10.0,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 89.0
+    },
+    {
+     "peso_kg": 11.24,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 5,
+     "ml_calculadora": 5.0,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 89.0
+    },
+    {
+     "peso_kg": 11.24,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 3.5,
+     "ml_calculadora": 3.5,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 93.4
+    },
+    {
+     "peso_kg": 12.71,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 10,
+     "ml_calculadora": 11.5,
+     "diferencia_ml": 1.5,
+     "mg_kg_dia_aiepi": 78.7
+    },
+    {
+     "peso_kg": 12.71,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 5,
+     "ml_calculadora": 5.5,
+     "diferencia_ml": 0.5,
+     "mg_kg_dia_aiepi": 78.7
+    },
+    {
+     "peso_kg": 12.71,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 3.5,
+     "ml_calculadora": 4.0,
+     "diferencia_ml": 0.5,
+     "mg_kg_dia_aiepi": 82.6
+    },
+    {
+     "peso_kg": 16.35,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 14.5,
+     "ml_calculadora": 14.5,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 88.7
+    },
+    {
+     "peso_kg": 16.35,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 7.5,
+     "ml_calculadora": 7.5,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 91.7
+    },
+    {
+     "peso_kg": 16.35,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 5,
+     "ml_calculadora": 5.0,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 91.7
+    },
+    {
+     "peso_kg": 21.18,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 18,
+     "ml_calculadora": 19.0,
+     "diferencia_ml": 1.0,
+     "mg_kg_dia_aiepi": 85.0
+    },
+    {
+     "peso_kg": 21.18,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 9,
+     "ml_calculadora": 9.5,
+     "diferencia_ml": 0.5,
+     "mg_kg_dia_aiepi": 85.0
+    },
+    {
+     "peso_kg": 21.18,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 6,
+     "ml_calculadora": 6.5,
+     "diferencia_ml": 0.5,
+     "mg_kg_dia_aiepi": 85.0
+    },
+    {
+     "peso_kg": 10.88,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 10,
+     "ml_calculadora": 10.0,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 91.9
+    },
+    {
+     "peso_kg": 10.88,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 5,
+     "ml_calculadora": 5.0,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 91.9
+    },
+    {
+     "peso_kg": 10.88,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 3.5,
+     "ml_calculadora": 3.5,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 96.5
+    },
+    {
+     "peso_kg": 12.32,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 10,
+     "ml_calculadora": 11.0,
+     "diferencia_ml": 1.0,
+     "mg_kg_dia_aiepi": 81.2
+    },
+    {
+     "peso_kg": 12.32,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 5,
+     "ml_calculadora": 5.5,
+     "diferencia_ml": 0.5,
+     "mg_kg_dia_aiepi": 81.2
+    },
+    {
+     "peso_kg": 12.32,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 3.5,
+     "ml_calculadora": 3.5,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 85.2
+    },
+    {
+     "peso_kg": 16.07,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 14.5,
+     "ml_calculadora": 14.5,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 90.2
+    },
+    {
+     "peso_kg": 16.07,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 7.5,
+     "ml_calculadora": 7.0,
+     "diferencia_ml": -0.5,
+     "mg_kg_dia_aiepi": 93.3
+    },
+    {
+     "peso_kg": 16.07,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 5,
+     "ml_calculadora": 5.0,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 93.3
+    },
+    {
+     "peso_kg": 21.51,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 18,
+     "ml_calculadora": 19.5,
+     "diferencia_ml": 1.5,
+     "mg_kg_dia_aiepi": 83.7
+    },
+    {
+     "peso_kg": 21.51,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 9,
+     "ml_calculadora": 9.5,
+     "diferencia_ml": 0.5,
+     "mg_kg_dia_aiepi": 83.7
+    },
+    {
+     "peso_kg": 21.51,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 6,
+     "ml_calculadora": 6.5,
+     "diferencia_ml": 0.5,
+     "mg_kg_dia_aiepi": 83.7
+    },
+    {
+     "peso_kg": 12.37,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 10,
+     "ml_calculadora": 11.0,
+     "diferencia_ml": 1.0,
+     "mg_kg_dia_aiepi": 80.8
+    },
+    {
+     "peso_kg": 12.37,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 5,
+     "ml_calculadora": 5.5,
+     "diferencia_ml": 0.5,
+     "mg_kg_dia_aiepi": 80.8
+    },
+    {
+     "peso_kg": 12.37,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 3.5,
+     "ml_calculadora": 3.5,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 84.9
+    },
+    {
+     "peso_kg": 14.07,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 12.5,
+     "ml_calculadora": 12.5,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 88.8
+    },
+    {
+     "peso_kg": 14.07,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 6.5,
+     "ml_calculadora": 6.5,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 92.4
+    },
+    {
+     "peso_kg": 14.07,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 4.5,
+     "ml_calculadora": 4.0,
+     "diferencia_ml": -0.5,
+     "mg_kg_dia_aiepi": 95.9
+    },
+    {
+     "peso_kg": 18.34,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 14.5,
+     "ml_calculadora": 16.5,
+     "diferencia_ml": 2.0,
+     "mg_kg_dia_aiepi": 79.1
+    },
+    {
+     "peso_kg": 18.34,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 7.5,
+     "ml_calculadora": 8.5,
+     "diferencia_ml": 1.0,
+     "mg_kg_dia_aiepi": 81.8
+    },
+    {
+     "peso_kg": 18.34,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 5,
+     "ml_calculadora": 5.5,
+     "diferencia_ml": 0.5,
+     "mg_kg_dia_aiepi": 81.8
+    },
+    {
+     "peso_kg": 12.05,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 10,
+     "ml_calculadora": 11.0,
+     "diferencia_ml": 1.0,
+     "mg_kg_dia_aiepi": 83.0
+    },
+    {
+     "peso_kg": 12.05,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 5,
+     "ml_calculadora": 5.5,
+     "diferencia_ml": 0.5,
+     "mg_kg_dia_aiepi": 83.0
+    },
+    {
+     "peso_kg": 12.05,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 3.5,
+     "ml_calculadora": 3.5,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 87.1
+    },
+    {
+     "peso_kg": 13.74,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 12.5,
+     "ml_calculadora": 12.5,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 91.0
+    },
+    {
+     "peso_kg": 13.74,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 6.5,
+     "ml_calculadora": 6.0,
+     "diferencia_ml": -0.5,
+     "mg_kg_dia_aiepi": 94.6
+    },
+    {
+     "peso_kg": 13.74,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 4.5,
+     "ml_calculadora": 4.0,
+     "diferencia_ml": -0.5,
+     "mg_kg_dia_aiepi": 98.3
+    },
+    {
+     "peso_kg": 18.22,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 14.5,
+     "ml_calculadora": 16.5,
+     "diferencia_ml": 2.0,
+     "mg_kg_dia_aiepi": 79.6
+    },
+    {
+     "peso_kg": 18.22,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 7.5,
+     "ml_calculadora": 8.0,
+     "diferencia_ml": 0.5,
+     "mg_kg_dia_aiepi": 82.3
+    },
+    {
+     "peso_kg": 18.22,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 5,
+     "ml_calculadora": 5.5,
+     "diferencia_ml": 0.5,
+     "mg_kg_dia_aiepi": 82.3
+    },
+    {
+     "peso_kg": 16.32,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 14.5,
+     "ml_calculadora": 14.5,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 88.8
+    },
+    {
+     "peso_kg": 16.32,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 7.5,
+     "ml_calculadora": 7.5,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 91.9
+    },
+    {
+     "peso_kg": 16.32,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 5,
+     "ml_calculadora": 5.0,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 91.9
+    },
+    {
+     "peso_kg": 17.53,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 14.5,
+     "ml_calculadora": 16.0,
+     "diferencia_ml": 1.5,
+     "mg_kg_dia_aiepi": 82.7
+    },
+    {
+     "peso_kg": 17.53,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 7.5,
+     "ml_calculadora": 8.0,
+     "diferencia_ml": 0.5,
+     "mg_kg_dia_aiepi": 85.6
+    },
+    {
+     "peso_kg": 17.53,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 5,
+     "ml_calculadora": 5.5,
+     "diferencia_ml": 0.5,
+     "mg_kg_dia_aiepi": 85.6
+    },
+    {
+     "peso_kg": 20.58,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 18,
+     "ml_calculadora": 18.5,
+     "diferencia_ml": 0.5,
+     "mg_kg_dia_aiepi": 87.5
+    },
+    {
+     "peso_kg": 20.58,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 9,
+     "ml_calculadora": 9.5,
+     "diferencia_ml": 0.5,
+     "mg_kg_dia_aiepi": 87.5
+    },
+    {
+     "peso_kg": 20.58,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 6,
+     "ml_calculadora": 6.0,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 87.5
+    },
+    {
+     "peso_kg": 15.54,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 12.5,
+     "ml_calculadora": 14.0,
+     "diferencia_ml": 1.5,
+     "mg_kg_dia_aiepi": 80.4
+    },
+    {
+     "peso_kg": 15.54,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 6.5,
+     "ml_calculadora": 7.0,
+     "diferencia_ml": 0.5,
+     "mg_kg_dia_aiepi": 83.7
+    },
+    {
+     "peso_kg": 15.54,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 4.5,
+     "ml_calculadora": 4.5,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 86.9
+    },
+    {
+     "peso_kg": 16.83,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 14.5,
+     "ml_calculadora": 15.0,
+     "diferencia_ml": 0.5,
+     "mg_kg_dia_aiepi": 86.2
+    },
+    {
+     "peso_kg": 16.83,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 7.5,
+     "ml_calculadora": 7.5,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 89.1
+    },
+    {
+     "peso_kg": 16.83,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 5,
+     "ml_calculadora": 5.0,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 89.1
+    },
+    {
+     "peso_kg": 20.24,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 18,
+     "ml_calculadora": 18.0,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 88.9
+    },
+    {
+     "peso_kg": 20.24,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 9,
+     "ml_calculadora": 9.0,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 88.9
+    },
+    {
+     "peso_kg": 20.24,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 6,
+     "ml_calculadora": 6.0,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 88.9
+    },
+    {
+     "peso_kg": 18.15,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 14.5,
+     "ml_calculadora": 16.5,
+     "diferencia_ml": 2.0,
+     "mg_kg_dia_aiepi": 79.9
+    },
+    {
+     "peso_kg": 18.15,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 7.5,
+     "ml_calculadora": 8.0,
+     "diferencia_ml": 0.5,
+     "mg_kg_dia_aiepi": 82.6
+    },
+    {
+     "peso_kg": 18.15,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 5,
+     "ml_calculadora": 5.5,
+     "diferencia_ml": 0.5,
+     "mg_kg_dia_aiepi": 82.6
+    },
+    {
+     "peso_kg": 19.48,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 18,
+     "ml_calculadora": 17.5,
+     "diferencia_ml": -0.5,
+     "mg_kg_dia_aiepi": 92.4
+    },
+    {
+     "peso_kg": 19.48,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 9,
+     "ml_calculadora": 9.0,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 92.4
+    },
+    {
+     "peso_kg": 19.48,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 6,
+     "ml_calculadora": 6.0,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 92.4
+    },
+    {
+     "peso_kg": 17.15,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 14.5,
+     "ml_calculadora": 15.5,
+     "diferencia_ml": 1.0,
+     "mg_kg_dia_aiepi": 84.5
+    },
+    {
+     "peso_kg": 17.15,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 7.5,
+     "ml_calculadora": 7.5,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 87.5
+    },
+    {
+     "peso_kg": 17.15,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 5,
+     "ml_calculadora": 5.0,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 87.5
+    },
+    {
+     "peso_kg": 18.59,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 14.5,
+     "ml_calculadora": 16.5,
+     "diferencia_ml": 2.0,
+     "mg_kg_dia_aiepi": 78.0
+    },
+    {
+     "peso_kg": 18.59,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 7.5,
+     "ml_calculadora": 8.5,
+     "diferencia_ml": 1.0,
+     "mg_kg_dia_aiepi": 80.7
+    },
+    {
+     "peso_kg": 18.59,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 5,
+     "ml_calculadora": 5.5,
+     "diferencia_ml": 0.5,
+     "mg_kg_dia_aiepi": 80.7
+    },
+    {
+     "peso_kg": 20.07,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 18,
+     "ml_calculadora": 18.0,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 89.7
+    },
+    {
+     "peso_kg": 20.07,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 9,
+     "ml_calculadora": 9.0,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 89.7
+    },
+    {
+     "peso_kg": 20.07,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 6,
+     "ml_calculadora": 6.0,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 89.7
+    },
+    {
+     "peso_kg": 21.55,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 18,
+     "ml_calculadora": 19.5,
+     "diferencia_ml": 1.5,
+     "mg_kg_dia_aiepi": 83.5
+    },
+    {
+     "peso_kg": 21.55,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 9,
+     "ml_calculadora": 9.5,
+     "diferencia_ml": 0.5,
+     "mg_kg_dia_aiepi": 83.5
+    },
+    {
+     "peso_kg": 21.55,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 6,
+     "ml_calculadora": 6.5,
+     "diferencia_ml": 0.5,
+     "mg_kg_dia_aiepi": 83.5
+    },
+    {
+     "peso_kg": 19.03,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 18,
+     "ml_calculadora": 17.0,
+     "diferencia_ml": -1.0,
+     "mg_kg_dia_aiepi": 94.6
+    },
+    {
+     "peso_kg": 19.03,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 9,
+     "ml_calculadora": 8.5,
+     "diferencia_ml": -0.5,
+     "mg_kg_dia_aiepi": 94.6
+    },
+    {
+     "peso_kg": 19.03,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 6,
+     "ml_calculadora": 5.5,
+     "diferencia_ml": -0.5,
+     "mg_kg_dia_aiepi": 94.6
+    },
+    {
+     "peso_kg": 20.64,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 18,
+     "ml_calculadora": 18.5,
+     "diferencia_ml": 0.5,
+     "mg_kg_dia_aiepi": 87.2
+    },
+    {
+     "peso_kg": 20.64,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 9,
+     "ml_calculadora": 9.5,
+     "diferencia_ml": 0.5,
+     "mg_kg_dia_aiepi": 87.2
+    },
+    {
+     "peso_kg": 20.64,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 6,
+     "ml_calculadora": 6.0,
+     "diferencia_ml": 0.0,
+     "mg_kg_dia_aiepi": 87.2
+    },
+    {
+     "peso_kg": 21.24,
+     "presentacion": "amox_susp_250",
+     "ml_aiepi": 18,
+     "ml_calculadora": 19.0,
+     "diferencia_ml": 1.0,
+     "mg_kg_dia_aiepi": 84.7
+    },
+    {
+     "peso_kg": 21.24,
+     "presentacion": "amox_susp_500",
+     "ml_aiepi": 9,
+     "ml_calculadora": 9.5,
+     "diferencia_ml": 0.5,
+     "mg_kg_dia_aiepi": 84.7
+    },
+    {
+     "peso_kg": 21.24,
+     "presentacion": "amox_susp_750",
+     "ml_aiepi": 6,
+     "ml_calculadora": 6.5,
+     "diferencia_ml": 0.5,
+     "mg_kg_dia_aiepi": 84.7
+    }
+   ]
+  },
+  "oms_aware_2022_amoxicilina": {
+   "comparaciones": 268,
+   "dentro_de_10_por_ciento": 90,
+   "dentro_de_20_por_ciento": 136,
+   "diferencia_relativa_maxima": 1.0,
+   "mg_kg_dia_implicita_min": 18.2,
+   "mg_kg_dia_implicita_max": 158.7,
+   "detalle": [
+    {
+     "peso_kg": 3.38,
+     "mg_dosis_aware": 250,
+     "mg_dosis_calculadora": 152.1,
+     "mg_kg_dia_aware": 147.9
+    },
+    {
+     "peso_kg": 4.45,
+     "mg_dosis_aware": 250,
+     "mg_dosis_calculadora": 200.2,
+     "mg_kg_dia_aware": 112.4
+    },
+    {
+     "peso_kg": 5.78,
+     "mg_dosis_aware": 250,
+     "mg_dosis_calculadora": 260.1,
+     "mg_kg_dia_aware": 86.5
+    },
+    {
+     "peso_kg": 6.54,
+     "mg_dosis_aware": 375,
+     "mg_dosis_calculadora": 294.3,
+     "mg_kg_dia_aware": 114.7
+    },
+    {
+     "peso_kg": 3.15,
+     "mg_dosis_aware": 250,
+     "mg_dosis_calculadora": 141.8,
+     "mg_kg_dia_aware": 158.7
+    },
+    {
+     "peso_kg": 4.17,
+     "mg_dosis_aware": 250,
+     "mg_dosis_calculadora": 187.7,
+     "mg_kg_dia_aware": 119.9
+    },
+    {
+     "peso_kg": 5.46,
+     "mg_dosis_aware": 250,
+     "mg_dosis_calculadora": 245.7,
+     "mg_kg_dia_aware": 91.6
+    },
+    {
+     "peso_kg": 6.21,
+     "mg_dosis_aware": 375,
+     "mg_dosis_calculadora": 279.4,
+     "mg_kg_dia_aware": 120.8
+    },
+    {
+     "peso_kg": 3.79,
+     "mg_dosis_aware": 250,
+     "mg_dosis_calculadora": 170.6,
+     "mg_kg_dia_aware": 131.9
+    },
+    {
+     "peso_kg": 4.32,
+     "mg_dosis_aware": 250,
+     "mg_dosis_calculadora": 194.4,
+     "mg_kg_dia_aware": 115.7
+    },
+    {
+     "peso_kg": 5.57,
+     "mg_dosis_aware": 250,
+     "mg_dosis_calculadora": 250.7,
+     "mg_kg_dia_aware": 89.8
+    },
+    {
+     "peso_kg": 7.1,
+     "mg_dosis_aware": 375,
+     "mg_dosis_calculadora": 319.5,
+     "mg_kg_dia_aware": 105.6
+    },
+    {
+     "peso_kg": 7.97,
+     "mg_dosis_aware": 375,
+     "mg_dosis_calculadora": 358.6,
+     "mg_kg_dia_aware": 94.1
+    },
+    {
+     "peso_kg": 3.45,
+     "mg_dosis_aware": 250,
+     "mg_dosis_calculadora": 155.2,
+     "mg_kg_dia_aware": 144.9
+    },
+    {
+     "peso_kg": 3.94,
+     "mg_dosis_aware": 250,
+     "mg_dosis_calculadora": 177.3,
+     "mg_kg_dia_aware": 126.9
+    },
+    {
+     "peso_kg": 5.13,
+     "mg_dosis_aware": 250,
+     "mg_dosis_calculadora": 230.8,
+     "mg_kg_dia_aware": 97.5
+    },
+    {
+     "peso_kg": 6.63,
+     "mg_dosis_aware": 375,
+     "mg_dosis_calculadora": 298.4,
+     "mg_kg_dia_aware": 113.1
+    },
+    {
+     "peso_kg": 7.52,
+     "mg_dosis_aware": 375,
+     "mg_dosis_calculadora": 338.4,
+     "mg_kg_dia_aware": 99.7
+    },
+    {
+     "peso_kg": 4.43,
+     "mg_dosis_aware": 250,
+     "mg_dosis_calculadora": 199.3,
+     "mg_kg_dia_aware": 112.9
+    },
+    {
+     "peso_kg": 5.01,
+     "mg_dosis_aware": 250,
+     "mg_dosis_calculadora": 225.4,
+     "mg_kg_dia_aware": 99.8
+    },
+    {
+     "peso_kg": 6.37,
+     "mg_dosis_aware": 375,
+     "mg_dosis_calculadora": 286.6,
+     "mg_kg_dia_aware": 117.7
+    },
+    {
+     "peso_kg": 8.02,
+     "mg_dosis_aware": 375,
+     "mg_dosis_calculadora": 360.9,
+     "mg_kg_dia_aware": 93.5
+    },
+    {
+     "peso_kg": 8.96,
+     "mg_dosis_aware": 375,
+     "mg_dosis_calculadora": 403.2,
+     "mg_kg_dia_aware": 83.7
+    },
+    {
+     "peso_kg": 3.99,
+     "mg_dosis_aware": 250,
+     "mg_dosis_calculadora": 179.6,
+     "mg_kg_dia_aware": 125.3
+    },
+    {
+     "peso_kg": 4.53,
+     "mg_dosis_aware": 250,
+     "mg_dosis_calculadora": 203.8,
+     "mg_kg_dia_aware": 110.4
+    },
+    {
+     "peso_kg": 5.84,
+     "mg_dosis_aware": 250,
+     "mg_dosis_calculadora": 262.8,
+     "mg_kg_dia_aware": 85.6
+    },
+    {
+     "peso_kg": 7.51,
+     "mg_dosis_aware": 375,
+     "mg_dosis_calculadora": 337.9,
+     "mg_kg_dia_aware": 99.9
+    },
+    {
+     "peso_kg": 8.5,
+     "mg_dosis_aware": 375,
+     "mg_dosis_calculadora": 382.5,
+     "mg_kg_dia_aware": 88.2
+    },
+    {
+     "peso_kg": 4.94,
+     "mg_dosis_aware": 250,
+     "mg_dosis_calculadora": 222.3,
+     "mg_kg_dia_aware": 101.2
+    },
+    {
+     "peso_kg": 5.57,
+     "mg_dosis_aware": 250,
+     "mg_dosis_calculadora": 250.7,
+     "mg_kg_dia_aware": 89.8
+    },
+    {
+     "peso_kg": 7.01,
+     "mg_dosis_aware": 375,
+     "mg_dosis_calculadora": 315.4,
+     "mg_kg_dia_aware": 107.0
+    },
+    {
+     "peso_kg": 8.75,
+     "mg_dosis_aware": 375,
+     "mg_dosis_calculadora": 393.8,
+     "mg_kg_dia_aware": 85.7
+    },
+    {
+     "peso_kg": 9.75,
+     "mg_dosis_aware": 375,
+     "mg_dosis_calculadora": 438.8,
+     "mg_kg_dia_aware": 76.9
+    },
+    {
+     "peso_kg": 4.43,
+     "mg_dosis_aware": 250,
+     "mg_dosis_calculadora": 199.3,
+     "mg_kg_dia_aware": 112.9
+    },
+    {
+     "peso_kg": 5.02,
+     "mg_dosis_aware": 250,
+     "mg_dosis_calculadora": 225.9,
+     "mg_kg_dia_aware": 99.6
+    },
+    {
+     "peso_kg": 6.43,
+     "mg_dosis_aware": 375,
+     "mg_dosis_calculadora": 289.4,
+     "mg_kg_dia_aware": 116.6
+    },
+    {
+     "peso_kg": 8.24,
+     "mg_dosis_aware": 375,
+     "mg_dosis_calculadora": 370.8,
+     "mg_kg_dia_aware": 91.0
+    },
+    {
+     "peso_kg": 9.33,
+     "mg_dosis_aware": 375,
+     "mg_dosis_calculadora": 419.9,
+     "mg_kg_dia_aware": 80.4
+    },
+    {
+     "peso_kg": 5.68,
+     "mg_dosis_aware": 250,
+     "mg_dosis_calculadora": 255.6,
+     "mg_kg_dia_aware": 88.0
+    },
+    {
+     "peso_kg": 6.36,
+     "mg_dosis_aware": 375,
+     "mg_dosis_calculadora": 286.2,
+     "mg_kg_dia_aware": 117.9
+    },
+    {
+     "peso_kg": 7.94,
+     "mg_dosis_aware": 375,
+     "mg_dosis_calculadora": 357.3,
+     "mg_kg_dia_aware": 94.5
+    },
+    {
+     "peso_kg": 9.85,
+     "mg_dosis_aware": 375,
+     "mg_dosis_calculadora": 443.2,
+     "mg_kg_dia_aware": 76.1
+    },
+    {
+     "peso_kg": 10.96,
+     "mg_dosis_aware": 500,
+     "mg_dosis_calculadora": 493.2,
+     "mg_kg_dia_aware": 91.2
+    },
+    {
+     "peso_kg": 5.09,
+     "mg_dosis_aware": 250,
+     "mg_dosis_calculadora": 229.1,
+     "mg_kg_dia_aware": 98.2
+    },
+    {
+     "peso_kg": 5.73,
+     "mg_dosis_aware": 250,
+     "mg_dosis_calculadora": 257.9,
+     "mg_kg_dia_aware": 87.3
+    },
+    {
+     "peso_kg": 7.3,
+     "mg_dosis_aware": 375,
+     "mg_dosis_calculadora": 328.5,
+     "mg_kg_dia_aware": 102.7
+    },
+    {
+     "peso_kg": 9.34,
+     "mg_dosis_aware": 375,
+     "mg_dosis_calculadora": 420.3,
+     "mg_kg_dia_aware": 80.3
+    },
+    {
+     "peso_kg": 10.58,
+     "mg_dosis_aware": 500,
+     "mg_dosis_calculadora": 476.1,
+     "mg_kg_dia_aware": 94.5
+    },
+    {
+     "peso_kg": 6.39,
+     "mg_dosis_aware": 375,
+     "mg_dosis_calculadora": 287.6,
+     "mg_kg_dia_aware": 117.4
+    },
+    {
+     "peso_kg": 7.15,
+     "mg_dosis_aware": 375,
+     "mg_dosis_calculadora": 321.8,
+     "mg_kg_dia_aware": 104.9
+    },
+    {
+     "peso_kg": 8.9,
+     "mg_dosis_aware": 375,
+     "mg_dosis_calculadora": 400.5,
+     "mg_kg_dia_aware": 84.3
+    },
+    {
+     "peso_kg": 11.04,
+     "mg_dosis_aware": 500,
+     "mg_dosis_calculadora": 496.8,
+     "mg_kg_dia_aware": 90.6
+    },
+    {
+     "peso_kg": 12.28,
+     "mg_dosis_aware": 500,
+     "mg_dosis_calculadora": 552.6,
+     "mg_kg_dia_aware": 81.4
+    },
+    {
+     "peso_kg": 5.76,
+     "mg_dosis_aware": 250,
+     "mg_dosis_calculadora": 259.2,
+     "mg_kg_dia_aware": 86.8
+    },
+    {
+     "peso_kg": 6.47,
+     "mg_dosis_aware": 375,
+     "mg_dosis_calculadora": 291.1,
+     "mg_kg_dia_aware": 115.9
+    },
+    {
+     "peso_kg": 8.23,
+     "mg_dosis_aware": 375,
+     "mg_dosis_calculadora": 370.4,
+     "mg_kg_dia_aware": 91.1
+    },
+    {
+     "peso_kg": 10.55,
+     "mg_dosis_aware": 500,
+     "mg_dosis_calculadora": 474.8,
+     "mg_kg_dia_aware": 94.8
+    },
+    {
+     "peso_kg": 11.99,
+     "mg_dosis_aware": 500,
+     "mg_dosis_calculadora": 539.5,
+     "mg_kg_dia_aware": 83.4
+    },
+    {
+     "peso_kg": 6.93,
+     "mg_dosis_aware": 375,
+     "mg_dosis_calculadora": 311.9,
+     "mg_kg_dia_aware": 108.2
+    },
+    {
+     "peso_kg": 7.74,
+     "mg_dosis_aware": 375,
+     "mg_dosis_calculadora": 348.3,
+     "mg_kg_dia_aware": 96.9
+    },
+    {
+     "peso_kg": 9.65,
+     "mg_dosis_aware": 375,
+     "mg_dosis_calculadora": 434.2,
+     "mg_kg_dia_aware": 77.7
+    },
+    {
+     "peso_kg": 11.98,
+     "mg_dosis_aware": 500,
+     "mg_dosis_calculadora": 539.1,
+     "mg_kg_dia_aware": 83.5
+    },
+    {
+     "peso_kg": 13.34,
+     "mg_dosis_aware": 500,
+     "mg_dosis_calculadora": 600.3,
+     "mg_kg_dia_aware": 75.0
+    },
+    {
+     "peso_kg": 6.27,
+     "mg_dosis_aware": 375,
+     "mg_dosis_calculadora": 282.1,
+     "mg_kg_dia_aware": 119.6
+    },
+    {
+     "peso_kg": 7.04,
+     "mg_dosis_aware": 375,
+     "mg_dosis_calculadora": 316.8,
+     "mg_kg_dia_aware": 106.5
+    },
+    {
+     "peso_kg": 8.95,
+     "mg_dosis_aware": 375,
+     "mg_dosis_calculadora": 402.8,
+     "mg_kg_dia_aware": 83.8
+    },
+    {
+     "peso_kg": 11.51,
+     "mg_dosis_aware": 500,
+     "mg_dosis_calculadora": 518.0,
+     "mg_kg_dia_aware": 86.9
+    },
+    {
+     "peso_kg": 13.11,
+     "mg_dosis_aware": 500,
+     "mg_dosis_calculadora": 590.0,
+     "mg_kg_dia_aware": 76.3
+    },
+    {
+     "peso_kg": 7.4,
+     "mg_dosis_aware": 375,
+     "mg_dosis_calculadora": 333.0,
+     "mg_kg_dia_aware": 101.4
+    },
+    {
+     "peso_kg": 8.27,
+     "mg_dosis_aware": 375,
+     "mg_dosis_calculadora": 372.1,
+     "mg_kg_dia_aware": 90.7
+    },
+    {
+     "peso_kg": 10.31,
+     "mg_dosis_aware": 500,
+     "mg_dosis_calculadora": 463.9,
+     "mg_kg_dia_aware": 97.0
+    },
+    {
+     "peso_kg": 12.84,
+     "mg_dosis_aware": 500,
+     "mg_dosis_calculadora": 577.8,
+     "mg_kg_dia_aware": 77.9
+    },
+    {
+     "peso_kg": 14.32,
+     "mg_dosis_aware": 500,
+     "mg_dosis_calculadora": 644.4,
+     "mg_kg_dia_aware": 69.8
+    },
+    {
+     "peso_kg": 6.74,
+     "mg_dosis_aware": 375,
+     "mg_dosis_calculadora": 303.3,
+     "mg_kg_dia_aware": 111.3
+    },
+    {
+     "peso_kg": 7.56,
+     "mg_dosis_aware": 375,
+     "mg_dosis_calculadora": 340.2,
+     "mg_kg_dia_aware": 99.2
+    },
+    {
+     "peso_kg": 9.6,
+     "mg_dosis_aware": 375,
+     "mg_dosis_calculadora": 432.0,
+     "mg_kg_dia_aware": 78.1
+    },
+    {
+     "peso_kg": 12.37,
+     "mg_dosis_aware": 500,
+     "mg_dosis_calculadora": 556.6,
+     "mg_kg_dia_aware": 80.8
+    },
+    {
+     "peso_kg": 14.13,
+     "mg_dosis_aware": 500,
+     "mg_dosis_calculadora": 635.9,
+     "mg_kg_dia_aware": 70.8
+    },
+    {
+     "peso_kg": 7.83,
+     "mg_dosis_aware": 375,
+     "mg_dosis_calculadora": 352.4,
+     "mg_kg_dia_aware": 95.8
+    },
+    {
+     "peso_kg": 8.75,
+     "mg_dosis_aware": 375,
+     "mg_dosis_calculadora": 393.8,
+     "mg_kg_dia_aware": 85.7
+    },
+    {
+     "peso_kg": 10.94,
+     "mg_dosis_aware": 500,
+     "mg_dosis_calculadora": 492.3,
+     "mg_kg_dia_aware": 91.4
+    },
+    {
+     "peso_kg": 13.66,
+     "mg_dosis_aware": 500,
+     "mg_dosis_calculadora": 614.7,
+     "mg_kg_dia_aware": 73.2
+    },
+    {
+     "peso_kg": 15.25,
+     "mg_dosis_aware": 750,
+     "mg_dosis_calculadora": 686.2,
+     "mg_kg_dia_aware": 98.4
+    },
+    {
+     "peso_kg": 7.19,
+     "mg_dosis_aware": 375,
+     "mg_dosis_calculadora": 323.6,
+     "mg_kg_dia_aware": 104.3
+    },
+    {
+     "peso_kg": 8.06,
+     "mg_dosis_aware": 375,
+     "mg_dosis_calculadora": 362.7,
+     "mg_kg_dia_aware": 93.1
+    },
+    {
+     "peso_kg": 10.23,
+     "mg_dosis_aware": 500,
+     "mg_dosis_calculadora": 460.4,
+     "mg_kg_dia_aware": 97.8
+    },
+    {
+     "peso_kg": 13.2,
+     "mg_dosis_aware": 500,
+     "mg_dosis_calculadora": 594.0,
+     "mg_kg_dia_aware": 75.8
+    },
+    {
+     "peso_kg": 15.09,
+     "mg_dosis_aware": 750,
+     "mg_dosis_calculadora": 679.0,
+     "mg_kg_dia_aware": 99.4
+    },
+    {
+     "peso_kg": 8.63,
+     "mg_dosis_aware": 375,
+     "mg_dosis_calculadora": 388.4,
+     "mg_kg_dia_aware": 86.9
+    },
+    {
+     "peso_kg": 9.67,
+     "mg_dosis_aware": 375,
+     "mg_dosis_calculadora": 435.1,
+     "mg_kg_dia_aware": 77.6
+    },
+    {
+     "peso_kg": 12.15,
+     "mg_dosis_aware": 500,
+     "mg_dosis_calculadora": 546.8,
+     "mg_kg_dia_aware": 82.3
+    },
+    {
+     "peso_kg": 15.27,
+     "mg_dosis_aware": 750,
+     "mg_dosis_calculadora": 687.1,
+     "mg_kg_dia_aware": 98.2
+    },
+    {
+     "peso_kg": 17.13,
+     "mg_dosis_aware": 750,
+     "mg_dosis_calculadora": 770.9,
+     "mg_kg_dia_aware": 87.6
+    },
+    {
+     "peso_kg": 8.06,
+     "mg_dosis_aware": 375,
+     "mg_dosis_calculadora": 362.7,
+     "mg_kg_dia_aware": 93.1
+    },
+    {
+     "peso_kg": 9.03,
+     "mg_dosis_aware": 375,
+     "mg_dosis_calculadora": 406.4,
+     "mg_kg_dia_aware": 83.1
+    },
+    {
+     "peso_kg": 11.47,
+     "mg_dosis_aware": 500,
+     "mg_dosis_calculadora": 516.1,
+     "mg_kg_dia_aware": 87.2
+    },
+    {
+     "peso_kg": 14.84,
+     "mg_dosis_aware": 500,
+     "mg_dosis_calculadora": 667.8,
+     "mg_kg_dia_aware": 67.4
+    },
+    {
+     "peso_kg": 17.01,
+     "mg_dosis_aware": 750,
+     "mg_dosis_calculadora": 765.5,
+     "mg_kg_dia_aware": 88.2
+    },
+    {
+     "peso_kg": 9.36,
+     "mg_dosis_aware": 375,
+     "mg_dosis_calculadora": 421.2,
+     "mg_kg_dia_aware": 80.1
+    },
+    {
+     "peso_kg": 10.52,
+     "mg_dosis_aware": 500,
+     "mg_dosis_calculadora": 473.4,
+     "mg_kg_dia_aware": 95.1
+    },
+    {
+     "peso_kg": 13.3,
+     "mg_dosis_aware": 500,
+     "mg_dosis_calculadora": 598.5,
+     "mg_kg_dia_aware": 75.2
+    },
+    {
+     "peso_kg": 16.85,
+     "mg_dosis_aware": 750,
+     "mg_dosis_calculadora": 758.2,
+     "mg_kg_dia_aware": 89.0
+    },
+    {
+     "peso_kg": 18.99,
+     "mg_dosis_aware": 750,
+     "mg_dosis_calculadora": 854.5,
+     "mg_kg_dia_aware": 79.0
+    },
+    {
+     "peso_kg": 8.89,
+     "mg_dosis_aware": 375,
+     "mg_dosis_calculadora": 400.1,
+     "mg_kg_dia_aware": 84.4
+    },
+    {
+     "peso_kg": 9.97,
+     "mg_dosis_aware": 375,
+     "mg_dosis_calculadora": 448.6,
+     "mg_kg_dia_aware": 75.2
+    },
+    {
+     "peso_kg": 12.7,
+     "mg_dosis_aware": 500,
+     "mg_dosis_calculadora": 571.5,
+     "mg_kg_dia_aware": 78.7
+    },
+    {
+     "peso_kg": 16.51,
+     "mg_dosis_aware": 750,
+     "mg_dosis_calculadora": 743.0,
+     "mg_kg_dia_aware": 90.9
+    },
+    {
+     "peso_kg": 18.98,
+     "mg_dosis_aware": 750,
+     "mg_dosis_calculadora": 854.1,
+     "mg_kg_dia_aware": 79.0
+    },
+    {
+     "peso_kg": 10.02,
+     "mg_dosis_aware": 500,
+     "mg_dosis_calculadora": 450.9,
+     "mg_kg_dia_aware": 99.8
+    },
+    {
+     "peso_kg": 11.28,
+     "mg_dosis_aware": 500,
+     "mg_dosis_calculadora": 507.6,
+     "mg_kg_dia_aware": 88.7
+    },
+    {
+     "peso_kg": 14.34,
+     "mg_dosis_aware": 500,
+     "mg_dosis_calculadora": 645.3,
+     "mg_kg_dia_aware": 69.7
+    },
+    {
+     "peso_kg": 18.31,
+     "mg_dosis_aware": 750,
+     "mg_dosis_calculadora": 824.0,
+     "mg_kg_dia_aware": 81.9
+    },
+    {
+     "peso_kg": 20.73,
+     "mg_dosis_aware": 1000,
+     "mg_dosis_calculadora": 932.9,
+     "mg_kg_dia_aware": 96.5
+    },
+    {
+     "peso_kg": 9.61,
+     "mg_dosis_aware": 375,
+     "mg_dosis_calculadora": 432.4,
+     "mg_kg_dia_aware": 78.0
+    },
+    {
+     "peso_kg": 10.81,
+     "mg_dosis_aware": 500,
+     "mg_dosis_calculadora": 486.4,
+     "mg_kg_dia_aware": 92.5
+    },
+    {
+     "peso_kg": 13.85,
+     "mg_dosis_aware": 500,
+     "mg_dosis_calculadora": 623.2,
+     "mg_kg_dia_aware": 72.2
+    },
+    {
+     "peso_kg": 18.14,
+     "mg_dosis_aware": 750,
+     "mg_dosis_calculadora": 816.3,
+     "mg_kg_dia_aware": 82.7
+    },
+    {
+     "peso_kg": 20.95,
+     "mg_dosis_aware": 1000,
+     "mg_dosis_calculadora": 942.8,
+     "mg_kg_dia_aware": 95.5
+    },
+    {
+     "peso_kg": 11.24,
+     "mg_dosis_aware": 500,
+     "mg_dosis_calculadora": 505.8,
+     "mg_kg_dia_aware": 89.0
+    },
+    {
+     "peso_kg": 12.71,
+     "mg_dosis_aware": 500,
+     "mg_dosis_calculadora": 572.0,
+     "mg_kg_dia_aware": 78.7
+    },
+    {
+     "peso_kg": 16.35,
+     "mg_dosis_aware": 750,
+     "mg_dosis_calculadora": 735.8,
+     "mg_kg_dia_aware": 91.7
+    },
+    {
+     "peso_kg": 21.18,
+     "mg_dosis_aware": 1000,
+     "mg_dosis_calculadora": 953.1,
+     "mg_kg_dia_aware": 94.4
+    },
+    {
+     "peso_kg": 24.18,
+     "mg_dosis_aware": 1000,
+     "mg_dosis_calculadora": 1088.1,
+     "mg_kg_dia_aware": 82.7
+    },
+    {
+     "peso_kg": 10.88,
+     "mg_dosis_aware": 500,
+     "mg_dosis_calculadora": 489.6,
+     "mg_kg_dia_aware": 91.9
+    },
+    {
+     "peso_kg": 12.32,
+     "mg_dosis_aware": 500,
+     "mg_dosis_calculadora": 554.4,
+     "mg_kg_dia_aware": 81.2
+    },
+    {
+     "peso_kg": 16.07,
+     "mg_dosis_aware": 750,
+     "mg_dosis_calculadora": 723.1,
+     "mg_kg_dia_aware": 93.3
+    },
+    {
+     "peso_kg": 21.51,
+     "mg_dosis_aware": 1000,
+     "mg_dosis_calculadora": 968.0,
+     "mg_kg_dia_aware": 93.0
+    },
+    {
+     "peso_kg": 25.17,
+     "mg_dosis_aware": 1000,
+     "mg_dosis_calculadora": 1132.7,
+     "mg_kg_dia_aware": 79.5
+    },
+    {
+     "peso_kg": 12.37,
+     "mg_dosis_aware": 500,
+     "mg_dosis_calculadora": 556.6,
+     "mg_kg_dia_aware": 80.8
+    },
+    {
+     "peso_kg": 14.07,
+     "mg_dosis_aware": 500,
+     "mg_dosis_calculadora": 633.1,
+     "mg_kg_dia_aware": 71.1
+    },
+    {
+     "peso_kg": 18.34,
+     "mg_dosis_aware": 750,
+     "mg_dosis_calculadora": 825.3,
+     "mg_kg_dia_aware": 81.8
+    },
+    {
+     "peso_kg": 24.16,
+     "mg_dosis_aware": 1000,
+     "mg_dosis_calculadora": 1087.2,
+     "mg_kg_dia_aware": 82.8
+    },
+    {
+     "peso_kg": 27.86,
+     "mg_dosis_aware": 1000,
+     "mg_dosis_calculadora": 1253.7,
+     "mg_kg_dia_aware": 71.8
+    },
+    {
+     "peso_kg": 12.05,
+     "mg_dosis_aware": 500,
+     "mg_dosis_calculadora": 542.2,
+     "mg_kg_dia_aware": 83.0
+    },
+    {
+     "peso_kg": 13.74,
+     "mg_dosis_aware": 500,
+     "mg_dosis_calculadora": 618.3,
+     "mg_kg_dia_aware": 72.8
+    },
+    {
+     "peso_kg": 18.22,
+     "mg_dosis_aware": 750,
+     "mg_dosis_calculadora": 819.9,
+     "mg_kg_dia_aware": 82.3
+    },
+    {
+     "peso_kg": 24.91,
+     "mg_dosis_aware": 1000,
+     "mg_dosis_calculadora": 1121.0,
+     "mg_kg_dia_aware": 80.3
+    },
+    {
+     "peso_kg": 29.55,
+     "mg_dosis_aware": 1000,
+     "mg_dosis_calculadora": 1329.8,
+     "mg_kg_dia_aware": 67.7
+    },
+    {
+     "peso_kg": 16.32,
+     "mg_dosis_aware": 750,
+     "mg_dosis_calculadora": 734.4,
+     "mg_kg_dia_aware": 91.9
+    },
+    {
+     "peso_kg": 17.53,
+     "mg_dosis_aware": 750,
+     "mg_dosis_calculadora": 788.9,
+     "mg_kg_dia_aware": 85.6
+    },
+    {
+     "peso_kg": 20.58,
+     "mg_dosis_aware": 1000,
+     "mg_dosis_calculadora": 926.1,
+     "mg_kg_dia_aware": 97.2
+    },
+    {
+     "peso_kg": 24.9,
+     "mg_dosis_aware": 1000,
+     "mg_dosis_calculadora": 1120.5,
+     "mg_kg_dia_aware": 80.3
+    },
+    {
+     "peso_kg": 27.82,
+     "mg_dosis_aware": 1000,
+     "mg_dosis_calculadora": 1251.9,
+     "mg_kg_dia_aware": 71.9
+    },
+    {
+     "peso_kg": 15.54,
+     "mg_dosis_aware": 750,
+     "mg_dosis_calculadora": 699.3,
+     "mg_kg_dia_aware": 96.5
+    },
+    {
+     "peso_kg": 16.83,
+     "mg_dosis_aware": 750,
+     "mg_dosis_calculadora": 757.4,
+     "mg_kg_dia_aware": 89.1
+    },
+    {
+     "peso_kg": 20.24,
+     "mg_dosis_aware": 1000,
+     "mg_dosis_calculadora": 910.8,
+     "mg_kg_dia_aware": 98.8
+    },
+    {
+     "peso_kg": 25.48,
+     "mg_dosis_aware": 1000,
+     "mg_dosis_calculadora": 1146.6,
+     "mg_kg_dia_aware": 78.5
+    },
+    {
+     "peso_kg": 29.33,
+     "mg_dosis_aware": 1000,
+     "mg_dosis_calculadora": 1319.8,
+     "mg_kg_dia_aware": 68.2
+    },
+    {
+     "peso_kg": 18.15,
+     "mg_dosis_aware": 750,
+     "mg_dosis_calculadora": 816.8,
+     "mg_kg_dia_aware": 82.6
+    },
+    {
+     "peso_kg": 19.48,
+     "mg_dosis_aware": 750,
+     "mg_dosis_calculadora": 876.6,
+     "mg_kg_dia_aware": 77.0
+    },
+    {
+     "peso_kg": 22.94,
+     "mg_dosis_aware": 1000,
+     "mg_dosis_calculadora": 1032.3,
+     "mg_kg_dia_aware": 87.2
+    },
+    {
+     "peso_kg": 28.18,
+     "mg_dosis_aware": 1000,
+     "mg_dosis_calculadora": 1268.1,
+     "mg_kg_dia_aware": 71.0
+    },
+    {
+     "peso_kg": 31.99,
+     "mg_dosis_aware": 1000,
+     "mg_dosis_calculadora": 1439.5,
+     "mg_kg_dia_aware": 62.5
+    },
+    {
+     "peso_kg": 17.15,
+     "mg_dosis_aware": 750,
+     "mg_dosis_calculadora": 771.8,
+     "mg_kg_dia_aware": 87.5
+    },
+    {
+     "peso_kg": 18.59,
+     "mg_dosis_aware": 750,
+     "mg_dosis_calculadora": 836.5,
+     "mg_kg_dia_aware": 80.7
+    },
+    {
+     "peso_kg": 22.48,
+     "mg_dosis_aware": 1000,
+     "mg_dosis_calculadora": 1011.6,
+     "mg_kg_dia_aware": 89.0
+    },
+    {
+     "peso_kg": 28.88,
+     "mg_dosis_aware": 1000,
+     "mg_dosis_calculadora": 1299.6,
+     "mg_kg_dia_aware": 69.3
+    },
+    {
+     "peso_kg": 33.99,
+     "mg_dosis_aware": 1000,
+     "mg_dosis_calculadora": 1529.5,
+     "mg_kg_dia_aware": 58.8
+    },
+    {
+     "peso_kg": 20.07,
+     "mg_dosis_aware": 1000,
+     "mg_dosis_calculadora": 903.1,
+     "mg_kg_dia_aware": 99.7
+    },
+    {
+     "peso_kg": 21.55,
+     "mg_dosis_aware": 1000,
+     "mg_dosis_calculadora": 969.8,
+     "mg_kg_dia_aware": 92.8
+    },
+    {
+     "peso_kg": 25.49,
+     "mg_dosis_aware": 1000,
+     "mg_dosis_calculadora": 1147.0,
+     "mg_kg_dia_aware": 78.5
+    },
+    {
+     "peso_kg": 31.87,
+     "mg_dosis_aware": 1000,
+     "mg_dosis_calculadora": 1434.2,
+     "mg_kg_dia_aware": 62.8
+    },
+    {
+     "peso_kg": 36.9,
+     "mg_dosis_aware": 1000,
+     "mg_dosis_calculadora": 1660.5,
+     "mg_kg_dia_aware": 54.2
+    },
+    {
+     "peso_kg": 19.03,
+     "mg_dosis_aware": 750,
+     "mg_dosis_calculadora": 856.4,
+     "mg_kg_dia_aware": 78.8
+    },
+    {
+     "peso_kg": 20.64,
+     "mg_dosis_aware": 1000,
+     "mg_dosis_calculadora": 928.8,
+     "mg_kg_dia_aware": 96.9
+    },
+    {
+     "peso_kg": 25.12,
+     "mg_dosis_aware": 1000,
+     "mg_dosis_calculadora": 1130.4,
+     "mg_kg_dia_aware": 79.6
+    },
+    {
+     "peso_kg": 32.93,
+     "mg_dosis_aware": 1000,
+     "mg_dosis_calculadora": 1481.8,
+     "mg_kg_dia_aware": 60.7
+    },
+    {
+     "peso_kg": 39.69,
+     "mg_dosis_aware": 1000,
+     "mg_dosis_calculadora": 1786.0,
+     "mg_kg_dia_aware": 50.4
+    },
+    {
+     "peso_kg": 22.08,
+     "mg_dosis_aware": 1000,
+     "mg_dosis_calculadora": 993.6,
+     "mg_kg_dia_aware": 90.6
+    },
+    {
+     "peso_kg": 23.71,
+     "mg_dosis_aware": 1000,
+     "mg_dosis_calculadora": 1067.0,
+     "mg_kg_dia_aware": 84.4
+    },
+    {
+     "peso_kg": 28.2,
+     "mg_dosis_aware": 1000,
+     "mg_dosis_calculadora": 1269.0,
+     "mg_kg_dia_aware": 70.9
+    },
+    {
+     "peso_kg": 35.97,
+     "mg_dosis_aware": 1000,
+     "mg_dosis_calculadora": 1618.7,
+     "mg_kg_dia_aware": 55.6
+    },
+    {
+     "peso_kg": 42.68,
+     "mg_dosis_aware": 1000,
+     "mg_dosis_calculadora": 1920.6,
+     "mg_kg_dia_aware": 46.9
+    },
+    {
+     "peso_kg": 21.24,
+     "mg_dosis_aware": 1000,
+     "mg_dosis_calculadora": 955.8,
+     "mg_kg_dia_aware": 94.2
+    },
+    {
+     "peso_kg": 23.07,
+     "mg_dosis_aware": 1000,
+     "mg_dosis_calculadora": 1038.2,
+     "mg_kg_dia_aware": 86.7
+    },
+    {
+     "peso_kg": 28.26,
+     "mg_dosis_aware": 1000,
+     "mg_dosis_calculadora": 1271.7,
+     "mg_kg_dia_aware": 70.8
+    },
+    {
+     "peso_kg": 37.77,
+     "mg_dosis_aware": 1000,
+     "mg_dosis_calculadora": 1699.7,
+     "mg_kg_dia_aware": 53.0
+    },
+    {
+     "peso_kg": 46.59,
+     "mg_dosis_aware": 1000,
+     "mg_dosis_calculadora": 2000.0,
+     "mg_kg_dia_aware": 42.9
+    },
+    {
+     "peso_kg": 24.25,
+     "mg_dosis_aware": 1000,
+     "mg_dosis_calculadora": 1091.2,
+     "mg_kg_dia_aware": 82.5
+    },
+    {
+     "peso_kg": 26.07,
+     "mg_dosis_aware": 1000,
+     "mg_dosis_calculadora": 1173.2,
+     "mg_kg_dia_aware": 76.7
+    },
+    {
+     "peso_kg": 31.21,
+     "mg_dosis_aware": 1000,
+     "mg_dosis_calculadora": 1404.5,
+     "mg_kg_dia_aware": 64.1
+    },
+    {
+     "peso_kg": 40.62,
+     "mg_dosis_aware": 1000,
+     "mg_dosis_calculadora": 1827.9,
+     "mg_kg_dia_aware": 49.2
+    },
+    {
+     "peso_kg": 49.5,
+     "mg_dosis_aware": 1000,
+     "mg_dosis_calculadora": 2000.0,
+     "mg_kg_dia_aware": 40.4
+    },
+    {
+     "peso_kg": 23.79,
+     "mg_dosis_aware": 1000,
+     "mg_dosis_calculadora": 1070.5,
+     "mg_kg_dia_aware": 84.1
+    },
+    {
+     "peso_kg": 25.89,
+     "mg_dosis_aware": 1000,
+     "mg_dosis_calculadora": 1165.0,
+     "mg_kg_dia_aware": 77.2
+    },
+    {
+     "peso_kg": 31.93,
+     "mg_dosis_aware": 1000,
+     "mg_dosis_calculadora": 1436.8,
+     "mg_kg_dia_aware": 62.6
+    },
+    {
+     "peso_kg": 43.38,
+     "mg_dosis_aware": 1000,
+     "mg_dosis_calculadora": 1952.1,
+     "mg_kg_dia_aware": 46.1
+    },
+    {
+     "peso_kg": 54.54,
+     "mg_dosis_aware": 1000,
+     "mg_dosis_calculadora": 2000.0,
+     "mg_kg_dia_aware": 36.7
+    },
+    {
+     "peso_kg": 26.73,
+     "mg_dosis_aware": 1000,
+     "mg_dosis_calculadora": 1202.8,
+     "mg_kg_dia_aware": 74.8
+    },
+    {
+     "peso_kg": 28.79,
+     "mg_dosis_aware": 1000,
+     "mg_dosis_calculadora": 1295.5,
+     "mg_kg_dia_aware": 69.5
+    },
+    {
+     "peso_kg": 34.69,
+     "mg_dosis_aware": 1000,
+     "mg_dosis_calculadora": 1561.0,
+     "mg_kg_dia_aware": 57.7
+    },
+    {
+     "peso_kg": 45.99,
+     "mg_dosis_aware": 1000,
+     "mg_dosis_calculadora": 2000.0,
+     "mg_kg_dia_aware": 43.5
+    },
+    {
+     "peso_kg": 57.4,
+     "mg_dosis_aware": 1000,
+     "mg_dosis_calculadora": 2000.0,
+     "mg_kg_dia_aware": 34.8
+    },
+    {
+     "peso_kg": 26.76,
+     "mg_dosis_aware": 1000,
+     "mg_dosis_calculadora": 1204.2,
+     "mg_kg_dia_aware": 74.7
+    },
+    {
+     "peso_kg": 29.19,
+     "mg_dosis_aware": 1000,
+     "mg_dosis_calculadora": 1313.5,
+     "mg_kg_dia_aware": 68.5
+    },
+    {
+     "peso_kg": 36.26,
+     "mg_dosis_aware": 1000,
+     "mg_dosis_calculadora": 1631.7,
+     "mg_kg_dia_aware": 55.2
+    },
+    {
+     "peso_kg": 49.88,
+     "mg_dosis_aware": 1000,
+     "mg_dosis_calculadora": 2000.0,
+     "mg_kg_dia_aware": 40.1
+    },
+    {
+     "peso_kg": 63.47,
+     "mg_dosis_aware": 1000,
+     "mg_dosis_calculadora": 2000.0,
+     "mg_kg_dia_aware": 31.5
+    },
+    {
+     "peso_kg": 29.76,
+     "mg_dosis_aware": 1000,
+     "mg_dosis_calculadora": 1339.2,
+     "mg_kg_dia_aware": 67.2
+    },
+    {
+     "peso_kg": 32.12,
+     "mg_dosis_aware": 1000,
+     "mg_dosis_calculadora": 1445.4,
+     "mg_kg_dia_aware": 62.3
+    },
+    {
+     "peso_kg": 38.97,
+     "mg_dosis_aware": 1000,
+     "mg_dosis_calculadora": 1753.7,
+     "mg_kg_dia_aware": 51.3
+    },
+    {
+     "peso_kg": 52.41,
+     "mg_dosis_aware": 1000,
+     "mg_dosis_calculadora": 2000.0,
+     "mg_kg_dia_aware": 38.2
+    },
+    {
+     "peso_kg": 66.58,
+     "mg_dosis_aware": 1000,
+     "mg_dosis_calculadora": 2000.0,
+     "mg_kg_dia_aware": 30.0
+    },
+    {
+     "peso_kg": 30.08,
+     "mg_dosis_aware": 1000,
+     "mg_dosis_calculadora": 1353.6,
+     "mg_kg_dia_aware": 66.5
+    },
+    {
+     "peso_kg": 32.91,
+     "mg_dosis_aware": 1000,
+     "mg_dosis_calculadora": 1481.0,
+     "mg_kg_dia_aware": 60.8
+    },
+    {
+     "peso_kg": 41.16,
+     "mg_dosis_aware": 1000,
+     "mg_dosis_calculadora": 1852.2,
+     "mg_kg_dia_aware": 48.6
+    },
+    {
+     "peso_kg": 57.1,
+     "mg_dosis_aware": 1000,
+     "mg_dosis_calculadora": 2000.0,
+     "mg_kg_dia_aware": 35.0
+    },
+    {
+     "peso_kg": 72.98,
+     "mg_dosis_aware": 1000,
+     "mg_dosis_calculadora": 2000.0,
+     "mg_kg_dia_aware": 27.4
+    },
+    {
+     "peso_kg": 33.61,
+     "mg_dosis_aware": 1000,
+     "mg_dosis_calculadora": 1512.5,
+     "mg_kg_dia_aware": 59.5
+    },
+    {
+     "peso_kg": 36.37,
+     "mg_dosis_aware": 1000,
+     "mg_dosis_calculadora": 1636.7,
+     "mg_kg_dia_aware": 55.0
+    },
+    {
+     "peso_kg": 44.4,
+     "mg_dosis_aware": 1000,
+     "mg_dosis_calculadora": 1998.0,
+     "mg_kg_dia_aware": 45.0
+    },
+    {
+     "peso_kg": 60.28,
+     "mg_dosis_aware": 1000,
+     "mg_dosis_calculadora": 2000.0,
+     "mg_kg_dia_aware": 33.2
+    },
+    {
+     "peso_kg": 77.15,
+     "mg_dosis_aware": 1000,
+     "mg_dosis_calculadora": 2000.0,
+     "mg_kg_dia_aware": 25.9
+    },
+    {
+     "peso_kg": 33.27,
+     "mg_dosis_aware": 1000,
+     "mg_dosis_calculadora": 1497.2,
+     "mg_kg_dia_aware": 60.1
+    },
+    {
+     "peso_kg": 36.52,
+     "mg_dosis_aware": 1000,
+     "mg_dosis_calculadora": 1643.4,
+     "mg_kg_dia_aware": 54.8
+    },
+    {
+     "peso_kg": 45.97,
+     "mg_dosis_aware": 1000,
+     "mg_dosis_calculadora": 2000.0,
+     "mg_kg_dia_aware": 43.5
+    },
+    {
+     "peso_kg": 64.08,
+     "mg_dosis_aware": 1000,
+     "mg_dosis_calculadora": 2000.0,
+     "mg_kg_dia_aware": 31.2
+    },
+    {
+     "peso_kg": 81.77,
+     "mg_dosis_aware": 1000,
+     "mg_dosis_calculadora": 2000.0,
+     "mg_kg_dia_aware": 24.5
+    },
+    {
+     "peso_kg": 37.97,
+     "mg_dosis_aware": 1000,
+     "mg_dosis_calculadora": 1708.7,
+     "mg_kg_dia_aware": 52.7
+    },
+    {
+     "peso_kg": 41.21,
+     "mg_dosis_aware": 1000,
+     "mg_dosis_calculadora": 1854.5,
+     "mg_kg_dia_aware": 48.5
+    },
+    {
+     "peso_kg": 50.61,
+     "mg_dosis_aware": 1000,
+     "mg_dosis_calculadora": 2000.0,
+     "mg_kg_dia_aware": 39.5
+    },
+    {
+     "peso_kg": 69.02,
+     "mg_dosis_aware": 1000,
+     "mg_dosis_calculadora": 2000.0,
+     "mg_kg_dia_aware": 29.0
+    },
+    {
+     "peso_kg": 88.1,
+     "mg_dosis_aware": 1000,
+     "mg_dosis_calculadora": 2000.0,
+     "mg_kg_dia_aware": 22.7
+    },
+    {
+     "peso_kg": 35.81,
+     "mg_dosis_aware": 1000,
+     "mg_dosis_calculadora": 1611.5,
+     "mg_kg_dia_aware": 55.9
+    },
+    {
+     "peso_kg": 39.44,
+     "mg_dosis_aware": 1000,
+     "mg_dosis_calculadora": 1774.8,
+     "mg_kg_dia_aware": 50.7
+    },
+    {
+     "peso_kg": 49.95,
+     "mg_dosis_aware": 1000,
+     "mg_dosis_calculadora": 2000.0,
+     "mg_kg_dia_aware": 40.0
+    },
+    {
+     "peso_kg": 69.76,
+     "mg_dosis_aware": 1000,
+     "mg_dosis_calculadora": 2000.0,
+     "mg_kg_dia_aware": 28.7
+    },
+    {
+     "peso_kg": 88.5,
+     "mg_dosis_aware": 1000,
+     "mg_dosis_calculadora": 2000.0,
+     "mg_kg_dia_aware": 22.6
+    },
+    {
+     "peso_kg": 41.99,
+     "mg_dosis_aware": 1000,
+     "mg_dosis_calculadora": 1889.5,
+     "mg_kg_dia_aware": 47.6
+    },
+    {
+     "peso_kg": 45.71,
+     "mg_dosis_aware": 1000,
+     "mg_dosis_calculadora": 2000.0,
+     "mg_kg_dia_aware": 43.8
+    },
+    {
+     "peso_kg": 56.45,
+     "mg_dosis_aware": 1000,
+     "mg_dosis_calculadora": 2000.0,
+     "mg_kg_dia_aware": 35.4
+    },
+    {
+     "peso_kg": 76.99,
+     "mg_dosis_aware": 1000,
+     "mg_dosis_calculadora": 2000.0,
+     "mg_kg_dia_aware": 26.0
+    },
+    {
+     "peso_kg": 97.29,
+     "mg_dosis_aware": 1000,
+     "mg_dosis_calculadora": 2000.0,
+     "mg_kg_dia_aware": 20.6
+    },
+    {
+     "peso_kg": 37.54,
+     "mg_dosis_aware": 1000,
+     "mg_dosis_calculadora": 1689.3,
+     "mg_kg_dia_aware": 53.3
+    },
+    {
+     "peso_kg": 41.48,
+     "mg_dosis_aware": 1000,
+     "mg_dosis_calculadora": 1866.6,
+     "mg_kg_dia_aware": 48.2
+    },
+    {
+     "peso_kg": 52.83,
+     "mg_dosis_aware": 1000,
+     "mg_dosis_calculadora": 2000.0,
+     "mg_kg_dia_aware": 37.9
+    },
+    {
+     "peso_kg": 73.77,
+     "mg_dosis_aware": 1000,
+     "mg_dosis_calculadora": 2000.0,
+     "mg_kg_dia_aware": 27.1
+    },
+    {
+     "peso_kg": 92.89,
+     "mg_dosis_aware": 1000,
+     "mg_dosis_calculadora": 2000.0,
+     "mg_kg_dia_aware": 21.5
+    },
+    {
+     "peso_kg": 45.17,
+     "mg_dosis_aware": 1000,
+     "mg_dosis_calculadora": 2000.0,
+     "mg_kg_dia_aware": 44.3
+    },
+    {
+     "peso_kg": 49.34,
+     "mg_dosis_aware": 1000,
+     "mg_dosis_calculadora": 2000.0,
+     "mg_kg_dia_aware": 40.5
+    },
+    {
+     "peso_kg": 61.27,
+     "mg_dosis_aware": 1000,
+     "mg_dosis_calculadora": 2000.0,
+     "mg_kg_dia_aware": 32.6
+    },
+    {
+     "peso_kg": 83.33,
+     "mg_dosis_aware": 1000,
+     "mg_dosis_calculadora": 2000.0,
+     "mg_kg_dia_aware": 24.0
+    },
+    {
+     "peso_kg": 103.89,
+     "mg_dosis_aware": 1000,
+     "mg_dosis_calculadora": 2000.0,
+     "mg_kg_dia_aware": 19.3
+    },
+    {
+     "peso_kg": 38.52,
+     "mg_dosis_aware": 1000,
+     "mg_dosis_calculadora": 1733.4,
+     "mg_kg_dia_aware": 51.9
+    },
+    {
+     "peso_kg": 42.71,
+     "mg_dosis_aware": 1000,
+     "mg_dosis_calculadora": 1922.0,
+     "mg_kg_dia_aware": 46.8
+    },
+    {
+     "peso_kg": 54.67,
+     "mg_dosis_aware": 1000,
+     "mg_dosis_calculadora": 2000.0,
+     "mg_kg_dia_aware": 36.6
+    },
+    {
+     "peso_kg": 76.26,
+     "mg_dosis_aware": 1000,
+     "mg_dosis_calculadora": 2000.0,
+     "mg_kg_dia_aware": 26.2
+    },
+    {
+     "peso_kg": 95.25,
+     "mg_dosis_aware": 1000,
+     "mg_dosis_calculadora": 2000.0,
+     "mg_kg_dia_aware": 21.0
+    },
+    {
+     "peso_kg": 47.38,
+     "mg_dosis_aware": 1000,
+     "mg_dosis_calculadora": 2000.0,
+     "mg_kg_dia_aware": 42.2
+    },
+    {
+     "peso_kg": 51.95,
+     "mg_dosis_aware": 1000,
+     "mg_dosis_calculadora": 2000.0,
+     "mg_kg_dia_aware": 38.5
+    },
+    {
+     "peso_kg": 64.87,
+     "mg_dosis_aware": 1000,
+     "mg_dosis_calculadora": 2000.0,
+     "mg_kg_dia_aware": 30.8
+    },
+    {
+     "peso_kg": 87.84,
+     "mg_dosis_aware": 1000,
+     "mg_dosis_calculadora": 2000.0,
+     "mg_kg_dia_aware": 22.8
+    },
+    {
+     "peso_kg": 107.96,
+     "mg_dosis_aware": 1000,
+     "mg_dosis_calculadora": 2000.0,
+     "mg_kg_dia_aware": 18.5
+    },
+    {
+     "peso_kg": 38.99,
+     "mg_dosis_aware": 1000,
+     "mg_dosis_calculadora": 1754.5,
+     "mg_kg_dia_aware": 51.3
+    },
+    {
+     "peso_kg": 43.37,
+     "mg_dosis_aware": 1000,
+     "mg_dosis_calculadora": 1951.7,
+     "mg_kg_dia_aware": 46.1
+    },
+    {
+     "peso_kg": 55.79,
+     "mg_dosis_aware": 1000,
+     "mg_dosis_calculadora": 2000.0,
+     "mg_kg_dia_aware": 35.8
+    },
+    {
+     "peso_kg": 77.66,
+     "mg_dosis_aware": 1000,
+     "mg_dosis_calculadora": 2000.0,
+     "mg_kg_dia_aware": 25.8
+    },
+    {
+     "peso_kg": 96.22,
+     "mg_dosis_aware": 1000,
+     "mg_dosis_calculadora": 2000.0,
+     "mg_kg_dia_aware": 20.8
+    },
+    {
+     "peso_kg": 48.6,
+     "mg_dosis_aware": 1000,
+     "mg_dosis_calculadora": 2000.0,
+     "mg_kg_dia_aware": 41.2
+    },
+    {
+     "peso_kg": 53.52,
+     "mg_dosis_aware": 1000,
+     "mg_dosis_calculadora": 2000.0,
+     "mg_kg_dia_aware": 37.4
+    },
+    {
+     "peso_kg": 67.18,
+     "mg_dosis_aware": 1000,
+     "mg_dosis_calculadora": 2000.0,
+     "mg_kg_dia_aware": 29.8
+    },
+    {
+     "peso_kg": 90.54,
+     "mg_dosis_aware": 1000,
+     "mg_dosis_calculadora": 2000.0,
+     "mg_kg_dia_aware": 22.1
+    },
+    {
+     "peso_kg": 109.82,
+     "mg_dosis_aware": 1000,
+     "mg_dosis_calculadora": 2000.0,
+     "mg_kg_dia_aware": 18.2
+    },
+    {
+     "peso_kg": 39.17,
+     "mg_dosis_aware": 1000,
+     "mg_dosis_calculadora": 1762.7,
+     "mg_kg_dia_aware": 51.1
+    },
+    {
+     "peso_kg": 43.71,
+     "mg_dosis_aware": 1000,
+     "mg_dosis_calculadora": 1967.0,
+     "mg_kg_dia_aware": 45.8
+    },
+    {
+     "peso_kg": 56.48,
+     "mg_dosis_aware": 1000,
+     "mg_dosis_calculadora": 2000.0,
+     "mg_kg_dia_aware": 35.4
+    },
+    {
+     "peso_kg": 78.43,
+     "mg_dosis_aware": 1000,
+     "mg_dosis_calculadora": 2000.0,
+     "mg_kg_dia_aware": 25.5
+    },
+    {
+     "peso_kg": 96.46,
+     "mg_dosis_aware": 1000,
+     "mg_dosis_calculadora": 2000.0,
+     "mg_kg_dia_aware": 20.7
+    }
+   ]
+  }
+ },
+ "descriptivo": {
+  "sin_presentacion_adecuada": {
+   "ciprofloxacina (oral)": 5060,
+   "clindamicina (oral)": 4770,
+   "metronidazol (oral)": 1270,
+   "vancomicina (oral)": 1255,
+   "doxiciclina (oral)": 1070,
+   "nitrofurantoina (oral)": 1045,
+   "claritromicina (oral)": 525,
+   "azitromicina (oral)": 515,
+   "amoxicilina (oral)": 462,
+   "cefuroxima (oral)": 370,
+   "cefalexina (oral)": 150,
+   "clindamicina (iv)": 150,
+   "dicloxacilina (oral)": 120,
+   "amoxicilina_clavulanato (oral)": 75,
+   "trimetoprim_sulfametoxazol (oral)": 70,
+   "amoxicilina_clavulanato_7_1 (oral)": 39,
+   "cefdinir (oral)": 10,
+   "cefadroxilo (oral)": 5,
+   "cefpodoxima (oral)": 5
+  },
+  "sin_tope_en_adolescente_de_mayor_peso": [
+   {
+    "enfermedad": "oma",
+    "opcion": "alergia/2",
+    "medicamento": "cefdinir",
+    "peso_kg": 109.82,
+    "dosis_diaria_mg": 1537
+   },
+   {
+    "enfermedad": "ivu_alta_iv",
+    "opcion": "primera/1",
+    "medicamento": "cefazolina",
+    "peso_kg": 109.82,
+    "dosis_diaria_mg": 16473
+   },
+   {
+    "enfermedad": "ivu_alta_iv",
+    "opcion": "segunda/3",
+    "medicamento": "gentamicina",
+    "peso_kg": 109.82,
+    "dosis_diaria_mg": 769
+   },
+   {
+    "enfermedad": "celulitis",
+    "opcion": "segunda/1",
+    "medicamento": "dicloxacilina",
+    "peso_kg": 109.82,
+    "dosis_diaria_mg": 5491
+   },
+   {
+    "enfermedad": "celulitis_hospital",
+    "opcion": "primera/1",
+    "medicamento": "cefazolina",
+    "peso_kg": 109.82,
+    "dosis_diaria_mg": 10982
+   },
+   {
+    "enfermedad": "celulitis_hospital",
+    "opcion": "primera/2",
+    "medicamento": "oxacilina",
+    "peso_kg": 109.82,
+    "dosis_diaria_mg": 21964
+   },
+   {
+    "enfermedad": "meningitis_bacteriana",
+    "opcion": "segunda/1",
+    "medicamento": "vancomicina_iv",
+    "peso_kg": 109.82,
+    "dosis_diaria_mg": 6589
+   },
+   {
+    "enfermedad": "neumonia_complicada",
+    "opcion": "segunda/2",
+    "medicamento": "vancomicina_iv",
+    "peso_kg": 109.82,
+    "dosis_diaria_mg": 6589
+   },
+   {
+    "enfermedad": "rinosinusitis_hospitalizada",
+    "opcion": "primera/1",
+    "medicamento": "ampicilina_sulbactam",
+    "peso_kg": 109.82,
+    "dosis_diaria_mg": 43928
+   },
+   {
+    "enfermedad": "piel_sarm_grave",
+    "opcion": "primera/1",
+    "medicamento": "vancomicina_iv",
+    "peso_kg": 109.82,
+    "dosis_diaria_mg": 6589
+   }
+  ]
+ }
+}

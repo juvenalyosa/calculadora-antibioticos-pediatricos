@@ -1,0 +1,432 @@
+{
+ "pares_con_dos_o_mas_documentos": 47,
+ "filas_sin_dosis_o_intervalo": 6,
+ "pares_con_razon_1": 14,
+ "pares_con_razon_mayor_o_igual_2": 21,
+ "mediana_razon": 1.5,
+ "pares": [
+  {
+   "enfermedad": "ivu_alta",
+   "medicamento": "cefalexina",
+   "documentos": 3,
+   "esquemas": 3,
+   "mg_kg_dia_min": 25.0,
+   "mg_kg_dia_max": 100.0,
+   "razon_max_min": 4.0
+  },
+  {
+   "enfermedad": "ivu_baja",
+   "medicamento": "cefalexina",
+   "documentos": 2,
+   "esquemas": 2,
+   "mg_kg_dia_min": 25.0,
+   "mg_kg_dia_max": 100.0,
+   "razon_max_min": 4.0
+  },
+  {
+   "enfermedad": "rinosinusitis",
+   "medicamento": "amoxicilina",
+   "documentos": 5,
+   "esquemas": 7,
+   "mg_kg_dia_min": 25.0,
+   "mg_kg_dia_max": 90.0,
+   "razon_max_min": 3.6
+  },
+  {
+   "enfermedad": "rinosinusitis",
+   "medicamento": "amoxicilina_clavulanato",
+   "documentos": 5,
+   "esquemas": 6,
+   "mg_kg_dia_min": 25.0,
+   "mg_kg_dia_max": 90.0,
+   "razon_max_min": 3.6
+  },
+  {
+   "enfermedad": "shigelosis",
+   "medicamento": "azitromicina",
+   "documentos": 2,
+   "esquemas": 2,
+   "mg_kg_dia_min": 6.0,
+   "mg_kg_dia_max": 20.0,
+   "razon_max_min": 3.33
+  },
+  {
+   "enfermedad": "celulitis",
+   "medicamento": "cefalexina",
+   "documentos": 3,
+   "esquemas": 4,
+   "mg_kg_dia_min": 50.0,
+   "mg_kg_dia_max": 150.0,
+   "razon_max_min": 3.0
+  },
+  {
+   "enfermedad": "neumonia_micoplasma",
+   "medicamento": "levofloxacino",
+   "documentos": 2,
+   "esquemas": 3,
+   "mg_kg_dia_min": 8.0,
+   "mg_kg_dia_max": 20.0,
+   "razon_max_min": 2.5
+  },
+  {
+   "enfermedad": "ivu_baja",
+   "medicamento": "nitrofurantoina",
+   "documentos": 2,
+   "esquemas": 2,
+   "mg_kg_dia_min": 3.0,
+   "mg_kg_dia_max": 7.0,
+   "razon_max_min": 2.33
+  },
+  {
+   "enfermedad": "oma",
+   "medicamento": "amoxicilina",
+   "documentos": 6,
+   "esquemas": 7,
+   "mg_kg_dia_min": 40.0,
+   "mg_kg_dia_max": 90.0,
+   "razon_max_min": 2.25
+  },
+  {
+   "enfermedad": "neumonia",
+   "medicamento": "amoxicilina",
+   "documentos": 5,
+   "esquemas": 7,
+   "mg_kg_dia_min": 40.0,
+   "mg_kg_dia_max": 90.0,
+   "razon_max_min": 2.25
+  },
+  {
+   "enfermedad": "oma",
+   "medicamento": "amoxicilina_clavulanato",
+   "documentos": 5,
+   "esquemas": 7,
+   "mg_kg_dia_min": 40.0,
+   "mg_kg_dia_max": 90.0,
+   "razon_max_min": 2.25
+  },
+  {
+   "enfermedad": "neumonia_micoplasma",
+   "medicamento": "doxiciclina",
+   "documentos": 3,
+   "esquemas": 3,
+   "mg_kg_dia_min": 2.0,
+   "mg_kg_dia_max": 4.4,
+   "razon_max_min": 2.2
+  },
+  {
+   "enfermedad": "neumonia_micoplasma",
+   "medicamento": "azitromicina",
+   "documentos": 4,
+   "esquemas": 5,
+   "mg_kg_dia_min": 5.0,
+   "mg_kg_dia_max": 10.0,
+   "razon_max_min": 2.0
+  },
+  {
+   "enfermedad": "ivu_alta",
+   "medicamento": "trimetoprim_sulfametoxazol",
+   "documentos": 3,
+   "esquemas": 3,
+   "mg_kg_dia_min": 6.0,
+   "mg_kg_dia_max": 12.0,
+   "razon_max_min": 2.0
+  },
+  {
+   "enfermedad": "profilaxis_ivu",
+   "medicamento": "nitrofurantoina",
+   "documentos": 3,
+   "esquemas": 3,
+   "mg_kg_dia_min": 1.0,
+   "mg_kg_dia_max": 2.0,
+   "razon_max_min": 2.0
+  },
+  {
+   "enfermedad": "rinosinusitis",
+   "medicamento": "cefuroxima",
+   "documentos": 3,
+   "esquemas": 3,
+   "mg_kg_dia_min": 25.0,
+   "mg_kg_dia_max": 50.0,
+   "razon_max_min": 2.0
+  },
+  {
+   "enfermedad": "campylobacter",
+   "medicamento": "azitromicina",
+   "documentos": 2,
+   "esquemas": 2,
+   "mg_kg_dia_min": 10.0,
+   "mg_kg_dia_max": 20.0,
+   "razon_max_min": 2.0
+  },
+  {
+   "enfermedad": "impetigo",
+   "medicamento": "cefalexina",
+   "documentos": 2,
+   "esquemas": 2,
+   "mg_kg_dia_min": 50.0,
+   "mg_kg_dia_max": 100.0,
+   "razon_max_min": 2.0
+  },
+  {
+   "enfermedad": "ivu_alta",
+   "medicamento": "amoxicilina_clavulanato_7_1",
+   "documentos": 2,
+   "esquemas": 2,
+   "mg_kg_dia_min": 40.0,
+   "mg_kg_dia_max": 80.0,
+   "razon_max_min": 2.0
+  },
+  {
+   "enfermedad": "ivu_alta",
+   "medicamento": "ciprofloxacina",
+   "documentos": 2,
+   "esquemas": 2,
+   "mg_kg_dia_min": 20.0,
+   "mg_kg_dia_max": 40.0,
+   "razon_max_min": 2.0
+  },
+  {
+   "enfermedad": "profilaxis_ivu",
+   "medicamento": "trimetoprima",
+   "documentos": 2,
+   "esquemas": 2,
+   "mg_kg_dia_min": 1.0,
+   "mg_kg_dia_max": 2.0,
+   "razon_max_min": 2.0
+  },
+  {
+   "enfermedad": "ivu_alta",
+   "medicamento": "cefadroxilo",
+   "documentos": 2,
+   "esquemas": 2,
+   "mg_kg_dia_min": 30.0,
+   "mg_kg_dia_max": 50.0,
+   "razon_max_min": 1.67
+  },
+  {
+   "enfermedad": "neumonia_micoplasma",
+   "medicamento": "claritromicina",
+   "documentos": 3,
+   "esquemas": 3,
+   "mg_kg_dia_min": 10.0,
+   "mg_kg_dia_max": 15.0,
+   "razon_max_min": 1.5
+  },
+  {
+   "enfermedad": "neumonia_micoplasma",
+   "medicamento": "eritromicina",
+   "documentos": 3,
+   "esquemas": 3,
+   "mg_kg_dia_min": 30.0,
+   "mg_kg_dia_max": 45.0,
+   "razon_max_min": 1.5
+  },
+  {
+   "enfermedad": "piel_sarm",
+   "medicamento": "trimetoprim_sulfametoxazol",
+   "documentos": 2,
+   "esquemas": 2,
+   "mg_kg_dia_min": 8.0,
+   "mg_kg_dia_max": 12.0,
+   "razon_max_min": 1.5
+  },
+  {
+   "enfermedad": "salmonelosis",
+   "medicamento": "ciprofloxacina",
+   "documentos": 2,
+   "esquemas": 2,
+   "mg_kg_dia_min": 20.0,
+   "mg_kg_dia_max": 30.0,
+   "razon_max_min": 1.5
+  },
+  {
+   "enfermedad": "shigelosis",
+   "medicamento": "ciprofloxacina",
+   "documentos": 2,
+   "esquemas": 2,
+   "mg_kg_dia_min": 20.0,
+   "mg_kg_dia_max": 30.0,
+   "razon_max_min": 1.5
+  },
+  {
+   "enfermedad": "clostridioides_difficile",
+   "medicamento": "metronidazol",
+   "documentos": 3,
+   "esquemas": 3,
+   "mg_kg_dia_min": 22.5,
+   "mg_kg_dia_max": 30.0,
+   "razon_max_min": 1.33
+  },
+  {
+   "enfermedad": "absceso_cutaneo",
+   "medicamento": "clindamicina",
+   "documentos": 2,
+   "esquemas": 2,
+   "mg_kg_dia_min": 30.0,
+   "mg_kg_dia_max": 40.0,
+   "razon_max_min": 1.33
+  },
+  {
+   "enfermedad": "faringoamigdalitis",
+   "medicamento": "amoxicilina",
+   "documentos": 3,
+   "esquemas": 4,
+   "mg_kg_dia_min": 40.0,
+   "mg_kg_dia_max": 50.0,
+   "razon_max_min": 1.25
+  },
+  {
+   "enfermedad": "ivu_alta",
+   "medicamento": "cefpodoxima",
+   "documentos": 2,
+   "esquemas": 2,
+   "mg_kg_dia_min": 8.0,
+   "mg_kg_dia_max": 10.0,
+   "razon_max_min": 1.25
+  },
+  {
+   "enfermedad": "shigelosis",
+   "medicamento": "acido_nalidixico",
+   "documentos": 3,
+   "esquemas": 3,
+   "mg_kg_dia_min": 50.0,
+   "mg_kg_dia_max": 60.0,
+   "razon_max_min": 1.2
+  },
+  {
+   "enfermedad": "impetigo",
+   "medicamento": "amoxicilina_clavulanato_7_1",
+   "documentos": 2,
+   "esquemas": 2,
+   "mg_kg_dia_min": 40.0,
+   "mg_kg_dia_max": 45.0,
+   "razon_max_min": 1.12
+  },
+  {
+   "enfermedad": "clostridioides_difficile",
+   "medicamento": "vancomicina",
+   "documentos": 3,
+   "esquemas": 5,
+   "mg_kg_dia_min": 40.0,
+   "mg_kg_dia_max": 40.0,
+   "razon_max_min": 1.0
+  },
+  {
+   "enfermedad": "celulitis",
+   "medicamento": "amoxicilina_clavulanato_7_1",
+   "documentos": 2,
+   "esquemas": 2,
+   "mg_kg_dia_min": 40.0,
+   "mg_kg_dia_max": 40.0,
+   "razon_max_min": 1.0
+  },
+  {
+   "enfermedad": "faringoamigdalitis",
+   "medicamento": "cefadroxilo",
+   "documentos": 2,
+   "esquemas": 2,
+   "mg_kg_dia_min": 30.0,
+   "mg_kg_dia_max": 30.0,
+   "razon_max_min": 1.0
+  },
+  {
+   "enfermedad": "ivu_alta",
+   "medicamento": "cefixima",
+   "documentos": 2,
+   "esquemas": 2,
+   "mg_kg_dia_min": 8.0,
+   "mg_kg_dia_max": 8.0,
+   "razon_max_min": 1.0
+  },
+  {
+   "enfermedad": "neumonia",
+   "medicamento": "azitromicina",
+   "documentos": 2,
+   "esquemas": 2,
+   "mg_kg_dia_min": 10.0,
+   "mg_kg_dia_max": 10.0,
+   "razon_max_min": 1.0
+  },
+  {
+   "enfermedad": "neumonia",
+   "medicamento": "claritromicina",
+   "documentos": 2,
+   "esquemas": 2,
+   "mg_kg_dia_min": 15.0,
+   "mg_kg_dia_max": 15.0,
+   "razon_max_min": 1.0
+  },
+  {
+   "enfermedad": "neumonia_micoplasma",
+   "medicamento": "minociclina",
+   "documentos": 2,
+   "esquemas": 2,
+   "mg_kg_dia_min": 4.0,
+   "mg_kg_dia_max": 4.0,
+   "razon_max_min": 1.0
+  },
+  {
+   "enfermedad": "oma",
+   "medicamento": "cefpodoxima",
+   "documentos": 2,
+   "esquemas": 2,
+   "mg_kg_dia_min": 10.0,
+   "mg_kg_dia_max": 10.0,
+   "razon_max_min": 1.0
+  },
+  {
+   "enfermedad": "oma",
+   "medicamento": "cefuroxima",
+   "documentos": 2,
+   "esquemas": 2,
+   "mg_kg_dia_min": 30.0,
+   "mg_kg_dia_max": 30.0,
+   "razon_max_min": 1.0
+  },
+  {
+   "enfermedad": "piel_sarm",
+   "medicamento": "doxiciclina",
+   "documentos": 2,
+   "esquemas": 2,
+   "mg_kg_dia_min": 4.0,
+   "mg_kg_dia_max": 4.0,
+   "razon_max_min": 1.0
+  },
+  {
+   "enfermedad": "profilaxis_ivu",
+   "medicamento": "trimetoprim_sulfametoxazol",
+   "documentos": 2,
+   "esquemas": 2,
+   "mg_kg_dia_min": 2.0,
+   "mg_kg_dia_max": 2.0,
+   "razon_max_min": 1.0
+  },
+  {
+   "enfermedad": "rinosinusitis",
+   "medicamento": "claritromicina",
+   "documentos": 2,
+   "esquemas": 2,
+   "mg_kg_dia_min": 15.0,
+   "mg_kg_dia_max": 15.0,
+   "razon_max_min": 1.0
+  },
+  {
+   "enfermedad": "tosferina",
+   "medicamento": "azitromicina",
+   "documentos": 2,
+   "esquemas": 2,
+   "mg_kg_dia_min": 10.0,
+   "mg_kg_dia_max": 10.0,
+   "razon_max_min": 1.0
+  },
+  {
+   "enfermedad": "tosferina",
+   "medicamento": "claritromicina",
+   "documentos": 2,
+   "esquemas": 2,
+   "mg_kg_dia_min": 15.0,
+   "mg_kg_dia_max": 15.0,
+   "razon_max_min": 1.0
+  }
+ ]
+}

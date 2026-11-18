@@ -53,6 +53,9 @@ COLUMNAS = {
         "medicamento_id", "tfg_min", "tfg_max", "factor_dosis",
         "intervalo_minimo_horas", "dosis_por_kg", "max_por_dosis", "evitar", "nota",
     ],
+    "topes_medicamento": [
+        "medicamento_id", "via", "max_por_dosis", "max_por_dia", "fuente_id", "pagina", "nota",
+    ],
     "enfermedades": [
         "id", "nombre", "grupo", "requiere_antibiotico", "mensaje", "fuente_id",
     ],
@@ -146,6 +149,7 @@ def sin_vacios(datos: dict) -> dict:
 def construir_medicamentos(carpeta: Path) -> list[dict]:
     presentaciones = leer_hoja(carpeta, "presentaciones")
     bandas = leer_hoja(carpeta, "ajuste_renal")
+    topes = leer_hoja(carpeta, "topes_medicamento")
 
     medicamentos = []
     for fila in leer_hoja(carpeta, "medicamentos"):
@@ -174,6 +178,17 @@ def construir_medicamentos(carpeta: Path) -> list[dict]:
             "nombre": fila["nombre"],
             "unidad": fila["unidad"],
             "ajuste_renal": ajuste,
+            "topes": [
+                sin_vacios({
+                    "via": t["via"],
+                    "max_por_dosis": numero(t, "max_por_dosis"),
+                    "max_por_dia": numero(t, "max_por_dia"),
+                    "fuente_id": t["fuente_id"],
+                    "pagina": t["pagina"],
+                    "nota": t["nota"],
+                })
+                for t in topes if t["medicamento_id"] == identificador
+            ],
             "presentaciones": [
                 sin_vacios({
                     "id": p["id"],
@@ -192,7 +207,7 @@ def construir_medicamentos(carpeta: Path) -> list[dict]:
 
     # Filas huérfanas: apuntan a un medicamento que no está en la hoja.
     conocidos = {m["id"] for m in medicamentos}
-    for fila in presentaciones + bandas:
+    for fila in presentaciones + bandas + topes:
         if fila["medicamento_id"] not in conocidos:
             raise ErrorDatos(
                 f"{fila['_origen']}: el medicamento «{fila['medicamento_id']}» "

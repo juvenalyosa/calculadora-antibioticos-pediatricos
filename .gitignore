@@ -23,3 +23,8 @@ __pycache__/
 # Documento de radicación: contiene datos personales (cédula, correo).
 # Se conserva fuera del control de versiones.
 /RADICACIÓN*.pdf
+
+# Instaladores generados localmente
+/salida/
+/dist/
+/AppDir/

@@ -70,7 +70,7 @@ ReportDialog::ReportDialog(ErrorReport report, ReportSink& sink, QWidget* parent
   layout->setContentsMargins(24, 22, 24, 20);
   layout->setSpacing(12);
   layout->addWidget(makePageHeader(
-      "Formato de reporte", "Reportar un error",
+      -1, "Reportar un error",
       "Describa qué encontró. Los datos del cálculo se adjuntan automáticamente; no se guarda "
       "ningún dato que identifique al paciente.",
       this));

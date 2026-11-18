@@ -71,7 +71,7 @@ DiseasePage::DiseasePage(Session& session, const KnowledgeBase& kb, QWidget* par
   auto* layout = new QVBoxLayout(this);
   layout->setSpacing(10);
   layout->addWidget(makePageHeader(
-      "Paso 3 de 4", "Enfermedad",
+      2, "Enfermedad",
       "Elija el diagnóstico. Se calcularán todas las líneas de manejo de la guía.", this));
   layout->addWidget(filter_);
 

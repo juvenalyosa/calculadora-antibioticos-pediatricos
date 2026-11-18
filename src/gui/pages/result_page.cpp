@@ -25,17 +25,16 @@ ResultPage::ResultPage(const Session& session, const KnowledgeBase& kb,
   connect(copy, &QPushButton::clicked, this,
           [this] { QApplication::clipboard()->setText(browser_->toPlainText()); });
 
-  auto* top = new QHBoxLayout;
-  top->addWidget(makePageHeader("Paso 4 de 4", "Resultado",
-                                "Verifique la dosis con el cálculo paso a paso antes de usarla.",
-                                this),
-                 1);
-  top->addWidget(copy, 0, Qt::AlignBottom);
+  auto* actions = new QHBoxLayout;
+  actions->addStretch();
+  actions->addWidget(copy);
 
   auto* layout = new QVBoxLayout(this);
   layout->setSpacing(10);
-  layout->addLayout(top);
+  layout->addWidget(makePageHeader(
+      3, "Resultado", "Verifique la dosis con el cálculo paso a paso antes de usarla.", this));
   layout->addWidget(browser_, 1);
+  layout->addLayout(actions);
 }
 
 void ResultPage::initializePage() {

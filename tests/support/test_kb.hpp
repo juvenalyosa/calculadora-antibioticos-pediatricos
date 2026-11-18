@@ -13,6 +13,7 @@
 ///   Fármaco C (mg)  no requiere ajuste renal. Sin presentaciones.
 ///   Fármaco D (mg)  ajuste renal con dosis de reemplazo: 10–30 → 15 mg/kg por
 ///                   toma (tope 500 mg), mínimo cada 12 h · <10 solo una nota.
+///                   Tope del medicamento por vía oral: 1000 mg por toma.
 #pragma once
 
 #include <string>
@@ -70,6 +71,7 @@ inline const char* const kTestKbJson = R"json({
           {"tfg_min": 0, "tfg_max": 10, "nota": "Usar con precaución."}
         ]
       },
+      "topes": [{"via": "oral", "max_por_dosis": 1000, "fuente_id": "guia_prueba"}],
       "presentaciones": []
     }
   ],

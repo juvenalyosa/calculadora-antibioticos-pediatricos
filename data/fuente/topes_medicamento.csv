@@ -1,0 +1,29 @@
+medicamento_id,via,max_por_dosis,max_por_dia,fuente_id,pagina,nota
+amoxicilina,oral,,4000,finlandia_vri_2023,Tabla 3 (p. 253),"Coincide con PIDS/IDSA 2011, tabla 7."
+amoxicilina_clavulanato,oral,,4000,pids_idsa_neumonia_2011,Tabla 7,En amoxicilina.
+amoxicilina_clavulanato_7_1,oral,,4000,pids_idsa_neumonia_2011,Tabla 7,En amoxicilina. PIDS/IDSA da el máximo para la amoxicilina-clavulanato sin precisar la relación.
+ampicilina,iv,,12000,cps_meningitis_2014,Tabla 2,
+ceftriaxona,iv,,4000,finlandia_vri_2023,Tabla 3 (p. 253),Igual en la Sociedad Canadiense de Pediatría 2014 y en NICE NG111. La OMS (AWaRe 2022) da 3 g en niños.
+ceftriaxona,im,,4000,nice_ng111_2018,Tabla 3,NICE lo da para la vía intravenosa o intramuscular.
+cefotaxima,iv,,12000,cps_meningitis_2014,Tabla 2,La guía da 8 a 12 g al día.
+cefuroxima_sodica,iv,,6000,finlandia_vri_2023,Tabla 3 (p. 253),
+cefuroxima,oral,,1000,consenso_suizo_itu_2021,Tabla 2,Dosis máxima diaria de SwissPedDose.
+cefalexina,oral,1000,4000,nice_ng111_2018,Tabla 3,Máximo para infecciones graves.
+clindamicina,oral,450,,idsa_piel_2014,Tabla 2,Dosis de adulto de la misma tabla (300 a 450 mg cuatro veces al día).
+clindamicina,iv,900,,sap_piel_2014,p. 188,Dosis de adulto (900 mg cada 8 horas).
+azitromicina,oral,,500,finlandia_vri_2023,Tabla 3 (p. 253),Igual en PIDS/IDSA 2011.
+claritromicina,oral,,1000,finlandia_vri_2023,Tabla 3 (p. 253),Igual en PIDS/IDSA 2011.
+doxiciclina,oral,100,200,finlandia_vri_2023,Tabla 3 (p. 253),El máximo por toma es de la guía china de micoplasma (p. 7).
+metronidazol,oral,500,,idsa_shea_cdifficile_2017,Tabla 2,
+metronidazol,iv,500,,idsa_shea_cdifficile_2017,Tabla 2,
+vancomicina,oral,500,,idsa_shea_cdifficile_2017,Tabla 2,Máximo de la enfermedad grave; en la no grave es 125 mg.
+ciprofloxacina,oral,,1500,francia_gastroenteritis_2017,Tabla 1 (p. S28),
+ciprofloxacina,iv,400,,fda_fichas_tecnicas,Ficha técnica de ciprofloxacina intravenosa,
+trimetoprim_sulfametoxazol,oral,320,,idsa_piel_2014,Tabla 2,En trimetoprim; dosis de adulto (1 a 2 tabletas dobles).
+nitrofurantoina,oral,100,,consenso_suizo_itu_2021,Tabla 2,
+amikacina,iv,,1500,consenso_suizo_itu_2021,Tabla 2,El consenso colombiano de infección urinaria da 1 g al día.
+penicilina_g,iv,,24000000,finlandia_vri_2023,Tabla 3 (p. 253),Igual en la Sociedad Canadiense de Pediatría 2014.
+cefpodoxima,oral,,400,consenso_suizo_itu_2021,Tabla 2,
+linezolid,iv,600,,sap_piel_2014,Figura 4 (p. 185),
+linezolid,oral,600,,sap_piel_2014,Figura 4 (p. 185),
+levofloxacina,iv,,750,pids_idsa_neumonia_2011,Tabla 7,
