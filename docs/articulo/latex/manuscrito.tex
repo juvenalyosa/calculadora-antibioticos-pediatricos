@@ -1,0 +1,1052 @@
+% Manuscrito: revisión de alcance de guías y verificación exhaustiva de la
+% calculadora de dosis de antibióticos pediátricos (documento de trabajo).
+%
+% Compilar con XeLaTeX (o Tectonic) y BibTeX:
+%   tectonic manuscrito.tex
+%   o bien: xelatex manuscrito && bibtex manuscrito && xelatex manuscrito && xelatex manuscrito
+%
+% Todas las cifras salen de archivos del repositorio (ver anexo E). No editar
+% un número a mano: regenerarlo con el programa que lo produce.
+
+\documentclass[11pt,a4paper]{article}
+
+% --- Idioma y tipografía -----------------------------------------------------
+\usepackage{fontspec}
+\setmainfont{texgyretermes}[
+  Extension = .otf, UprightFont = *-regular, BoldFont = *-bold,
+  ItalicFont = *-italic, BoldItalicFont = *-bolditalic]
+\setsansfont{texgyreheros}[
+  Extension = .otf, UprightFont = *-regular, BoldFont = *-bold,
+  ItalicFont = *-italic, BoldItalicFont = *-bolditalic]
+\usepackage[spanish,es-noshorthands,es-tabla,es-nodecimaldot]{babel}
+\usepackage{microtype}
+\usepackage[a4paper,margin=2.4cm,headheight=14pt]{geometry}
+\usepackage{setspace}
+\setstretch{1.12}
+
+% --- Tablas, figuras y números ------------------------------------------------
+\usepackage{booktabs,tabularx,longtable,multirow,array}
+\usepackage{threeparttable}
+\usepackage[font=small,labelfont={bf,sf},labelsep=period,justification=raggedright,singlelinecheck=false]{caption}
+\usepackage{siunitx}
+\sisetup{output-decimal-marker={,}, group-separator={\,}, group-minimum-digits=4, detect-all}
+\usepackage{amsmath}
+\usepackage{xcolor}
+\definecolor{marino}{HTML}{1F4E79}
+\definecolor{gris}{HTML}{5A6478}
+\definecolor{dorado}{HTML}{C8A45D}
+\definecolor{rojo}{HTML}{A33B2E}
+\usepackage{tikz}
+\usetikzlibrary{positioning,arrows.meta,calc,fit}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepgfplotslibrary{groupplots}
+\usepackage{enumitem}
+\setlist{itemsep=2pt,topsep=4pt}
+
+% --- Títulos, encabezados y enlaces -------------------------------------------
+\usepackage{titlesec}
+\titleformat{\section}{\sffamily\large\bfseries\color{marino}}{\thesection.}{0.5em}{}
+\titleformat{\subsection}{\sffamily\normalsize\bfseries\color{marino}}{\thesubsection}{0.5em}{}
+\titleformat{\subsubsection}{\sffamily\normalsize\itshape}{\thesubsubsection}{0.5em}{}
+\titlespacing*{\section}{0pt}{1.4em}{0.6em}
+\titlespacing*{\subsection}{0pt}{1.1em}{0.4em}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\sffamily\footnotesize\color{gris}Calculadora de dosis de antibióticos pediátricos}
+\fancyhead[R]{\sffamily\footnotesize\color{gris}Documento de trabajo · borrador 2}
+\fancyfoot[C]{\sffamily\footnotesize\thepage}
+\renewcommand{\headrulewidth}{0.3pt}
+\usepackage[numbers,sort&compress,square]{natbib}
+\setlength{\bibsep}{2pt}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xurl}
+
+% Marcador visible para lo que el equipo debe completar.
+\newcommand{\pendiente}[1]{\textcolor{rojo}{\textbf{[#1]}}}
+\newcommand{\codigo}[1]{\texttt{\small #1}}
+\setlength{\emergencystretch}{2.5em}
+
+\begin{document}
+
+% =============================================================================
+\pagenumbering{Alph}
+\begin{titlepage}
+\sffamily
+\noindent{\small\color{gris}DOCUMENTO DE TRABAJO · BORRADOR 2 · 18 DE NOVIEMBRE DE 2026}
+
+\vspace{1.2cm}
+\noindent{\LARGE\bfseries\color{marino}Revisión de alcance de guías de práctica clínica y verificación exhaustiva de una calculadora determinista de dosis de antibióticos para infecciones prevalentes en la infancia en Colombia}
+
+\vspace{0.8cm}
+\noindent{\large Síntesis de 58 guías, concordancia entre recomendaciones y prueba con \num{1350} pacientes virtuales construidos con los patrones de crecimiento de la OMS}
+
+\vspace{1.2cm}
+\noindent\textbf{Autores:} \pendiente{por completar por el equipo investigador}\\[2pt]
+\textbf{Filiación y correspondencia:} \pendiente{por completar}\\[2pt]
+\textbf{Proyecto:} prototipo «Calculadora de dosis de antibióticos para las enfermedades infecciosas prevalentes en la infancia», Universidad Militar Nueva Granada, convocatoria de prototipado 2025-2.\\[2pt]
+\textbf{Revista objetivo:} \pendiente{por definir; estructura IMRyD, referencias numéricas}
+
+\vspace{1cm}
+\noindent\fcolorbox{dorado}{white}{\parbox{0.95\textwidth}{\rmfamily\small
+\textbf{Advertencia.} La herramienta descrita es un prototipo académico. Ningún esquema de su base de conocimiento ha sido verificado por profesionales clínicos y la herramienta no se ha probado con pacientes. Las pruebas informadas aquí demuestran que el programa aplica sus reglas de forma correcta y estable; no demuestran que las reglas sean clínicamente correctas, que la herramienta sea segura ni que reduzca errores.}}
+
+\vfill
+\noindent{\small\color{gris}Las cifras de este documento se generan con programas del repositorio del proyecto (anexo~E). La revisión de alcance, la extracción de datos y la redacción contaron con un modelo de lenguaje; véase la declaración correspondiente.}
+\end{titlepage}
+\pagenumbering{arabic}
+
+% =============================================================================
+\section*{Resumen}
+\addcontentsline{toc}{section}{Resumen}
+
+\noindent\textbf{Introducción.} Los errores de dosificación son el tipo de error de medicación más frecuente en pediatría, y las calculadoras de dosis reducen los errores de cálculo en estudios de simulación. Una calculadora, sin embargo, solo es tan confiable como las reglas que contiene, y las guías que deben alimentarla difieren entre sí y dejan vacíos.
+
+\noindent\textbf{Objetivos.} (1) Identificar, con una búsqueda documentada y reproducible, las guías de práctica clínica que recomiendan esquemas antibióticos para las infecciones prevalentes en niños de 1 mes a menos de 18 años, con prioridad para Colombia; (2) cuantificar la concordancia entre guías y los vacíos que impiden el cálculo directo; (3) incorporar lo pertinente a la base de conocimiento de una calculadora determinista; y (4) verificar la calculadora en una población pediátrica modelada.
+
+\noindent\textbf{Métodos.} Revisión de alcance informada según PRISMA-ScR, con búsquedas en PubMed, OpenAlex (autores de instituciones colombianas) y DOAJ (en español) de 2010 a 2026 para once grupos de infecciones; cribado y extracción con formularios fijos y citas textuales, realizados por un modelo de lenguaje como revisor único. Las recomendaciones se integraron con una jerarquía explícita (Colombia, Latinoamérica y OMS, internacional). La calculadora se verificó con pruebas unitarias, con una segunda implementación independiente y con una prueba exhaustiva de \num{1350} pacientes virtuales construidos con los patrones de crecimiento de la OMS (27 edades, 2 sexos, puntajes z de $-3$ a $+3$ y 5 niveles de función renal), contrastada con once comprobaciones derivadas de las reglas y de la literatura.
+
+\noindent\textbf{Resultados.} Se identificaron \num{2054} registros (\num{1872} únicos); 175 documentos pasaron el cribado (4 colombianos, 24 latinoamericanos, 7 de la OMS), 77 se obtuvieron a texto completo y 58 se incluyeron. Se extrajeron 413 esquemas (84 iguales a los ya cargados, 95 distintos y 234 nuevos) y 111 dosis máximas. De 47 pares enfermedad--medicamento oral recomendados por dos o más documentos, 21 mostraron una razón de 2 o más entre la dosis diaria más alta y la más baja (mediana 1,5); la amoxicilina para otitis y neumonía varió entre 40 y 90~mg/kg/día. La búsqueda recuperó las 7 guías del corpus inicial de 31 documentos. La base quedó con 46 entidades clínicas, 113 esquemas, 37 medicamentos y 28 dosis máximas por medicamento; 64 de los 104 esquemas calculados por peso no tienen dosis máxima en su propia fuente. La prueba exhaustiva produjo \num{166250} resultados; tras corregir un defecto que detectó (el redondeo a la presentación podía superar el tope de la banda renal en \num{1360} cantidades, 0,7~\%), no hubo ningún fallo en las comprobaciones y dos ejecuciones fueron idénticas. Sin una dosis máxima, diez esquemas producen dosis de adulto o superiores en adolescentes de mayor peso.
+
+\noindent\textbf{Conclusiones.} Una búsqueda documentada amplía y ordena la evidencia que alimenta la calculadora, pero la evidencia colombiana indexada es escasa y las guías difieren hasta cuatro veces en la dosis de un mismo medicamento. La prueba con una población modelada detecta defectos y riesgos que los casos tipo no muestran y debería formar parte de la verificación de toda calculadora de dosis. La validación clínica sigue pendiente.
+
+\noindent\textbf{Palabras clave:} antibacterianos; pediatría; cálculo de dosis; sistemas de apoyo a decisiones clínicas; guías de práctica clínica; revisión de alcance; errores de medicación; verificación de software.
+
+\newpage
+\tableofcontents
+\newpage
+
+% =============================================================================
+\section{Introducción}
+
+\subsection{El problema: dosificar antibióticos en niños}
+
+En pediatría la dosis de la mayoría de los medicamentos se calcula para cada paciente a partir del peso y la edad, lo que multiplica las oportunidades de error. Una revisión sistemática de 16 estudios encontró que el error de dosis era el tipo de error de medicación más frecuente en 11 de ellos y el segundo en otros 3~\citep{wong2004}. En un estudio de \num{10778} órdenes médicas de \num{1120} niños hospitalizados en dos instituciones académicas, el 5,7~\% tuvo algún error; los eventos adversos potenciales fueron tres veces más frecuentes que en un estudio previo en adultos, el 79~\% ocurrió al ordenar el medicamento, el 34~\% correspondió a dosis incorrectas y el 28~\% involucró antiinfecciosos~\citep{kaushal2001}. Un metaanálisis posterior de 71 estudios confirmó que los errores de medicación son frecuentes en niños hospitalizados, con estimaciones muy variables según el servicio y el método de detección~\citep{gates2019}.
+
+Los antibióticos concentran buena parte de ese riesgo porque se prescriben mucho. En consultas ambulatorias de Estados Unidos (todas las edades) se estimaron 506 prescripciones de antibióticos por cada \num{1000} habitantes al año, de las cuales 353 se consideraron apropiadas; la sinusitis, la otitis media supurativa y la faringitis fueron los diagnósticos con más prescripciones~\citep{flemingdutra2016}. El uso inadecuado contribuye a la resistencia bacteriana, a la que se atribuyeron 1,14 millones de muertes en el mundo en 2021~\citep{gbdamr2024}.
+
+\subsection{Lo que se sabe sobre las calculadoras de dosis}
+
+Las herramientas informáticas de apoyo a la prescripción se han propuesto como respuesta. Una revisión de su uso en pediatría concluyó que las calculadoras de dosis disminuyeron los errores de cálculo y que el apoyo a la dosificación redujo los eventos adversos, aunque con tasas altas de alertas ignoradas~\citep{stultz2012}. Dos estudios experimentales aportan estimaciones directas. En un estudio controlado no aleatorizado con 77 profesionales, una calculadora añadida al formulario pediátrico neerlandés redujo la probabilidad de error de cálculo de 39,0~\% a 24,4~\% (diferencia de 14,6 puntos; IC~95~\%: 3,1 a 26,2)~\citep{vanderzanden2020}. En un ensayo aleatorizado de simulación con 52 profesionales, un sistema suizo de apoyo a la dosificación redujo la probabilidad de una dosis errónea frente al uso de la ficha técnica con calculadora de bolsillo (razón de momios 0,08; IC~95~\%: 0,02 a 0,36) y redujo en 45~\% el tiempo empleado~\citep{higi2023}.
+
+Esa evidencia tiene límites que importan para diseñar una herramienta nueva. Ambos estudios midieron errores en casos simulados, no desenlaces en pacientes~\citep{vanderzanden2020,higi2023}. En el primero, la diferencia dejó de ser significativa cuando el error se definió como una desviación de 10~\% o más, y la calculadora introdujo tipos de error nuevos, como los de transcripción~\citep{vanderzanden2020}. En el segundo, consultar la base de datos sin usar su calculadora no redujo los errores de forma sustancial~\citep{higi2023}, lo que sugiere que el beneficio depende del cálculo automatizado y no solo del acceso a la información.
+
+\subsection{Lo que falta: reglas confiables y verificadas}
+
+Una calculadora transforma reglas en números; si la regla es discutible, la calculadora la aplica con precisión y sin discusión. Las guías no siempre coinciden: para la neumonía adquirida en la comunidad tratada de forma ambulatoria, la guía finlandesa recomienda amoxicilina a 40--45~mg/kg/día como dosis habitual~\citep{backman2025}, mientras la guía estadounidense recomienda 90~mg/kg/día~\citep{bradley2011}. Muchas recomendaciones no traen la dosis máxima, que es indispensable para que una dosis por kilogramo no crezca sin límite en un adolescente de mayor peso. Y el ajuste por función renal se apoya en recomendaciones pediátricas derivadas en su mayoría de datos de adultos~\citep{schijvens2020,minotti2022}.
+
+En Colombia las recomendaciones para estas infecciones están dispersas entre guías del Ministerio de Salud~\citep{gpc42}, la estrategia de Atención Integrada a las Enfermedades Prevalentes de la Infancia (AIEPI)~\citep{aiepi2012} y guías de sociedades científicas~\citep{acorloma2024,acorlfaa2024,acorlrs2024,acin2023,itucol2023}. La disponibilidad de cada medicamento depende además del registro sanitario vigente~\citep{invima}. Las calculadoras evaluadas en la literatura están ligadas a formularios nacionales de los Países Bajos y Suiza~\citep{vanderzanden2020,higi2023}. En la búsqueda que se describe en este trabajo no se identificó una descripción publicada de cómo convertir en reglas calculables las guías vigentes en Colombia, ni de cuántas decisiones quedan sin resolver al hacerlo; no se afirma que no exista.
+
+La verificación de este tipo de software suele limitarse a unos pocos casos tipo. Esa práctica deja sin explorar justamente los extremos donde aparecen los errores graves: lactantes pequeños, desnutrición, obesidad y función renal reducida. Colombia adoptó como referencia los patrones de crecimiento de la Organización Mundial de la Salud (OMS) para menores de 18 años~\citep{res2465}, lo que permite construir una población virtual representativa del rango de pesos y tallas esperado.
+
+\subsection{Justificación}
+
+Una versión anterior de este trabajo partió de 31 documentos reunidos por el equipo clínico sin una estrategia de búsqueda documentada y verificó el motor en dos pacientes tipo. Ambas limitaciones impedían afirmar que la base de conocimiento reflejara la evidencia disponible y que el programa funcionara en todo el rango pediátrico. Este documento las aborda con una revisión de alcance reproducible y con una prueba exhaustiva sobre una población modelada.
+
+\subsection{Objetivos}
+
+\begin{enumerate}[label=(\arabic*)]
+  \item Identificar, con una búsqueda documentada y reproducible, las guías de práctica clínica que recomiendan esquemas antibióticos para infecciones prevalentes en niños de 1 mes a menos de 18 años, priorizando las válidas en Colombia.
+  \item Cuantificar la concordancia entre guías en la dosis recomendada y los vacíos que impiden el cálculo directo (dosis máxima, ajuste renal, disponibilidad y ambigüedades).
+  \item Incorporar a la base de conocimiento de la calculadora lo que la jerarquía de fuentes selecciona, dejando trazabilidad de cada decisión.
+  \item Verificar que la calculadora aplica sus reglas de forma correcta, segura y estable en una población pediátrica modelada con los patrones de la OMS.
+\end{enumerate}
+
+La hipótesis de trabajo fue doble: que una búsqueda documentada recupera las guías del corpus inicial y añade evidencia latinoamericana pertinente, y que una prueba exhaustiva detecta defectos que la verificación con casos tipo no detecta. El estudio no evalúa desenlaces clínicos.
+
+% =============================================================================
+\section{Métodos}
+
+\subsection{Diseño general}
+
+El trabajo tiene tres componentes encadenados (figura~\ref{fig:motor} resume el tercero):
+
+\begin{enumerate}[label=(\alph*)]
+  \item una revisión de alcance de guías de práctica clínica, informada según la extensión PRISMA para revisiones de alcance (PRISMA-ScR)~\citep{tricco2018}, con una síntesis sin metaanálisis que sigue los elementos aplicables de SWiM~\citep{campbell2020};
+  \item la ingeniería de la base de conocimiento: codificación de las recomendaciones en hojas de datos con fuente y página, e integración según una jerarquía explícita;
+  \item la verificación computacional de la calculadora: pruebas unitarias, comparación con una implementación independiente y una prueba exhaustiva con una población modelada.
+\end{enumerate}
+
+El protocolo de la revisión (\codigo{docs/revision/protocolo.md}) se escribió durante su ejecución y no se registró antes de empezar; es una limitación declarada.
+
+\subsection{Revisión de alcance}
+
+\subsubsection{Pregunta}
+
+¿Qué esquemas antibióticos o antiparasitarios (medicamento, vía, dosis, intervalo, dosis máxima y duración) recomiendan las guías vigentes para las infecciones prevalentes en niños de 1 mes a menos de 18 años, o cuándo recomiendan no darlos, con prioridad para las guías válidas en Colombia? La tabla~\ref{tab:pcc} resume los elementos de la pregunta.
+
+\begin{table}[htbp]
+\centering
+\caption{Elementos de la pregunta de la revisión (población, concepto y contexto).}
+\label{tab:pcc}
+\small
+\begin{tabularx}{\textwidth}{@{}lX@{}}
+\toprule
+Elemento & Definición \\
+\midrule
+Población & Niños y adolescentes de 1 mes a menos de 18 años \\
+Concepto & Recomendaciones de tratamiento antimicrobiano (elección, dosis, intervalo, dosis máxima, duración) o de no tratar \\
+Contexto & Colombia; Latinoamérica; OMS y OPS; guías internacionales de sociedades científicas o agencias \\
+Infecciones & Otitis; faringoamigdalitis; rinosinusitis; neumonía; bronquiolitis, laringitis, bronquitis y tos ferina; infección urinaria; diarrea aguda y disentería; piel, tejidos blandos y mordeduras; parásitos intestinales; infección odontogénica y conjuntivitis; fiebre sin foco, sepsis y meningitis \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsubsection{Fuentes de información y estrategias de búsqueda}
+
+La búsqueda se ejecutó el 18 de noviembre de 2026 con un programa (\codigo{docs/revision/buscar.py}) que contiene las ecuaciones completas, registra la fecha y el número de resultados de cada consulta y guarda los registros. Para cada uno de los once grupos de infecciones se usaron cuatro estrategias (44 consultas en total):
+
+\begin{itemize}
+  \item \textbf{PubMed, guías:} términos de la infección (MeSH y texto libre) \textsc{y} niños \textsc{y} un filtro de guía (tipos de publicación \emph{Guideline}, \emph{Practice Guideline} y \emph{Consensus Development Conference}, o las palabras guía, consenso o recomendaciones en el título) \textsc{y} 2010 a 2026 \textsc{y} inglés o español.
+  \item \textbf{PubMed, región:} términos de la infección \textsc{y} niños \textsc{y} Colombia o Latinoamérica (nombres de los países) \textsc{y} tratamiento antibiótico.
+  \item \textbf{OpenAlex}~\citep{openalex}: términos en español en título y resumen, restringidos a trabajos con al menos un autor de una institución colombiana, desde 2010.
+  \item \textbf{DOAJ}~\citep{doaj}: términos en español de la infección, niños y guía, consenso o tratamiento.
+\end{itemize}
+
+El anexo~A reproduce una ecuación completa. Se intentó consultar LILACS (Biblioteca Virtual en Salud) y SciELO, pero ambos rechazaron las consultas automatizadas con un error de acceso (HTTP 403); el intento quedó registrado y no se buscó la forma de eludir ese bloqueo. Su cobertura se compensó en parte con OpenAlex y DOAJ, que indexan buena parte de las revistas latinoamericanas, y con las búsquedas dirigidas de guías colombianas (Ministerio de Salud, AIEPI, sociedades científicas) hechas en la fase previa del proyecto.
+
+Los duplicados se eliminaron en orden por identificador de objeto digital (DOI), por identificador de PubMed (PMID) y por título normalizado.
+
+\subsubsection{Criterios de elegibilidad}
+
+Se incluyeron los documentos que cumplían todas estas condiciones: (1) guía de práctica clínica, consenso, declaración de posición, protocolo oficial de un ministerio o de la OMS/OPS, o revisión de guías; (2) recomendación de tratamiento antimicrobiano, o de no darlo, para una de las infecciones; (3) población que incluye niños fuera del período neonatal; (4) inglés o español; (5) publicación de 2010 a 2026. La tabla~\ref{tab:motivos} define los motivos de exclusión, uno por registro.
+
+\begin{table}[htbp]
+\centering
+\caption{Motivos de exclusión en el cribado (E) y en la lectura a texto completo (T).}
+\label{tab:motivos}
+\small
+\begin{tabularx}{\textwidth}{@{}lX@{}}
+\toprule
+Código & Motivo \\
+\midrule
+E1 & No es guía (estudio primario, ensayo, revisión narrativa, editorial, auditoría de adherencia) \\
+E2 & Sin contenido de tratamiento (diagnóstico, imágenes, cirugía, prevención o vacunas únicamente) \\
+E3 & Población fuera del alcance (solo adultos, solo neonatos o solo huéspedes especiales) \\
+E4 & Infección fuera del alcance \\
+E5 & Versión reemplazada por otra del mismo organismo presente entre los registros \\
+E6 & No es un documento recuperable (fe de erratas, comentario, resumen de otra guía incluida) \\
+\midrule
+T1 & Sin dosis pediátricas utilizables \\
+T2 & No es una guía al leerla completa \\
+T3 & Duplicado o resumen de otro documento incluido \\
+T4 & Población fuera del alcance \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsubsection{Selección de los documentos}
+
+El cribado por título y resumen se hizo en cuatro grupos temáticos con los criterios escritos de antemano. Cuando el título no bastaba se leyó el resumen en PubMed y la decisión se anotó como «resumen consultado»; en caso de duda el registro se incluyó para revisarlo a texto completo y se marcó como «dudoso». \textbf{El cribado y la extracción los realizó un modelo de lenguaje de propósito general (Claude, Anthropic) como revisor único, sin doble revisión humana.} Cada decisión, con su motivo, quedó en un archivo para que el equipo clínico la audite.
+
+\subsubsection{Obtención de los textos completos}
+
+Para cada documento incluido en el cribado se buscó automáticamente el texto completo que las propias bases declaran de acceso abierto: primero en PubMed Central (formato XML) y después la copia de acceso abierto que registra OpenAlex (PDF o HTML). No se usaron vías que eludieran restricciones de acceso. Se añadieron las copias de documentos ya obtenidas en la fase previa del proyecto. El resultado de cada intento quedó registrado (\codigo{recuperacion.csv}).
+
+\subsubsection{Extracción de datos}
+
+La extracción siguió un formulario fijo (\codigo{instrucciones\_extraccion.md}) con tres salidas por grupo temático: (a) por documento, si se obtuvo, la decisión a texto completo, el organismo emisor y si ya era fuente de la base; (b) por esquema pediátrico, las mismas columnas de la hoja de esquemas de la base (medicamento, vía, forma de expresar la dosis, dosis mínima, habitual y máxima, intervalo, dosis máximas por toma y por día, duración, límites de edad y peso) más la página o tabla, la \emph{cita textual} y la comparación con la base (igual, distinta o nueva); y (c) las dosis máximas que declare cada documento. Las tablas cuyo texto extraído salía desordenado se leyeron sobre imágenes de las páginas. Se priorizó extraer todo de los documentos colombianos y latinoamericanos y, de los internacionales, la versión más reciente de cada organismo principal. En dos de los cuatro grupos, un programa comprobó que cada cita aparece palabra por palabra en el texto fuente.
+
+\subsubsection{Síntesis}
+
+La síntesis fue descriptiva, sin metaanálisis, porque las unidades de análisis son recomendaciones y no estimaciones de efecto. Para cuantificar la concordancia se tomaron los esquemas orales extraídos expresados por kilogramo; los expresados por kilogramo y toma se convirtieron a dosis diaria con su intervalo, y se descartaron los que no indicaban intervalo. Para cada par enfermedad--medicamento recomendado por al menos dos documentos distintos se calculó la razón
+\begin{equation}
+R = \frac{\max_i \, d_i^{\text{máx}}}{\min_i \, d_i^{\text{mín}}},
+\label{eq:razon}
+\end{equation}
+donde $d_i^{\text{mín}}$ y $d_i^{\text{máx}}$ son los extremos de la dosis diaria (mg/kg/día) del documento $i$. $R = 1$ indica que todos los documentos recomiendan la misma dosis. La penicilina V se excluyó de este análisis porque unas guías la dosifican en miligramos y otras en unidades internacionales. $R$ no distingue entre una diferencia de criterio y una diferencia de esquema (por ejemplo, dosis de carga frente a mantenimiento); es una cota superior de la heterogeneidad y se interpreta junto con los esquemas que la producen (\codigo{docs/articulo/concordancia.py}).
+
+\subsubsection{Integración a la base de conocimiento}
+
+Para elegir la recomendación que carga la calculadora se aplicó la jerarquía del protocolo: (1) guía o lineamiento colombiano vigente; (2) guía latinoamericana o de la OMS/OPS; (3) guía internacional reciente de una sociedad científica o agencia. Cuando la guía elegida no daba un dato necesario para calcular, se tomó de la siguiente en la jerarquía o de la ficha técnica, y la nota del esquema lo declara. Se excluyeron los medicamentos sin registro sanitario vigente en Colombia~\citep{invima}. Todo dato incorporado entró en estado «borrador» con su fuente y su página; el programa que aplica los cambios (\codigo{docs/revision/integrar.py}) es idempotente y deja escrito el motivo de cada decisión, incluidas las de no incorporar.
+
+\subsection{Corpus inicial y estimaciones publicadas}
+
+El corpus inicial de 31 documentos reunido por el equipo clínico se clasificó por diseño e infección. Las estimaciones de efecto de sus revisiones sistemáticas y ensayos se presentan como fueron publicadas; no se combinaron en una estimación nueva porque el corpus no proviene de una búsqueda sistemática, las preguntas, poblaciones y desenlaces difieren entre documentos, y ninguna pregunta tenía más de dos ensayos primarios dentro del corpus. Donde el texto traía los conteos, la medida de efecto se recalculó (riesgo relativo con intervalo por el método logarítmico; diferencia de riesgos con intervalo de Wald) para comprobar su reproducibilidad. Se midió además la sensibilidad de la búsqueda nueva como la proporción de documentos del corpus inicial que recuperó.
+
+\subsection{Modelo de datos y reglas de codificación}
+
+La base de conocimiento se registra en siete hojas de datos (fuentes, medicamentos, presentaciones comerciales, bandas de ajuste renal, topes por medicamento, enfermedades y esquemas) que un programa convierte en un único archivo validado. Cada esquema tiene línea de tratamiento (primera, segunda o alergia), opción, componentes (para las combinaciones), dosis, intervalo, topes, duración, límites de edad y peso, nota, fuente, página y estado de revisión. Las reglas principales fueron:
+
+\begin{itemize}
+  \item donde existe guía colombiana, se registra como primera opción y las demás como alternativas;
+  \item cuando la fuente da un rango de dosis, el cálculo usa el extremo superior y el resultado muestra el rango completo;
+  \item cuando la fuente no da la dosis máxima, se deja sin máximo o se toma de otra fuente, y la nota lo declara;
+  \item \textbf{tope por medicamento (nuevo en esta versión):} la dosis máxima del medicamento por vía, en la práctica la del adulto, con su fuente. Solo se aplica a los esquemas que no traen su propio tope de ese tipo (por toma o por día), y el resultado lo advierte;
+  \item el estado «verificado» exige el registro de dos revisores clínicos distintos; mientras tanto el resultado lleva una advertencia visible.
+\end{itemize}
+
+El ajuste renal se codificó por bandas de filtración glomerular a partir de fichas técnicas armonizadas de la Agencia Europea de Medicamentos~\citep{emaamoxil} y del formulario pediátrico neerlandés~\citep{kinderformularium}.
+
+\subsection{Motor de cálculo}
+
+El motor, escrito en C++17, aplica cinco pasos en orden fijo (figura~\ref{fig:motor}). Sea $P$ el peso en kilogramos, $d$ la dosis de la guía (extremo superior del rango) y $\tau$ el intervalo en horas.
+
+\paragraph{1. Dosis base por toma.}
+\begin{equation}
+D_0 =
+\begin{cases}
+d \cdot P \cdot \tau / 24 & \text{si la dosis está en mg/kg/día},\\
+d \cdot P & \text{si está en mg/kg por toma},\\
+d & \text{si es una dosis fija.}
+\end{cases}
+\end{equation}
+
+\paragraph{2. Topes.} Con $T_{\text{toma}}$ y $T_{\text{día}}$ los topes del esquema o, en su defecto, los del medicamento por esa vía:
+\begin{equation}
+D_1 = \min\!\left(D_0,\; T_{\text{toma}},\; T_{\text{día}} \cdot \tau/24\right).
+\end{equation}
+
+\paragraph{3. Ajuste renal.} Si la filtración del paciente cae en una banda del medicamento: si la banda indica evitarlo, el medicamento no se calcula; si no, con $r$ la dosis de reemplazo por kilogramo, $f$ la fracción de la dosis, $B$ el tope de la banda y $\tau_{\min}$ el intervalo mínimo (cada elemento solo si la banda lo define),
+\begin{equation}
+D_2 = \min\!\left(\big(r \cdot P \ \text{o}\ D_1\big)\cdot f,\; B\right), \qquad \tau' = \max(\tau, \tau_{\min}).
+\end{equation}
+
+\paragraph{4. Presentación comercial.} Con $c$ el contenido por unidad (mg por mL, por tableta o por vial) y $s$ el paso de redondeo (0,5~mL; media tableta; una cápsula), la cantidad exacta $q^{*} = D_2/c$ se redondea a $q = s\lfloor q^{*}/s + 1/2\rfloor$; si $q \cdot c$ supera el menor de los topes por toma aplicables (del esquema, del medicamento o de la banda renal), se redondea hacia abajo, $q = s\lfloor q^{*}/s\rfloor$. La presentación se marca como adecuada si $q > 0$ y la desviación
+\begin{equation}
+\delta = \frac{q\,c - D_2}{D_2}
+\end{equation}
+cumple $|\delta| \le 0{,}10$.
+
+\paragraph{5. Advertencias.} Cada condición relevante produce un aviso con código estable: tope aplicado (de la guía o del medicamento), esquema sin ningún tope, ajuste renal aplicado o sin dato, medicamento que se debe evitar, presentación inadecuada o inexistente y contenido no verificado.
+
+La filtración glomerular se digita o se estima con la ecuación CKiD U25~\citep{pierce2021} o con la de Schwartz de cabecera~\citep{schwartz2009}. El motor es determinista: no usa aleatoriedad, red ni reloj, y cada resultado incluye el desglose de los pasos y la fuente.
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[
+  font=\sffamily\small, node distance=4mm and 5mm,
+  paso/.style={draw=marino, fill=marino!6, rounded corners=3pt, minimum height=12mm, text width=24mm, align=center},
+  dato/.style={draw=gris!60, fill=white, rounded corners=2pt, text width=24mm, align=center, font=\sffamily\scriptsize},
+  flecha/.style={-{Stealth[length=2.2mm]}, thick, marino}]
+  \node[paso] (p1) {1. Dosis base\\ $D_0$};
+  \node[paso, right=of p1] (p2) {2. Topes\\ $D_1$};
+  \node[paso, right=of p2] (p3) {3. Ajuste renal\\ $D_2,\ \tau'$};
+  \node[paso, right=of p3] (p4) {4. Presentación\\ $q,\ \delta$};
+  \node[paso, right=of p4, fill=dorado!15, draw=dorado] (p5) {5. Resultado con advertencias};
+  \foreach \a/\b in {p1/p2, p2/p3, p3/p4, p4/p5} \draw[flecha] (\a) -- (\b);
+  \node[dato, below=of p1] {Peso, edad,\\ esquema de la guía};
+  \node[dato, below=of p2] {Topes del esquema o del medicamento};
+  \node[dato, below=of p3] {TFG digitada o estimada (CKiD U25)};
+  \node[dato, below=of p4] {Presentaciones registradas en Colombia};
+  \node[dato, below=of p5] {Desglose y fuente con página};
+\end{tikzpicture}
+\caption{Pasos del motor de cálculo. Cada paso deja una línea en el desglose que ve el usuario.}
+\label{fig:motor}
+\end{figure}
+
+\subsection{Verificación de la calculadora}
+
+\subsubsection{Pruebas unitarias e implementación independiente}
+
+Las pruebas unitarias se ejecutan sobre una base de conocimiento sintética que ejercita cada regla. Para la comparación cruzada se escribió una segunda implementación en Python a partir de la descripción escrita de las reglas, sin reutilizar código del motor. Ambas se compararon en dos pacientes tipo definidos en el protocolo del proyecto (12 meses, 10~kg, 75~cm; y 13 años, 50~kg, 162~cm), en todos los esquemas aplicables, con función renal normal y con filtración de 40, 20 y 5~mL/min/1,73~m² en los medicamentos con bandas de ajuste. Se exigió igualdad de la dosis por toma (tolerancia relativa de 0,1~\%), del intervalo y de la cantidad de la presentación.
+
+\subsubsection{Prueba exhaustiva con una población modelada}
+
+\paragraph{Población.} Se construyeron pacientes virtuales con los patrones de crecimiento de la OMS para menores de 5 años~\citep{mgrs2006} y la referencia de 5 a 19 años~\citep{deonis2007}, adoptados en Colombia~\citep{res2465}. Las tablas LMS se tomaron de los archivos publicados por la OMS (anexo~E). Para un puntaje $z$, el valor de la medida es~\citep{cole1992}
+\begin{equation}
+X(z) = M\,\big(1 + L\,S\,z\big)^{1/L} \quad (L \neq 0), \qquad X(z) = M\,e^{S z} \quad (L = 0).
+\end{equation}
+Hasta los 60 meses el peso se tomó del patrón de peso para la edad en el puntaje $z$ y la talla de la mediana de longitud o talla para la edad. Desde los 61 meses, como la OMS no publica peso para la edad después de los 10 años, el peso se obtuvo del índice de masa corporal para la edad en el puntaje $z$ y de la talla mediana: $P = \text{IMC}(z) \cdot (\text{talla}/100)^2$. La tabla~\ref{tab:rejilla} describe la rejilla y la figura~\ref{fig:poblacion} muestra los pesos resultantes. Cada paciente virtual se calculó para todas las enfermedades de la base mediante un modo de cálculo por lotes de la línea de órdenes (\codigo{calc-dosis lote}).
+
+\begin{table}[htbp]
+\centering
+\caption{Rejilla de la población modelada.}
+\label{tab:rejilla}
+\small
+\begin{tabularx}{\textwidth}{@{}lX@{}}
+\toprule
+Dimensión & Valores \\
+\midrule
+Edad & 27 edades: 1, 2, 3, 4, 6, 9, 12, 15, 18, 24, 30, 36, 48, 60, 72, 84, 96, 108, 120, 132, 144, 156, 168, 180, 192, 204 y 215 meses \\
+Sexo & Masculino y femenino \\
+Peso & Puntaje $z$ de $-3$, $-2$, 0, $+2$ y $+3$ (de la desnutrición grave a la obesidad) \\
+Talla & Mediana para la edad y el sexo \\
+Función renal & No evaluada; filtración de 75, 45, 20 y 5~mL/min/1,73~m² \\
+Enfermedades & Las 46 de la base \\
+\midrule
+Total & $27 \times 2 \times 5 \times 5 = \num{1350}$ pacientes virtuales; peso de 2,72 a 109,82~kg \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}
+\begin{groupplot}[
+  group style={group size=2 by 1, horizontal sep=14mm},
+  width=0.48\textwidth, height=6.2cm,
+  xlabel={Edad (años)}, xmin=0, xmax=18,
+  ymin=0, ymax=115, grid=major, grid style={gris!20},
+  tick label style={font=\sffamily\scriptsize}, label style={font=\sffamily\small},
+  title style={font=\sffamily\small\bfseries},
+  legend style={font=\sffamily\scriptsize, draw=none, fill=white, fill opacity=0.85, at={(0.03,0.97)}, anchor=north west},
+  cycle list={{marino!35,thick},{marino!60,thick},{marino,very thick},{dorado,thick},{rojo,thick}}]
+\nextgroupplot[title={Niños}, ylabel={Peso (kg)}]
+  \addplot table[x=anios,y=zm3]{datos/peso_m.dat}; \addlegendentry{$z=-3$}
+  \addplot table[x=anios,y=zm2]{datos/peso_m.dat}; \addlegendentry{$z=-2$}
+  \addplot table[x=anios,y=z0]{datos/peso_m.dat};  \addlegendentry{$z=0$}
+  \addplot table[x=anios,y=zp2]{datos/peso_m.dat}; \addlegendentry{$z=+2$}
+  \addplot table[x=anios,y=zp3]{datos/peso_m.dat}; \addlegendentry{$z=+3$}
+\nextgroupplot[title={Niñas}]
+  \addplot table[x=anios,y=zm3]{datos/peso_f.dat};
+  \addplot table[x=anios,y=zm2]{datos/peso_f.dat};
+  \addplot table[x=anios,y=z0]{datos/peso_f.dat};
+  \addplot table[x=anios,y=zp2]{datos/peso_f.dat};
+  \addplot table[x=anios,y=zp3]{datos/peso_f.dat};
+\end{groupplot}
+\end{tikzpicture}
+\caption{Peso de los pacientes virtuales por edad, sexo y puntaje $z$. El cambio de pendiente a los 5 años refleja el paso del patrón de peso para la edad al de índice de masa corporal para la edad con talla mediana.}
+\label{fig:poblacion}
+\end{figure}
+
+\paragraph{Comprobaciones.} Un programa independiente del motor (\codigo{docs/validacion/verificar.py}) recalcula cada resultado a partir de las hojas de datos y de las reglas escritas, y aplica las comprobaciones de la tabla~\ref{tab:comprobaciones}. Las comprobaciones A a D debían cumplirse sin excepción; la E es descriptiva. La prueba completa se ejecuta como parte del conjunto de pruebas automáticas del proyecto.
+
+\begin{table}[htbp]
+\centering
+\caption{Comprobaciones de la prueba exhaustiva.}
+\label{tab:comprobaciones}
+\small
+\begin{tabularx}{\textwidth}{@{}lXl@{}}
+\toprule
+& Comprobación & Origen \\
+\midrule
+A & Cada dosis, intervalo y cantidad de presentación coincide con el recálculo independiente & Reglas \\
+B & Cada opción aparece calculada o «no aplica» según sus límites de edad y peso & Reglas \\
+C1 & La dosis por kilogramo entregada no supera el máximo de la guía & Literatura \\
+C2 & La dosis no supera los topes por toma ni por día (del esquema o del medicamento) & Literatura \\
+C3 & Con función renal reducida la dosis no aumenta ni el intervalo se acorta & Fichas técnicas \\
+C4 & Donde la ficha técnica indica evitar, no se calcula; donde falta el dato renal, se advierte & Fichas técnicas \\
+C5 & Todo esquema por peso sin ningún tope muestra la advertencia correspondiente & Seguridad \\
+C6 & Las presentaciones marcadas adecuadas desvían 10~\% o menos y no superan el tope por toma & Seguridad \\
+C7 & A igual edad y función renal, la dosis no disminuye al aumentar el peso & Coherencia \\
+D & Dos ejecuciones producen archivos idénticos (comparación SHA-256) & Determinismo \\
+E & Concordancia con tablas publicadas de dosis por peso (AIEPI 2012 y OMS 2022) & Literatura \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\paragraph{Concordancia con tablas publicadas.} Se comparó la amoxicilina de primera línea para la otitis media aguda (90~mg/kg/día cada 12 horas~\citep{acorloma2024}) con dos tablas de dosis por peso: la de AIEPI, que da mililitros por toma cada 12 horas en tres concentraciones para bandas de 4 a 21~kg (libro clínico, p.~492)~\citep{aiepi2012}, y la del libro AWaRe de la OMS, que da miligramos por toma cada 12 horas para bandas de 3 a más de 20~kg (tabla~50.1)~\citep{aware2022}. Para cada paciente virtual con función renal no evaluada cuyo peso cae en una banda, se calculó la diferencia relativa entre la cantidad de la calculadora y la de la tabla. Las bandas de AIEPI se expresan en kilogramos enteros, por lo que la banda de 4 a 6~kg se aplicó hasta 6,99~kg.
+
+\subsection{Consideraciones éticas, disponibilidad y uso de inteligencia artificial}
+
+No participaron pacientes ni se usaron datos identificables; los pacientes son virtuales. El código, las hojas de datos, los registros de la búsqueda, las decisiones de cribado y extracción, y los programas que generan cada cifra están en el repositorio del proyecto \pendiente{disponibilidad pública por definir}. Los textos completos de las guías no se redistribuyen porque tienen derechos de autor. El uso de un modelo de lenguaje se declara al final del documento.
+
+% =============================================================================
+\section{Resultados}
+
+\subsection{Búsqueda y selección}
+
+Las 44 consultas recuperaron \num{2054} registros: \num{1587} de PubMed, 269 de OpenAlex y 198 de DOAJ. Tras eliminar 182 duplicados quedaron \num{1872} registros para el cribado, de los que se excluyeron \num{1697}, la mayoría por no ser guías (\num{1095}). Pasaron el cribado 175 documentos. Se obtuvo el texto completo de 77, se excluyeron 19 a texto completo y se incluyeron 58 en la síntesis (figura~\ref{fig:flujo}).
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[
+  font=\sffamily\scriptsize, node distance=6mm and 7mm,
+  caja/.style={draw=marino, rounded corners=2pt, text width=60mm, align=left, inner sep=4pt, fill=white},
+  excl/.style={draw=gris, rounded corners=2pt, text width=68mm, align=left, inner sep=4pt, fill=gris!6},
+  etapa/.style={fill=marino, text=white, font=\sffamily\scriptsize\bfseries, rotate=90, minimum width=18mm, align=center},
+  flecha/.style={-{Stealth[length=2mm]}, marino, thick}]
+  \node[caja, minimum height=15mm] (id) {\textbf{Registros identificados: \num{2054}}\\ PubMed: \num{1587} · OpenAlex: 269 · DOAJ: 198\\ (44 consultas, 11 grupos de infecciones)};
+  \node[excl, right=of id, minimum height=15mm] (dup) {Duplicados eliminados: 182\\ LILACS y SciELO: no consultables de forma\\ automatizada (HTTP 403)};
+  \node[caja, below=of id, minimum height=17mm] (cr) {\textbf{Registros cribados por título y resumen:}\\ \textbf{\num{1872}}};
+  \node[excl, right=of cr, minimum height=17mm] (excr) {\textbf{Excluidos: \num{1697}}\\ E1 no es guía: \num{1095} · E2 sin tratamiento: 236\\ E3 población: 27 · E4 infección: 250\\ E5 versión reemplazada: 27 · E6 no recuperable: 62};
+  \node[caja, below=of cr, minimum height=12mm] (bu) {\textbf{Documentos buscados a texto completo: 175}\\ Colombia 4 · Latinoamérica 24 · OMS/OPS 7\\ Internacional 140};
+  \node[excl, right=of bu, minimum height=12mm] (nr) {\textbf{No obtenidos: 98}\\ Acceso cerrado o sin copia legal disponible};
+  \node[caja, below=of bu, minimum height=13mm] (ev) {\textbf{Evaluados a texto completo: 77}\\ 68 por acceso abierto (45 de PubMed Central,\\ 23 de otras fuentes) y 9 de copias previas};
+  \node[excl, right=of ev, minimum height=13mm] (ext) {\textbf{Excluidos: 19}\\ T1 sin dosis pediátricas: 15 · T2 no es guía: 3\\ T3 duplicado: 1};
+  \node[caja, below=of ev, draw=dorado, line width=0.8pt, minimum height=13mm] (inc) {\textbf{Incluidos en la síntesis: 58}\\ Colombia 2 · Latinoamérica 13 · OMS 1\\ Internacional 42\\ 413 esquemas y 111 dosis máximas extraídos};
+  \foreach \a/\b in {id/cr, cr/bu, bu/ev, ev/inc} \draw[flecha] (\a) -- (\b);
+  \foreach \a/\b in {id/dup, cr/excr, bu/nr, ev/ext} \draw[flecha] (\a) -- (\b);
+  \node[etapa, anchor=south, minimum width=14mm] at ($(id.west)+(-3mm,0)$) {Identificación};
+  \node[etapa, anchor=south, minimum width=26mm] at ($(cr.west)!0.5!(bu.west)+(-3mm,0)$) {Cribado};
+  \node[etapa, anchor=south, minimum width=14mm] at ($(ev.west)+(-3mm,0)$) {Elegibilidad};
+  \node[etapa, anchor=south, minimum width=14mm] at ($(inc.west)+(-3mm,0)$) {Inclusión};
+\end{tikzpicture}
+\caption{Flujo de la revisión de alcance (PRISMA-ScR). Las cifras se calculan con \codigo{docs/revision/prisma.py} a partir de los archivos de la revisión.}
+\label{fig:flujo}
+\end{figure}
+
+La tabla~\ref{tab:recuperacion} detalla la obtención de los textos. De los 175 documentos, 45 estaban en PubMed Central y 23 tenían una copia de acceso abierto descargable; 40 figuraban como de acceso abierto, pero la editorial rechazó la descarga automatizada o la copia era solo una página de presentación; 47 eran de acceso cerrado y 20 no tenían identificador que permitiera buscarlos. Entre los no obtenidos están guías relevantes: la guía de meningitis de NICE de 2024, la de la OMS de 2025, la actualización de IDSA/PIDS de 2026 sobre neumonía, el consenso español de 2025 sobre el tratamiento etiológico de la gastroenteritis y la guía colombiana de enfermedad diarreica aguda publicada en 2015~\citep{florez2015}, cuyo servidor rechazó la descarga.
+
+\begin{table}[htbp]
+\centering
+\caption{Obtención del texto completo de los 175 documentos que pasaron el cribado.}
+\label{tab:recuperacion}
+\small
+\begin{tabular}{@{}lrrrrr@{}}
+\toprule
+Resultado & G1 & G2 & G3 & G4 & Total \\
+\midrule
+PubMed Central & 14 & 12 & 12 & 7 & 45 \\
+Copia de acceso abierto (PDF o HTML) & 6 & 4 & 13 & 0 & 23 \\
+Acceso abierto declarado, descarga rechazada & 14 & 11 & 7 & 8 & 40 \\
+Acceso cerrado & 14 & 13 & 12 & 8 & 47 \\
+Sin identificador utilizable & 5 & 6 & 6 & 3 & 20 \\
+\midrule
+Total cribado & 53 & 46 & 50 & 26 & 175 \\
+Evaluados a texto completo\textsuperscript{a} & 26 & 17 & 25 & 9 & 77 \\
+Incluidos en la síntesis & 19 & 15 & 19 & 5 & 58 \\
+\bottomrule
+\end{tabular}
+
+\vspace{2pt}
+\begin{minipage}{0.92\textwidth}\footnotesize
+G1: vías respiratorias altas, boca y ojos. G2: vías respiratorias bajas. G3: infección urinaria, piel, parásitos, fiebre y meningitis. G4: diarrea. \textsuperscript{a}Incluye 9 documentos obtenidos en la fase previa del proyecto; por eso no coincide con la suma de las dos primeras filas.
+\end{minipage}
+\end{table}
+
+\subsection{Características de los documentos incluidos}
+
+De los 58 documentos incluidos, 42 son internacionales, 13 latinoamericanos, 2 colombianos y 1 de la OMS. Diecinueve corresponden a vías respiratorias altas, boca y ojos; 15 a vías respiratorias bajas; 19 a infección urinaria, piel, fiebre y meningitis, y 5 a diarrea. La tabla~\ref{tab:latam} enumera los documentos colombianos y latinoamericanos incluidos, que se extrajeron por completo.
+
+\begin{table}[htbp]
+\centering
+\caption{Documentos colombianos y latinoamericanos incluidos en la síntesis.}
+\label{tab:latam}
+\small
+\begin{tabularx}{\textwidth}{@{}llXr@{}}
+\toprule
+País & Año & Organismo y tema & Ref. \\
+\midrule
+Colombia & 2024 & Asociación Colombiana de Otorrinolaringología: rinosinusitis en niños & \citep{acorlrs2024} \\
+Colombia & 2023 & Guía de práctica clínica (revista \emph{Infectio}): piel y tejidos blandos & \citep{acin2023} \\
+Chile & 2019 & Sociedad Chilena de Infectología: faringoamigdalitis estreptocócica & \citep{chilefaa2019} \\
+Chile & 2019 & Sociedad Chilena de Infectología: otitis media aguda & \citep{chileoma2019} \\
+Chile & 2019 & Sociedad Chilena de Infectología: rinosinusitis bacteriana & \citep{chilers2019} \\
+Chile & 2019 & Sociedad Chilena de Infectología: neumonía adquirida en la comunidad & \citep{chilenac2019} \\
+Chile & 2022 & Sociedad Chilena de Infectología: infección urinaria (partes 1 y 2) & \citep{chileitu2022} \\
+México & 2022 & Hospital Infantil de México: otitis media aguda & \citep{mexicooma2022} \\
+Brasil & 2025 & Asociación Brasileña de Otorrinolaringología: rinosinusitis & \citep{brasilrs2025} \\
+Argentina & 2024 & Sociedad Argentina de Infectología: neumonía complicada & \citep{sadi2024} \\
+Argentina & 2021 & Sociedad Argentina de Pediatría: infecciones respiratorias bajas en menores de 2 años & \citep{sapiras2021} \\
+Argentina & 2017 & Sociedad Argentina de Pediatría: fiebre sin foco en menores de 36 meses & \citep{sapfiebre2017} \\
+Argentina & 2014 & Sociedad Argentina de Pediatría: piel y partes blandas (partes 1 y 2) & \citep{sappiel2014a,sappiel2014} \\
+Argentina & 2022 & Sociedad Argentina de Pediatría: infección urinaria & \citep{sapitu2022} \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+La búsqueda indexada encontró solo cuatro documentos colombianos y obtuvo el texto completo de dos. Las demás guías colombianas de la base (otitis media aguda y faringoamigdalitis de la Asociación Colombiana de Otorrinolaringología~\citep{acorloma2024,acorlfaa2024}, el consenso de infección urinaria~\citep{itucol2023}, la Guía 42 del Ministerio de Salud~\citep{gpc42} y el libro clínico de AIEPI~\citep{aiepi2012}) provienen de las búsquedas dirigidas de la fase previa; varias no están en las bases consultadas o no tienen la indexación que las estrategias exigían.
+
+\subsection{Sensibilidad frente al corpus inicial}
+
+De los 31 documentos del corpus inicial, la búsqueda recuperó 9: las 7 guías o consensos, todas incluidas~\citep{castelli2025,marchisio2019,chiappini2024,backman2025,china2025,cohen2017,codepeh2019}, y 2 documentos que no son guías, excluidos con el motivo E1. Los 22 no recuperados son ensayos, revisiones sistemáticas, revisiones narrativas, estudios observacionales, un protocolo, una serie de casos y otros documentos que la estrategia excluye por diseño (tabla~\ref{tab:corpus}). La sensibilidad de la búsqueda para las guías del corpus inicial fue, por tanto, de 7 de 7.
+
+\begin{table}[htbp]
+\centering
+\caption{Diseño de los 31 documentos del corpus inicial y su recuperación por la búsqueda nueva.}
+\label{tab:corpus}
+\small
+\begin{tabular}{@{}lrr@{}}
+\toprule
+Diseño & Documentos & Recuperados \\
+\midrule
+Guía, consenso o recomendación de sociedad científica & 7 & 7 \\
+Revisión sistemática con metaanálisis & 5 & 0 \\
+Ensayo clínico aleatorizado & 2 & 0 \\
+Protocolo de ensayo clínico & 1 & 0 \\
+Estudio observacional o cuasiexperimental & 6 & 1 \\
+Revisión narrativa o de evidencia & 7 & 1 \\
+Serie de casos & 1 & 0 \\
+Otros (hoja informativa; desarrollo de una aplicación) & 2 & 0 \\
+\midrule
+Total & 31 & 9 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Estimaciones publicadas en el corpus inicial}
+
+La tabla~\ref{tab:estimaciones} resume las estimaciones de las cinco revisiones sistemáticas y los dos ensayos del corpus inicial. Tres hallazgos son pertinentes para la calculadora: en la neumonía tratada de forma ambulatoria, los cursos de 3 a 5 días no difirieron de los de 7 a 10 días en fracaso del tratamiento~\citep{kuitunen2023}; en la faringoamigdalitis estreptocócica no hubo diferencias clínicamente importantes entre clases de antibióticos, con certeza baja~\citep{hedin2023}, y la penicilina V durante 5 días fue no inferior a 10 días en curación clínica, aunque con menor erradicación bacteriológica~\citep{skoog2019}; y para la foliculitis y los forúnculos la evidencia fue insuficiente para comparar tratamientos~\citep{lin2021}.
+
+\begin{table}[htbp]
+\centering
+\caption{Estimaciones publicadas en las revisiones sistemáticas y ensayos del corpus inicial.}
+\label{tab:estimaciones}
+\scriptsize
+\begin{tabularx}{\textwidth}{@{}lXlX@{}}
+\toprule
+Estudio & Comparación y población & Estudios (participantes) & Resultado principal, como fue publicado \\
+\midrule
+Kuitunen 2023~\citep{kuitunen2023} & Curso corto (3--5 días) frente a largo (7--10 días); neumonía ambulatoria, 6 meses o más & 4 (\num{1541}) & Fracaso: 7,9~\% frente a 8,0~\%; diferencia de riesgos 0,00 (IC~95~\%: $-0{,}03$ a 0,02) \\
+Lassi 2021~\citep{lassi2021} & Amoxicilina frente a placebo; neumonía no grave con sibilancias, 2 a 59 meses & 3 (\num{3222}) & Fracaso: RR 0,80 (IC~95~\%: 0,68 a 0,94); certeza baja \\
+Hedin 2023~\citep{hedin2023} & Cefalosporinas frente a penicilina; faringitis estreptocócica & 5 (\num{2018}) & Sin resolución de síntomas: OR 0,79 (0,55 a 1,12); certeza baja \\
+Hedin 2023~\citep{hedin2023} & Macrólidos frente a penicilina; faringitis estreptocócica & 6 (\num{1728}) & Resolución de síntomas: OR 1,11 (0,92 a 1,35); certeza baja \\
+Dawit 2021~\citep{dawit2021} & Azitromicina frente a amoxicilina-clavulanato; otitis media & 14 & Eficacia al terminar: OR 0,75 (0,62 a 0,91)\textsuperscript{a} \\
+Lin 2021~\citep{lin2021} & Antibióticos orales entre sí; foliculitis y forúnculos & 18 (\num{1300}) & Sin diferencias demostradas; certeza baja o muy baja \\
+Skoog Ståhlgren 2019~\citep{skoog2019} & Penicilina V 5 frente a 10 días; faringoamigdalitis estreptocócica, 6 años o más & 1 (433) & Curación clínica 89,6~\% frente a 93,3~\% (IC~95~\% de la diferencia: $-9{,}7$ a 2,2); erradicación 80,4~\% frente a 90,7~\% \\
+Hullegie 2024~\citep{hullegie2024} & Gotas óticas frente a amoxicilina oral; otitis media con otorrea & 1 (58 de 350 previstos) & Resolución a 3 días: 42~\% frente a 65~\%; terminado antes de tiempo, no concluyente \\
+\bottomrule
+\end{tabularx}
+
+\vspace{2pt}
+\begin{minipage}{0.95\textwidth}\footnotesize
+OR: razón de momios; RR: riesgo relativo. \textsuperscript{a}El intervalo excluye el 1, pero el resumen describe el resultado como una diferencia no significativa.
+\end{minipage}
+\end{table}
+
+El recálculo con los conteos impresos reprodujo el riesgo relativo de retratamiento de Kuitunen (1,07; IC~95~\%: 0,74 a 1,55) y dos de las tres comparaciones de un solo estudio de Lin. En la tercera (cefdinir frente a cefalexina; 25/32 frente a 32/42) se obtuvo 1,03 (0,80 a 1,32), frente al 1,00 (0,73 a 1,38) publicado. Para Skoog Ståhlgren la diferencia de curación clínica fue de $-3{,}7$ puntos con un intervalo de Wald de $-9{,}2$ a 1,7, más estrecho que el publicado, que usa otro método.
+
+\subsection{Esquemas extraídos y comparación con la base}
+
+Se extrajeron 413 esquemas pediátricos con cita textual y página (tabla~\ref{tab:extraccion}): 84 coincidían con un esquema ya cargado, 95 diferían en algún valor (dosis, intervalo, tope o duración) y 234 eran nuevos para la base, ya fuera porque la enfermedad o el medicamento no estaban o porque se trataba de otra línea de tratamiento. Se extrajeron además 111 dosis máximas.
+
+\begin{table}[htbp]
+\centering
+\caption{Esquemas extraídos y su comparación con la base de conocimiento previa, por grupo.}
+\label{tab:extraccion}
+\small
+\begin{tabular}{@{}lrrrrr@{}}
+\toprule
+Grupo & Iguales & Distintos & Nuevos & Total & Dosis máximas \\
+\midrule
+G1 Vías altas, boca y ojos & 39 & 22 & 28 & 89 & 24 \\
+G2 Vías bajas & 11 & 30 & 55 & 96 & 24 \\
+G3 Urinaria, piel, fiebre, meningitis & 19 & 32 & 129 & 180 & 43 \\
+G4 Diarrea & 15 & 11 & 22 & 48 & 20 \\
+\midrule
+Total & 84 & 95 & 234 & 413 & 111 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Los esquemas nuevos se concentraron en infecciones que la base no cubría o cubría solo de forma ambulatoria: meningitis bacteriana, neumonía complicada y necrotizante, infección urinaria complicada, infecciones graves de piel por \emph{Staphylococcus aureus} resistente a meticilina y yersiniosis, además de esquemas neonatales que quedan fuera del alcance de la calculadora.
+
+\subsection{Variabilidad entre guías}
+
+Cuarenta y siete pares enfermedad--medicamento oral fueron recomendados por dos o más documentos con dosis comparables. En 14 todos los documentos coincidieron ($R = 1$); en 21 la dosis diaria más alta duplicó o más a la más baja ($R \ge 2$); la mediana de $R$ fue 1,5. La tabla~\ref{tab:discordancia} enumera los pares con $R \ge 2$.
+
+\begin{table}[htbp]
+\centering
+\caption{Pares enfermedad--medicamento con razón de 2 o más entre la dosis diaria más alta y la más baja recomendadas (ecuación~\ref{eq:razon}).}
+\label{tab:discordancia}
+\small
+\begin{tabular}{@{}llrrrr@{}}
+\toprule
+Enfermedad & Medicamento & Documentos & \multicolumn{2}{c}{mg/kg/día} & $R$ \\
+\cmidrule(lr){4-5}
+& & & mínimo & máximo & \\
+\midrule
+Pielonefritis & Cefalexina & 3 & 25 & 100 & 4,0 \\
+Cistitis & Cefalexina & 2 & 25 & 100 & 4,0 \\
+Rinosinusitis & Amoxicilina & 5 & 25 & 90 & 3,6 \\
+Rinosinusitis & Amoxicilina-clavulanato & 5 & 25 & 90 & 3,6 \\
+Shigelosis & Azitromicina & 2 & 6 & 20 & 3,3\textsuperscript{a} \\
+Celulitis & Cefalexina & 3 & 50 & 150 & 3,0 \\
+Neumonía por micoplasma & Levofloxacina & 2 & 8 & 20 & 2,5 \\
+Cistitis & Nitrofurantoína & 2 & 3 & 7 & 2,3 \\
+Otitis media aguda & Amoxicilina & 6 & 40 & 90 & 2,25 \\
+Neumonía & Amoxicilina & 5 & 40 & 90 & 2,25 \\
+Otitis media aguda & Amoxicilina-clavulanato & 5 & 40 & 90 & 2,25 \\
+Neumonía por micoplasma & Doxiciclina & 3 & 2 & 4,4 & 2,2 \\
+Neumonía por micoplasma & Azitromicina & 4 & 5 & 10 & 2,0\textsuperscript{a} \\
+Pielonefritis & Trimetoprim-sulfametoxazol & 3 & 6 & 12 & 2,0 \\
+Profilaxis de infección urinaria & Nitrofurantoína & 3 & 1 & 2 & 2,0 \\
+Rinosinusitis & Cefuroxima & 3 & 25 & 50 & 2,0 \\
+Campylobacteriosis & Azitromicina & 2 & 10 & 20 & 2,0 \\
+Impétigo & Cefalexina & 2 & 50 & 100 & 2,0 \\
+Pielonefritis & Amoxicilina-clavulanato 7:1 & 2 & 40 & 80 & 2,0 \\
+Pielonefritis & Ciprofloxacina & 2 & 20 & 40 & 2,0 \\
+Profilaxis de infección urinaria & Trimetoprim & 2 & 1 & 2 & 2,0 \\
+\bottomrule
+\end{tabular}
+
+\vspace{2pt}
+\begin{minipage}{0.92\textwidth}\footnotesize
+\textsuperscript{a}Incluye esquemas con dosis de carga el primer día y dosis menor después; la razón mezcla ambos tramos. Archivo completo: \codigo{docs/articulo/concordancia.csv}.
+\end{minipage}
+\end{table}
+
+La amoxicilina, el antibiótico de primera línea más frecuente en la base, ilustra el fenómeno (tabla~\ref{tab:amoxicilina}). Para la otitis media aguda, las guías colombianas, mexicana, estadounidenses, italianas y de la OMS recomiendan 80 a 90~mg/kg/día, mientras la guía chilena recomienda 40 a 50~mg/kg/día y lo justifica por la baja resistencia del neumococo en Chile~\citep{chileoma2019}. Para la neumonía ambulatoria, la dosis habitual finlandesa~\citep{backman2025} y la chilena~\citep{chilenac2019} son la mitad de la colombiana~\citep{gpc42,aiepi2012}. Esa diferencia se traslada sin atenuación al resultado: para el paciente tipo de 10~kg con neumonía, la calculadora entrega 900~mg al día con la guía colombiana y 450~mg al día con la dosis habitual finlandesa.
+
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{3.0cm}>{\raggedright\arraybackslash}p{6.1cm}>{\raggedright\arraybackslash}p{3.6cm}>{\raggedright\arraybackslash}p{2.2cm}@{}}
+\caption{Dosis diaria de amoxicilina oral recomendada, por indicación y documento.}\label{tab:amoxicilina}\\
+\toprule
+Indicación & Documento & mg/kg/día & Tomas al día \\
+\midrule
+\endfirsthead
+\toprule
+Indicación & Documento & mg/kg/día & Tomas al día \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+Otitis media aguda & ACORL 2024, Colombia~\citep{acorloma2024} & 90 & 2 \\
+& AIEPI 2012, Colombia~\citep{aiepi2012} & 90 & 2 \\
+& Hospital Infantil de México 2022~\citep{mexicooma2022} & 90 & No indicado \\
+& Sociedad Chilena de Infectología 2019~\citep{chileoma2019} & 40--50 & 2 \\
+& Consenso italiano 2025~\citep{castelli2025} & 80--90 & 3 \\
+& Sociedad Italiana de Pediatría 2019~\citep{marchisio2019} & 80--90 & 3 \\
+& AAP 2013, Estados Unidos~\citep{lieberthal2013} & 80--90 & 2 \\
+& AAFP 2019, Estados Unidos~\citep{gaddey2019} & 80--90 & 2 \\
+& OMS 2022~\citep{aware2022} & 80--90 & 2 o 3 \\
+& Sakulchit y Goldman 2017, Canadá~\citep{sakulchit2017} & 45--60 o 75--90 & 3 o 2 \\
+& Guía israelí descrita por Rothman 2018~\citep{rothman2018} & 60--80 & 2 o 3 \\
+\midrule
+Neumonía ambulatoria & Guía 42, Colombia 2014~\citep{gpc42} & 90 & No indicado \\
+& AIEPI 2012, Colombia~\citep{aiepi2012} & 90 & 2 \\
+& Sociedad Chilena de Infectología 2019~\citep{chilenac2019} & 50 & 2 \\
+& Sociedad Argentina de Pediatría 2021~\citep{sapiras2021} & 80--90 & 2 o 3 \\
+& PIDS/IDSA 2011, Estados Unidos~\citep{bradley2011} & 90 & 2 \\
+& OMS 2014~\citep{who2014} & 80 & 2 \\
+& Guía finlandesa 2023, dosis habitual~\citep{backman2025} & 40--45 & 3 \\
+& Guía finlandesa 2023, dosis alta~\citep{backman2025} & 80--90 & 3 \\
+\midrule
+Rinosinusitis bacteriana & ACORL 2024, Colombia~\citep{acorlrs2024} & 80--90 & 2 o 3 \\
+& Sociedad Chilena de Infectología 2019~\citep{chilers2019} & 50 & 2 \\
+& Asociación Brasileña de Otorrinolaringología 2025~\citep{brasilrs2025} & 25--50 (90 si se sospecha resistencia) & 2 o 3 \\
+& AAP 2013, Estados Unidos~\citep{wald2013} & 45 o 80--90 & 2 \\
+\midrule
+Faringoamigdalitis estreptocócica & ACORL 2024, Colombia~\citep{acorlfaa2024} & 50 & 1 o 2 \\
+& Sociedad Chilena de Infectología 2019~\citep{chilefaa2019} & 50 & 1 o 2 \\
+& IDSA 2012, Estados Unidos~\citep{shulman2012} & 50 & 1 o 2 \\
+& Consenso italiano 2024~\citep{chiappini2024} & 50 & 2 \\
+& OMS 2022~\citep{aware2022} & 80--90 & 2 o 3 \\
+\end{longtable}
+
+\subsection{Integración a la base de conocimiento}
+
+La aplicación de la jerarquía produjo los cambios de la tabla~\ref{tab:integracion}. Tres de las cinco enfermedades nuevas proceden de guías colombianas o latinoamericanas; la meningitis bacteriana se cargó con la OMS como primera opción porque el lineamiento colombiano de enfermedad meningocócica de 2018 escribe la ceftriaxona como «100~mg/kg cada 12 horas» sin aclarar si la cifra es por día o por toma, una ambigüedad que puede duplicar la dosis.
+
+\begin{table}[htbp]
+\centering
+\caption{Cambios incorporados a la base de conocimiento (versión 0.5.0-borrador).}
+\label{tab:integracion}
+\scriptsize
+\begin{tabularx}{\textwidth}{@{}p{4.2cm}p{3.6cm}X@{}}
+\toprule
+Cambio & Fuente & Motivo \\
+\midrule
+Tope por medicamento y vía (28 topes, 23 medicamentos) & \citep{backman2025,bradley2011,lesaux2014,niceng111,buettcher2021,stevens2014,sappiel2014,mcdonald2018,cohen2017}; ficha técnica & La prueba exhaustiva mostró dosis irreales en adolescentes de mayor peso cuando el esquema no tiene tope \\
+Meningitis bacteriana (nueva) & OMS 2022~\citep{aware2022}; Sociedad Canadiense de Pediatría 2014~\citep{lesaux2014} & El lineamiento colombiano es ambiguo en la dosis de ceftriaxona \\
+Neumonía complicada (nueva) & SADI 2024~\citep{sadi2024}; SAP 2021~\citep{sapiras2021} & No se encontró guía colombiana \\
+Rinosinusitis grave hospitalizada (nueva) & ACORL 2024~\citep{acorlrs2024} & Esquemas parenterales de la guía colombiana no cargados \\
+Infección grave de piel por SARM (nueva) & Guía colombiana 2023~\citep{acin2023} & Esquemas intravenosos de la guía colombiana no cargados \\
+Yersiniosis (nueva) & Guía francesa 2017~\citep{cohen2017} & Estaba en una guía ya usada \\
+\emph{C. difficile}: dosis por toma y enfermedad grave & IDSA/SHEA 2017~\citep{mcdonald2018} & Dosis y topes más recientes \\
+Shigelosis: ceftriaxona (2 meses a 5 años) & AIEPI 2012~\citep{aiepi2012} & Único esquema colombiano dosificado con un medicamento registrado \\
+Faringoamigdalitis: cefadroxilo en alergia & IDSA 2012~\citep{shulman2012}; Chile 2019~\citep{chilefaa2019} & Alternativa con registro sanitario \\
+Otitis media aguda: clindamicina en alergia de tipo I & ACORL 2024 la recomienda~\citep{acorloma2024}; dosis de AAP 2013~\citep{lieberthal2013} & La guía colombiana no da la dosis \\
+Número de gotas de ciprofloxacina en la otitis media crónica (nota) & Guía australiana 2021~\citep{leach2021} & AIEPI no lo indica \\
+Seis medicamentos nuevos & Ampicilina-sulbactam, cefotaxima, levofloxacina, vancomicina intravenosa, linezolid, cefadroxilo & Todos con registro sanitario vigente \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+No se incorporaron, con motivo escrito: la amoxicilina a 40--50~mg/kg/día de Chile (responde a la epidemiología chilena y existe guía colombiana), las alternativas de Brasil y México para otitis y sinusitis (existe guía colombiana), los esquemas neonatales (fuera del alcance), la daptomicina y la ceftarolina (uso especializado), el cólera (dosis única con topes de adulto no comprobados), el ácido nalidíxico, la cefixima y el clioquinol (sin registro sanitario vigente o sin disponibilidad), y los esquemas periodontales (manejo odontológico especializado).
+
+La base resultante tiene 46 entidades clínicas (34 con indicación de antibiótico y 12 en las que se recomienda no darlo), 113 esquemas, 37 medicamentos, 51 presentaciones, 17 bandas de ajuste renal, 28 topes por medicamento y 40 fuentes (tabla~\ref{tab:base}). De los 113 esquemas, 57 citan una guía colombiana, 29 un documento del corpus inicial, 18 otra guía internacional, 5 una guía latinoamericana y 4 la OMS; 63 son de primera línea, 32 de segunda y 18 para alergia. Todos están en estado «borrador».
+
+\begin{table}[htbp]
+\centering
+\caption{Entidades clínicas de la base de conocimiento por grupo.}
+\label{tab:base}
+\small
+\begin{tabular}{@{}lrrr@{}}
+\toprule
+Grupo & Entidades & Con antibiótico & Sin antibiótico \\
+\midrule
+Respiratorias altas & 11 & 7 & 4 \\
+Respiratorias bajas & 8 & 5 & 3 \\
+Gastrointestinales & 9 & 8 & 1 \\
+Piel y tejidos blandos & 7 & 6 & 1 \\
+Urinarias & 4 & 3 & 1 \\
+Boca y dientes & 3 & 2 & 1 \\
+Fiebre y enfermedad grave & 3 & 2 & 1 \\
+Ojos & 1 & 1 & 0 \\
+\midrule
+Total & 46 & 34 & 12 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Vacíos de las fuentes}
+
+\paragraph{Dosis máximas.} De los 104 esquemas calculados por peso, 40 tienen una dosis máxima en su propia fuente, 21 la toman de otra fuente (lo declara la nota) y 43 no traen ninguna. De estos 43, el tope por medicamento cubre 33; los 10 restantes no tienen ningún tope con fuente (tabla~\ref{tab:topes}). En total, 64 de 104 esquemas por peso (62~\%) no tienen dosis máxima en la fuente que los recomienda.
+
+\begin{table}[htbp]
+\centering
+\caption{Cobertura de la dosis máxima en los 104 esquemas calculados por peso.}
+\label{tab:topes}
+\small
+\begin{tabular}{@{}lr@{}}
+\toprule
+Origen del tope que aplica la calculadora & Esquemas \\
+\midrule
+Tope en la propia fuente del esquema & 40 \\
+Tope de otra fuente, declarado en la nota & 21 \\
+Tope del medicamento por vía (nuevo) & 33 \\
+Ningún tope con fuente (advertencia visible) & 10 \\
+\midrule
+Total & 104 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\paragraph{Ajuste renal.} Las guías clínicas no traen reglas de ajuste renal. Con fichas técnicas y el formulario neerlandés se codificaron bandas para 12 medicamentos; 4 se registraron como «no requiere ajuste» y 21 quedaron sin dato, en cuyo caso la calculadora advierte cuando la filtración es menor de 90~mL/min/1,73~m². En la fase previa, la comparación de fuentes para 16 medicamentos o formas mostró al menos una discrepancia sobre el umbral, la regla o la población en 12. Con una filtración de 20~mL/min/1,73~m², por ejemplo, la ficha técnica europea indica amoxicilina a 15~mg/kg por toma cada 12 horas~\citep{emaamoxil} y el formulario neerlandés no ajusta por encima de 10~\citep{kinderformularium}: para un niño de 10~kg con otitis, 150~mg o 450~mg por toma.
+
+\paragraph{Disponibilidad.} El ácido nalidíxico, primera opción de la guía del Ministerio de Salud de 2013~\citep{gpc8} y de AIEPI~\citep{aiepi2012} para la disentería, no tiene registro sanitario vigente~\citep{invima}; la guía del Ministerio menciona cefotaxima, ceftriaxona y ciprofloxacina como segunda línea, pero sin dosis. La cefixima, recomendada por varias guías internacionales para la shigelosis y la infección urinaria, tampoco tiene registro vigente. La nitrofurantoína solo está registrada en formas sólidas de 100~mg y la clindamicina no tiene forma líquida oral, por lo que en lactantes ninguna presentación resulta adecuada.
+
+\paragraph{Ambigüedades.} Además de la ceftriaxona del lineamiento meningocócico, la revisión encontró: la ceftriaxona de la guía colombiana de rinosinusitis indicada «cada 12 horas», intervalo poco habitual~\citep{acorlrs2024}; la ampicilina-sulbactam de la misma guía sin indicar a qué componente se refiere la dosis; la penicilina G de la guía colombiana de piel impresa con vía oral~\citep{acin2023}; y el componente del trimetoprim-sulfametoxazol sin precisar en una guía argentina. Estas ambigüedades quedaron en la nota de cada esquema con la indicación «confirmar».
+
+\subsection{Verificación de la calculadora}
+
+\paragraph{Pruebas unitarias e implementación independiente.} En la versión actual pasaron los 53 casos de prueba unitaria (\num{6129} comprobaciones). El motor coincidió con la implementación independiente en los 382 escenarios de los dos pacientes tipo: 199 con función renal normal y 183 con ajuste renal, 311 con comprobación de la cantidad de la presentación, que cubren 31 entidades con al menos un esquema calculable.
+
+\paragraph{Prueba exhaustiva.} Los \num{1350} pacientes virtuales produjeron \num{166250} filas de resultado (tabla~\ref{tab:exhaustiva}). En la primera ejecución la comprobación A falló en \num{1360} de las \num{189590} cantidades de presentación comprobadas (0,7~\%), y la C6 en las mismas: con función renal reducida, el redondeo a la presentación podía superar el tope por toma de la banda renal. Por ejemplo, una niña virtual de 7 años y 33,99~kg con filtración de 20~mL/min/1,73~m² recibía amoxicilina limitada a 500~mg por la banda, pero la suspensión de 750~mg/5~mL se redondeaba de 3,33 a 3,5~mL, que entregan 525~mg. El defecto se corrigió en el motor, se añadió una prueba unitaria que reproduce el caso y, tras la corrección y la integración de los datos nuevos, ninguna comprobación de A a D falló: dos ejecuciones produjeron archivos idénticos.
+
+\begin{table}[htbp]
+\centering
+\caption{Resultado de la prueba exhaustiva con la base 0.5.0-borrador.}
+\label{tab:exhaustiva}
+\small
+\begin{tabular}{@{}lrr@{}}
+\toprule
+Elemento & Cantidad & Fallos \\
+\midrule
+Pacientes virtuales & \num{1350} & \\
+Filas de resultado & \num{166250} & \\
+\quad Dosis calculadas & \num{127510} & \\
+\quad Opciones que no aplican por edad o peso & \num{13100} & \\
+\quad Enfermedades sin indicación de antibiótico & \num{16200} & \\
+\quad Medicamentos que se deben evitar por función renal & \num{4490} & \\
+\quad Indicaciones tópicas sin cálculo & \num{4950} & \\
+\midrule
+A. Dosis e intervalos recalculados & \num{127510} & 0 \\
+A. Cantidades de presentación recalculadas & \num{214230} & 0 \\
+B. Aplicabilidad por edad y peso & todas las filas & 0 \\
+C1. Dosis por kilogramo frente al máximo de la guía & \num{124060} & 0 \\
+C2. Topes por toma y por día & \num{127510} & 0 \\
+C3. Comparaciones con y sin función renal reducida & \num{101110} & 0 \\
+C4. Advertencia por falta de dato renal & \num{25280} & 0 \\
+C5. Advertencia de esquema sin ningún tope & \num{13300} & 0 \\
+C6. Presentaciones marcadas adecuadas & incluidas en A & 0 \\
+C7. Series de peso creciente & \num{25572} & 0 \\
+D. Determinismo (dos ejecuciones) & 1 comparación & 0 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\paragraph{Dosis sin tope en los extremos de peso.} Antes de añadir los topes por medicamento, la prueba mostró dosis claramente superiores a las de un adulto en los adolescentes de mayor peso: por ejemplo, ceftriaxona de \num{5491}~mg al día para un varón virtual de 17 años y 109,8~kg. Con los topes por medicamento quedan 10 esquemas sin ningún tope con fuente; la tabla~\ref{tab:sintope} muestra la dosis que producen en ese paciente. Todos muestran la advertencia de esquema sin tope, pero la cifra no está limitada.
+
+\begin{table}[htbp]
+\centering
+\caption{Esquemas sin ningún tope con fuente: dosis diaria calculada para el paciente virtual de mayor peso (varón, 17 años y 11 meses, 109,8~kg).}
+\label{tab:sintope}
+\small
+\begin{tabular}{@{}llr@{}}
+\toprule
+Enfermedad & Medicamento & mg/día \\
+\midrule
+Rinosinusitis grave hospitalizada & Ampicilina-sulbactam (400 mg/kg/día) & \num{43928} \\
+Celulitis que requiere hospitalización & Oxacilina & \num{21964} \\
+Pielonefritis de manejo intravenoso & Cefazolina & \num{16473} \\
+Celulitis que requiere hospitalización & Cefazolina & \num{10982} \\
+Meningitis bacteriana (alternativa) & Vancomicina intravenosa & \num{6589} \\
+Neumonía complicada & Vancomicina intravenosa & \num{6589} \\
+Infección grave de piel por SARM & Vancomicina intravenosa & \num{6589} \\
+Celulitis & Dicloxacilina & \num{5491} \\
+Otitis media aguda (alergia) & Cefdinir & \num{1537} \\
+Pielonefritis de manejo intravenoso & Gentamicina & 769 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\paragraph{Concordancia con tablas publicadas.} Para la amoxicilina de la otitis, la cantidad calculada quedó a 10~\% o menos de la de AIEPI en 284 de 423 comparaciones (67~\%) y a 20~\% o menos en 394 (93~\%); la diferencia máxima fue de 33~\%. Las bandas de AIEPI implican dosis de 64,9 a 119,9~mg/kg/día según el peso exacto dentro de cada banda, frente a los 90 constantes de la calculadora. Con la tabla de la OMS la coincidencia fue menor: 90 de 268 comparaciones a 10~\% o menos y 136 a 20~\% o menos. La diferencia se concentra por encima de 20~kg, donde la OMS fija 1~g por toma y la calculadora sigue la guía colombiana hasta el tope de 4~g al día, es decir, hasta 2~g por toma (figura~\ref{fig:amox}); las bandas de la OMS implican de 18,2 a 158,7~mg/kg/día.
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+  width=0.92\textwidth, height=7.2cm,
+  xlabel={Peso (kg)}, ylabel={Amoxicilina por toma cada 12 horas (mg)},
+  xmin=0, xmax=112, ymin=0, ymax=2150, grid=major, grid style={gris!20},
+  tick label style={font=\sffamily\scriptsize}, label style={font=\sffamily\small},
+  scaled y ticks=false, yticklabel style={/pgf/number format/.cd, 1000 sep={\,}},
+  legend style={font=\sffamily\scriptsize, draw=none, at={(0.98,0.03)}, anchor=south east, fill=white, fill opacity=0.9}]
+  \addplot[only marks, mark=*, mark size=1.1pt, marino] table[x=peso,y=dosis]{datos/amox_motor.dat};
+  \addlegendentry{Calculadora: 90 mg/kg/día, tope 4 g/día (pacientes virtuales)}
+  \addplot[const plot, very thick, dorado] table[x=peso,y=dosis]{datos/amox_aiepi.dat};
+  \addlegendentry{AIEPI 2012: suspensión de 250 mg/5 mL, bandas de 4 a 21 kg}
+  \addplot[const plot, very thick, rojo, dashed] table[x=peso,y=dosis]{datos/amox_aware.dat};
+  \addlegendentry{OMS AWaRe 2022: bandas de peso}
+\end{axis}
+\end{tikzpicture}
+\caption{Dosis de amoxicilina para otitis media aguda calculada para los 270 pacientes virtuales con función renal no evaluada, frente a las tablas de dosis por peso de AIEPI y de la OMS.}
+\label{fig:amox}
+\end{figure}
+
+% =============================================================================
+\section{Discusión}
+
+\subsection{Hallazgos principales}
+
+Este trabajo muestra cinco resultados. Primero, una búsqueda documentada en tres bases recuperó las 7 guías del corpus inicial y añadió 51 documentos incluidos, entre ellos 13 latinoamericanos, con lo que la base pasó de 41 a 46 entidades clínicas y de 88 a 113 esquemas, con cada dato vinculado a una cita textual. Segundo, la evidencia colombiana indexada es escasa: la búsqueda encontró 4 documentos colombianos y solo pudo leer 2; la mayor parte de las guías colombianas de la base procede de búsquedas dirigidas. Tercero, las guías difieren de forma sustancial: en 21 de 47 comparaciones la dosis diaria más alta duplica o más a la más baja. Cuarto, la información necesaria para calcular sigue incompleta: 62~\% de los esquemas por peso no tienen dosis máxima en su fuente, y el ajuste renal procede de fichas técnicas que discrepan entre sí. Quinto, la prueba con una población modelada detectó un defecto que los dos pacientes tipo no mostraban y un riesgo (dosis sin tope en adolescentes de mayor peso) que motivó un cambio de diseño.
+
+\subsection{Relación con la literatura}
+
+Los estudios que evaluaron calculadoras de dosis midieron el error de cálculo del usuario~\citep{vanderzanden2020,higi2023}; este trabajo mide dos eslabones anteriores: la conversión de las guías en reglas y la corrección con que el programa las aplica. Los planos son complementarios: una calculadora puede eliminar el error aritmético y aun así entregar una dosis discutible si la regla codificada lo es, o una dosis imposible si el programa no limita los extremos. La observación de que una calculadora introduce errores nuevos~\citep{vanderzanden2020} es coherente con el defecto que encontró la prueba exhaustiva: un error de redondeo que solo aparece al combinar una banda renal, un peso concreto y una concentración concreta. La discordancia en el ajuste renal concuerda con revisiones que señalan que las recomendaciones pediátricas se extrapolan de adultos~\citep{schijvens2020,minotti2022}.
+
+\subsection{Interpretación de la variabilidad entre guías}
+
+Parte de la variabilidad tiene una explicación que las propias guías declaran. La guía chilena justifica la dosis de 40--50~mg/kg/día de amoxicilina en la otitis por la baja resistencia del neumococo en ese país~\citep{chileoma2019}, y la guía finlandesa reserva la dosis alta de la neumonía para la sospecha de neumococo resistente~\citep{backman2025}. La hipótesis de que la diferencia refleja la epidemiología local de la resistencia es plausible, pero este estudio no la pone a prueba. Otra parte de la variabilidad es formal: esquemas con dosis de carga, rangos amplios o diferencias en la forma de expresar la dosis (por toma o por día, en miligramos o en unidades). Para una herramienta colombiana, la consecuencia práctica es que la elección de la guía de referencia es una decisión clínica que debe quedar documentada, no un detalle de programación; por eso la base registra la guía colombiana como primera opción y muestra las demás como alternativas.
+
+\subsection{La prueba exhaustiva como parte de la verificación}
+
+Verificar una calculadora con unos pocos casos tipo comprueba los cálculos más frecuentes y deja sin explorar los extremos. La población modelada cubre desde 2,7 hasta 109,8~kg y combina cada peso con cinco niveles de función renal. El defecto de redondeo afectaba al 0,7~\% de las cantidades de presentación y no aparecía en los dos pacientes tipo. Las dosis sin tope tampoco: en el adolescente tipo de 50~kg son la mitad que en el de 110~kg, y el problema se hace evidente en los pesos más altos de la población. Como la prueba se ejecuta en cada compilación, cualquier cambio futuro en los datos o en el motor que rompa una regla de seguridad se detecta de inmediato.
+
+El tope por medicamento es una decisión de diseño con consecuencias: limita la dosis a la del adulto aunque la guía del esquema no lo diga. Se eligió porque una dosis por kilogramo sin límite es más peligrosa que una dosis limitada con una advertencia visible, y porque las propias guías que sí traen tope usan por lo general la dosis máxima del adulto. La elección concreta de cada tope (por ejemplo, 3~g al día de ceftriaxona según la OMS o 4~g según la guía canadiense) es, de nuevo, una decisión clínica pendiente de confirmar.
+
+\subsection{Implicaciones}
+
+Para el equipo clínico, los resultados ofrecen una lista priorizada de decisiones: confirmar los diez esquemas sin tope, las ambigüedades señaladas en las guías colombianas y la elección entre fuentes de ajuste renal. Para la investigación, muestran que la evidencia colombiana sobre dosificación pediátrica de antibióticos es en buena parte literatura gris o no indexada, lo que limita la reproducibilidad de cualquier herramienta basada en ella. Para quienes desarrollan herramientas similares, sugieren incorporar desde el inicio una búsqueda documentada, un tope por medicamento y una prueba con una población modelada.
+
+\subsection{Fortalezas}
+
+Cada dato conserva su fuente, su página y una cita textual; las decisiones tomadas donde las fuentes callan o discrepan están escritas; la búsqueda, el cribado, la extracción, la integración y la verificación son reproducibles con programas del repositorio; la verificación usa una implementación independiente y una población construida con patrones de crecimiento adoptados oficialmente en Colombia; y los resultados negativos (documentos no obtenidos, decisiones de no incorporar) también quedan registrados.
+
+\subsection{Limitaciones}
+
+Son sustanciales y condicionan toda conclusión.
+
+\begin{enumerate}
+  \item \textbf{No hay validación clínica.} Ningún esquema ha sido revisado por dos profesionales, que es el criterio que el propio programa exige.
+  \item \textbf{Revisor único automatizado.} El cribado y la extracción los hizo un modelo de lenguaje sin doble revisión humana. Las decisiones pueden contener errores de clasificación o de lectura; las marcadas como «dudoso» deben revisarse primero.
+  \item \textbf{Cobertura de la búsqueda.} LILACS y SciELO no se pudieron consultar; el protocolo no se registró antes de empezar; solo se incluyeron documentos en inglés y español.
+  \item \textbf{Textos no obtenidos.} El 56~\% de los documentos que pasaron el cribado no se pudo leer por acceso cerrado o bloqueo de descarga, entre ellos guías recientes y relevantes; la síntesis puede estar sesgada hacia lo publicado en acceso abierto.
+  \item \textbf{Verificación computacional no es validación clínica.} La prueba demuestra que el programa aplica sus reglas; si una regla está mal, el programa la aplicará con precisión. La implementación independiente y el verificador se escribieron a partir de la misma descripción de las reglas.
+  \item \textbf{Población modelada simplificada.} Se usó la talla mediana para todos los pesos y, desde los 5 años, el peso se derivó del índice de masa corporal; la correlación real entre peso y talla no se modeló. No se incluyeron neonatos, prematuros ni pacientes con amputaciones o edema.
+  \item \textbf{Concordancia con tablas publicadas limitada.} Solo se comparó un medicamento en una indicación con dos tablas.
+  \item \textbf{Ajuste renal.} Las bandas mezclan fuentes que expresan la filtración en mL/min y en mL/min/1,73~m², y la ecuación CKiD U25 se desarrolló en niños y jóvenes con enfermedad renal crónica~\citep{pierce2021}.
+  \item \textbf{Usabilidad.} No se evaluó la usabilidad ni el efecto de la herramienta sobre los errores de prescripción.
+\end{enumerate}
+
+\subsection{Lo que este estudio no permite afirmar}
+
+No demuestra que la calculadora reduzca errores, que sus dosis sean las correctas para un paciente dado, que sea segura para uso clínico ni que la búsqueda haya encontrado todas las guías pertinentes.
+
+% =============================================================================
+\section{Conclusiones}
+
+Respecto al primer objetivo, una búsqueda documentada en PubMed, OpenAlex y DOAJ identificó 175 documentos pertinentes, de los que 58 se incluyeron; recuperó las 7 guías del corpus inicial y añadió 13 guías latinoamericanas, pero solo 2 colombianas legibles. Respecto al segundo, en 21 de 47 comparaciones la dosis diaria recomendada de un mismo medicamento para una misma enfermedad varió el doble o más entre documentos, y 64 de 104 esquemas por peso carecen de dosis máxima en su fuente. Respecto al tercero, la base pasó a 46 entidades clínicas y 113 esquemas, con 28 topes por medicamento y la justificación escrita de cada incorporación y de cada exclusión. Respecto al cuarto, la calculadora aplicó sus reglas sin ningún fallo en \num{166250} resultados de una población de \num{1350} pacientes virtuales, después de corregir el único defecto que la prueba encontró.
+
+Antes de cualquier uso con pacientes se requiere la doble verificación clínica de cada esquema, la confirmación de los topes y de las ambigüedades señaladas, el cálculo manual independiente de los casos tipo, la búsqueda en LILACS y SciELO, la lectura de las guías que no se pudieron obtener y una evaluación con usuarios.
+
+% =============================================================================
+\section*{Declaraciones}
+\addcontentsline{toc}{section}{Declaraciones}
+
+\noindent\textbf{Uso de inteligencia artificial.} Un modelo de lenguaje (Claude, Anthropic) se usó para escribir los programas de búsqueda, cribado, recuperación, extracción, integración y verificación; para realizar el cribado y la extracción como revisor único; para escribir el código de la calculadora; y para redactar este borrador. Cada referencia se comprobó contra Crossref, PubMed o el documento original (anexo~B). Los autores deben revisar y asumir la responsabilidad de todo el contenido antes de enviarlo a una revista.
+
+\noindent\textbf{Financiación:} \pendiente{por completar}. \textbf{Conflictos de interés:} \pendiente{por completar}. \textbf{Contribución de los autores:} \pendiente{por completar, según la taxonomía CRediT}.
+
+\noindent\textbf{Disponibilidad de datos y código:} \pendiente{por definir}. Los archivos se listan en el anexo~E.
+
+% =============================================================================
+\bibliographystyle{unsrtnat}
+\bibliography{referencias}
+
+% =============================================================================
+\clearpage
+\appendix
+\renewcommand{\thesection}{\Alph{section}}
+\section{Ecuaciones de búsqueda}
+
+Ecuación de PubMed para el grupo de otitis con el filtro de guías, tal como la ejecutó \codigo{buscar.py} el 18 de noviembre de 2026. Las de los demás grupos cambian solo el primer bloque y están en \codigo{docs/revision/bitacora\_busqueda.json} con su número de resultados.
+
+\begin{quote}\footnotesize\ttfamily\raggedright
+("otitis media"[tiab] OR "Otitis Media"[Mesh] OR "otitis externa"[tiab] OR mastoiditis[tiab]) AND (child*[tiab] OR pediatric*[tiab] OR paediatric*[tiab] OR infant*[tiab] OR adolescen*[tiab] OR "Child"[Mesh] OR "Infant"[Mesh] OR "Adolescent"[Mesh]) AND (Guideline[pt] OR "Practice Guideline"[pt] OR "Consensus Development Conference"[pt] OR guideline*[ti] OR consensus[ti] OR recommendation*[ti] OR "position statement"[ti] OR guia[ti] OR consenso[ti] OR recomendaciones[ti]) AND ("2010/01/01"[dp] : "2026/11/18"[dp]) AND (english[la] OR spanish[la])
+\end{quote}
+
+La estrategia regional sustituye el bloque de guías por \texttt{(Colombia OR "Latin America" OR} los nombres de los países latinoamericanos\texttt{)} y añade un bloque de tratamiento antibiótico. OpenAlex se consultó con el filtro \texttt{authorships.institutions.country\_code:CO}, tipo artículo y publicación desde 2010; DOAJ, con los términos en español.
+
+\section{Auditoría de las referencias}
+
+Cada referencia con DOI se comprobó contra Crossref y, cuando existía, contra PubMed, el 18 de noviembre de 2026: autores, título, revista, año, volumen, páginas y actualizaciones registradas (retractaciones, correcciones). Las referencias sin DOI se comprobaron en el sitio de la institución que las emite o en el documento original. La tabla~\ref{tab:auditoria} registra las observaciones; las referencias que no aparecen en ella no tuvieron ninguna.
+
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{2.6cm}p{13.1cm}@{}}
+\caption{Observaciones de la auditoría de referencias.}\label{tab:auditoria}\\
+\toprule
+Referencia & Observación \\
+\midrule
+\endfirsthead
+\toprule
+Referencia & Observación \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+\citep{stevens2014} & El borrador anterior citaba el DOI \codigo{10.1093/cid/ciu444}, que corresponde al resumen ejecutivo (páginas 147--159), con las páginas de la guía completa. Ese DOI es el del resumen ejecutivo~\citep{stevens2014resumen}. Se corrigió al DOI de la guía completa, \codigo{10.1093/cid/ciu296} (páginas e10--e52). \\
+\citep{itucol2023} & Crossref y OpenAlex registran un único autor (Baquero-Rodríguez). El PDF del artículo lista como primeros autores a Espitaleta y Figueroa; se siguió el documento original. Conviene notificar el error de metadatos a la revista. \\
+\citep{acorloma2024,acorlfaa2024,acorlrs2024} & Volumen 52, número 4, de 2024; Crossref registra la publicación en línea el 28 de febrero de 2025. \\
+\citep{buettcher2021} & Tiene una fe de erratas registrada (\codigo{10.1007/s00431-020-03820-3}); no afecta a los datos usados. \\
+\citep{mexicooma2022,sapiras2021,sapitu2022,sapfiebre2017,sappiel2014,sappiel2014a} & Crossref no registra la página final; se cita la inicial. Los documentos argentinos no tienen autores personales en Crossref; se citan el comité o los autores que registra PubMed. \\
+\citep{sadi2024} & Crossref registra tres autores y no da páginas. \\
+\citep{gaddey2019,sakulchit2017} & Sin DOI; se comprobaron en PubMed. \\
+\citep{florez2015} & Metadatos comprobados en Crossref; el texto completo no se pudo descargar (el servidor rechazó la descarga). Se cita para identificar el documento, no por su contenido. \\
+\citep{res2465} & Se consultó el texto de la resolución en el normograma de la Superintendencia Nacional de Salud; no se obtuvo el anexo técnico oficial con las tablas. \\
+\end{longtable}
+
+\section{Revisión crítica simulada por pares}
+
+\subsection*{Críticas mayores}
+\begin{enumerate}
+  \item \textbf{Un solo revisor, automatizado.} PRISMA-ScR no exige doble revisión, pero la confianza en el cribado y la extracción depende de ella. \emph{Respuesta:} se declara como la principal limitación; todas las decisiones están en archivos auditables. \emph{Acción pendiente:} que dos miembros del equipo revisen una muestra aleatoria de las decisiones de cribado y todos los esquemas incorporados, y que se informe el acuerdo entre revisores.
+  \item \textbf{Más de la mitad de los textos no se obtuvo.} \emph{Respuesta:} se identifican los no obtenidos más relevantes. \emph{Acción pendiente:} obtenerlos por la biblioteca de la universidad y repetir la extracción.
+  \item \textbf{La verificación es circular.} El verificador y la segunda implementación se escribieron a partir de la misma descripción de reglas que el motor. \emph{Respuesta:} es cierto para las comprobaciones A y B; las comprobaciones C se derivan de principios de la literatura, no del código. \emph{Acción pendiente:} cálculo manual independiente de los casos tipo por el equipo clínico.
+  \item \textbf{El tope por medicamento no proviene de guías pediátricas.} \emph{Respuesta:} se declara como decisión de diseño; cada tope tiene fuente y el resultado advierte cuando se aplica.
+\end{enumerate}
+
+\subsection*{Críticas menores}
+\begin{enumerate}
+  \item La razón $R$ mezcla esquemas de carga y mantenimiento; debería presentarse también por tipo de esquema.
+  \item La comparación con tablas publicadas debería extenderse a otros medicamentos con tablas por peso (cefalexina, trimetoprim-sulfametoxazol, metronidazol).
+  \item La población modelada debería incluir variación de talla y no solo de peso.
+  \item Falta un diagrama del modelo de datos.
+\end{enumerate}
+
+\section{Problemas pendientes}
+
+\begin{enumerate}
+  \item Doble verificación clínica de los 113 esquemas y de los 28 topes por medicamento.
+  \item Decisión sobre los diez esquemas sin tope (tabla~\ref{tab:sintope}).
+  \item Aclaración de la dosis de ceftriaxona del lineamiento colombiano de enfermedad meningocócica y de las ambigüedades de las guías colombianas de rinosinusitis y piel.
+  \item Búsqueda en LILACS y SciELO desde su interfaz web.
+  \item Obtención y extracción de las guías no leídas (NICE 2024 y OMS 2025 de meningitis, IDSA/PIDS 2026, consenso español 2025 de gastroenteritis, guía colombiana de enfermedad diarreica de 2015).
+  \item Elección entre fuentes de ajuste renal.
+  \item Evaluación de usabilidad con profesionales.
+\end{enumerate}
+
+\section{Archivos reproducibles}
+
+\begin{table}[htbp]
+\centering
+\small
+\begin{tabularx}{\textwidth}{@{}lX@{}}
+\toprule
+Archivo & Contenido \\
+\midrule
+\codigo{docs/revision/protocolo.md} & Protocolo de la revisión \\
+\codigo{docs/revision/buscar.py} & Búsqueda reproducible; escribe \codigo{bitacora\_busqueda.json} y \codigo{registros.csv} \\
+\codigo{docs/revision/cribado.csv} & Decisión y motivo de cada uno de los \num{1872} registros \\
+\codigo{docs/revision/recuperar.py} & Obtención de textos de acceso abierto; escribe \codigo{recuperacion.csv} \\
+\codigo{docs/revision/texto\_completo\_G*.csv} & Decisión a texto completo por documento \\
+\codigo{docs/revision/esquemas\_G*.csv} & 413 esquemas con cita textual y página \\
+\codigo{docs/revision/maximos\_G*.csv} & 111 dosis máximas con cita textual \\
+\codigo{docs/revision/integrar.py} & Aplicación de la jerarquía a la base de conocimiento \\
+\codigo{docs/revision/decisiones\_integracion.md} & Qué se incorporó y qué no, con el motivo \\
+\codigo{docs/revision/prisma.py} & Cifras del flujo de la figura~\ref{fig:flujo} \\
+\codigo{docs/articulo/concordancia.py} & Análisis de variabilidad (tabla~\ref{tab:discordancia}) \\
+\codigo{docs/articulo/analisis.py} & Cifras de la base de conocimiento \\
+\codigo{docs/validacion/oms/} & Tablas LMS de la OMS usadas para la población \\
+\codigo{docs/validacion/poblacion.py} & Generación de los \num{1350} pacientes virtuales \\
+\codigo{docs/validacion/verificar.py} & Comprobaciones A a E; escribe \codigo{informe.json} \\
+\codigo{tools/verificacion\_cruzada.py} & Implementación independiente (382 escenarios) \\
+\codigo{data/fuente/*.csv} & Hojas de datos de la base de conocimiento \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\end{document}

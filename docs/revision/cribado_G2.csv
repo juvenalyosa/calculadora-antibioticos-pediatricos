@@ -1,0 +1,491 @@
+clave,decision,motivo,ambito,tipo_documento,infeccion,nota
+doi:10.1001/jamapediatrics.2022.4123,excluir,E1,,,neumonía adquirida en la comunidad,"revisión narrativa, editorial, carta o comentario; no es guía"
+doi:10.18597/rcog.236,excluir,E1,,,infección respiratoria (otro),estudio primario u otro documento no normativo
+doi:10.1053/j.gastro.2021.04.034,excluir,E2,,,infección respiratoria (otro),vacunación/inmunización únicamente
+doi:10.2196/42736,excluir,E1,,,infección respiratoria (otro),estudio de adherencia/impacto de guías o encuesta de práctica
+doi:10.1016/s0123-9392(12)70017-6,excluir,E1,,,neumonía (otro),estudio primario u otro documento no normativo
+doi:10.1542/hpeds.2021-006037,incluir,,"internacional (Choosing Wisely, medicina hospitalaria pediátrica, EE. UU.)",consenso,neumonía adquirida en la comunidad,dudoso: lista Choosing Wisely; incluye recomendación sobre antibiótico en NAC
+doi:10.1097/mop.0b013e3283488160,excluir,E2,,,infección respiratoria (otro),vacunación/inmunización únicamente
+titulo:neumonaporneumococoypseudomonasaeruginosaadquiridaenlacomunidadenunapacientesinf,excluir,E1,,,neumonía adquirida en la comunidad,estudio primario u otro documento no normativo
+doi:10.1136/thoraxjnl-2011-200598,incluir,,"internacional (BTS, Reino Unido)",guia,neumonía adquirida en la comunidad,actualización 2011 que reemplaza la de 2002
+doi:10.1136/thoraxjnl-2011-200671,excluir,E1,,,neumonía adquirida en la comunidad,"revisión narrativa, editorial, carta o comentario; no es guía; resumen consultado"
+doi:10.1093/cid/cir625,excluir,E6,,,neumonía adquirida en la comunidad,resumen ejecutivo de la guía PIDS/IDSA 2011; ver doi:10.1093/cid/cir531
+doi:10.1093/cid/cir531,incluir,,"internacional (PIDS/IDSA, EE. UU.)",guia,neumonía adquirida en la comunidad,guía completa 2011; la actualización 2026 (doi:10.1093/cid/ciag186) solo aborda derrame paraneumónico
+doi:10.1371/journal.pone.0020325,excluir,E1,,,neumonía adquirida en la comunidad,estudio de adherencia/impacto de guías o encuesta de práctica
+doi:10.1111/j.1442-200x.2010.03316.x,incluir,,"internacional (JSPP/JSPID, Japón)",guia,neumonía adquirida en la comunidad,guía japonesa 2007 publicada en 2011; resumen consultado
+doi:10.1590/s1806-37132011000200004,excluir,E1,,,neumonía adquirida en la comunidad,estudio de adherencia/impacto de guías o encuesta de práctica
+doi:10.1136/emj.2009.083683,excluir,E4,,,neumonía (otro),influenza pandémica en adultos
+doi:10.1542/peds.2012-1285,excluir,E1,,,neumonía adquirida en la comunidad,estudio primario u otro documento no normativo
+pmid:22962933,excluir,E1,,,neumonía adquirida en la comunidad,"revisión narrativa, editorial, carta o comentario; no es guía; sin resumen en PubMed"
+doi:10.1016/j.resinv.2012.02.003,excluir,E1,,,neumonía adquirida en la comunidad,estudio de adherencia/impacto de guías o encuesta de práctica
+doi:10.1016/j.resinv.2012.02.002,excluir,E1,,,neumonía adquirida en la comunidad,estudio de adherencia/impacto de guías o encuesta de práctica
+doi:10.1542/peds.2011-2412,excluir,E1,,,neumonía adquirida en la comunidad,estudio primario u otro documento no normativo
+doi:10.1542/peds.2011-1533,excluir,E1,,,neumonía adquirida en la comunidad,estudio de adherencia/impacto de guías o encuesta de práctica
+pmid:22338542,excluir,E1,,,neumonía adquirida en la comunidad,estudio de adherencia/impacto de guías o encuesta de práctica
+titulo:grmenesatpicosenniosconneumonaadquiridaenlacomunidadhospitaldeemergenciasgrauess,excluir,E1,,,neumonía adquirida en la comunidad,estudio primario u otro documento no normativo
+doi:10.1542/hpeds.2012-0050,excluir,E1,,,neumonía adquirida en la comunidad,estudio primario u otro documento no normativo
+doi:10.1111/apa.12501,incluir,,"internacional (revisión comparativa, Italia)",revision de guias,neumonía adquirida en la comunidad,compara 12 guías de países desarrollados y en desarrollo; resumen consultado
+doi:10.1097/inf.0b013e3182a4dcfa,incluir,,"internacional (revisión de guías, menores de 5 años)",revision de guias,neumonía adquirida en la comunidad,dudoso: sin resumen en PubMed; podría ser comentario
+doi:10.1111/acem.12088,excluir,E1,,,neumonía adquirida en la comunidad,estudio de adherencia/impacto de guías o encuesta de práctica
+pmid:23326817,excluir,E1,,,neumonía adquirida en la comunidad,"revisión narrativa, editorial, carta o comentario; no es guía; sin resumen en PubMed"
+doi:10.11144/javeriana.rgsp12-25.cspq,excluir,E1,,,neumonía adquirida en la comunidad,estudio primario u otro documento no normativo
+doi:10.21774/cys.v1i4.251,excluir,E1,,,neumonía adquirida en la comunidad,estudio primario u otro documento no normativo
+doi:10.1111/tmi.12368,excluir,E1,,,neumonía adquirida en la comunidad,estudio primario u otro documento no normativo
+doi:10.1186/1756-0500-7-531,excluir,E1,,,neumonía adquirida en la comunidad,estudio de adherencia/impacto de guías o encuesta de práctica
+doi:10.1016/j.semerg.2014.06.012,excluir,E2,,,neumonía (otro),vacunación/inmunización únicamente
+doi:10.1089/mdr.2014.0064,excluir,E1,,,neumonía adquirida en la comunidad,estudio de adherencia/impacto de guías o encuesta de práctica
+doi:10.1093/cid/ciu013,excluir,E1,,,neumonía adquirida en la comunidad,estudio de adherencia/impacto de guías o encuesta de práctica
+titulo:calidaddeldiagnsticodeneumonaenelserviciodeenfermedadesrespiratorias,excluir,E1,,,neumonía adquirida en la comunidad,estudio primario u otro documento no normativo
+doi:10.1542/peds.2014-3047,excluir,E1,,,neumonía adquirida en la comunidad,estudio de adherencia/impacto de guías o encuesta de práctica
+doi:10.1542/peds.2014-2077,excluir,E1,,,neumonía adquirida en la comunidad,estudio primario u otro documento no normativo
+doi:10.1017/ice.2015.45,excluir,E1,,,neumonía (otro),estudio primario u otro documento no normativo
+doi:10.1016/j.anpedi.2014.12.002,incluir,,"internacional (SEIP/SENP, España)",consenso,neumonía adquirida en la comunidad complicada,NAC complicada y pacientes de riesgo; posible solapamiento con consenso 2020 (doi:10.1016/j.arbres.2020.03.025); resumen consultado
+doi:10.1177/0009922814559381,excluir,E1,,,neumonía adquirida en la comunidad,estudio de adherencia/impacto de guías o encuesta de práctica
+doi:10.1002/jhm.2265,excluir,E1,,,neumonía adquirida en la comunidad,estudio de adherencia/impacto de guías o encuesta de práctica
+doi:10.1016/j.semerg.2016.07.009,excluir,E2,,,neumonía adquirida en la comunidad,vacunación/inmunización únicamente
+doi:10.1186/s12887-016-0661-3,excluir,E1,,,neumonía adquirida en la comunidad,estudio de adherencia/impacto de guías o encuesta de práctica
+doi:10.1186/s12887-016-0651-5,excluir,E2,,,neumonía adquirida en la comunidad,"evaluación AGREE II de calidad metodológica, sin comparación de tratamiento; resumen consultado"
+doi:10.2147/tcrm.s101709,excluir,E1,,,neumonía adquirida en la comunidad,estudio de adherencia/impacto de guías o encuesta de práctica
+doi:10.1186/s41479-016-0005-y,excluir,E1,,,neumonía adquirida en la comunidad,encuesta a centros europeos comparada con guías; resumen consultado
+doi:10.3855/jidc.6637,excluir,E1,,,neumonía adquirida en la comunidad,estudio de adherencia/impacto de guías o encuesta de práctica
+doi:10.1002/jhm.2534,excluir,E1,,,neumonía adquirida en la comunidad,estudio de impacto de guías nacionales en uso de recursos
+doi:10.1016/s1473-3099(16)00017-7,excluir,E1,,,neumonía adquirida en la comunidad,estudio primario u otro documento no normativo
+doi:10.1016/j.ijpam.2017.12.002,incluir,,"internacional (Saudi Pediatric Infectious Diseases Society, Arabia Saudita)",guia,neumonía adquirida en la comunidad,sin resumen en PubMed; título suficiente
+doi:10.1007/s00247-017-3944-4,excluir,E2,,,neumonía adquirida en la comunidad,imagenología en NAC
+pmid:28813753,excluir,E1,,,neumonía adquirida en la comunidad,estudio de adherencia/impacto de guías o encuesta de práctica
+doi:10.1136/bmj.j686,excluir,E1,,,neumonía adquirida en la comunidad,"revisión narrativa, editorial, carta o comentario; no es guía; sin resumen en PubMed"
+titulo:actualizacindelmodelopredictivosegrav23intervencionesdiagnsticasteraputicasdemay,excluir,E1,,,neumonía (otro),estudio primario u otro documento no normativo
+doi:10.1016/j.rmclc.2017.01.006,excluir,E1,,,neumonía adquirida en la comunidad,"revisión narrativa, editorial, carta o comentario; no es guía"
+doi:10.1542/peds.2018-0331,excluir,E1,,,neumonía adquirida en la comunidad,estudio de adherencia/impacto de guías o encuesta de práctica
+pmid:29619807,excluir,E3,,,neumonía adquirida en la comunidad,recomendaciones de urgencias para NAC en adultos; resumen consultado
+doi:10.15386/cjmed-808,excluir,E1,,,neumonía adquirida en la comunidad,estudio primario u otro documento no normativo
+doi:10.1111/crj.12674,excluir,E3,,,neumonía adquirida en la comunidad,guía china de NAC en adultos
+doi:10.1016/j.ijid.2017.11.019,excluir,E1,,,neumonía por M. pneumoniae,estudio primario u otro documento no normativo
+doi:10.14482/sun.34.1.10726,excluir,E1,,,neumonía adquirida en la comunidad,estudio primario u otro documento no normativo
+doi:10.4067/s0716-10182019000400505,incluir,,Latinoamerica (Chile; Rev Chilena Infectol),consenso,neumonía adquirida en la comunidad,recomendaciones de diagnóstico y tratamiento antimicrobiano; sin resumen en PubMed
+doi:10.1007/5584_2019_392,excluir,E1,,,neumonía adquirida en la comunidad,estudio primario u otro documento no normativo
+doi:10.1016/j.annemergmed.2019.02.025,excluir,E1,,,neumonía adquirida en la comunidad,estudio de adherencia/impacto de guías o encuesta de práctica
+doi:10.1007/s10096-019-03473-7,excluir,E1,,,neumonía (otro),estudio de adherencia/impacto de guías o encuesta de práctica
+doi:10.1016/j.jmii.2018.11.004,incluir,,"internacional (IDST/TSPCCM, Taiwán)",guia,neumonía adquirida en la comunidad,incluye tratamiento de neumonía pediátrica; resumen consultado
+doi:10.14482/sun.34.2.616.24,excluir,E1,,,neumonía adquirida en la comunidad,estudio primario u otro documento no normativo
+titulo:guadebuenasprcticasclnicasparalaatencinalnioconneumonaadquiridaenlacomunidad,incluir,,Latinoamerica (Cuba),guia,neumonía adquirida en la comunidad,guía de buenas prácticas clínicas (Medisur); verificar autoría institucional
+doi:10.1016/j.anpede.2019.01.003,excluir,E1,,,neumonía por M. pneumoniae,estudio primario u otro documento no normativo
+doi:10.7196/ajtccm.2020.v26i3.104,incluir,,"internacional (South African Thoracic Society, Sudáfrica)",guia,neumonía adquirida en la comunidad,menores de 5 años; incluye manejo antibiótico; resumen consultado
+doi:10.1016/j.ijantimicag.2020.106189,excluir,E1,,,neumonía adquirida en la comunidad,estudio de adherencia/impacto de guías o encuesta de práctica
+doi:10.3389/fped.2020.00302,excluir,E1,,,neumonía adquirida en la comunidad,estudio de adherencia/impacto de guías o encuesta de práctica
+doi:10.1016/j.arbres.2020.03.025,incluir,,"internacional (SENP/SEPAR/SEIP, España)",consenso,neumonía adquirida en la comunidad,resumen consultado
+doi:10.1016/j.jacr.2020.01.033,excluir,E2,,,neumonía adquirida en la comunidad,imagenología en NAC
+doi:10.1007/s40121-019-00276-3,excluir,E1,,,neumonía adquirida en la comunidad,estudio de adherencia/impacto de guías o encuesta de práctica
+doi:10.35366/94170,excluir,E1,,,neumonía adquirida en la comunidad,estudio primario u otro documento no normativo
+doi:10.1093/jacamr/dlab080,excluir,E1,,,neumonía adquirida en la comunidad,estudio de adherencia/impacto de guías o encuesta de práctica
+doi:10.3390/healthcare9060701,excluir,E1,,,neumonía adquirida en la comunidad,estudio de adherencia/impacto de guías o encuesta de práctica
+doi:10.1093/pch/pxaa066,excluir,E1,,,neumonía adquirida en la comunidad,estudio primario u otro documento no normativo
+doi:10.1111/ijcp.14010,incluir,,"internacional (guía de consejo rápido, China)",guia,neumonía adquirida en la comunidad; neumonía por M. pneumoniae,azitromicina IV en niños: indicaciones y dosis; resumen consultado
+doi:10.1111/apa.15692,excluir,E1,,,neumonía (otro),estudio de adherencia/impacto de guías o encuesta de práctica
+doi:10.1097/pec.0000000000001745,excluir,E1,,,neumonía adquirida en la comunidad,estudio de adherencia/impacto de guías o encuesta de práctica
+doi:10.1136/thoraxjnl-2019-214054,excluir,E1,,,neumonía adquirida en la comunidad,"revisión narrativa, editorial, carta o comentario; no es guía"
+doi:10.51451/np.v8i2.404,excluir,E1,,,neumonía adquirida en la comunidad,"revisión narrativa, editorial, carta o comentario; no es guía"
+doi:10.51451/np.v8i2.403,excluir,E1,,,neumonía adquirida en la comunidad,"revisión narrativa, editorial, carta o comentario; no es guía"
+titulo:particularidadesclnicaseimagenolgicasdeunpacienteconneumonapormycoplasmapneumoni,excluir,E1,,,neumonía por M. pneumoniae,estudio primario u otro documento no normativo
+doi:10.7189/jogh.12.10002,excluir,E1,,,neumonía adquirida en la comunidad,"revisión sistemática de estudios sobre signos clínicos, no de guías"
+doi:10.1016/j.prrv.2022.01.006,incluir,,internacional (revisión sistemática de GPC),revision de guias,neumonía adquirida en la comunidad,14 GPC evaluadas con AGREE II y comparación de recomendaciones; resumen consultado
+doi:10.52011/180,excluir,E1,,,neumonía adquirida en la comunidad,estudio primario u otro documento no normativo
+doi:10.1097/pq9.0000000000000711,excluir,E1,,,neumonía adquirida en la comunidad,estudio de adherencia/impacto de guías o encuesta de práctica
+doi:10.1007/s00431-023-05099-6,excluir,E1,,,neumonía (otro),estudio primario u otro documento no normativo
+doi:10.1093/cid/ciad385,excluir,E1,,,neumonía adquirida en la comunidad,estudio de adherencia/impacto de guías o encuesta de práctica; resumen consultado
+doi:10.26633/rpsp.2023.52,excluir,E1,,,neumonía adquirida en la comunidad,estudio de adherencia/impacto de guías o encuesta de práctica
+doi:10.1093/jpids/piac123,excluir,E1,,,neumonía adquirida en la comunidad,Delphi de desenlaces para ensayos clínicos; resumen consultado
+doi:10.1016/j.chest.2023.06.010,excluir,E1,,,neumonía adquirida en la comunidad,"revisión narrativa, editorial, carta o comentario; no es guía"
+doi:10.1002/ppul.26592,excluir,E1,,,neumonía por M. pneumoniae,estudio primario u otro documento no normativo
+doi:10.26752/cuarzo.v29.n1.651,excluir,E1,,,neumonía (otro),estudio primario u otro documento no normativo
+doi:10.1186/s13052-024-01786-8,incluir,,"internacional (SIPPS-SIP-SITIP-FIMP-SIAIP-SIMRI-FIMMG-SIMG, Italia)",consenso,neumonía adquirida en la comunidad,NAC leve-moderada en niños sanos; resumen consultado
+doi:10.1007/s12519-024-00845-8,excluir,E1,,,neumonía por M. pneumoniae,"revisión narrativa, editorial, carta o comentario; no es guía"
+doi:10.1007/s12519-024-00831-0,incluir,,"internacional (consenso de expertos, China)",consenso,neumonía por M. pneumoniae,M. pneumoniae resistente a macrólidos; resumen consultado
+doi:10.1016/j.anpede.2024.05.014,incluir,,"internacional (SEIP, España)",consenso,neumonía por M. pneumoniae,documento de posicionamiento; resumen consultado
+pmid:38944877,excluir,E2,,,neumonía (otro),vacunación/inmunización únicamente
+doi:10.1016/j.fhj.2024.100142,excluir,E1,,,neumonía adquirida en la comunidad,estudio primario u otro documento no normativo
+doi:10.1542/hpeds.2023-007418,excluir,E1,,,neumonía adquirida en la comunidad,estudio de adherencia/impacto de guías o encuesta de práctica
+doi:10.1097/ccm.0000000000006172,excluir,E2,,,neumonía adquirida en la comunidad,"guía de corticoides en sepsis/SDRA/NAC, sin contenido antibiótico; resumen consultado"
+doi:10.1016/j.ram.2024.05.002,excluir,E1,,,neumonía por M. pneumoniae,"revisión narrativa, editorial, carta o comentario; no es guía"
+doi:10.52226/revista.v32i116.345,incluir,,Latinoamerica (Argentina; Actualizaciones en Sida e Infectología),otro,neumonía adquirida en la comunidad complicada,dudoso: sin resumen disponible; verificar si es documento de sociedad
+doi:10.4103/atm.atm_293_25,incluir,,"internacional (Saudi Thoracic Society, Arabia Saudita)",guia,neumonía adquirida en la comunidad,niños y adultos; resumen consultado
+doi:10.1183/16000617.0016-2025,excluir,E2,,,neumonía (otro),vacunación/inmunización únicamente
+doi:10.3947/ic.2025.0042,excluir,E2,,,neumonía (otro),vacunación/inmunización únicamente
+pmid:41264741,incluir,,"internacional (NICE, Reino Unido)",guia,neumonía adquirida en la comunidad,NICE 2025 Pneumonia: diagnosis and management; verificar cobertura pediátrica; resumen consultado
+doi:10.3390/antibiotics14070709,excluir,E1,,,neumonía adquirida en la comunidad,estudio de adherencia/impacto de guías o encuesta de práctica
+doi:10.5863/jppt-24-00069,excluir,E1,,,neumonía adquirida en la comunidad,simulación farmacocinética (estudio primario)
+doi:10.1002/ped4.12469,incluir,,"internacional (Sociedad China de Pediatría/CMA, China)",guia,neumonía por M. pneumoniae,guía basada en evidencia 2023; resumen consultado
+doi:10.1542/hpeds.2024-007994,excluir,E1,,,neumonía adquirida en la comunidad,estudio de adherencia/impacto de guías o encuesta de práctica
+doi:10.1016/s0140-6736(25)01493-x,excluir,E1,,,neumonía adquirida en la comunidad,"revisión narrativa, editorial, carta o comentario; no es guía"
+doi:10.1136/bmjresp-2025-003476,excluir,E1,,,neumonía (otro),estudio primario u otro documento no normativo
+titulo:necrosisyabscesopulmonarenniashuarconneumonasrecurrentes,excluir,E1,,,neumonía adquirida en la comunidad,estudio primario u otro documento no normativo
+doi:10.1097/inf.0000000000005408,excluir,E2,,,neumonía adquirida en la comunidad,definición diagnóstica de NAC (Delphi); resumen consultado
+doi:10.1093/cid/ciag191,excluir,E4,,,neumonía adquirida en la comunidad,actualización IDSA/PIDS 2026 limitada a procedimientos pleurales en empiema; resumen consultado
+doi:10.1093/cid/ciag190,excluir,E4,,,neumonía adquirida en la comunidad,actualización IDSA/PIDS 2026 limitada a procedimientos pleurales en empiema; resumen consultado
+doi:10.1093/cid/ciag186,incluir,,"internacional (IDSA/PIDS, EE. UU.)",guia,neumonía adquirida en la comunidad con derrame paraneumónico,"dudoso: actualización 2026 parte 1, derrame paraneumónico; verificar contenido antibiótico; resumen consultado"
+doi:10.1093/cid/ciag187,excluir,E2,,,neumonía adquirida en la comunidad,actualización IDSA/PIDS 2026 sobre ecografía torácica (diagnóstico); resumen consultado
+doi:10.1093/cid/ciag188,excluir,E4,,,neumonía adquirida en la comunidad,actualización IDSA/PIDS 2026 limitada a procedimientos pleurales en empiema; resumen consultado
+doi:10.1093/cid/ciag189,excluir,E4,,,neumonía adquirida en la comunidad,actualización IDSA/PIDS 2026 limitada a procedimientos pleurales en empiema; resumen consultado
+doi:10.12659/ajcr.949272,excluir,E1,,,neumonía (otro),reporte de caso
+doi:10.1080/22221751.2026.2614742,excluir,E1,,,neumonía por M. pneumoniae,"revisión narrativa, editorial, carta o comentario; no es guía"
+pmid:23570768,incluir,,Latinoamerica (Argentina; SADI y otras sociedades),consenso,bronquitis aguda,niños y adultos sin enfermedad pulmonar; antibiótico no indicado en bronquitis aguda; resumen consultado
+doi:10.1111/apa.13177,excluir,E5,,,tos ferina,guía finlandesa 2014 (publ. 2016) reemplazada por actualización 2023 doi:10.1111/apa.17481; verificar que cubra tos ferina
+doi:10.1371/journal.pone.0174584,excluir,E1,,,neumonía (otro),estudio de adherencia/impacto de guías o encuesta de práctica
+doi:10.18233/apm38no5pp317-3211471,excluir,E1,,,neumonía (otro),reporte de caso
+doi:10.1542/hpeds.2018-0211,excluir,E1,,,bronquiolitis,estudio de adherencia/impacto de guías o encuesta de práctica
+titulo:neumonanecrotizanteenpacientepeditrico,excluir,E1,,,neumonía adquirida en la comunidad,estudio primario u otro documento no normativo
+doi:10.1111/apa.17481,incluir,,"internacional (Grupo de guías nacionales, Finlandia)",guia,neumonía adquirida en la comunidad; bronquitis aguda; bronquiolitis; crup/laringotraqueítis,actualización completa 2023 de la guía de IRA baja pediátrica; resumen consultado
+doi:10.1111/j.1365-2710.2009.01045.x,excluir,E1,,,neumonía (otro),estudio de adherencia/impacto de guías o encuesta de práctica
+titulo:sndrometorcicoagudoennioscondrepanocitosisenelinstitutodehematologaeinmunologa,excluir,E1,,,infección respiratoria (otro),estudio primario u otro documento no normativo
+titulo:neumonitisintersticiallinfoideaenniosinfectadosporelvirusdeinmunodeficienciahuma,excluir,E1,,,neumonía adquirida en la comunidad,estudio primario u otro documento no normativo
+doi:10.1016/j.anpedi.2010.04.015,incluir,,"internacional (GPC Bronquiolitis aguda, España)",guia,bronquiolitis,133 recomendaciones; resumen consultado
+doi:10.1016/j.anpedi.2010.03.020,excluir,E2,,,bronquiolitis,descripción metodológica de la GPC de bronquiolitis; resumen consultado
+doi:10.1542/peds.2010-0743,excluir,E2,,,infección respiratoria (otro),vacunación/inmunización únicamente
+doi:10.7196/samj.4016,incluir,,"internacional (SATS/SASPID, Sudáfrica)",guia,bronquiolitis,resumen consultado
+doi:10.1016/j.anpedi.2009.12.018,excluir,E2,,,bronquiolitis,conferencia de consenso bronquiolitis (V): prevención; resumen consultado
+doi:10.1016/j.anpedi.2009.12.019,excluir,E2,,,bronquiolitis,conferencia de consenso bronquiolitis (VI): pronóstico; resumen consultado
+doi:10.1016/s1553-7250(10)36029-6,excluir,E1,,,tos ferina,estudio de adherencia/impacto de guías o encuesta de práctica
+doi:10.1016/j.ijid.2009.11.006,excluir,E1,,,infección respiratoria (otro),estudio primario u otro documento no normativo
+doi:10.1016/j.anpedi.2009.11.020,incluir,,"internacional (Conferencia de consenso aBREVIADo, España)",consenso,bronquiolitis,documento de metodología y recomendaciones; resumen consultado
+doi:10.1016/j.anpedi.2009.11.019,excluir,E2,,,bronquiolitis,conferencia de consenso bronquiolitis (II): epidemiología; resumen consultado
+doi:10.56085/20277970.121,excluir,E1,,,infección respiratoria (otro),estudio primario u otro documento no normativo
+titulo:perfilclnicoyepidemiolgicodelainfluenzaah1n1enelhospitalnacionalalmanzoraguinaga,excluir,E1,,,infección respiratoria (otro),estudio primario u otro documento no normativo
+doi:10.3238/arztebl.2011.0771,excluir,E2,,,infección respiratoria (otro),vacunación/inmunización únicamente
+pmid:22012116,excluir,E2,,,tos ferina,vacunación/inmunización únicamente
+doi:10.1542/peds.2011-1752,excluir,E2,,,tos ferina,vacunación/inmunización únicamente
+doi:10.1001/archpediatrics.2011.138,excluir,E2,,,infección respiratoria (otro),vacunación/inmunización únicamente
+doi:10.3345/kjp.2011.54.4.141,excluir,E2,,,tos ferina,vacunación/inmunización únicamente
+doi:10.1038/bmt.2011.35,excluir,E4,,,infección respiratoria (otro),enfermedad injerto contra huésped
+doi:10.1590/s0036-36342011000100009,excluir,E2,,,tos ferina,consenso mexicano de diagnóstico y prevención de tos ferina; resumen consultado
+doi:10.1331/japha.2011.11505,excluir,E2,,,tos ferina,vacunación/inmunización únicamente
+pmid:21228763,excluir,E2,,,tos ferina,vacunación/inmunización únicamente
+doi:10.1586/erv.10.156,excluir,E1,,,tos ferina,"revisión narrativa, editorial, carta o comentario; no es guía"
+doi:10.7705/biomedica.v31i3.348,excluir,E1,,,infección respiratoria (otro),estudio primario u otro documento no normativo
+pmid:23904776,excluir,E4,,,infección respiratoria (otro),asma
+doi:10.1177/1942602x12452443,excluir,E2,,,tos ferina,vacunación/inmunización únicamente
+doi:10.1016/j.vaccine.2012.09.084,excluir,E1,,,tos ferina,"revisión narrativa, editorial, carta o comentario; no es guía"
+pmid:22739778,excluir,E2,,,tos ferina,vacunación/inmunización únicamente
+doi:10.1016/j.vaccine.2012.06.005,excluir,E2,,,tos ferina,vacunación/inmunización únicamente
+doi:10.1097/mop.0b013e3283534d11,excluir,E2,,,infección respiratoria (otro),vacunación/inmunización únicamente
+doi:10.1001/jama.2012.367,excluir,E2,,,tos ferina,vacunación/inmunización únicamente
+doi:10.1016/j.vaccine.2012.02.034,excluir,E4,,,infección respiratoria (otro),vacuna VPH
+doi:10.1097/aog.0b013e31824e1327,excluir,E2,,,tos ferina,vacunación/inmunización únicamente
+pmid:27500927,excluir,E1,,,bronquiolitis,"revisión narrativa, editorial, carta o comentario; no es guía; resumen consultado"
+doi:10.30789/rcneumologia.v24.n1.2012.203,excluir,E1,,,bronquiolitis,"revisión narrativa, editorial, carta o comentario; no es guía"
+doi:10.1016/s0123-9392(12)70010-3,excluir,E1,,,tos ferina,estudio primario u otro documento no normativo
+doi:10.1016/s0123-9392(12)70059-0,excluir,E1,,,infección respiratoria (otro),reporte de caso
+doi:10.32997/rcb-2012-3106,excluir,E2,,,infección respiratoria (otro),vacunación/inmunización únicamente
+titulo:swyerjamessyndromecasereport,excluir,E1,,,infección respiratoria (otro),reporte de caso
+titulo:neumonarecurrentepresentacinclnicadelahemosiderosispulmonaridiopticaenunaniadetr,excluir,E1,,,neumonía adquirida en la comunidad,estudio primario u otro documento no normativo
+doi:10.1007/s13312-013-0292-9,excluir,E2,,,infección respiratoria (otro),vacunación/inmunización únicamente
+doi:10.1542/peds.2013-1747,excluir,E1,,,tos ferina,estudio de adherencia/impacto de guías o encuesta de práctica
+doi:10.1111/epi.12306,excluir,E2,,,infección respiratoria (otro),vacunación/inmunización únicamente
+doi:10.1016/j.jadohealth.2013.07.039,excluir,E2,,,infección respiratoria (otro),vacunación/inmunización únicamente
+doi:10.1097/01.aog.0000431054.33593.e3,excluir,E2,,,tos ferina,vacunación/inmunización únicamente
+doi:10.1097/mop.0b013e328360dc63,excluir,E2,,,infección respiratoria (otro),vacunación/inmunización únicamente
+doi:10.1016/j.jped.2013.02.003,excluir,E2,,,infección respiratoria (otro),oxigenoterapia/alto flujo únicamente
+doi:10.1542/peds.2012-1427m,excluir,E1,,,bronquiolitis,estudio de adherencia/impacto de guías o encuesta de práctica
+pmid:23425962,excluir,E2,,,tos ferina,vacunación/inmunización únicamente
+doi:10.1016/j.eimc.2012.12.011,excluir,E2,,,tos ferina,tos ferina: epidemiología y estrategias de vacunación; resumen consultado
+titulo:caractersticasenniosmenoresdetresaosdeedadconriesgodealergiaalimentaria,excluir,E1,,,infección respiratoria (otro),estudio primario u otro documento no normativo
+doi:10.33132/23229659.318,excluir,E1,,,infección respiratoria (otro),estudio primario u otro documento no normativo
+doi:10.21774/cys.v2i6.336,excluir,E1,,,infección respiratoria (otro),estudio primario u otro documento no normativo
+titulo:seguimientodelpacienteasmticoqudebesaberelfarmacuticocomunitario,excluir,E1,,,infección respiratoria (otro),estudio primario u otro documento no normativo
+titulo:utilizacindemontelukastenpoblacinpeditricaestudioentresfarmaciascomunitarias,excluir,E1,,,infección respiratoria (otro),estudio primario u otro documento no normativo
+doi:10.1186/s13613-014-0029-5,excluir,E2,,,infección respiratoria (otro),oxigenoterapia/alto flujo únicamente
+doi:10.4161/hv.29020,excluir,E2,,,infección respiratoria (otro),vacunación/inmunización únicamente
+doi:10.1378/chest.14-2024,excluir,E1,,,bronquiolitis,"revisión narrativa, editorial, carta o comentario; no es guía; sin resumen en PubMed"
+doi:10.1093/pch/19.9.485,incluir,,"internacional (Canadian Paediatric Society, Canadá)",guia,bronquiolitis,1 a 24 meses; resumen consultado
+doi:10.1007/s13312-014-0504-y,excluir,E2,,,infección respiratoria (otro),vacunación/inmunización únicamente
+doi:10.1542/peds.2014-2742,incluir,,"internacional (AAP, EE. UU.)",guia,bronquiolitis,1 a 23 meses; resumen consultado
+doi:10.1186/1824-7288-40-65,excluir,E5,,,bronquiolitis,consenso italiano 2014 reemplazado por actualización 2022 doi:10.1186/s13052-022-01392-6
+pmid:25072068,excluir,E2,,,tos ferina,vacunación/inmunización únicamente
+doi:10.1542/peds.2014-1665,excluir,E2,,,bronquiolitis,prevención/inmunoprofilaxis del VSR únicamente
+doi:10.1542/peds.2014-1666,excluir,E2,,,bronquiolitis,prevención/inmunoprofilaxis del VSR únicamente
+doi:10.1136/archdischild-2014-306838,incluir,,OMS-OPS (OMS),otro,neumonía adquirida en la comunidad; bronquiolitis,dudoso: resumen de recomendaciones OMS para países en desarrollo; sin resumen en PubMed
+doi:10.1016/j.jpeds.2014.05.057,excluir,E1,,,bronquiolitis,estudio de adherencia/impacto de guías o encuesta de práctica
+doi:10.1016/j.jpeds.2014.05.021,excluir,E1,,,bronquiolitis,estudio de adherencia/impacto de guías o encuesta de práctica
+doi:10.1097/mop.0000000000000093,excluir,E2,,,infección respiratoria (otro),vacunación/inmunización únicamente
+doi:10.1002/jhm.2187,excluir,E2,,,infección respiratoria (otro),calidad metodológica de guías pediátricas hospitalarias; resumen consultado
+doi:10.1542/peds.2013-2881,excluir,E1,,,bronquiolitis,estudio de adherencia/impacto de guías o encuesta de práctica
+doi:10.4161/hv.27893,excluir,E2,,,infección respiratoria (otro),vacunación/inmunización únicamente
+doi:10.1016/j.bmhimx.2014.08.007,excluir,E1,,,bronquiolitis,estudio primario u otro documento no normativo; resumen consultado
+doi:10.1542/peds.2013-1991,excluir,E1,,,bronquiolitis,estudio de adherencia/impacto de guías o encuesta de práctica
+doi:10.1097/01.jaa.0000438528.61644.91,excluir,E1,,,tos ferina,"revisión narrativa, editorial, carta o comentario; no es guía; resumen consultado"
+doi:10.1542/peds.2013-2005,excluir,E1,,,bronquiolitis,estudio de adherencia/impacto de guías o encuesta de práctica
+doi:10.1002/ppul.22835,excluir,E1,,,bronquiolitis,estudio de adherencia/impacto de guías o encuesta de práctica
+titulo:anlisispsicomtricodelaevaluacindelaspectopragmticodellenguajeinfantilbateraicraa,excluir,E1,,,infección respiratoria (otro),estudio primario u otro documento no normativo
+doi:10.1186/s13052-015-0203-x,excluir,E2,,,bronquiolitis,prevención/inmunoprofilaxis del VSR únicamente
+doi:10.1542/peds.2015-2862,excluir,E6,,,bronquiolitis,fe de erratas de la guía AAP 2014 doi:10.1542/peds.2014-2742
+doi:10.7196/samjnew.8040,incluir,,"internacional (grupo de expertos, Sudáfrica)",consenso,bronquiolitis,dudoso: actualización breve 2015 de recomendaciones sudafricanas; resumen consultado
+doi:10.1016/j.vaccine.2015.08.028,excluir,E1,,,infección respiratoria (otro),estudio de adherencia/impacto de guías o encuesta de práctica
+doi:10.5492/wjccm.v4.i3.152,excluir,E1,,,bronquiolitis,"revisión narrativa, editorial, carta o comentario; no es guía; resumen consultado"
+doi:10.1136/bmjopen-2015-008096,excluir,E1,,,infección respiratoria (otro),estudio de adherencia/impacto de guías o encuesta de práctica
+pmid:26065055,excluir,E5,,,infección respiratoria (otro),NICE NG9 2015 reemplazada por versión 2021 pmid:34464037
+doi:10.1097/mop.0000000000000228,excluir,E2,,,infección respiratoria (otro),vacunación/inmunización únicamente
+doi:10.1542/peds.2014-3703,excluir,E1,,,bronquiolitis,"revisión narrativa, editorial, carta o comentario; no es guía; sin resumen en PubMed"
+doi:10.5811/westjem.2015.1.24930,excluir,E1,,,bronquiolitis,"revisión narrativa, editorial, carta o comentario; no es guía"
+pmid:25638906,excluir,E1,,,bronquiolitis,"revisión narrativa, editorial, carta o comentario; no es guía; sin resumen en PubMed"
+doi:10.1016/j.pedhc.2014.10.002,excluir,E1,,,bronquiolitis,estudio de adherencia/impacto de guías o encuesta de práctica
+doi:10.1016/j.anpedi.2014.10.004,excluir,E2,,,bronquiolitis,prevención/inmunoprofilaxis del VSR únicamente
+doi:10.1016/j.prrv.2014.11.004,excluir,E1,,,bronquiolitis,"revisión narrativa, editorial, carta o comentario; no es guía; resumen consultado"
+doi:10.17533/udea.iatreia.21496,excluir,E1,,,bronquiolitis,estudio primario u otro documento no normativo
+doi:10.17533/udea.iatreia.21363,excluir,E1,,,bronquiolitis,estudio primario u otro documento no normativo
+doi:10.17533/udea.iatreia.21497,excluir,E1,,,infección respiratoria (otro),estudio primario u otro documento no normativo
+titulo:helioxeneltratamientodelostrastornosbroncoobstructivosenunaunidaddecuidadosinten,excluir,E1,,,infección respiratoria (otro),estudio primario u otro documento no normativo
+titulo:aspectosclnicosyepidemiolgicosasociadosalsndromecoqueluchoideenniosmenoresdecinc,excluir,E1,,,tos ferina,estudio primario u otro documento no normativo
+doi:10.1016/j.vaccine.2016.09.055,excluir,E1,,,tos ferina,estudio de adherencia/impacto de guías o encuesta de práctica
+doi:10.1002/ppul.23561,excluir,E2,,,bronquiolitis,prevención/inmunoprofilaxis del VSR únicamente
+doi:10.1177/1753465816662159,excluir,E1,,,bronquiolitis,estudio de adherencia/impacto de guías o encuesta de práctica
+doi:10.1016/j.vaccine.2016.03.046,excluir,E2,,,infección respiratoria (otro),vacunación/inmunización únicamente
+doi:10.1093/fampra/cmw037,excluir,E1,,,bronquitis aguda,estudio primario u otro documento no normativo
+doi:10.1016/j.anpedi.2016.03.019,excluir,E1,,,bronquiolitis,"revisión narrativa, editorial, carta o comentario; no es guía"
+doi:10.12968/hmed.2016.77.4.212,excluir,E1,,,bronquiolitis,"revisión narrativa, editorial, carta o comentario; no es guía; resumen consultado"
+doi:10.1177/1524839915627458,excluir,E2,,,infección respiratoria (otro),vacunación/inmunización únicamente
+doi:10.1016/j.vaccine.2016.02.060,excluir,E2,,,infección respiratoria (otro),vacunación/inmunización únicamente
+doi:10.1093/jac/dkw030,excluir,E1,,,infección respiratoria (otro),estudio de adherencia/impacto de guías o encuesta de práctica
+doi:10.1016/j.anpedi.2016.01.012,excluir,E1,,,bronquiolitis,"revisión narrativa, editorial, carta o comentario; no es guía"
+doi:10.1136/archdischild-2015-309156,excluir,E1,,,bronquiolitis,"revisión narrativa, editorial, carta o comentario; no es guía; sin resumen en PubMed"
+doi:10.1016/j.vaccine.2015.10.136,excluir,E2,,,tos ferina,vacunación/inmunización únicamente
+doi:10.1111/apa.13162,excluir,E5,,,crup/laringotraqueítis,guía finlandesa 2014 (publ. 2016) reemplazada por actualización 2023 doi:10.1111/apa.17481
+doi:10.1002/14651858.cd010123.pub2,excluir,E1,,,infección respiratoria (otro),"revisión narrativa, editorial, carta o comentario; no es guía"
+doi:10.7705/biomedica.v36i3.3117,excluir,E1,,,tos ferina,estudio primario u otro documento no normativo
+titulo:quistebroncognicopresentacindeuncaso,excluir,E1,,,infección respiratoria (otro),reporte de caso
+titulo:evaluacindeunaintervencineducativagrupaldeenfermeraenniosconasma,excluir,E1,,,infección respiratoria (otro),estudio primario u otro documento no normativo
+titulo:herniadiafragmticapostraumticaenunanciano,excluir,E1,,,infección respiratoria (otro),estudio primario u otro documento no normativo
+doi:10.1136/bmjpo-2017-000089,excluir,E1,,,bronquiolitis,estudio primario u otro documento no normativo
+doi:10.1097/aog.0000000000002301,excluir,E2,,,tos ferina,vacunación/inmunización únicamente
+doi:10.1097/aog.0000000000002293,excluir,E2,,,tos ferina,vacunación/inmunización únicamente
+doi:10.1002/ppul.23750,excluir,E1,,,bronquiolitis,"revisión narrativa, editorial, carta o comentario; no es guía; resumen consultado"
+doi:10.1111/apa.13964,excluir,E1,,,bronquiolitis,estudio de adherencia/impacto de guías o encuesta de práctica
+doi:10.1016/j.amepre.2017.03.022,excluir,E1,,,tos ferina,estudio de adherencia/impacto de guías o encuesta de práctica
+doi:10.1542/hpeds.2016-0195,excluir,E1,,,bronquiolitis,estudio de adherencia/impacto de guías o encuesta de práctica; resumen consultado
+doi:10.1542/peds.2016-4186,excluir,E2,,,infección respiratoria (otro),vacunación/inmunización únicamente
+doi:10.1111/jep.12446,excluir,E2,,,bronquiolitis,"evaluación AGREE II de calidad de GPC de bronquiolitis (autores colombianos), sin contenido de tratamiento; resumen consultado"
+doi:10.1155/2017/9730696,excluir,E1,,,bronquiolitis,estudio primario u otro documento no normativo
+titulo:atelectasiayreflujogastroesofgicopresentacindecaso,excluir,E1,,,infección respiratoria (otro),reporte de caso
+titulo:evaluacindelestadoclnicofuncionaldeniosconasmabronquialtratadosconmontelukast,excluir,E1,,,infección respiratoria (otro),estudio primario u otro documento no normativo
+pmid:30487483,excluir,E1,,,neumonía adquirida en la comunidad,estudio primario u otro documento no normativo
+doi:10.1016/j.vaccine.2018.10.028,excluir,E2,,,tos ferina,recomendaciones GPI sobre control y vacunación de tos ferina
+doi:10.11124/jbisrir-2017-003475,excluir,E1,,,bronquiolitis,protocolo de revisión de alcance
+doi:10.1016/j.clinthera.2018.07.004,excluir,E2,,,infección respiratoria (otro),vacunación/inmunización únicamente
+doi:10.1016/j.jcv.2018.06.011,excluir,E1,,,bronquiolitis,estudio de adherencia/impacto de guías o encuesta de práctica
+doi:10.1016/j.anpedi.2018.02.008,excluir,E1,,,bronquiolitis,estudio de adherencia/impacto de guías o encuesta de práctica
+doi:10.1111/apa.14397,excluir,E1,,,bronquiolitis,estudio primario u otro documento no normativo
+doi:10.2807/1560-7917.es.2018.23.17.18-00048,excluir,E2,,,infección respiratoria (otro),vacunación/inmunización únicamente
+doi:10.15585/mmwr.rr6702a1,excluir,E2,,,tos ferina,vacunación/inmunización únicamente
+doi:10.1016/j.emc.2017.12.006,excluir,E1,,,bronquiolitis,"revisión narrativa, editorial, carta o comentario; no es guía; resumen consultado"
+doi:10.1016/j.vaccine.2018.03.025,excluir,E2,,,tos ferina,recomendaciones GPI sobre control y vacunación de tos ferina
+doi:10.1111/chd.12590,excluir,E1,,,bronquiolitis,estudio primario u otro documento no normativo
+doi:10.1186/s12874-018-0478-x,excluir,E2,,,bronquiolitis,metodología de elaboración de la guía australasiática; resumen consultado
+doi:10.1136/thoraxjnl-2017-211180,excluir,E1,,,bronquiolitis,"revisión narrativa, editorial, carta o comentario; no es guía"
+doi:10.1007/s00431-017-3034-5,excluir,E1,,,bronquiolitis,estudio de adherencia/impacto de guías o encuesta de práctica
+doi:10.1080/21645515.2017.1379639,excluir,E2,,,infección respiratoria (otro),vacunación/inmunización únicamente
+doi:10.1177/0009922817698804,excluir,E1,,,bronquiolitis,estudio de adherencia/impacto de guías o encuesta de práctica
+doi:10.1016/j.ft.2018.09.002,excluir,E1,,,infección respiratoria (otro),estudio primario u otro documento no normativo
+doi:10.21615/cesmedicina.32.2.1,excluir,E1,,,infección respiratoria (otro),estudio primario u otro documento no normativo
+doi:10.1016/j.anpede.2018.02.007,excluir,E1,,,bronquiolitis,estudio de adherencia/impacto de guías o encuesta de práctica
+doi:10.5546/aap.2019.s37,excluir,E2,,,infección respiratoria (otro),vacunación/inmunización únicamente
+doi:10.1186/s13052-019-0736-5,excluir,E1,,,bronquiolitis,revisión sistemática de estudios observacionales sobre palivizumab
+doi:10.5603/arm.2019.0056,excluir,E2,,,crup/laringotraqueítis,"crup: etiología, epidemiología y clínica, sin tratamiento; resumen consultado"
+doi:10.1093/intqhc/mzz088,excluir,E1,,,crup/laringotraqueítis,estudio de adherencia/impacto de guías o encuesta de práctica
+pmid:34464039,excluir,E5,,,infección respiratoria (otro),informe de vigilancia 2019 de NICE NG9; versión vigente pmid:34464037
+doi:10.1097/pec.0000000000001915,excluir,E1,,,bronquiolitis,"revisión narrativa, editorial, carta o comentario; no es guía"
+doi:10.1016/j.jvacx.2019.100013,excluir,E2,,,infección respiratoria (otro),vacunación/inmunización únicamente
+doi:10.1080/14760584.2019.1646643,excluir,E2,,,tos ferina,vacunación/inmunización únicamente
+doi:10.1177/0009922819850462,excluir,E1,,,bronquiolitis,estudio de adherencia/impacto de guías o encuesta de práctica
+doi:10.1111/jep.13157,excluir,E1,,,bronquiolitis,estudio primario u otro documento no normativo
+doi:10.1111/cod.13303,excluir,E4,,,infección respiratoria (otro),dermatitis de contacto
+doi:10.1182/blood.2019000216,excluir,E4,,,infección respiratoria (otro),enfermedad injerto contra huésped
+doi:10.31662/jmaj.2018-0012,excluir,E2,,,infección respiratoria (otro),vacunación/inmunización únicamente
+pmid:31381281,excluir,E2,,,infección respiratoria (otro),revisión CADTH de alto flujo; resumen consultado
+doi:10.1542/peds.2017-4156,excluir,E1,,,bronquiolitis,estudio de adherencia/impacto de guías o encuesta de práctica
+doi:10.1007/s00431-018-3300-1,excluir,E1,,,bronquiolitis,encuesta de práctica sobre nutrición y búsqueda documental
+doi:10.1016/j.chest.2018.09.027,excluir,E2,,,tos ferina,diagnóstico clínico de tos ferina (CHEST); resumen consultado
+doi:10.1111/ajo.12896,excluir,E1,,,tos ferina,estudio primario u otro documento no normativo
+doi:10.1111/jpc.14160,incluir,,"internacional (revisión AGREE de guías nacionales, Australia)",revision de guias,bronquiolitis,"compara recomendaciones de PREDICT, NICE y AAP; resumen consultado"
+doi:10.1111/jpc.14104,excluir,E5,,,bronquiolitis,guía australasiática 2018 reemplazada por actualización 2025 doi:10.1111/jpc.70144
+doi:10.11144/javeriana.umed61-1.nmar,excluir,E1,,,bronquiolitis,estudio primario u otro documento no normativo
+doi:10.22354/in.v23i3.786,excluir,E1,,,bronquiolitis,estudio primario u otro documento no normativo
+doi:10.51451/np.v14i3.106,excluir,E1,,,infección respiratoria (otro),estudio primario u otro documento no normativo
+doi:10.1016/j.anpede.2018.02.010,excluir,E1,,,bronquiolitis,estudio primario u otro documento no normativo
+doi:10.1016/j.anpede.2019.01.015,excluir,E1,,,infección respiratoria (otro),estudio primario u otro documento no normativo
+doi:10.1016/j.anpede.2018.02.012,excluir,E1,,,bronquiolitis,estudio de adherencia/impacto de guías o encuesta de práctica
+doi:10.51451/np.v14i3.105,excluir,E1,,,infección respiratoria (otro),estudio primario u otro documento no normativo
+doi:10.3390/diagnostics10110935,excluir,E2,,,bronquiolitis,ecografía pulmonar (diagnóstico)
+doi:10.1002/emp2.12103,excluir,E1,,,infección respiratoria (otro),evaluación de protocolos prehospitalarios de EMS; resumen consultado
+doi:10.4081/mrm.2020.673,excluir,E1,,,bronquiolitis,estudio de adherencia/impacto de guías o encuesta de práctica
+doi:10.1183/23120541.00135-2020,excluir,E1,,,bronquiolitis,"revisión narrativa, editorial, carta o comentario; no es guía; resumen consultado"
+doi:10.1371/journal.pone.0237801,excluir,E1,,,bronquiolitis,estudio primario u otro documento no normativo; resumen consultado
+doi:10.3389/fimmu.2020.01282,excluir,E2,,,infección respiratoria (otro),vacunación/inmunización únicamente
+doi:10.1111/jpc.14930,excluir,E1,,,bronquiolitis,estudio de adherencia/impacto de guías o encuesta de práctica
+doi:10.1080/14760584.2020.1775078,excluir,E2,,,infección respiratoria (otro),vacunación/inmunización únicamente
+doi:10.1089/ped.2020.1141,excluir,E1,,,bronquiolitis,estudio de adherencia/impacto de guías o encuesta de práctica
+doi:10.1016/j.ijid.2020.04.081,excluir,E2,,,tos ferina,recomendaciones GPI sobre control y vacunación de tos ferina
+doi:10.15585/mmwr.mm6905a5,excluir,E2,,,tos ferina,vacunación/inmunización únicamente
+doi:10.1016/s2352-3026(19)30256-x,excluir,E4,,,infección respiratoria (otro),enfermedad injerto contra huésped
+doi:10.15585/mmwr.mm6903a5,excluir,E2,,,tos ferina,vacunación/inmunización únicamente
+doi:10.1542/hpeds.2019-0230,excluir,E1,,,bronquiolitis,estudio de adherencia/impacto de guías o encuesta de práctica
+doi:10.1007/s00431-019-03563-w,excluir,E2,,,infección respiratoria (otro),vacunación/inmunización únicamente
+doi:10.1097/phh.0000000000001072,excluir,E1,,,tos ferina,estudio primario u otro documento no normativo
+doi:10.1093/infdis/jiz240,incluir,,"internacional (RESCEU, revisión sistemática de GPC)",revision de guias,bronquiolitis,resumen consultado
+doi:10.12788/jhm.3291,excluir,E1,,,infección respiratoria (otro),estudio de adherencia/impacto de guías o encuesta de práctica
+doi:10.1002/ppul.24486,excluir,E1,,,bronquiolitis,estudio de adherencia/impacto de guías o encuesta de práctica
+doi:10.1136/archdischild-2018-315199,excluir,E1,,,bronquiolitis,estudio de adherencia/impacto de guías o encuesta de práctica
+doi:10.11604/pamj.2020.37.94.22712,excluir,E1,,,bronquiolitis,estudio primario u otro documento no normativo
+doi:10.1186/s12913-020-05814-1,excluir,E1,,,bronquiolitis,estudio primario u otro documento no normativo
+doi:10.32641/rchped.v91i2.1156,excluir,E1,,,bronquiolitis,estudio de adherencia/impacto de guías o encuesta de práctica
+doi:10.1186/s12879-020-05198-x,excluir,E1,,,tos ferina,reporte de caso
+doi:10.35366/94169,excluir,E1,,,bronquiolitis,estudio primario u otro documento no normativo
+doi:10.32997/rcb-2020-3158,excluir,E1,,,bronquiolitis,estudio primario u otro documento no normativo
+doi:10.15446/rsap.v22n6.86074,excluir,E1,,,bronquiolitis,estudio primario u otro documento no normativo
+doi:10.51451/np.v14i1.79,excluir,E1,,,bronquiolitis,estudio primario u otro documento no normativo
+doi:10.14295/rp.v53i2.182,excluir,E1,,,bronquiolitis,estudio de adherencia/impacto de guías o encuesta de práctica
+doi:10.51451/np.v14i2.92,excluir,E1,,,infección respiratoria (otro),estudio primario u otro documento no normativo
+titulo:plantasutilizadasenmedicinatradicionalparaafeccionesrespiratoriasvirales,excluir,E1,,,infección respiratoria (otro),estudio primario u otro documento no normativo
+titulo:cnulanasaldealtoflujoenlactantesconinfeccinrespiratoriaagudabajainternadosenunas,excluir,E1,,,infección respiratoria (otro),estudio primario u otro documento no normativo
+doi:10.21897/rmvz.1923,excluir,E1,,,infección respiratoria (otro),reporte de caso
+doi:10.3390/microorganisms9112221,excluir,E1,,,bronquiolitis,estudio de adherencia/impacto de guías o encuesta de práctica
+doi:10.1002/iid3.451,excluir,E1,,,bronquiolitis,estudio de adherencia/impacto de guías o encuesta de práctica
+doi:10.1542/hpeds.2020-005785,excluir,E1,,,bronquiolitis,estudio de adherencia/impacto de guías o encuesta de práctica
+doi:10.1093/jcag/gwab016,excluir,E2,,,infección respiratoria (otro),vacunación/inmunización únicamente
+pmid:34464037,incluir,,"internacional (NICE, Reino Unido)",guia,bronquiolitis,versión 2021 de NG9; resumen consultado
+doi:10.5546/aap.2021.s171,incluir,,"Latinoamerica (Sociedad Argentina de Pediatría, Argentina)",consenso,bronquiolitis; neumonía adquirida en la comunidad,"IRA baja en menores de 2 años, actualización 2021; resumen consultado"
+doi:10.1136/bmjpo-2021-001111,excluir,E1,,,bronquiolitis,estudio de adherencia/impacto de guías o encuesta de práctica
+doi:10.3345/cep.2021.00507,excluir,E2,,,tos ferina,vacunación/inmunización únicamente
+doi:10.1016/j.ctim.2021.102736,excluir,E2,,,bronquitis aguda,"consenso de terapias antroposóficas para bronquitis aguda, sin contenido antibiótico; resumen consultado"
+pmid:33899193,excluir,E1,,,bronquiolitis,estudio de adherencia/impacto de guías o encuesta de práctica
+doi:10.1007/s00431-021-04057-4,excluir,E1,,,infección respiratoria (otro),estudio primario u otro documento no normativo; resumen consultado
+doi:10.15537/smj.2021.42.4.20200769,excluir,E2,,,bronquiolitis,consenso saudí de profilaxis VSR (prevención únicamente)
+doi:10.4187/respcare.09006,excluir,E2,,,infección respiratoria (otro),oxigenoterapia/alto flujo únicamente
+doi:10.1038/s41533-021-00228-w,excluir,E1,,,bronquiolitis,estudio de adherencia/impacto de guías o encuesta de práctica
+doi:10.1001/jamanetworkopen.2020.37356,excluir,E1,,,bronquiolitis,estudio de adherencia/impacto de guías o encuesta de práctica
+doi:10.3390/diagnostics11010066,excluir,E6,,,bronquiolitis,respuesta a comentario
+doi:10.3390/diagnostics11010055,excluir,E6,,,bronquiolitis,comentario a consenso de ecografía
+doi:10.12788/jhm.3535,excluir,E1,,,bronquiolitis,estudio de adherencia/impacto de guías o encuesta de práctica
+doi:10.1016/j.arcped.2020.11.007,excluir,E1,,,bronquiolitis,estudio primario u otro documento no normativo
+doi:10.1080/21645515.2020.1817713,excluir,E2,,,infección respiratoria (otro),vacunación/inmunización únicamente
+doi:10.1002/ppul.25114,excluir,E1,,,bronquiolitis,estudio primario u otro documento no normativo
+doi:10.1093/pch/pxaa013,excluir,E1,,,bronquiolitis,estudio de adherencia/impacto de guías o encuesta de práctica
+doi:10.1186/s40545-020-00284-6,excluir,E1,,,bronquiolitis,estudio primario u otro documento no normativo
+doi:10.1007/s41669-020-00218-7,excluir,E1,,,bronquiolitis,estudio primario u otro documento no normativo
+doi:10.1016/j.medin.2019.10.005,excluir,E1,,,infección respiratoria (otro),estudio primario u otro documento no normativo
+doi:10.51451/np.v8i2.409,excluir,E1,,,bronquiolitis,"revisión narrativa, editorial, carta o comentario; no es guía"
+doi:10.29193/rmu.37.2.6,excluir,E1,,,bronquiolitis,estudio primario u otro documento no normativo
+doi:10.22267/rus.212302.219,excluir,E1,,,infección respiratoria (otro),estudio primario u otro documento no normativo
+doi:10.7764/horiz_enferm.32.1.79-90,excluir,E1,,,infección respiratoria (otro),estudio primario u otro documento no normativo
+titulo:infeccionesrespiratoriasagudasbajasenniosmenoresde2aoshospitalizacionesduranteel,excluir,E1,,,infección respiratoria (otro),estudio primario u otro documento no normativo
+doi:10.51451/np.v16i2.326,excluir,E1,,,bronquiolitis,"revisión narrativa, editorial, carta o comentario; no es guía"
+doi:10.29262/ram.v68i1.844,excluir,E1,,,neumonía adquirida en la comunidad,reporte de caso
+doi:10.1016/j.anpede.2020.03.015,excluir,E1,,,bronquiolitis,estudio primario u otro documento no normativo
+doi:10.51451/np.v16i1.233,excluir,E1,,,infección respiratoria (otro),estudio primario u otro documento no normativo
+doi:10.3390/vaccines10121990,excluir,E2,,,tos ferina,vacunación/inmunización únicamente
+doi:10.3390/jcm11216558,excluir,E4,,,infección respiratoria (otro),sibilancias preescolares/asma; resumen consultado
+doi:10.11604/pamj.2022.42.219.24876,excluir,E1,,,bronquiolitis,estudio de adherencia/impacto de guías o encuesta de práctica
+doi:10.1007/s00431-022-04606-5,excluir,E1,,,infección respiratoria (otro),estudio de adherencia/impacto de guías o encuesta de práctica
+doi:10.1080/14760584.2022.2130770,excluir,E2,,,tos ferina,vacunación/inmunización únicamente
+doi:10.1542/peds.2021-053507,excluir,E1,,,crup/laringotraqueítis,estudio de mejora de calidad (implementación de guía local); resumen consultado
+doi:10.1111/apa.16468,excluir,E1,,,crup/laringotraqueítis,estudio primario u otro documento no normativo
+doi:10.3390/ijerph19074066,excluir,E2,,,tos ferina,vacunación/inmunización únicamente
+doi:10.1136/bmjopen-2021-052943,excluir,E1,,,bronquiolitis,conjunto básico de desenlaces para ensayos
+doi:10.1111/apa.16322,excluir,E1,,,bronquiolitis,"revisión narrativa, editorial, carta o comentario; no es guía; resumen consultado"
+doi:10.1542/hpeds.2021-006323,excluir,E1,,,tos ferina,estudio primario u otro documento no normativo
+doi:10.1016/j.vaccine.2021.12.004,excluir,E2,,,tos ferina,tos ferina en Asia: vigilancia y vacunación (GPI); resumen consultado
+doi:10.1016/j.anpede.2021.11.002,excluir,E2,,,infección respiratoria (otro),vacunación/inmunización únicamente
+doi:10.1016/j.acap.2021.08.003,excluir,E1,,,bronquiolitis,estudio primario u otro documento no normativo
+doi:10.35434/rcmhnaaa.2022.15supl.1.1636,excluir,E2,,,infección respiratoria (otro),vacunación/inmunización únicamente
+doi:10.18359/rmed.5798,excluir,E1,,,infección respiratoria (otro),estudio primario u otro documento no normativo
+doi:10.24875/bmhim.21000150,excluir,E2,,,tos ferina,vacunación/inmunización únicamente
+doi:10.17843/rpmesp.2022.391.9830,excluir,E1,,,infección respiratoria (otro),estudio primario u otro documento no normativo
+doi:10.1016/j.nefro.2020.12.018,excluir,E1,,,infección respiratoria (otro),estudio primario u otro documento no normativo
+doi:10.25176/rfmh.v22i4.5094,excluir,E1,,,infección respiratoria (otro),estudio primario u otro documento no normativo
+doi:10.3389/fped.2023.1322360,excluir,E2,,,infección respiratoria (otro),"fármacos mucoactivos inhalados, sin contenido antibiótico; resumen consultado"
+doi:10.1542/peds.2023-062371,excluir,E4,,,infección respiratoria (otro),alergia alimentaria
+doi:10.1080/14760584.2023.2271057,excluir,E2,,,infección respiratoria (otro),vacunación/inmunización únicamente
+doi:10.1186/s13052-023-01527-3,excluir,E1,,,bronquiolitis,"revisión narrativa, editorial, carta o comentario; no es guía; resumen consultado"
+doi:10.1186/s12884-023-05938-2,excluir,E1,,,tos ferina,estudio de adherencia/impacto de guías o encuesta de práctica
+doi:10.1542/hpeds.2023-007221,excluir,E1,,,crup/laringotraqueítis,encuesta sobre variación de GPC hospitalarias de crup; resumen consultado
+doi:10.1542/hpeds.2023-007181,excluir,E1,,,crup/laringotraqueítis,estudio de adherencia/impacto de guías o encuesta de práctica
+doi:10.1016/j.anpede.2023.07.004,excluir,E2,,,infección respiratoria (otro),vacunación/inmunización únicamente
+doi:10.1542/hpeds.2023-007120,excluir,E1,,,bronquiolitis,estudio primario u otro documento no normativo
+doi:10.1080/21645515.2023.2216117,excluir,E2,,,infección respiratoria (otro),vacunación/inmunización únicamente
+doi:10.1371/journal.pone.0285626,excluir,E1,,,bronquiolitis,estudio de adherencia/impacto de guías o encuesta de práctica
+doi:10.1002/ppul.26460,excluir,E1,,,bronquiolitis,estudio de adherencia/impacto de guías o encuesta de práctica
+doi:10.1111/apa.16809,excluir,E1,,,bronquiolitis,"revisión narrativa, editorial, carta o comentario; no es guía"
+doi:10.1007/s00431-023-04940-2,excluir,E1,,,bronquiolitis,estudio de adherencia/impacto de guías o encuesta de práctica
+doi:10.1186/s13052-022-01392-6,incluir,,"internacional (consenso intersocietario, Italia)",consenso,bronquiolitis,actualiza el consenso de 2014; resumen consultado
+doi:10.26633/rpsp.2023.24,excluir,E2,,,infección respiratoria (otro),vacunación/inmunización únicamente
+doi:10.1007/s00134-022-06918-4,incluir,,"internacional (GFRUP, países francófonos)",guia,bronquiolitis grave,lactantes <12 meses en UCI pediátrica; resumen consultado
+doi:10.1016/j.japh.2022.10.017,excluir,E2,,,infección respiratoria (otro),vacunación/inmunización únicamente
+doi:10.14295/rp.v55isuplemento2.250,excluir,E1,,,infección respiratoria (otro),reporte de caso
+titulo:bronquiolitismanejoinicial,incluir,,Latinoamerica (Argentina; Revista del Hospital de Niños),otro,bronquiolitis,dudoso: sin resumen; podría ser revisión narrativa o guía hospitalaria
+doi:10.21037/cdt-24-302,excluir,E2,,,infección respiratoria (otro),vacunación/inmunización únicamente
+doi:10.1186/s40560-024-00764-w,excluir,E1,,,infección respiratoria (otro),"revisión narrativa, editorial, carta o comentario; no es guía"
+doi:10.1007/s12519-024-00848-5,incluir,,"internacional (consenso de expertos, China)",consenso,tos ferina,diagnóstico y tratamiento en niños; resumen consultado
+doi:10.1377/hlthaff.2024.00378,excluir,E2,,,infección respiratoria (otro),vacunación/inmunización únicamente
+doi:10.15585/mmwr.mm7336a4,excluir,E2,,,infección respiratoria (otro),vacunación/inmunización únicamente
+doi:10.4103/atm.atm_69_24,excluir,E2,,,bronquiolitis,consenso saudí sobre prevención del VSR; resumen consultado
+doi:10.1016/j.ctim.2024.103072,excluir,E2,,,crup/laringotraqueítis,"consenso de terapias antroposóficas para crup, sin contenido antibiótico; resumen consultado"
+doi:10.1016/j.jhqr.2024.06.005,excluir,E1,,,bronquiolitis,estudio de adherencia/impacto de guías o encuesta de práctica
+doi:10.1164/rccm.202406-1117st,excluir,E4,,,bronquiolitis,bronquiolitis obliterante post-trasplante
+doi:10.1016/j.anpede.2024.02.014,excluir,E2,,,infección respiratoria (otro),vacunación/inmunización únicamente
+doi:10.1080/21645515.2024.2324547,excluir,E2,,,tos ferina,vacunación/inmunización únicamente
+pmid:38271938,excluir,E2,,,infección respiratoria (otro),vacunación/inmunización únicamente
+doi:10.1002/ijgo.15311,excluir,E2,,,tos ferina,vacunación/inmunización únicamente
+doi:10.1007/s12519-023-00777-9,incluir,,"internacional (consenso de expertos, China)",consenso,bronquiolitis (VSR),"diagnóstico, tratamiento y prevención de infección por VSR; resumen consultado"
+doi:10.1093/ije/dyad161,excluir,E1,,,tos ferina,estudio de adherencia/impacto de guías o encuesta de práctica
+doi:10.3390/life14121675,excluir,E1,,,bronquiolitis,"revisión narrativa, editorial, carta o comentario; no es guía"
+doi:10.1007/s00431-024-05530-6,excluir,E1,,,bronquiolitis,estudio primario u otro documento no normativo
+doi:10.1097/pcc.0000000000003500,excluir,E1,,,infección respiratoria (otro),estudio primario u otro documento no normativo
+doi:10.68770/rp.v57i4.480,excluir,E1,,,infección respiratoria (otro),estudio primario u otro documento no normativo
+doi:10.14295/rp.v57i1.401,excluir,E1,,,infección respiratoria (otro),estudio primario u otro documento no normativo
+doi:10.34119/bjhrv7n1-135,excluir,E1,,,infección respiratoria (otro),estudio primario u otro documento no normativo
+doi:10.1016/j.anpede.2023.12.006,excluir,E1,,,bronquiolitis,estudio de adherencia/impacto de guías o encuesta de práctica
+doi:10.52226/revista.v32i116.347,excluir,E2,,,bronquiolitis,prevención/inmunoprofilaxis del VSR únicamente
+titulo:sndromedeleffleryascaridiasisenlavabiliarenunaniapresentacindeuncasoclnico,excluir,E1,,,infección respiratoria (otro),reporte de caso
+doi:10.18597/rcog.4310,excluir,E2,,,infección respiratoria (otro),vacunación/inmunización únicamente
+doi:10.1097/01.npr.0000000000000364,excluir,E2,,,bronquiolitis,vacunas contra VSR
+doi:10.1136/bmjpo-2025-003349,excluir,E1,,,bronquiolitis,estudio primario u otro documento no normativo
+doi:10.3390/ijms26157135,excluir,E1,,,infección respiratoria (otro),estudio primario u otro documento no normativo
+doi:10.1111/jpc.70142,excluir,E1,,,bronquiolitis,"revisión narrativa, editorial, carta o comentario; no es guía; sin resumen en PubMed"
+doi:10.1111/jpc.70144,incluir,,"internacional (PREDICT, Australia y Nueva Zelanda)",guia,bronquiolitis,actualización 2025; resumen consultado
+doi:10.1111/jpc.70145,excluir,E2,,,bronquiolitis,metodología de elaboración de la guía australasiática; resumen consultado
+doi:10.1007/s12519-025-00926-2,excluir,E2,,,bronquiolitis,prevención/inmunoprofilaxis del VSR únicamente
+doi:10.1080/21645515.2025.2513729,excluir,E2,,,tos ferina,vacunación/inmunización únicamente
+doi:10.3390/children12050571,excluir,E1,,,bronquiolitis,estudio de adherencia/impacto de guías o encuesta de práctica
+doi:10.1097/id9.0000000000000141,incluir,,"internacional (grupo elaborador de guía, China)",guia,tos ferina,interpretación de la guía china 2024 de tos ferina; resumen consultado
+doi:10.1016/j.jmii.2025.02.007,excluir,E2,,,bronquiolitis,prevención/inmunoprofilaxis del VSR únicamente
+doi:10.1016/j.ijregi.2024.100559,excluir,E2,,,tos ferina,recomendaciones GPI sobre control y vacunación de tos ferina
+doi:10.1186/s13052-025-01844-9,excluir,E2,,,bronquiolitis,prevención/inmunoprofilaxis del VSR únicamente
+doi:10.1016/j.anpede.2024.503713,excluir,E2,,,infección respiratoria (otro),vacunación/inmunización únicamente
+doi:10.1016/j.jmii.2024.12.010,excluir,E2,,,bronquiolitis,vacunas contra VSR
+doi:10.1111/apa.17566,excluir,E1,,,bronquiolitis,estudio de adherencia/impacto de guías o encuesta de práctica
+doi:10.1016/j.pedhc.2024.11.005,excluir,E2,,,bronquiolitis,prevención/inmunoprofilaxis del VSR únicamente
+doi:10.1002/ppul.27391,excluir,E1,,,bronquiolitis,"revisión narrativa, editorial, carta o comentario; no es guía; resumen consultado"
+doi:10.1513/annalsats.202407-758ag,excluir,E4,,,bronquiolitis,bronquiolitis obliterante post-trasplante
+doi:10.24875/bmhim.24000184,excluir,E1,,,infección respiratoria (otro),estudio primario u otro documento no normativo
+doi:10.1016/j.rmcr.2025.102173,excluir,E1,,,tos ferina,reporte de caso
+doi:10.55633/s3me/060.2025,excluir,E1,,,bronquiolitis,"revisión narrativa, editorial, carta o comentario; no es guía"
+titulo:sndromeinflamatoriomultisistmicoenpacienteconleucemia,excluir,E1,,,infección respiratoria (otro),estudio primario u otro documento no normativo
+doi:10.29262/ram.v72i3.1534,excluir,E1,,,infección respiratoria (otro),estudio primario u otro documento no normativo
+doi:10.24875/bmhim.24000136,excluir,E1,,,infección respiratoria (otro),estudio primario u otro documento no normativo
+doi:10.1002/lary.71022,incluir,,internacional (consenso Delphi internacional),consenso,crup/laringotraqueítis recurrente,"dudoso: crup recurrente, evaluación y manejo; resumen consultado"
+doi:10.1002/ijgo.71330,excluir,E2,,,infección respiratoria (otro),vacunación/inmunización únicamente
+doi:10.1002/gin2.70065,excluir,E1,,,bronquiolitis,estudio Delphi metodológico sobre conversión a guía viva; resumen consultado
+doi:10.3390/children13081046,excluir,E1,,,crup/laringotraqueítis,estudio de adherencia/impacto de guías o encuesta de práctica
+doi:10.24875/bmhim.26000053,excluir,E2,,,bronquiolitis,prevención/inmunoprofilaxis del VSR únicamente
+doi:10.1016/j.pedhc.2026.06.011,excluir,E1,,,bronquiolitis,estudio primario u otro documento no normativo
+doi:10.1186/s12887-026-07285-5,excluir,E1,,,bronquiolitis,estudio de adherencia/impacto de guías o encuesta de práctica
+doi:10.47895/amp.v60i10.11356,excluir,E2,,,infección respiratoria (otro),vacunación/inmunización únicamente
+doi:10.1016/j.jpeds.2026.115195,excluir,E1,,,bronquiolitis,estudio de adherencia/impacto de guías o encuesta de práctica
+doi:10.1007/s40121-026-01329-0,excluir,E2,,,tos ferina,recomendaciones GPI sobre control y vacunación de tos ferina
+doi:10.1016/j.arbres.2026.01.009,incluir,,Latinoamerica (ALAT),consenso,bronquiolitis (VSR),"consenso ALAT 2025, incluye manejo; autores colombianos; resumen consultado"
+doi:10.1016/j.vaccine.2026.128265,excluir,E1,,,infección respiratoria (otro),estudio de adherencia/impacto de guías o encuesta de práctica
+doi:10.1002/jpen.70055,excluir,E1,,,bronquiolitis,estudio de adherencia/impacto de guías o encuesta de práctica
+pmid:42160651,incluir,,OMS-OPS (OMS),guia,bronquiolitis,guías consolidadas OMS 2026 asma y bronquiolitis; resumen consultado
+doi:10.1016/j.arcped.2025.10.008,excluir,E1,,,bronquiolitis,estudio de adherencia/impacto de guías o encuesta de práctica
+doi:10.5281/zenodo.21724296,excluir,E1,,,tos ferina,estudio primario u otro documento no normativo
+doi:10.34896/rsi.2026.11.52.001,excluir,E1,,,bronquiolitis,"revisión narrativa, editorial, carta o comentario; no es guía"
+doi:10.7705/biomedica.8075,excluir,E1,,,tos ferina,estudio primario u otro documento no normativo
+doi:10.1016/j.anpede.2026.504159,excluir,E1,,,infección respiratoria (otro),estudio primario u otro documento no normativo
+doi:10.17533/udea.iatreia.21495,excluir,E1,,,bronquiolitis,estudio primario u otro documento no normativo

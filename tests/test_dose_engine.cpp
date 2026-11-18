@@ -287,6 +287,41 @@ TEST_CASE("motor: ajuste renal con dosis de reemplazo y tope de la banda") {
   CHECK(adolescent.dose_per_administration == doctest::Approx(500.0));
   CHECK(adolescent.interval_hours == 12);
 
+  // El redondeo a la presentación tampoco supera el tope de la banda. Con
+  // 34 kg: 15 × 34 = 510 → tope 500 mg; en una suspensión de 150 mg/mL serían
+  // 3,33 mL, que redondeados hacia arriba darían 3,5 mL (525 mg).
+  // (Caso hallado por la prueba exhaustiva con la población modelada.)
+  {
+    KnowledgeBase with_liquid = testing::loadTestKb();
+    Drug& drug_d = const_cast<Drug&>(with_liquid.drug("farmaco_d"));
+    Presentation suspension;
+    suspension.id = "d_susp_750";
+    suspension.description = "Suspensión 750 mg/5 mL";
+    suspension.route = Route::Oral;
+    suspension.dispensing_unit = "mL";
+    suspension.amount_per_unit = 150.0;
+    suspension.rounding_step = 0.5;
+    drug_d.presentations.push_back(suspension);
+    const DoseEngine capped_engine(with_liquid);
+    const Patient heavy{Age::fromYearsAndMonths(7, 0), Kilograms(34.0), Centimeters(120.0)};
+    const TreatmentPlan plan =
+        capped_engine.plan({heavy, RenalFunction::entered(Gfr(20.0)), "enfermedad_renal"});
+    const RegimenResult& result = optionOf(lineOf(plan, TreatmentLineKind::First), 1).components.at(0);
+    CHECK(result.dose_per_administration == doctest::Approx(500.0));
+    const Administration& a = administrationOf(result, "d_susp_750");
+    CHECK(a.rounded_quantity == doctest::Approx(3.0));
+    CHECK(a.delivered_amount <= 500.0 + 1e-9);
+  }
+
+  // Tope del medicamento: el esquema solo trae tope diario (4000 mg); el tope
+  // por toma lo pone el medicamento. 90 × 50 ÷ 3 = 1500 mg → 1000 mg.
+  const RegimenResult heavy_normal = regimen(testing::adolescentCase(), 100.0);
+  CHECK(heavy_normal.dose_per_administration == doctest::Approx(1000.0));
+  CHECK(hasCode(heavy_normal.warnings, "TOPE_DEL_MEDICAMENTO_APLICADO"));
+  CHECK_FALSE(hasCode(heavy_normal.warnings, "SIN_TOPE_MAXIMO"));
+  CHECK(normal.warnings.size() == regimen(testing::infantCase(), 100.0).warnings.size());
+  CHECK_FALSE(hasCode(normal.warnings, "TOPE_DEL_MEDICAMENTO_APLICADO"));
+
   // TFG 5: la banda no cambia la dosis, pero su nota se muestra como aviso.
   const RegimenResult severe = regimen(testing::infantCase(), 5.0);
   CHECK(severe.dose_per_administration == doctest::Approx(300.0));

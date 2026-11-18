@@ -46,3 +46,7 @@ albendazol_susp_200,albendazol,Suspensión 200 mg/5 mL,oral,liquido,200,5,,,
 albendazol_tab_200,albendazol,Tableta 200 mg,oral,solido,200,,tableta,no,
 mebendazol_susp_100,mebendazol,Suspensión 100 mg/5 mL,oral,liquido,100,5,,,
 clinda_amp_600,clindamicina,Ampolla 600 mg/4 mL,iv,liquido,600,4,,,"0,1"
+cefadroxilo_susp_250,cefadroxilo,Suspensión 250 mg/5 mL,oral,liquido,250,5,,,
+cefadroxilo_susp_500,cefadroxilo,Suspensión 500 mg/5 mL,oral,liquido,500,5,,,
+cefadroxilo_cap_500,cefadroxilo,Cápsula 500 mg,oral,solido,500,,cápsula,no,
+linezolid_tab_600,linezolid,Tableta 600 mg,oral,solido,600,,tableta,no,

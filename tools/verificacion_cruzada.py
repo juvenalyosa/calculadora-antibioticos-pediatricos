@@ -38,6 +38,9 @@ def texto(valor):
     return str(int(redondeado)) if redondeado == int(redondeado) else repr(redondeado)
 
 
+TOPES = {}
+
+
 def aplica(fila, meses, kg):
     edad_min, edad_max = num(fila["edad_min_meses"]), num(fila["edad_max_meses"])
     peso_min, peso_max = num(fila["peso_min_kg"]), num(fila["peso_max_kg"])
@@ -56,7 +59,10 @@ def dosis_por_toma(fila, kg):
         dosis = usual * kg
     else:  # dosis_fija
         dosis = usual
-    tope_toma, tope_dia = num(fila["max_por_dosis"]), num(fila["max_por_dia"])
+    # Topes del esquema o, si faltan, del medicamento por esa vía.
+    tope_med = TOPES.get((fila["medicamento_id"], fila["via"]), {})
+    tope_toma = num(fila["max_por_dosis"]) if fila["max_por_dosis"] else num(tope_med.get("max_por_dosis", ""))
+    tope_dia = num(fila["max_por_dia"]) if fila["max_por_dia"] else num(tope_med.get("max_por_dia", ""))
     if tope_toma is not None:
         dosis = min(dosis, tope_toma)
     if tope_dia is not None and intervalo:
@@ -101,12 +107,22 @@ def cantidad(presentacion, dosis, tope_toma):
     return redondeada, desviacion
 
 
-def elegir_presentacion(presentaciones, fila, dosis, preferida):
+def tope_por_toma(fila, banda):
+    """Tope por toma que limita el redondeo: el del esquema o el del medicamento,
+    y el de la banda renal si es menor."""
+    tope_med = TOPES.get((fila["medicamento_id"], fila["via"]), {})
+    tope = num(fila["max_por_dosis"]) if fila["max_por_dosis"] else num(tope_med.get("max_por_dosis", ""))
+    if banda is not None and num(banda["max_por_dosis"]) is not None:
+        tope = min(tope, num(banda["max_por_dosis"])) if tope is not None else num(banda["max_por_dosis"])
+    return tope
+
+
+def elegir_presentacion(presentaciones, fila, dosis, preferida, tope):
     """La presentación adecuada (desviación ≤ 10 %) del tipo preferido, si existe."""
     candidatas = []
     for p in presentaciones:
         if p["medicamento_id"] == fila["medicamento_id"] and p["via"] == fila["via"]:
-            valor, desviacion = cantidad(p, dosis, num(fila["max_por_dosis"]))
+            valor, desviacion = cantidad(p, dosis, tope)
             if valor > 0 and desviacion <= 0.10 + 1e-9:
                 candidatas.append((p["tipo"] != preferida, desviacion, p["id"], valor))
     if not candidatas:
@@ -117,6 +133,7 @@ def elegir_presentacion(presentaciones, fila, dosis, preferida):
 
 def main():
     esquemas, presentaciones, bandas = leer("esquemas"), leer("presentaciones"), leer("ajuste_renal")
+    TOPES.update({(t["medicamento_id"], t["via"]): t for t in leer("topes_medicamento")})
     abreviatura = {"primera": "1", "segunda": "2", "alergia": "al"}
     filas = []
     for nombre, meses, kg, talla in PACIENTES:
@@ -130,10 +147,11 @@ def main():
                                    and banda["evitar"] != "si"]
             for tfg in escenarios:
                 dosis, intervalo = dosis_por_toma(fila, kg)
-                if tfg is not None:
-                    dosis, intervalo = ajuste_renal(banda_de(bandas, fila["medicamento_id"], tfg),
-                                                    kg, dosis, intervalo)
-                presentacion, valor = elegir_presentacion(presentaciones, fila, dosis, preferida)
+                banda = banda_de(bandas, fila["medicamento_id"], tfg) if tfg is not None else None
+                if banda is not None:
+                    dosis, intervalo = ajuste_renal(banda, kg, dosis, intervalo)
+                presentacion, valor = elegir_presentacion(presentaciones, fila, dosis, preferida,
+                                                          tope_por_toma(fila, banda))
                 caso = "-".join([fila["enfermedad_id"], nombre,
                                  abreviatura[fila["linea"]] + fila["opcion"],
                                  "normal" if tfg is None else f"tfg{tfg}"])

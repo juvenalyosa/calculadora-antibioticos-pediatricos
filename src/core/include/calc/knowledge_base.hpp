@@ -121,12 +121,36 @@ struct RenalAdjustment {
   [[nodiscard]] const RenalBand* findBand(double gfr) const noexcept;
 };
 
+/// Dosis máxima del medicamento por vía, con independencia de la indicación
+/// (en la práctica, la dosis máxima del adulto). Se aplica a los esquemas que
+/// no traen su propio tope de ese tipo: así una dosis por kilogramo no crece
+/// sin límite en los pacientes de mayor peso.
+struct DrugCap {
+  Route route = Route::Oral;
+  std::optional<double> max_per_dose;
+  std::optional<double> max_per_day;
+  std::string source_id;
+  std::string page;
+  std::string note;
+};
+
 struct Drug {
   std::string id;
   std::string name;
   DrugUnit unit = DrugUnit::Milligram;
   std::vector<Presentation> presentations;
   RenalAdjustment renal;
+  std::vector<DrugCap> caps;  ///< A lo sumo uno por vía.
+
+  /// Tope del medicamento para una vía, si existe.
+  [[nodiscard]] const DrugCap* capFor(Route route) const noexcept {
+    for (const DrugCap& cap : caps) {
+      if (cap.route == route) {
+        return &cap;
+      }
+    }
+    return nullptr;
+  }
 };
 
 /// Un medicamento con su dosis dentro de una opción terapéutica.

@@ -30,3 +30,9 @@ albendazol,Albendazol,mg,sin_dato,,,borrador
 mebendazol,Mebendazol,mg,sin_dato,,,borrador
 ciprofloxacina_otica,"Ciprofloxacina ótica al 0,3 %",mg,sin_dato,,,borrador
 gentamicina_oftalmica,"Gentamicina oftálmica al 0,3 %",mg,sin_dato,,,borrador
+ampicilina_sulbactam,Ampicilina-sulbactam,mg,sin_dato,,,borrador
+cefotaxima,Cefotaxima,mg,sin_dato,,,borrador
+levofloxacina,Levofloxacina,mg,sin_dato,,,borrador
+vancomicina_iv,Vancomicina (intravenosa),mg,sin_dato,Se elimina por el riñón: la dosis se ajusta según los niveles séricos y la función renal.,,borrador
+linezolid,Linezolid,mg,no_requiere,,kinderformularium,borrador
+cefadroxilo,Cefadroxilo,mg,sin_dato,,,borrador

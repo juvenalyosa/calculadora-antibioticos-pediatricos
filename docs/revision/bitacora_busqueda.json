@@ -1,0 +1,359 @@
+{
+ "fecha": "2026-11-18",
+ "desde": "2010/01/01",
+ "hasta": "2026/11/18",
+ "estrategias": [
+  {
+   "tema": "otitis",
+   "base": "PubMed",
+   "estrategia": "pubmed_guias",
+   "ecuacion": "(\"otitis media\"[tiab] OR \"Otitis Media\"[Mesh] OR \"otitis externa\"[tiab] OR mastoiditis[tiab]) AND (child*[tiab] OR pediatric*[tiab] OR paediatric*[tiab] OR infant*[tiab] OR adolescen*[tiab] OR \"Child\"[Mesh] OR \"Infant\"[Mesh] OR \"Adolescent\"[Mesh]) AND (Guideline[pt] OR \"Practice Guideline\"[pt] OR \"Consensus Development Conference\"[pt] OR guideline*[ti] OR consensus[ti] OR recommendation*[ti] OR \"position statement\"[ti] OR guia[ti] OR consenso[ti] OR recomendaciones[ti]) AND (\"2010/01/01\"[dp] : \"2026/11/18\"[dp]) AND (english[la] OR spanish[la])",
+   "resultados": 150,
+   "recuperados": 150
+  },
+  {
+   "tema": "otitis",
+   "base": "PubMed",
+   "estrategia": "pubmed_region",
+   "ecuacion": "(\"otitis media\"[tiab] OR \"Otitis Media\"[Mesh] OR \"otitis externa\"[tiab] OR mastoiditis[tiab]) AND (child*[tiab] OR pediatric*[tiab] OR paediatric*[tiab] OR infant*[tiab] OR adolescen*[tiab] OR \"Child\"[Mesh] OR \"Infant\"[Mesh] OR \"Adolescent\"[Mesh]) AND (Colombia[tiab] OR Colombia[ad] OR Colombian[tiab] OR \"Latin America\"[tiab] OR \"Latin American\"[tiab] OR \"Colombia\"[Mesh] OR \"Latin America\"[Mesh]) AND (\"Anti-Bacterial Agents\"[Mesh] OR antibiotic*[tiab] OR antimicrobial*[tiab] OR amoxicillin[tiab] OR treatment[ti] OR management[ti]) AND (\"2010/01/01\"[dp] : \"2026/11/18\"[dp]) AND (english[la] OR spanish[la])",
+   "resultados": 13,
+   "recuperados": 13
+  },
+  {
+   "tema": "otitis",
+   "base": "OpenAlex",
+   "estrategia": "openalex",
+   "ecuacion": "otitis",
+   "resultados": 34,
+   "recuperados": 34
+  },
+  {
+   "tema": "otitis",
+   "base": "DOAJ",
+   "estrategia": "doaj",
+   "ecuacion": "otitis",
+   "resultados": 35,
+   "recuperados": 26
+  },
+  {
+   "tema": "faringitis",
+   "base": "PubMed",
+   "estrategia": "pubmed_guias",
+   "ecuacion": "(pharyngitis[tiab] OR tonsillitis[tiab] OR pharyngotonsillitis[tiab] OR tonsillopharyngitis[tiab] OR \"sore throat\"[tiab] OR \"Pharyngitis\"[Mesh] OR \"scarlet fever\"[tiab]) AND (child*[tiab] OR pediatric*[tiab] OR paediatric*[tiab] OR infant*[tiab] OR adolescen*[tiab] OR \"Child\"[Mesh] OR \"Infant\"[Mesh] OR \"Adolescent\"[Mesh]) AND (Guideline[pt] OR \"Practice Guideline\"[pt] OR \"Consensus Development Conference\"[pt] OR guideline*[ti] OR consensus[ti] OR recommendation*[ti] OR \"position statement\"[ti] OR guia[ti] OR consenso[ti] OR recomendaciones[ti]) AND (\"2010/01/01\"[dp] : \"2026/11/18\"[dp]) AND (english[la] OR spanish[la])",
+   "resultados": 89,
+   "recuperados": 89
+  },
+  {
+   "tema": "faringitis",
+   "base": "PubMed",
+   "estrategia": "pubmed_region",
+   "ecuacion": "(pharyngitis[tiab] OR tonsillitis[tiab] OR pharyngotonsillitis[tiab] OR tonsillopharyngitis[tiab] OR \"sore throat\"[tiab] OR \"Pharyngitis\"[Mesh] OR \"scarlet fever\"[tiab]) AND (child*[tiab] OR pediatric*[tiab] OR paediatric*[tiab] OR infant*[tiab] OR adolescen*[tiab] OR \"Child\"[Mesh] OR \"Infant\"[Mesh] OR \"Adolescent\"[Mesh]) AND (Colombia[tiab] OR Colombia[ad] OR Colombian[tiab] OR \"Latin America\"[tiab] OR \"Latin American\"[tiab] OR \"Colombia\"[Mesh] OR \"Latin America\"[Mesh]) AND (\"Anti-Bacterial Agents\"[Mesh] OR antibiotic*[tiab] OR antimicrobial*[tiab] OR amoxicillin[tiab] OR treatment[ti] OR management[ti]) AND (\"2010/01/01\"[dp] : \"2026/11/18\"[dp]) AND (english[la] OR spanish[la])",
+   "resultados": 6,
+   "recuperados": 6
+  },
+  {
+   "tema": "faringitis",
+   "base": "OpenAlex",
+   "estrategia": "openalex",
+   "ecuacion": "faringoamigdalitis OR faringitis OR amigdalitis",
+   "resultados": 6,
+   "recuperados": 6
+  },
+  {
+   "tema": "faringitis",
+   "base": "DOAJ",
+   "estrategia": "doaj",
+   "ecuacion": "faringoamigdalitis OR faringitis OR amigdalitis",
+   "resultados": 21,
+   "recuperados": 18
+  },
+  {
+   "tema": "sinusitis",
+   "base": "PubMed",
+   "estrategia": "pubmed_guias",
+   "ecuacion": "(sinusitis[tiab] OR rhinosinusitis[tiab] OR \"Sinusitis\"[Mesh]) AND (child*[tiab] OR pediatric*[tiab] OR paediatric*[tiab] OR infant*[tiab] OR adolescen*[tiab] OR \"Child\"[Mesh] OR \"Infant\"[Mesh] OR \"Adolescent\"[Mesh]) AND (Guideline[pt] OR \"Practice Guideline\"[pt] OR \"Consensus Development Conference\"[pt] OR guideline*[ti] OR consensus[ti] OR recommendation*[ti] OR \"position statement\"[ti] OR guia[ti] OR consenso[ti] OR recomendaciones[ti]) AND (\"2010/01/01\"[dp] : \"2026/11/18\"[dp]) AND (english[la] OR spanish[la])",
+   "resultados": 74,
+   "recuperados": 74
+  },
+  {
+   "tema": "sinusitis",
+   "base": "PubMed",
+   "estrategia": "pubmed_region",
+   "ecuacion": "(sinusitis[tiab] OR rhinosinusitis[tiab] OR \"Sinusitis\"[Mesh]) AND (child*[tiab] OR pediatric*[tiab] OR paediatric*[tiab] OR infant*[tiab] OR adolescen*[tiab] OR \"Child\"[Mesh] OR \"Infant\"[Mesh] OR \"Adolescent\"[Mesh]) AND (Colombia[tiab] OR Colombia[ad] OR Colombian[tiab] OR \"Latin America\"[tiab] OR \"Latin American\"[tiab] OR \"Colombia\"[Mesh] OR \"Latin America\"[Mesh]) AND (\"Anti-Bacterial Agents\"[Mesh] OR antibiotic*[tiab] OR antimicrobial*[tiab] OR amoxicillin[tiab] OR treatment[ti] OR management[ti]) AND (\"2010/01/01\"[dp] : \"2026/11/18\"[dp]) AND (english[la] OR spanish[la])",
+   "resultados": 4,
+   "recuperados": 4
+  },
+  {
+   "tema": "sinusitis",
+   "base": "OpenAlex",
+   "estrategia": "openalex",
+   "ecuacion": "rinosinusitis OR sinusitis",
+   "resultados": 17,
+   "recuperados": 17
+  },
+  {
+   "tema": "sinusitis",
+   "base": "DOAJ",
+   "estrategia": "doaj",
+   "ecuacion": "rinosinusitis OR sinusitis",
+   "resultados": 12,
+   "recuperados": 9
+  },
+  {
+   "tema": "neumonia",
+   "base": "PubMed",
+   "estrategia": "pubmed_guias",
+   "ecuacion": "(\"community-acquired pneumonia\"[tiab] OR \"community acquired pneumonia\"[tiab] OR (\"Pneumonia\"[Mesh] AND \"Community-Acquired Infections\"[Mesh]) OR \"Mycoplasma pneumoniae\"[tiab]) AND (child*[tiab] OR pediatric*[tiab] OR paediatric*[tiab] OR infant*[tiab] OR adolescen*[tiab] OR \"Child\"[Mesh] OR \"Infant\"[Mesh] OR \"Adolescent\"[Mesh]) AND (Guideline[pt] OR \"Practice Guideline\"[pt] OR \"Consensus Development Conference\"[pt] OR guideline*[ti] OR consensus[ti] OR recommendation*[ti] OR \"position statement\"[ti] OR guia[ti] OR consenso[ti] OR recomendaciones[ti]) AND (\"2010/01/01\"[dp] : \"2026/11/18\"[dp]) AND (english[la] OR spanish[la])",
+   "resultados": 107,
+   "recuperados": 107
+  },
+  {
+   "tema": "neumonia",
+   "base": "PubMed",
+   "estrategia": "pubmed_region",
+   "ecuacion": "(\"community-acquired pneumonia\"[tiab] OR \"community acquired pneumonia\"[tiab] OR (\"Pneumonia\"[Mesh] AND \"Community-Acquired Infections\"[Mesh]) OR \"Mycoplasma pneumoniae\"[tiab]) AND (child*[tiab] OR pediatric*[tiab] OR paediatric*[tiab] OR infant*[tiab] OR adolescen*[tiab] OR \"Child\"[Mesh] OR \"Infant\"[Mesh] OR \"Adolescent\"[Mesh]) AND (Colombia[tiab] OR Colombia[ad] OR Colombian[tiab] OR \"Latin America\"[tiab] OR \"Latin American\"[tiab] OR \"Colombia\"[Mesh] OR \"Latin America\"[Mesh]) AND (\"Anti-Bacterial Agents\"[Mesh] OR antibiotic*[tiab] OR antimicrobial*[tiab] OR amoxicillin[tiab] OR treatment[ti] OR management[ti]) AND (\"2010/01/01\"[dp] : \"2026/11/18\"[dp]) AND (english[la] OR spanish[la])",
+   "resultados": 12,
+   "recuperados": 12
+  },
+  {
+   "tema": "neumonia",
+   "base": "OpenAlex",
+   "estrategia": "openalex",
+   "ecuacion": "neumonía adquirida en la comunidad",
+   "resultados": 11,
+   "recuperados": 11
+  },
+  {
+   "tema": "neumonia",
+   "base": "DOAJ",
+   "estrategia": "doaj",
+   "ecuacion": "neumonía adquirida en la comunidad",
+   "resultados": 20,
+   "recuperados": 17
+  },
+  {
+   "tema": "respiratorias_virales",
+   "base": "PubMed",
+   "estrategia": "pubmed_guias",
+   "ecuacion": "(bronchiolitis[tiab] OR croup[tiab] OR laryngotracheitis[tiab] OR \"acute bronchitis\"[tiab] OR pertussis[tiab] OR \"whooping cough\"[tiab]) AND (child*[tiab] OR pediatric*[tiab] OR paediatric*[tiab] OR infant*[tiab] OR adolescen*[tiab] OR \"Child\"[Mesh] OR \"Infant\"[Mesh] OR \"Adolescent\"[Mesh]) AND (Guideline[pt] OR \"Practice Guideline\"[pt] OR \"Consensus Development Conference\"[pt] OR guideline*[ti] OR consensus[ti] OR recommendation*[ti] OR \"position statement\"[ti] OR guia[ti] OR consenso[ti] OR recomendaciones[ti]) AND (\"2010/01/01\"[dp] : \"2026/11/18\"[dp]) AND (english[la] OR spanish[la])",
+   "resultados": 273,
+   "recuperados": 273
+  },
+  {
+   "tema": "respiratorias_virales",
+   "base": "PubMed",
+   "estrategia": "pubmed_region",
+   "ecuacion": "(bronchiolitis[tiab] OR croup[tiab] OR laryngotracheitis[tiab] OR \"acute bronchitis\"[tiab] OR pertussis[tiab] OR \"whooping cough\"[tiab]) AND (child*[tiab] OR pediatric*[tiab] OR paediatric*[tiab] OR infant*[tiab] OR adolescen*[tiab] OR \"Child\"[Mesh] OR \"Infant\"[Mesh] OR \"Adolescent\"[Mesh]) AND (Colombia[tiab] OR Colombia[ad] OR Colombian[tiab] OR \"Latin America\"[tiab] OR \"Latin American\"[tiab] OR \"Colombia\"[Mesh] OR \"Latin America\"[Mesh]) AND (\"Anti-Bacterial Agents\"[Mesh] OR antibiotic*[tiab] OR antimicrobial*[tiab] OR amoxicillin[tiab] OR treatment[ti] OR management[ti]) AND (\"2010/01/01\"[dp] : \"2026/11/18\"[dp]) AND (english[la] OR spanish[la])",
+   "resultados": 19,
+   "recuperados": 19
+  },
+  {
+   "tema": "respiratorias_virales",
+   "base": "OpenAlex",
+   "estrategia": "openalex",
+   "ecuacion": "bronquiolitis OR tos ferina OR laringotraqueítis",
+   "resultados": 39,
+   "recuperados": 39
+  },
+  {
+   "tema": "respiratorias_virales",
+   "base": "DOAJ",
+   "estrategia": "doaj",
+   "ecuacion": "bronquiolitis OR tos ferina OR laringotraqueítis",
+   "resultados": 116,
+   "recuperados": 47
+  },
+  {
+   "tema": "urinaria",
+   "base": "PubMed",
+   "estrategia": "pubmed_guias",
+   "ecuacion": "(\"urinary tract infection\"[tiab] OR \"urinary tract infections\"[tiab] OR pyelonephritis[tiab] OR cystitis[tiab] OR \"Urinary Tract Infections\"[Mesh]) AND (child*[tiab] OR pediatric*[tiab] OR paediatric*[tiab] OR infant*[tiab] OR adolescen*[tiab] OR \"Child\"[Mesh] OR \"Infant\"[Mesh] OR \"Adolescent\"[Mesh]) AND (Guideline[pt] OR \"Practice Guideline\"[pt] OR \"Consensus Development Conference\"[pt] OR guideline*[ti] OR consensus[ti] OR recommendation*[ti] OR \"position statement\"[ti] OR guia[ti] OR consenso[ti] OR recomendaciones[ti]) AND (\"2010/01/01\"[dp] : \"2026/11/18\"[dp]) AND (english[la] OR spanish[la])",
+   "resultados": 218,
+   "recuperados": 218
+  },
+  {
+   "tema": "urinaria",
+   "base": "PubMed",
+   "estrategia": "pubmed_region",
+   "ecuacion": "(\"urinary tract infection\"[tiab] OR \"urinary tract infections\"[tiab] OR pyelonephritis[tiab] OR cystitis[tiab] OR \"Urinary Tract Infections\"[Mesh]) AND (child*[tiab] OR pediatric*[tiab] OR paediatric*[tiab] OR infant*[tiab] OR adolescen*[tiab] OR \"Child\"[Mesh] OR \"Infant\"[Mesh] OR \"Adolescent\"[Mesh]) AND (Colombia[tiab] OR Colombia[ad] OR Colombian[tiab] OR \"Latin America\"[tiab] OR \"Latin American\"[tiab] OR \"Colombia\"[Mesh] OR \"Latin America\"[Mesh]) AND (\"Anti-Bacterial Agents\"[Mesh] OR antibiotic*[tiab] OR antimicrobial*[tiab] OR amoxicillin[tiab] OR treatment[ti] OR management[ti]) AND (\"2010/01/01\"[dp] : \"2026/11/18\"[dp]) AND (english[la] OR spanish[la])",
+   "resultados": 30,
+   "recuperados": 30
+  },
+  {
+   "tema": "urinaria",
+   "base": "OpenAlex",
+   "estrategia": "openalex",
+   "ecuacion": "infección urinaria OR infección de vías urinarias",
+   "resultados": 41,
+   "recuperados": 41
+  },
+  {
+   "tema": "urinaria",
+   "base": "DOAJ",
+   "estrategia": "doaj",
+   "ecuacion": "infección urinaria OR infección de vías urinarias",
+   "resultados": 11,
+   "recuperados": 10
+  },
+  {
+   "tema": "diarrea",
+   "base": "PubMed",
+   "estrategia": "pubmed_guias",
+   "ecuacion": "(gastroenteritis[tiab] OR \"acute diarrhea\"[tiab] OR \"acute diarrhoea\"[tiab] OR dysentery[tiab] OR shigell*[tiab] OR \"Clostridioides difficile\"[tiab] OR \"Clostridium difficile\"[tiab] OR \"Gastroenteritis\"[Mesh]) AND (child*[tiab] OR pediatric*[tiab] OR paediatric*[tiab] OR infant*[tiab] OR adolescen*[tiab] OR \"Child\"[Mesh] OR \"Infant\"[Mesh] OR \"Adolescent\"[Mesh]) AND (Guideline[pt] OR \"Practice Guideline\"[pt] OR \"Consensus Development Conference\"[pt] OR guideline*[ti] OR consensus[ti] OR recommendation*[ti] OR \"position statement\"[ti] OR guia[ti] OR consenso[ti] OR recomendaciones[ti]) AND (\"2010/01/01\"[dp] : \"2026/11/18\"[dp]) AND (english[la] OR spanish[la])",
+   "resultados": 344,
+   "recuperados": 344
+  },
+  {
+   "tema": "diarrea",
+   "base": "PubMed",
+   "estrategia": "pubmed_region",
+   "ecuacion": "(gastroenteritis[tiab] OR \"acute diarrhea\"[tiab] OR \"acute diarrhoea\"[tiab] OR dysentery[tiab] OR shigell*[tiab] OR \"Clostridioides difficile\"[tiab] OR \"Clostridium difficile\"[tiab] OR \"Gastroenteritis\"[Mesh]) AND (child*[tiab] OR pediatric*[tiab] OR paediatric*[tiab] OR infant*[tiab] OR adolescen*[tiab] OR \"Child\"[Mesh] OR \"Infant\"[Mesh] OR \"Adolescent\"[Mesh]) AND (Colombia[tiab] OR Colombia[ad] OR Colombian[tiab] OR \"Latin America\"[tiab] OR \"Latin American\"[tiab] OR \"Colombia\"[Mesh] OR \"Latin America\"[Mesh]) AND (\"Anti-Bacterial Agents\"[Mesh] OR antibiotic*[tiab] OR antimicrobial*[tiab] OR amoxicillin[tiab] OR treatment[ti] OR management[ti]) AND (\"2010/01/01\"[dp] : \"2026/11/18\"[dp]) AND (english[la] OR spanish[la])",
+   "resultados": 59,
+   "recuperados": 59
+  },
+  {
+   "tema": "diarrea",
+   "base": "OpenAlex",
+   "estrategia": "openalex",
+   "ecuacion": "enfermedad diarreica aguda OR diarrea aguda OR gastroenteritis",
+   "resultados": 62,
+   "recuperados": 62
+  },
+  {
+   "tema": "diarrea",
+   "base": "DOAJ",
+   "estrategia": "doaj",
+   "ecuacion": "enfermedad diarreica aguda OR diarrea aguda OR gastroenteritis",
+   "resultados": 16,
+   "recuperados": 11
+  },
+  {
+   "tema": "piel",
+   "base": "PubMed",
+   "estrategia": "pubmed_guias",
+   "ecuacion": "(\"skin and soft tissue infection\"[tiab] OR \"skin and soft tissue infections\"[tiab] OR cellulitis[tiab] OR impetigo[tiab] OR \"skin abscess\"[tiab] OR erysipelas[tiab] OR \"Staphylococcal Skin Infections\"[Mesh] OR \"bite wound\"[tiab] OR \"Bites and Stings\"[Mesh]) AND (child*[tiab] OR pediatric*[tiab] OR paediatric*[tiab] OR infant*[tiab] OR adolescen*[tiab] OR \"Child\"[Mesh] OR \"Infant\"[Mesh] OR \"Adolescent\"[Mesh]) AND (Guideline[pt] OR \"Practice Guideline\"[pt] OR \"Consensus Development Conference\"[pt] OR guideline*[ti] OR consensus[ti] OR recommendation*[ti] OR \"position statement\"[ti] OR guia[ti] OR consenso[ti] OR recomendaciones[ti]) AND (\"2010/01/01\"[dp] : \"2026/11/18\"[dp]) AND (english[la] OR spanish[la])",
+   "resultados": 47,
+   "recuperados": 47
+  },
+  {
+   "tema": "piel",
+   "base": "PubMed",
+   "estrategia": "pubmed_region",
+   "ecuacion": "(\"skin and soft tissue infection\"[tiab] OR \"skin and soft tissue infections\"[tiab] OR cellulitis[tiab] OR impetigo[tiab] OR \"skin abscess\"[tiab] OR erysipelas[tiab] OR \"Staphylococcal Skin Infections\"[Mesh] OR \"bite wound\"[tiab] OR \"Bites and Stings\"[Mesh]) AND (child*[tiab] OR pediatric*[tiab] OR paediatric*[tiab] OR infant*[tiab] OR adolescen*[tiab] OR \"Child\"[Mesh] OR \"Infant\"[Mesh] OR \"Adolescent\"[Mesh]) AND (Colombia[tiab] OR Colombia[ad] OR Colombian[tiab] OR \"Latin America\"[tiab] OR \"Latin American\"[tiab] OR \"Colombia\"[Mesh] OR \"Latin America\"[Mesh]) AND (\"Anti-Bacterial Agents\"[Mesh] OR antibiotic*[tiab] OR antimicrobial*[tiab] OR amoxicillin[tiab] OR treatment[ti] OR management[ti]) AND (\"2010/01/01\"[dp] : \"2026/11/18\"[dp]) AND (english[la] OR spanish[la])",
+   "resultados": 19,
+   "recuperados": 19
+  },
+  {
+   "tema": "piel",
+   "base": "OpenAlex",
+   "estrategia": "openalex",
+   "ecuacion": "infecciones de piel y tejidos blandos OR impétigo OR celulitis",
+   "resultados": 14,
+   "recuperados": 14
+  },
+  {
+   "tema": "piel",
+   "base": "DOAJ",
+   "estrategia": "doaj",
+   "ecuacion": "infecciones de piel y tejidos blandos OR impétigo OR celulitis",
+   "resultados": 1,
+   "recuperados": 1
+  },
+  {
+   "tema": "parasitos",
+   "base": "PubMed",
+   "estrategia": "pubmed_guias",
+   "ecuacion": "(giardia*[tiab] OR amebiasis[tiab] OR amoebiasis[tiab] OR \"soil-transmitted helminth\"[tiab] OR deworming[tiab] OR \"Intestinal Diseases, Parasitic\"[Mesh]) AND (child*[tiab] OR pediatric*[tiab] OR paediatric*[tiab] OR infant*[tiab] OR adolescen*[tiab] OR \"Child\"[Mesh] OR \"Infant\"[Mesh] OR \"Adolescent\"[Mesh]) AND (Guideline[pt] OR \"Practice Guideline\"[pt] OR \"Consensus Development Conference\"[pt] OR guideline*[ti] OR consensus[ti] OR recommendation*[ti] OR \"position statement\"[ti] OR guia[ti] OR consenso[ti] OR recomendaciones[ti]) AND (\"2010/01/01\"[dp] : \"2026/11/18\"[dp]) AND (english[la] OR spanish[la])",
+   "resultados": 9,
+   "recuperados": 9
+  },
+  {
+   "tema": "parasitos",
+   "base": "PubMed",
+   "estrategia": "pubmed_region",
+   "ecuacion": "(giardia*[tiab] OR amebiasis[tiab] OR amoebiasis[tiab] OR \"soil-transmitted helminth\"[tiab] OR deworming[tiab] OR \"Intestinal Diseases, Parasitic\"[Mesh]) AND (child*[tiab] OR pediatric*[tiab] OR paediatric*[tiab] OR infant*[tiab] OR adolescen*[tiab] OR \"Child\"[Mesh] OR \"Infant\"[Mesh] OR \"Adolescent\"[Mesh]) AND (Colombia[tiab] OR Colombia[ad] OR Colombian[tiab] OR \"Latin America\"[tiab] OR \"Latin American\"[tiab] OR \"Colombia\"[Mesh] OR \"Latin America\"[Mesh]) AND (\"Anti-Bacterial Agents\"[Mesh] OR antibiotic*[tiab] OR antimicrobial*[tiab] OR amoxicillin[tiab] OR treatment[ti] OR management[ti]) AND (\"2010/01/01\"[dp] : \"2026/11/18\"[dp]) AND (english[la] OR spanish[la])",
+   "resultados": 3,
+   "recuperados": 3
+  },
+  {
+   "tema": "parasitos",
+   "base": "OpenAlex",
+   "estrategia": "openalex",
+   "ecuacion": "parasitosis intestinal OR geohelmintiasis",
+   "resultados": 29,
+   "recuperados": 29
+  },
+  {
+   "tema": "parasitos",
+   "base": "DOAJ",
+   "estrategia": "doaj",
+   "ecuacion": "parasitosis intestinal OR geohelmintiasis",
+   "resultados": 31,
+   "recuperados": 22
+  },
+  {
+   "tema": "boca_ojos",
+   "base": "PubMed",
+   "estrategia": "pubmed_guias",
+   "ecuacion": "(\"odontogenic infection\"[tiab] OR \"odontogenic infections\"[tiab] OR \"dental abscess\"[tiab] OR \"bacterial conjunctivitis\"[tiab] OR \"Conjunctivitis, Bacterial\"[Mesh]) AND (child*[tiab] OR pediatric*[tiab] OR paediatric*[tiab] OR infant*[tiab] OR adolescen*[tiab] OR \"Child\"[Mesh] OR \"Infant\"[Mesh] OR \"Adolescent\"[Mesh]) AND (Guideline[pt] OR \"Practice Guideline\"[pt] OR \"Consensus Development Conference\"[pt] OR guideline*[ti] OR consensus[ti] OR recommendation*[ti] OR \"position statement\"[ti] OR guia[ti] OR consenso[ti] OR recomendaciones[ti]) AND (\"2010/01/01\"[dp] : \"2026/11/18\"[dp]) AND (english[la] OR spanish[la])",
+   "resultados": 6,
+   "recuperados": 6
+  },
+  {
+   "tema": "boca_ojos",
+   "base": "PubMed",
+   "estrategia": "pubmed_region",
+   "ecuacion": "(\"odontogenic infection\"[tiab] OR \"odontogenic infections\"[tiab] OR \"dental abscess\"[tiab] OR \"bacterial conjunctivitis\"[tiab] OR \"Conjunctivitis, Bacterial\"[Mesh]) AND (child*[tiab] OR pediatric*[tiab] OR paediatric*[tiab] OR infant*[tiab] OR adolescen*[tiab] OR \"Child\"[Mesh] OR \"Infant\"[Mesh] OR \"Adolescent\"[Mesh]) AND (Colombia[tiab] OR Colombia[ad] OR Colombian[tiab] OR \"Latin America\"[tiab] OR \"Latin American\"[tiab] OR \"Colombia\"[Mesh] OR \"Latin America\"[Mesh]) AND (\"Anti-Bacterial Agents\"[Mesh] OR antibiotic*[tiab] OR antimicrobial*[tiab] OR amoxicillin[tiab] OR treatment[ti] OR management[ti]) AND (\"2010/01/01\"[dp] : \"2026/11/18\"[dp]) AND (english[la] OR spanish[la])",
+   "resultados": 6,
+   "recuperados": 6
+  },
+  {
+   "tema": "boca_ojos",
+   "base": "OpenAlex",
+   "estrategia": "openalex",
+   "ecuacion": "infección odontogénica OR conjuntivitis bacteriana",
+   "resultados": 2,
+   "recuperados": 2
+  },
+  {
+   "tema": "boca_ojos",
+   "base": "DOAJ",
+   "estrategia": "doaj",
+   "ecuacion": "infección odontogénica OR conjuntivitis bacteriana",
+   "resultados": 30,
+   "recuperados": 27
+  },
+  {
+   "tema": "fiebre_grave",
+   "base": "PubMed",
+   "estrategia": "pubmed_guias",
+   "ecuacion": "(\"fever without source\"[tiab] OR \"fever without a source\"[tiab] OR \"febrile infant\"[tiab] OR \"febrile infants\"[tiab] OR \"bacterial meningitis\"[tiab] OR \"Meningitis, Bacterial\"[Mesh]) AND (child*[tiab] OR pediatric*[tiab] OR paediatric*[tiab] OR infant*[tiab] OR adolescen*[tiab] OR \"Child\"[Mesh] OR \"Infant\"[Mesh] OR \"Adolescent\"[Mesh]) AND (Guideline[pt] OR \"Practice Guideline\"[pt] OR \"Consensus Development Conference\"[pt] OR guideline*[ti] OR consensus[ti] OR recommendation*[ti] OR \"position statement\"[ti] OR guia[ti] OR consenso[ti] OR recomendaciones[ti]) AND (\"2010/01/01\"[dp] : \"2026/11/18\"[dp]) AND (english[la] OR spanish[la])",
+   "resultados": 85,
+   "recuperados": 85
+  },
+  {
+   "tema": "fiebre_grave",
+   "base": "PubMed",
+   "estrategia": "pubmed_region",
+   "ecuacion": "(\"fever without source\"[tiab] OR \"fever without a source\"[tiab] OR \"febrile infant\"[tiab] OR \"febrile infants\"[tiab] OR \"bacterial meningitis\"[tiab] OR \"Meningitis, Bacterial\"[Mesh]) AND (child*[tiab] OR pediatric*[tiab] OR paediatric*[tiab] OR infant*[tiab] OR adolescen*[tiab] OR \"Child\"[Mesh] OR \"Infant\"[Mesh] OR \"Adolescent\"[Mesh]) AND (Colombia[tiab] OR Colombia[ad] OR Colombian[tiab] OR \"Latin America\"[tiab] OR \"Latin American\"[tiab] OR \"Colombia\"[Mesh] OR \"Latin America\"[Mesh]) AND (\"Anti-Bacterial Agents\"[Mesh] OR antibiotic*[tiab] OR antimicrobial*[tiab] OR amoxicillin[tiab] OR treatment[ti] OR management[ti]) AND (\"2010/01/01\"[dp] : \"2026/11/18\"[dp]) AND (english[la] OR spanish[la])",
+   "resultados": 14,
+   "recuperados": 14
+  },
+  {
+   "tema": "fiebre_grave",
+   "base": "OpenAlex",
+   "estrategia": "openalex",
+   "ecuacion": "fiebre sin foco OR meningitis bacteriana",
+   "resultados": 14,
+   "recuperados": 14
+  },
+  {
+   "tema": "fiebre_grave",
+   "base": "DOAJ",
+   "estrategia": "doaj",
+   "ecuacion": "fiebre sin foco OR meningitis bacteriana",
+   "resultados": 12,
+   "recuperados": 10
+  }
+ ]
+}

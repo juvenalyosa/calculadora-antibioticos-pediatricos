@@ -7,6 +7,7 @@
 #                      tests/data/matriz_alfa.csv usando la base real.
 #   kb_al_dia          comprueba que el JSON corresponde a las hojas CSV.
 #   interfaz_recorrido recorre la interfaz gráfica (si se construyó con Qt).
+#   validacion_poblacion prueba exhaustiva con la población modelada.
 
 add_executable(calc_tests
   test_main.cpp
@@ -46,6 +47,16 @@ endif()
 
 find_package(Python3 COMPONENTS Interpreter)
 if(Python3_FOUND)
+  # Prueba exhaustiva: población pediátrica modelada con los patrones de la OMS,
+  # todas las enfermedades y escenarios renales, verificada contra un recálculo
+  # independiente y reglas de seguridad (docs/validacion/LEEME.md).
+  if(TARGET calc-dosis)
+    add_test(NAME validacion_poblacion
+      COMMAND "${Python3_EXECUTABLE}" "${PROJECT_SOURCE_DIR}/docs/validacion/ejecutar.py"
+              $<TARGET_FILE:calc-dosis> "${CMAKE_CURRENT_BINARY_DIR}/validacion")
+    set_tests_properties(validacion_poblacion PROPERTIES TIMEOUT 900)
+  endif()
+
   add_test(NAME kb_al_dia
     COMMAND "${Python3_EXECUTABLE}" "${PROJECT_SOURCE_DIR}/tools/construir_kb.py" --check)
 endif()

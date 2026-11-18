@@ -40,3 +40,8 @@ celulitis_facial_dental,Celulitis facial de origen dental (remisión urgente),Bo
 fiebre_sin_foco,Fiebre sin foco en el niño con buen aspecto,Fiebre y enfermedad grave,no,"Si el niño está bien para irse a su casa y no tiene causa clara de la fiebre, no se inician antibióticos: los antibióticos no son antipiréticos.",aiepi_2012
 fiebre_alto_riesgo,Enfermedad febril de alto riesgo (primera dosis antes de remitir),Fiebre y enfermedad grave,si,,aiepi_2012
 conjuntivitis,Conjuntivitis bacteriana,Ojos,si,,oms_aware_2022
+meningitis_bacteriana,Meningitis bacteriana: tratamiento empírico (hospital),Fiebre y enfermedad grave,si,,oms_aware_2022
+neumonia_complicada,Neumonía complicada: derrame pleural o empiema (hospital),Respiratorias bajas,si,,sadi_neumonia_complicada_2024
+rinosinusitis_hospitalizada,Rinosinusitis grave que requiere hospitalización,Respiratorias altas,si,,acorl_rinosinusitis_2024
+piel_sarm_grave,Infección grave de piel por S. aureus resistente a meticilina (hospital),Piel y tejidos blandos,si,,acin_piel_2023
+yersiniosis,Diarrea por Yersinia,Gastrointestinales,si,,francia_gastroenteritis_2017

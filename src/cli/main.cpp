@@ -30,6 +30,7 @@
 #include "calc/kb_loader.hpp"
 #include "calc/text.hpp"
 #include "calc/version.hpp"
+#include "batch.hpp"
 #include "plan_printer.hpp"
 
 namespace {
@@ -46,6 +47,7 @@ constexpr const char* kUsage = R"(Uso:
                       [--talla-cm <x>] [--sexo <m|f>]
                       [--tfg <x> | --creatinina <mg/dL>]
                       [--formula <ckid-u25|schwartz>] [--sin-desglose]
+  calc-dosis lote     [--kb <archivo>] --entrada <escenarios.csv> --salida <resultados.csv>
   calc-dosis version
 
 Si no se indica --kb se usa data/kb/base_conocimiento.json.
@@ -269,6 +271,12 @@ int main(int argc, char** argv) {
     }
     if (command == "calcular") {
       return runCalculate(arguments);
+    }
+    if (command == "lote") {
+      const int scenarios = cli::runBatch(loadKb(arguments), arguments.requiredText("--entrada"),
+                                          arguments.requiredText("--salida"));
+      std::cout << scenarios << " escenarios calculados\n";
+      return 0;
     }
     if (command == "version" || command == "--version") {
       std::cout << kAppName << " " << kAppVersion << "\n";

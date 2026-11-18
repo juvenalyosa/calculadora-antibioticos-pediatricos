@@ -1,0 +1,511 @@
+clave,decision,motivo,ambito,tipo_documento,infeccion,nota
+doi:10.25054/rfs.v6i1.153,excluir,E1,,otro,piel y tejidos blandos,estudio primario o revisión narrativa
+doi:10.2478/pjs-2013-0045,excluir,E4,,otro,otro (enfermedad diverticular),adultos; fuera del alcance
+pmid:31891472,incluir,,"internacional (NICE NG143, Reino Unido)",guia,fiebre sin foco (<5 años),resumen consultado; incluye antibiótico parenteral empírico ante sospecha de infección bacteriana grave
+doi:10.1097/pec.0b013e3181fe90d1,excluir,E1,,otro,fiebre sin foco / meningitis,estudio de adherencia a guías
+doi:10.1179/joc.2010.22.4.226,incluir,,internacional (comparación de guías europeas e internacionales),revision de guias,meningitis bacteriana,"resumen consultado; compara antibiótico empírico, dosis y duración en niños"
+doi:10.1136/bmj.c3209,excluir,E5,,guia,meningitis bacteriana,resumen BMJ de NICE CG102 2010; versión más nueva: pmid:38843370
+pmid:22787688,excluir,E5,,guia,meningitis bacteriana,resumen consultado; NICE CG102 2010; versión más nueva: pmid:38843370
+pmid:22086889,excluir,E2,,guia,meningitis (vacunas),solo vacunación
+doi:10.1016/j.vaccine.2011.06.096,excluir,E1,,otro,fiebre sin foco / meningitis,estudio primario o revisión narrativa
+doi:10.1542/peds.2012-1178,excluir,E6,,otro,fiebre sin foco / meningitis,comentario o respuesta
+doi:10.2223/jped.2167,excluir,E2,,otro,meningitis (vacunas),solo vacunación
+pmid:31851447,excluir,E1,,otro,meningitis bacteriana,"resumen consultado; actualización de evidencia NICE 2012, no es guía"
+doi:10.1097/mej.0b013e328351e5d8,excluir,E4,,otro,otro (indicadores de urgencias),fuera del alcance
+titulo:incidenceofmeningitisininfantswithsimplefebrileseizuresexperienceina3thlevelhosp,excluir,E1,,otro,fiebre sin foco / meningitis,estudio primario o revisión narrativa
+titulo:brotemeningoccicoenelbarrioolayaherreraenlazonasurorientaldecartagenadeindiasdty,excluir,E1,,otro,fiebre sin foco / meningitis,estudio primario o revisión narrativa
+doi:10.1093/pch/19.3.141,incluir,,"internacional (Canadian Paediatric Society, Canadá)",guia,meningitis bacteriana,resumen consultado; niños mayores de 1 mes
+doi:10.1097/inf.0000000000000228,excluir,E2,,consenso,enfermedad meningocócica,"resumen consultado; recomendaciones de vigilancia y vacunación, sin tratamiento"
+doi:10.1371/journal.pone.0084993,excluir,E1,,otro,fiebre sin foco / meningitis,estudio primario o revisión narrativa
+titulo:enfermedadinvasoraporhaemophilusinfluenzaeapropsitodedoscasosenlactantesmenores,excluir,E1,,otro,fiebre sin foco / meningitis,estudio primario o revisión narrativa
+doi:10.1016/j.jpeds.2015.09.021,excluir,E1,,otro,fiebre sin foco / meningitis,estudio primario o revisión narrativa
+doi:10.1002/jhm.2329,excluir,E1,,otro,fiebre sin foco / meningitis,estudio primario o revisión narrativa
+doi:10.1093/cid/civ011,excluir,E1,,otro,fiebre sin foco / meningitis,estudio de implementación o impacto de guías
+pmid:32207890,excluir,E5,,guia,meningitis bacteriana,resumen consultado; NICE 2015; versión más nueva: pmid:38843370
+doi:10.1016/j.anpedi.2014.09.004,excluir,E2,,guia,meningitis (vacunas),solo vacunación
+doi:10.1590/s0120-41572015000100017,excluir,E1,,otro,fiebre sin foco / meningitis,estudio primario o revisión narrativa
+doi:10.1016/j.cmi.2016.07.026,excluir,E1,,otro,fiebre sin foco / meningitis,estudio de implementación o impacto de guías
+doi:10.14482/sun.32.1.8483,excluir,E1,,otro,fiebre sin foco / meningitis,estudio primario o revisión narrativa
+doi:10.1542/hpeds.2016-0217,excluir,E1,,otro,fiebre sin foco / meningitis,estudio de implementación o impacto de guías
+doi:10.4103/ijmm.ijmm_17_124,excluir,E1,,otro,fiebre sin foco / meningitis,estudio primario o revisión narrativa
+doi:10.1542/peds.2016-3484,excluir,E2,,otro,meningitis (vacunas),solo vacunación
+doi:10.1093/cid/cix240,excluir,E1,,otro,fiebre sin foco / meningitis,estudio de adherencia a guías
+doi:10.5546/aap.2017.205,incluir,,"Latinoamerica (Sociedad Argentina de Pediatría, Argentina)",consenso,fiebre sin foco (<36 meses),resumen consultado; resumen ejecutivo del consenso
+doi:10.22379/24224022138,excluir,E1,,otro,fiebre sin foco / meningitis,estudio primario o revisión narrativa
+doi:10.1093/cid/cix806,excluir,E1,,otro,fiebre sin foco / meningitis,estudio primario o revisión narrativa
+doi:10.4067/s0716-10182018000200207,excluir,E1,,otro,fiebre sin foco / meningitis,reporte de caso
+doi:10.1097/inf.0000000000001744,excluir,E1,,otro,fiebre sin foco / meningitis,ensayo clínico
+doi:10.18041/1900-7841/rcslibre.2018v13n2.4785,excluir,E1,,otro,fiebre sin foco / meningitis,estudio primario o revisión narrativa
+doi:10.14482/sun.34.1.10745,excluir,E1,,otro,fiebre sin foco / meningitis,estudio primario o revisión narrativa
+doi:10.37076/acorl.v37i2.313,excluir,E2,,otro,otro (vacunación),solo vacunación
+doi:10.1016/s1473-3099(19)30414-1,excluir,E1,,otro,fiebre sin foco / meningitis,"revisión sistemática de estudios, no de guías"
+doi:10.1016/j.medmal.2019.03.009,incluir,,"internacional (SPILF, Francia)",guia,meningitis bacteriana,resumen consultado; excluye neonatos; versión larga (la versión corta es doi:10.1016/j.medmal.2019.03.008)
+doi:10.1016/j.medmal.2019.03.008,excluir,E6,,guia,meningitis bacteriana,versión corta de la guía SPILF incluida doi:10.1016/j.medmal.2019.03.009
+doi:10.1016/j.acap.2019.03.001,excluir,E1,,otro,fiebre sin foco / meningitis,estudio de adherencia a guías
+doi:10.15537/smj.2019.3.23965,excluir,E1,,otro,fiebre sin foco / meningitis,estudio de adherencia a guías
+doi:10.1186/s12879-020-05502-9,excluir,E1,,otro,fiebre sin foco / meningitis,estudio primario o revisión narrativa
+doi:10.1177/0009922820920933,excluir,E1,,otro,fiebre sin foco / meningitis,estudio primario o revisión narrativa
+doi:10.1097/pq9.0000000000000252,excluir,E1,,otro,fiebre sin foco / meningitis,estudio de implementación o impacto de guías
+doi:10.18273/revsal.v52n4-2020013,excluir,E1,,otro,fiebre sin foco / meningitis,estudio primario o revisión narrativa
+doi:10.1542/peds.2021-054063,excluir,E6,,otro,fiebre sin foco,fe de erratas de la guía AAP incluida doi:10.1542/peds.2021-052228
+doi:10.1007/s12519-021-00456-7,excluir,E1,,otro,fiebre sin foco / meningitis,carta con datos primarios
+doi:10.3390/vaccines9070771,excluir,E1,,otro,fiebre sin foco / meningitis,estudio primario o revisión narrativa
+doi:10.1542/hpeds.2021-006201,excluir,E1,,otro,fiebre sin foco,artículo sobre el desarrollo de la guía AAP
+doi:10.1542/peds.2021-052228,incluir,,"internacional (AAP, Estados Unidos)",guia,fiebre sin foco (lactantes 8-60 días),resumen consultado; incluye lactantes de 29-60 días
+doi:10.1097/pec.0000000000002012,excluir,E1,,otro,fiebre sin foco / meningitis,estudio de implementación o impacto de guías
+doi:10.7705/biomedica.5658,excluir,E1,,otro,fiebre sin foco / meningitis,estudio primario o revisión narrativa
+doi:10.1080/21645515.2021.1972709,excluir,E1,,otro,fiebre sin foco / meningitis,estudio primario o revisión narrativa
+doi:10.1001/jamapediatrics.2022.2639,excluir,E6,,otro,fiebre sin foco / meningitis,comentario o respuesta
+doi:10.1001/jamapediatrics.2022.2642,excluir,E6,,otro,fiebre sin foco / meningitis,comentario o respuesta
+doi:10.1080/23744235.2022.2050942,excluir,E1,,otro,meningitis bacteriana,"estudio primario sobre secuelas, sin tratamiento antimicrobiano"
+doi:10.1001/jamapediatrics.2022.0066,excluir,E6,,otro,fiebre sin foco,sinopsis de la guía AAP incluida doi:10.1542/peds.2021-052228
+doi:10.3389/fped.2022.1006887,excluir,E1,,otro,fiebre sin foco / meningitis,estudio primario o revisión narrativa
+doi:10.22354/24223794.1050,excluir,E1,,otro,fiebre sin foco / meningitis,estudio primario o revisión narrativa
+doi:10.1007/s12098-023-04584-y,excluir,E1,,otro,otro (tuberculosis),análisis crítico de guía OMS de tuberculosis
+doi:10.1097/mej.0000000000001023,excluir,E1,,otro,fiebre sin foco / meningitis,carta con datos primarios
+doi:10.1542/pir.2022-005624,excluir,E1,,otro,fiebre sin foco,revisión narrativa de la guía AAP
+doi:10.1097/pec.0000000000002905,excluir,E1,,otro,fiebre sin foco / meningitis,estudio de implementación o impacto de guías
+doi:10.1542/hpeds.2022-006820,excluir,E1,,otro,fiebre sin foco / meningitis,estudio primario o revisión narrativa
+doi:10.1542/peds.2022-059862,excluir,E1,,otro,fiebre sin foco / meningitis,estudio primario o revisión narrativa
+doi:10.1542/peds.2022-058495,excluir,E1,,otro,fiebre sin foco / meningitis,estudio primario o revisión narrativa
+doi:10.22354/24223794.1147,excluir,E1,,otro,fiebre sin foco / meningitis,estudio primario o revisión narrativa
+doi:10.1542/hpeds.2024-007906,excluir,E1,,otro,fiebre sin foco / meningitis,estudio primario o revisión narrativa
+doi:10.4103/ijmy.ijmy_147_24,excluir,E1,,otro,fiebre sin foco / meningitis,estudio primario o revisión narrativa
+doi:10.1542/peds.2024-065922,excluir,E1,,otro,fiebre sin foco / meningitis,estudio de adherencia a guías
+doi:10.1044/2024_jslhr-23-00499,excluir,E1,,otro,fiebre sin foco / meningitis,estudio primario o revisión narrativa
+doi:10.3928/19382359-20240407-01,excluir,E1,,otro,fiebre sin foco / meningitis,estudio primario o revisión narrativa
+doi:10.1542/peds.2023-063339,excluir,E1,,otro,fiebre sin foco / meningitis,estudio primario o revisión narrativa
+doi:10.1007/s00431-024-05553-z,excluir,E1,,otro,fiebre sin foco / meningitis,estudio de adherencia a guías
+pmid:38843370,incluir,,"internacional (NICE NG240, Reino Unido)",guia,meningitis bacteriana,"resumen consultado; 2024; bebés, niños y adultos; reemplaza CG102/2015"
+doi:10.1080/03007995.2024.2314738,excluir,E1,,otro,fiebre sin foco / meningitis,estudio de adherencia a guías
+doi:10.1136/emermed-2023-213779,excluir,E1,,otro,fiebre sin foco / meningitis,estudio primario o revisión narrativa
+doi:10.1007/s00381-024-06405-9,excluir,E1,,otro,fiebre sin foco / meningitis,reporte de caso
+doi:10.1097/inf.0000000000004265,excluir,E1,,otro,fiebre sin foco / meningitis,estudio primario o revisión narrativa
+titulo:abscesopulmonarenedadpeditricainformedecaso,excluir,E1,,otro,fiebre sin foco / meningitis,estudio primario o revisión narrativa
+doi:10.1111/ajr.70115,excluir,E1,,otro,fiebre sin foco / meningitis,estudio primario o revisión narrativa
+doi:10.1016/j.jacr.2025.02.029,excluir,E2,,guia,fiebre sin foco,criterios ACR solo de imágenes
+doi:10.1111/jpc.70025,excluir,E1,,otro,fiebre sin foco / meningitis,estudio de adherencia a guías
+doi:10.1136/bmjpo-2024-002970,incluir,,"internacional (guías hospitalarias de Londres y NICE NG143, Reino Unido)",revision de guias,fiebre sin foco (lactantes),"dudoso; resumen consultado; compara guías locales con NG143 (AGREE II), incluye inicio de antibióticos"
+doi:10.1542/peds.2024-068028,excluir,E1,,otro,fiebre sin foco / meningitis,estudio primario o revisión narrativa
+pmid:40393410,incluir,,OMS-OPS (OMS),guia,meningitis bacteriana,"resumen consultado; 2025; niños y adultos, meningitis adquirida en la comunidad"
+doi:10.1128/asmcr.00095-25,excluir,E1,,otro,fiebre sin foco / meningitis,reporte de caso
+doi:10.1002/14651858.cd012768.pub4,excluir,E1,,otro,fiebre sin foco / meningitis,"revisión sistemática de estudios, no de guías"
+titulo:meningitisbacterianaysndromedechoquetxicoporstreptococcuspyogenesenunescolar,excluir,E1,,otro,fiebre sin foco / meningitis,estudio primario o revisión narrativa
+doi:10.1186/s13052-026-02304-8,excluir,E1,,otro,fiebre sin foco / meningitis,estudio de adherencia a guías
+doi:10.1080/21645515.2026.2676385,excluir,E2,,consenso,meningitis (vacunas),consenso sobre vacunas
+doi:10.1016/j.jcjq.2026.04.007,excluir,E1,,otro,fiebre sin foco / meningitis,estudio de adherencia a guías
+doi:10.1111/ped.70416,excluir,E1,,otro,fiebre sin foco / meningitis,estudio primario o revisión narrativa
+doi:10.1097/pec.0000000000003499,excluir,E1,,otro,fiebre sin foco / meningitis,estudio de implementación o impacto de guías
+doi:10.7705/biomedica.8106,excluir,E1,,otro,fiebre sin foco / meningitis,reporte de caso
+doi:10.4103/0256-4947.68549,incluir,,"internacional (University of Kentucky, Estados Unidos; publicada en Ann Saudi Med)",guia,pielonefritis,"resumen consultado; guía de autores para manejo hospitalario, incluye niños mayores de 2 años"
+doi:10.1542/peds.2011-1330,excluir,E5,,guia,infección urinaria,AAP 2011; versión más nueva: doi:10.1542/peds.2026-078565
+pmid:23157147,excluir,E5,,guia,infección urinaria,resumen de AAP 2011; versión más nueva: doi:10.1542/peds.2026-078565
+doi:10.1093/tropej/fmt054,excluir,E1,,otro,infección urinaria,resumen consultado; revisión narrativa
+doi:10.1542/peds.2012-0164,excluir,E1,,otro,fiebre sin foco / meningitis; infección urinaria,estudio primario o revisión narrativa
+doi:10.1111/apa.12560,excluir,E1,,otro,fiebre sin foco / meningitis; infección urinaria,encuesta
+doi:10.1097/pec.0000000000000400,excluir,E1,,otro,fiebre sin foco / meningitis; infección urinaria,estudio primario o revisión narrativa
+doi:10.1542/peds.2016-3026,excluir,E5,,guia,infección urinaria,reafirmación AAP 2016; versión más nueva: doi:10.1542/peds.2026-078565
+doi:10.1111/ped.12853,excluir,E1,,otro,fiebre sin foco / meningitis; infección urinaria,estudio primario o revisión narrativa
+doi:10.12788/jhm.3349,excluir,E1,,otro,fiebre sin foco / meningitis; infección urinaria,estudio primario o revisión narrativa
+doi:10.1136/archdischild-2021-322586,excluir,E1,,otro,fiebre sin foco / meningitis; infección urinaria,ensayo clínico
+doi:10.1542/hpeds.2023-007160,excluir,E1,,otro,fiebre sin foco / meningitis; infección urinaria,estudio primario o revisión narrativa
+doi:10.3389/fped.2024.1401654,excluir,E1,,otro,fiebre sin foco / meningitis; infección urinaria,estudio de adherencia a guías
+doi:10.1542/peds.2025-074507,excluir,E1,,otro,fiebre sin foco / meningitis; infección urinaria,estudio de implementación o impacto de guías
+titulo:infeccinurinariaenniosdefinicinepidemiologaclnicaclasificacinyfactoresderiesgo,excluir,E2,,otro,infección urinaria,"capítulo de definición, epidemiología, clínica y factores de riesgo, sin tratamiento"
+titulo:conocimientospercepcionesyprcticassobregiardiasisdealerglogosdeciudaddelahabana,excluir,E1,,otro,parasitosis intestinal,encuesta
+doi:10.1093/tropej/fmp043,excluir,E1,,otro,parasitosis intestinal,estudio de implementación o impacto de guías
+doi:10.1016/s0123-9392(10)70090-4,excluir,E1,,otro,parasitosis intestinal,estudio primario o revisión narrativa
+doi:10.18359/rmed.1287,excluir,E1,,otro,parasitosis intestinal,encuesta
+doi:10.7705/biomedica.v30i2.185,excluir,E1,,otro,parasitosis intestinal,estudio primario o revisión narrativa
+doi:10.29375/01237047.1559,excluir,E1,,otro,parasitosis intestinal,estudio primario o revisión narrativa
+titulo:alimentacinyestadonutricionaldelosniosenzonaspaldicasdeantioquiacolombia,excluir,E1,,otro,parasitosis intestinal,estudio primario o revisión narrativa
+titulo:parasitismointestinalinfantilfactoresepidemiolgicosenorangewalkbeliceintestinalp,excluir,E1,,otro,parasitosis intestinal,estudio primario o revisión narrativa
+titulo:inermicapsiferiasisunaparasitosisfrecuenteypocodiagnosticadaennuestromedio,excluir,E1,,otro,parasitosis intestinal,estudio primario o revisión narrativa
+titulo:frecuenciadeparasitosisintestinalesycaractersticasepidemiolgicasdelapoblacininfa,excluir,E1,,otro,parasitosis intestinal,estudio primario o revisión narrativa
+doi:10.1002/14651858.cd007787.pub2,excluir,E1,,otro,giardiasis,"revisión sistemática de ensayos (Cochrane), no es guía"
+doi:10.17533/udea.iatreia.13956,excluir,E1,,otro,parasitosis intestinal,estudio primario o revisión narrativa
+titulo:neurocysticercosisinthepediatricagedescriptionandfiveyearsofexperience,excluir,E1,,otro,parasitosis intestinal,estudio primario o revisión narrativa
+titulo:pruebadesusceptibilidadantiparasitariainvitroparablastocystishominisentamoebahis,excluir,E1,,otro,parasitosis intestinal,estudio primario o revisión narrativa
+titulo:parsitosintestinalesdesnutricinycondicionesdevidadeniosenurabcolombiasoledadyolv,excluir,E1,,otro,parasitosis intestinal,estudio primario o revisión narrativa
+doi:10.17533/udea.iatreia.14342,excluir,E1,,otro,parasitosis intestinal,estudio primario o revisión narrativa
+titulo:parasitismointestinalenniasyniosmayoresde5aosdeciudadbolvarparasitismointestinal,excluir,E1,,otro,parasitosis intestinal,estudio primario o revisión narrativa
+doi:10.1016/s0120-4912(15)30130-0,excluir,E1,,otro,parasitosis intestinal,estudio primario o revisión narrativa
+titulo:larvamigranscutaneareportedecuatrocasos,excluir,E1,,otro,parasitosis intestinal,estudio primario o revisión narrativa
+titulo:morbilidadocultaporparasitismointestinalenlagunitamunicipiogirardotvenezuela,excluir,E1,,otro,parasitosis intestinal,estudio primario o revisión narrativa
+doi:10.1016/s0716-8640(14)70065-3,excluir,E1,,otro,parasitosis intestinal,estudio primario o revisión narrativa
+doi:10.17533/udea.rfnsp.v33n2a04,excluir,E1,,otro,parasitosis intestinal,estudio primario o revisión narrativa
+titulo:implementacinyevaluacindeunaestrategiacombinadadeeducacinensaludyquimioterapiama,excluir,E1,,otro,parasitosis intestinal,estudio primario o revisión narrativa
+doi:10.1093/infdis/jix375,excluir,E6,,otro,parasitosis intestinal,comentario o respuesta
+doi:10.17533/udea.rfnsp.v35n3a09,excluir,E1,,otro,parasitosis intestinal,estudio primario o revisión narrativa
+doi:10.18359/rmed.3088,excluir,E1,,otro,parasitosis intestinal,estudio primario o revisión narrativa
+doi:10.1186/s13071-018-3149-1,excluir,E4,,otro,otro (parásitos en mascotas),veterinaria
+doi:10.1093/cid/ciy002,excluir,E1,,otro,parasitosis intestinal,estudio primario o revisión narrativa
+doi:10.22354/in.v22i4.736,excluir,E1,,otro,parasitosis intestinal,estudio primario o revisión narrativa
+doi:10.22354/in.v23i1.753,excluir,E1,,otro,parasitosis intestinal,estudio primario o revisión narrativa
+doi:10.1186/s13071-019-3410-2,excluir,E4,,otro,otro (parásitos en mascotas),veterinaria
+doi:10.1017/s0031182018001385,incluir,,internacional (Países Bajos),guia,parasitosis intestinal (Dientamoeba fragilis),dudoso; resumen consultado; guía de autores en niños y adultos; verificar si este protozoo entra en el alcance
+doi:10.18566/medupb.v38n1.a06,excluir,E1,,otro,parasitosis intestinal,estudio primario o revisión narrativa
+titulo:prevalenciayefectosdelacoinfeccinconplasmodiumsppygeohelmintosengestantesdezonas,excluir,E1,,otro,parasitosis intestinal,estudio primario o revisión narrativa
+doi:10.33132/01248146.1558,excluir,E1,,otro,parasitosis intestinal,estudio primario o revisión narrativa
+doi:10.24875/hgmx.m19000032,excluir,E1,,otro,parasitosis intestinal,estudio primario o revisión narrativa
+doi:10.22516/25007440.250,excluir,E1,,otro,parasitosis intestinal,estudio primario o revisión narrativa
+titulo:prevalenciadeparasitosisintestinalesenniosdelcantnpajnecuador,excluir,E1,,otro,parasitosis intestinal,estudio primario o revisión narrativa
+doi:10.1111/mcn.12937,excluir,E1,,otro,parasitosis intestinal,estudio primario o revisión narrativa
+doi:10.5281/zenodo.6347724,excluir,E1,,otro,parasitosis intestinal,estudio primario o revisión narrativa
+doi:10.32997/rcb-2012-3108,excluir,E1,,otro,parasitosis intestinal,estudio primario o revisión narrativa
+doi:10.22354/in.v26i2.1014,excluir,E1,,otro,parasitosis intestinal,estudio primario o revisión narrativa
+titulo:neurocisticercosismasivapresentacindeuncasoyrevisindelaliteratura,excluir,E1,,otro,parasitosis intestinal,estudio primario o revisión narrativa
+doi:10.1016/j.anpede.2020.06.010,excluir,E1,,otro,parasitosis intestinal,estudio primario o revisión narrativa
+doi:10.1016/j.anpedi.2020.06.023,excluir,E1,,otro,parasitosis intestinal,estudio primario o revisión narrativa
+doi:10.56050/01205498.2186,excluir,E1,,otro,parasitosis intestinal,estudio primario o revisión narrativa
+doi:10.34119/bjhrv5n5-217,excluir,E1,,otro,parasitosis intestinal,estudio primario o revisión narrativa
+doi:10.31080/asnh.2022.06.1147,excluir,E1,,otro,parasitosis intestinal,estudio primario o revisión narrativa
+doi:10.5281/zenodo.5816437,excluir,E1,,otro,parasitosis intestinal,estudio primario o revisión narrativa
+doi:10.22354/24223794.1149,excluir,E1,,otro,parasitosis intestinal,estudio primario o revisión narrativa
+doi:10.34119/bjhrv6n1-081,excluir,E1,,otro,parasitosis intestinal,estudio primario o revisión narrativa
+doi:10.22267/rus.242601.309,excluir,E1,,otro,parasitosis intestinal,estudio primario o revisión narrativa
+doi:10.61284/136,excluir,E1,,otro,parasitosis intestinal,estudio primario o revisión narrativa
+doi:10.56903/kasmera.5137705,excluir,E1,,otro,parasitosis intestinal,estudio primario o revisión narrativa
+doi:https://doi.org/10.24265/horizmed.2023.v23n2.06,excluir,E1,,otro,parasitosis intestinal,estudio primario o revisión narrativa
+pmid:39190728,incluir,,OMS-OPS (OMS),guia,geohelmintiasis (estrongiloidiasis),resumen consultado; quimioterapia preventiva con ivermectina (desparasitación masiva); verificar dosis pediátricas
+doi:10.1371/journal.pone.0292146,excluir,E1,,otro,parasitosis intestinal,estudio primario o revisión narrativa
+doi:10.22267/rus.252702.347,excluir,E1,,otro,parasitosis intestinal,estudio primario o revisión narrativa
+doi:10.14710/nmjn.v15i1.58253,excluir,E1,,otro,parasitosis intestinal,estudio primario o revisión narrativa
+doi:10.1016/j.dialog.2026.100276,excluir,E4,,otro,otro (malaria),fuera del alcance
+doi:10.22370/revmat.2.2025.5664,excluir,E4,,otro,otro (Chagas),fuera del alcance
+doi:10.18273/revmed.v39n3-2026005,excluir,E1,,otro,parasitosis intestinal; infección urinaria,estudio primario o revisión narrativa
+doi:10.1590/s0325-00752010000300021,excluir,E4,,guia,otro (alergia a himenópteros),fuera del alcance
+titulo:infeccionesporstaphylococcusaureusmeticilinoresistenteenniosenbucaramangacolombi,excluir,E1,,otro,piel y tejidos blandos,estudio primario o revisión narrativa
+doi:10.1093/cid/cir034,excluir,E1,,otro,piel y tejidos blandos,estudio primario o revisión narrativa
+doi:10.1093/cid/ciq146,incluir,,"internacional (IDSA, Estados Unidos)",guia,SAMR (piel y tejidos blandos y otras),resumen consultado; adultos y niños; texto completo (resumen ejecutivo: doi:10.1093/cid/cir034)
+doi:10.1093/qjmed/hcq214,excluir,E4,,otro,otro (envenenamiento ofídico),fuera del alcance
+doi:10.1590/s0074-02762011000800013,excluir,E1,,otro,piel y tejidos blandos,estudio primario o revisión narrativa
+doi:10.2174/156802611797633393,excluir,E4,,otro,otro (envenenamiento ofídico),fuera del alcance
+doi:10.5354/0717-3652.2010.18096,incluir,,Latinoamerica (Chile; por confirmar),otro,piel y tejidos blandos,"dudoso; título no informativo, sin PMID ni resumen"
+doi:10.1001/jama.2013.241,excluir,E1,,otro,piel y tejidos blandos,ensayo clínico
+doi:10.1186/s12875-014-0175-8,excluir,E1,,otro,piel y tejidos blandos,resumen consultado; estudio de resistencia frente a guías
+pmid:25340232,excluir,E1,,otro,piel y tejidos blandos,estudio primario o revisión narrativa
+doi:10.5546/aap.2014.183,incluir,,"Latinoamerica (Comité Nacional de Infectología, SAP, Argentina)",consenso,piel y tejidos blandos,resumen consultado; Arch Argent Pediatr 2014;112(2); mismo título que doi:10.5546/aap.2014.96: verificar si son dos partes o duplicado
+doi:10.5546/aap.2014.96,incluir,,"Latinoamerica (Comité Nacional de Infectología, SAP, Argentina)",consenso,piel y tejidos blandos,resumen consultado; Arch Argent Pediatr 2014;112(1); mismo título que doi:10.5546/aap.2014.183: verificar si son dos partes o duplicado
+doi:10.1007/s15010-013-0563-3,excluir,E4,,guia,otro (malaria),profilaxis de malaria
+doi:10.7705/biomedica.v35i4.2572,excluir,E1,,otro,piel y tejidos blandos,estudio primario o revisión narrativa
+doi:10.1007/s12325-015-0220-6,excluir,E1,,otro,piel y tejidos blandos,estudio primario o revisión narrativa
+doi:10.1097/inf.0000000000000624,excluir,E1,,otro,piel y tejidos blandos,reporte de caso
+pmid:28206885,excluir,E4,,otro,otro (maltrato infantil),fuera del alcance
+pmid:27931457,excluir,E4,,otro,otro (maltrato infantil),fuera del alcance
+doi:10.1542/peds.2016-2149,excluir,E3,,guia,otro (cordón umbilical),solo recién nacidos
+doi:10.1111/all.12908,excluir,E4,,otro,otro (anafilaxia por himenópteros),fuera del alcance
+doi:10.1097/mop.0000000000000334,excluir,E1,,otro,piel y tejidos blandos,estudio primario o revisión narrativa
+doi:10.1016/j.anpedi.2015.01.002,incluir,,"internacional (SEIP-AEPAP-SEPEAP, España)",consenso,piel y tejidos blandos; mordeduras,resumen consultado; incluye heridas por punción y mordedura sobreinfectadas
+doi:10.1186/s12941-016-0130-8,excluir,E1,,otro,piel y tejidos blandos,ensayo clínico
+doi:10.5546/aap.2017.s91,excluir,E4,,guia,otro (alergia a himenópteros),fuera del alcance
+doi:10.1159/000458707,excluir,E1,,otro,piel y tejidos blandos,estudio de adherencia a guías
+doi:10.4067/s0716-10182017000500487,excluir,E1,,otro,piel y tejidos blandos,estudio primario o revisión narrativa
+doi:10.1016/j.rccar.2017.05.014,excluir,E1,,otro,piel y tejidos blandos,estudio primario o revisión narrativa
+titulo:piperacilinasdicainyectableeneltratamientodeinfeccionesenniosde1a12aos,excluir,E1,,otro,piel y tejidos blandos,estudio primario o revisión narrativa
+doi:10.23922/jarc.2018-009,excluir,E4,,otro,otro (fístula anal),fuera del alcance
+doi:10.7705/biomedica.v38i4.4022,excluir,E1,,otro,piel y tejidos blandos,estudio primario o revisión narrativa
+doi:10.1016/j.jped.2017.06.020,excluir,E1,,otro,piel y tejidos blandos,estudio primario o revisión narrativa
+doi:10.14295/pediatr.v51i1.100,excluir,E1,,otro,piel y tejidos blandos,estudio primario o revisión narrativa
+doi:10.1016/j.toxicon.2019.09.003,excluir,E4,,otro,otro (escorpionismo),fuera del alcance
+doi:10.1097/aci.0000000000000570,excluir,E4,,guia,otro (alergia a insectos),fuera del alcance
+doi:10.1016/j.clinthera.2019.01.010,incluir,,"internacional (cinco sociedades pediátricas italianas, Italia)",consenso,"impétigo, absceso y celulitis",resumen consultado; GRADE
+doi:10.15446/rsap.v21n4.77130,excluir,E1,,otro,piel y tejidos blandos,estudio primario o revisión narrativa
+doi:10.1016/j.ijid.2019.07.007,excluir,E1,,otro,piel y tejidos blandos,estudio primario o revisión narrativa
+doi:10.1159/000500560,excluir,E1,,otro,piel y tejidos blandos,reporte de caso
+doi:10.4103/aam.aam_38_19,excluir,E4,,otro,otro (envenenamiento ofídico),fuera del alcance
+pmid:32550690,incluir,,"internacional (panel de expertos, Estados Unidos y otros países)",consenso,impétigo,resumen consultado
+doi:10.1016/j.tmaid.2020.101579,excluir,E1,,otro,piel y tejidos blandos,estudio de adherencia a guías
+doi:10.18041/1900-7841/rcslibre.2020v15n2.7188,excluir,E1,,otro,piel y tejidos blandos,estudio primario o revisión narrativa
+doi:10.29375/01237047.3826,excluir,E1,,otro,piel y tejidos blandos,estudio primario o revisión narrativa
+doi:10.1371/journal.pntd.0009564,excluir,E1,,otro,otro (rabia),encuesta sobre profilaxis antirrábica
+doi:10.1371/journal.pone.0252223,excluir,E1,,otro,otro (dosificación hospitalaria),resumen consultado; encuestas de prevalencia
+doi:10.1038/s41433-020-01195-1,excluir,E1,,otro,celulitis orbitaria,"análisis de guías locales, sin resumen"
+doi:10.1093/tropej/fmab105,excluir,E1,,otro,piel y tejidos blandos,estudio primario o revisión narrativa
+doi:10.1002/14651858.cd013535.pub2,excluir,E1,,otro,piel y tejidos blandos,"revisión sistemática de estudios, no de guías"
+doi:10.1136/emermed-2021-211713,excluir,E1,,otro,piel y tejidos blandos,encuesta
+doi:10.1097/pec.0000000000002667,excluir,E1,,otro,piel y tejidos blandos,estudio primario o revisión narrativa
+doi:10.1136/archdischild-2021-322381,incluir,,"internacional (NICE NG184, Reino Unido; revisión secundaria)",otro,mordeduras humanas y de animales,dudoso; revisión de la guía NICE NG184 sin resumen; obtener la guía original
+doi:10.1097/inf.0000000000003349,excluir,E1,,otro,piel y tejidos blandos,estudio primario o revisión narrativa
+doi:10.1016/j.jiac.2023.02.012,excluir,E1,,otro,piel y tejidos blandos,ensayo clínico
+doi:10.1016/j.curtheres.2022.100690,incluir,,"internacional (expertos italianos, Italia)",consenso,impétigo (tratamiento tópico),resumen consultado; puede no dar dosis
+doi:10.22354/24223794.1131,incluir,,"Colombia (GPC colombiana, revista Infectio)",guia,piel y tejidos blandos superficiales,guía colombiana pediátrica
+doi:10.29262/ram.v69i1.1104,excluir,E1,,otro,piel y tejidos blandos,estudio primario o revisión narrativa
+doi:10.36849/jdd.2024.8240,excluir,E4,,otro,otro (dermatitis atópica),fuera del alcance
+doi:10.1542/hpeds.2023-007581,excluir,E1,,otro,piel y tejidos blandos,estudio primario o revisión narrativa
+doi:10.1016/j.anai.2023.09.015,excluir,E4,,guia,otro (anafilaxia),fuera del alcance
+doi:10.1089/ped.2022.0206,excluir,E1,,otro,piel y tejidos blandos,reporte de caso
+doi:10.1136/archdischild-2024-328264,incluir,,"internacional (NICE NG153, Reino Unido; revisión secundaria)",otro,impétigo,dudoso; revisión de la guía NICE NG153 sin resumen; obtener la guía original
+doi:10.1016/j.jpedsurg.2024.161984,incluir,,"internacional (autores, Estados Unidos)",guia,mordedura de perro,dudoso; resumen consultado; revisión sistemática con guía de autores; incluye cuándo dar antibiótico profiláctico
+doi:10.1016/j.bjid.2025.104572,excluir,E1,,otro,piel y tejidos blandos,estudio primario o revisión narrativa
+doi:10.35366/120766,excluir,E1,,otro,piel y tejidos blandos,estudio primario o revisión narrativa
+doi:10.59556/japi.74.1528,excluir,E4,,guia,otro (envenenamiento ofídico),fuera del alcance
+doi:10.1097/pec.0000000000003576,excluir,E1,,otro,piel y tejidos blandos,estudio de adherencia a guías
+doi:10.1136/military-2025-003107,excluir,E4,,otro,otro (escorpionismo),fuera del alcance
+doi:10.1016/j.jpedsurg.2025.162549,excluir,E4,,otro,otro (envenenamiento ofídico),fuera del alcance
+doi:10.37980/im.journal.rspp.es.20262682,excluir,E1,,otro,piel y tejidos blandos,estudio primario o revisión narrativa
+doi:10.37980/im.journal.rspp.es.20262763,excluir,E1,,otro,piel y tejidos blandos,estudio primario o revisión narrativa
+doi:10.1136/archdischild-2015-308255,excluir,E1,,otro,piel; infección urinaria,resumen consultado; encuesta de guías hospitalarias
+doi:10.1093/cid/ciy381,excluir,E2,,otro,otro (laboratorio de microbiología),solo diagnóstico
+doi:10.1186/s12909-020-1934-y,excluir,E1,,otro,piel y tejidos blandos; infección urinaria,estudio primario o revisión narrativa
+doi:10.1001/jamanetworkopen.2024.11259,excluir,E2,,otro,otro (prioridades de investigación),sin contenido de tratamiento
+doi:10.1136/adc.2010.196725,excluir,E1,,otro,infección urinaria,carta con datos primarios
+doi:10.1016/j.juro.2010.05.065,excluir,E2,,guia,reflujo vesicoureteral,RVU
+doi:10.1016/j.juro.2010.05.066,excluir,E2,,guia,reflujo vesicoureteral,tamizaje de RVU
+doi:10.1016/j.ijid.2010.02.2264,excluir,E1,,otro,infección urinaria,estudio de implementación o impacto de guías
+doi:10.1016/j.juro.2010.02.002,excluir,E2,,otro,infección urinaria,solo imágenes
+doi:10.1007/s11934-010-0095-7,excluir,E1,,otro,infección urinaria,resumen consultado; revisión narrativa sobre profilaxis
+pmid:20148505,excluir,E3,,guia,bacteriuria asintomática,solo adultos (USPSTF)
+doi:10.1186/1471-2296-11-6,excluir,E1,,otro,infección urinaria,encuesta
+doi:10.1590/s0124-00642010000600013,excluir,E1,,otro,infección urinaria,estudio primario o revisión narrativa
+titulo:infeccinurinariadelacomunidadenpacientespeditricosdelaclnicauniversitariabolivar,excluir,E1,,otro,infección urinaria,estudio primario o revisión narrativa
+doi:10.1016/j.juro.2011.07.017,excluir,E6,,otro,infección urinaria,comentario o respuesta
+doi:10.1542/peds.2011-1818,excluir,E6,,otro,infección urinaria,comentario o respuesta
+doi:10.1097/ccm.0b013e31821867cc,excluir,E4,,otro,"otro (sepsis, enfermería)",fuera del alcance
+doi:10.1055/s-0031-1277212,excluir,E1,,otro,infección urinaria,estudio primario o revisión narrativa
+pmid:21666999,excluir,E1,,otro,infección urinaria,estudio de adherencia a guías
+doi:10.4269/ajtmh.2011.11-0057,excluir,E1,,otro,infección urinaria,estudio primario o revisión narrativa
+doi:10.1016/j.acuro.2011.03.012,excluir,E4,,guia,otro (incontinencia),fuera del alcance
+doi:10.4103/0256-4947.75792,excluir,E6,,otro,infección urinaria,comentario o respuesta
+doi:10.1016/j.eururo.2010.11.021,excluir,E4,,guia,otro (incontinencia),fuera del alcance
+doi:10.1111/j.1365-2753.2010.01469.x,excluir,E1,,otro,infección urinaria,estudio de adherencia a guías
+doi:10.25054/rfs.v3i2.71,excluir,E1,,otro,infección urinaria,estudio primario o revisión narrativa
+titulo:caracterizacinetiolgicaydesensibilidadaantimicrobianosenpacientespeditricosconin,excluir,E1,,otro,infección urinaria,estudio primario o revisión narrativa
+doi:10.30554/archmed.11.2.823.2011,excluir,E1,,otro,infección urinaria,estudio primario o revisión narrativa
+doi:10.1200/jco.2012.43.4951,excluir,E4,,otro,otro (oncología),fuera del alcance
+doi:10.1016/j.eururo.2012.05.059,excluir,E2,,guia,reflujo vesicoureteral,guía de RVU
+doi:10.1155/2012/978673,excluir,E2,,otro,otro (nefrología),criterios de remisión
+doi:10.1002/nau.22248,excluir,E3,,guia,infección urinaria,vejiga neurogénica
+doi:10.2105/ajph.2011.300621,excluir,E1,,otro,infección urinaria,estudio primario o revisión narrativa
+doi:10.1111/j.1651-2227.2012.02631.x,excluir,E6,,otro,infección urinaria,comentario o respuesta
+doi:10.1111/j.1651-2227.2012.02627.x,excluir,E6,,otro,infección urinaria,comentario o respuesta
+doi:10.1007/s11096-012-9606-6,excluir,E1,,otro,infección urinaria,estudio de implementación o impacto de guías
+doi:10.1007/s00467-011-2077-5,excluir,E1,,otro,infección urinaria,editorial
+doi:10.1111/j.1464-410x.2011.10801.x,excluir,E1,,otro,infección urinaria,estudio de implementación o impacto de guías
+doi:10.1111/j.1651-2227.2011.02549.x,excluir,E5,,guia,infección urinaria febril,resumen consultado; recomendaciones italianas 2012; versión más nueva: doi:10.1111/apa.14988
+titulo:etiologabacterianaysensibilidadantibiticaenniosconinfeccinurinariadedoscentrosho,excluir,E1,,otro,infección urinaria,estudio primario o revisión narrativa
+doi:10.1016/s0123-9392(12)70062-0,excluir,E1,,otro,infección urinaria,estudio primario o revisión narrativa
+doi:10.17533/udea.iatreia.13596,excluir,E1,,otro,infección urinaria,estudio primario o revisión narrativa
+doi:10.1016/s0120-4912(15)30002-1,excluir,E1,,otro,infección urinaria,estudio primario o revisión narrativa
+doi:10.25054/rfs.v4i2.96,excluir,E1,,otro,infección urinaria,estudio primario o revisión narrativa
+titulo:abdominalmassanunusualcaseofxanthogranulomatouspyelonephritisinpediatrics,excluir,E1,,otro,infección urinaria,estudio primario o revisión narrativa
+doi:10.1007/s10096-013-1909-6,excluir,E1,,otro,infección urinaria,ensayo clínico
+doi:10.1038/nrurol.2013.234,excluir,E6,,otro,infección urinaria,comentario o respuesta
+doi:10.1053/j.gastro.2013.08.051,excluir,E4,,otro,otro (cirrosis),adultos; fuera del alcance
+doi:10.1542/peds.2013-0720,excluir,E1,,otro,infección urinaria,estudio de implementación o impacto de guías
+doi:10.1016/j.juro.2013.03.038,excluir,E1,,otro,infección urinaria,estudio primario o revisión narrativa
+doi:10.4103/0971-4065.109403,excluir,E2,,guia,otro (hidronefrosis prenatal),sin tratamiento de IU
+doi:10.1136/archdischild-2012-303032,excluir,E1,,otro,infección urinaria,estudio primario o revisión narrativa
+doi:10.1007/s13312-013-0064-6,excluir,E2,,guia,otro (hidronefrosis prenatal),sin tratamiento de IU
+doi:10.3928/00904481-20130222-10,excluir,E1,,otro,infección urinaria,resumen consultado; revisión narrativa
+doi:10.1007/s00383-012-3257-5,excluir,E1,,otro,infección urinaria,estudio primario o revisión narrativa
+pmid:31851446,excluir,E1,,otro,infección urinaria,"resumen consultado; actualización de evidencia NICE 2013, no es guía"
+doi:10.1097/mop.0b013e32835c14cc,excluir,E1,,otro,infección urinaria,resumen consultado; revisión narrativa
+doi:10.1016/j.eururo.2012.09.038,excluir,E2,,otro,otro (profilaxis urológica),vigilancia de profilaxis
+doi:10.1016/s0123-9392(13)70724-0,excluir,E1,,otro,infección urinaria,estudio primario o revisión narrativa
+doi:10.2169/internalmedicine.53.1308,excluir,E1,,otro,infección urinaria,estudio de adherencia a guías
+doi:10.1177/0009922814536263,excluir,E1,,otro,infección urinaria,estudio de adherencia a guías
+pmid:24814591,excluir,E1,,otro,infección urinaria,estudio de adherencia a guías
+doi:10.1177/1043454214532024,excluir,E4,,otro,otro (oncología),fuera del alcance
+doi:10.1007/s00247-014-2967-3,excluir,E1,,otro,infección urinaria,estudio primario o revisión narrativa
+doi:10.1007/s00467-014-2801-z,excluir,E1,,otro,infección urinaria,estudio primario o revisión narrativa
+doi:10.1136/archdischild-2013-304429,excluir,E1,,otro,infección urinaria,estudio de adherencia a guías
+doi:10.1007/s00431-013-2253-7,excluir,E1,,otro,infección urinaria,estudio primario o revisión narrativa
+doi:10.1007/s00431-013-2182-5,excluir,E1,,otro,infección urinaria,estudio de implementación o impacto de guías
+doi:10.1016/j.jpurol.2013.07.025,excluir,E1,,otro,infección urinaria,estudio de implementación o impacto de guías
+doi:10.1128/jcm.01879-14,excluir,E1,,otro,infección urinaria,estudio primario o revisión narrativa
+doi:10.1186/s12866-014-0214-6,excluir,E1,,otro,infección urinaria,estudio primario o revisión narrativa
+pmid:24970958,excluir,E1,,otro,infección urinaria,estudio primario o revisión narrativa
+doi:10.1590/s0120-41572014000500009,excluir,E1,,otro,infección urinaria,estudio primario o revisión narrativa
+pmid:24892390,excluir,E1,,otro,infección urinaria,estudio primario o revisión narrativa
+doi:10.11144/javeriana.umed55-3.fcsp,excluir,E1,,otro,infección urinaria,estudio primario o revisión narrativa
+doi:10.17533/udea.iatreia.14843,excluir,E1,,otro,infección urinaria,estudio primario o revisión narrativa
+titulo:frecuenciadecomplicacionesspticasposterioracistouretrografamiccionalsinurocultiv,excluir,E1,,otro,infección urinaria,estudio primario o revisión narrativa
+doi:10.1016/j.bmhimx.2015.01.001,excluir,E1,,otro,infección urinaria,estudio primario o revisión narrativa
+doi:10.3345/kjp.2015.58.9.341,excluir,E1,,otro,infección urinaria,estudio primario o revisión narrativa
+doi:10.1038/nrurol.2015.209,excluir,E6,,otro,infección urinaria,comentario o respuesta
+doi:10.1111/apa.13129,excluir,E1,,otro,infección urinaria,estudio primario o revisión narrativa
+doi:10.1016/j.jpurol.2015.03.010,excluir,E1,,otro,infección urinaria,estudio primario o revisión narrativa
+doi:10.1111/apa.13025,excluir,E6,,otro,infección urinaria,comentario o respuesta
+doi:10.3109/21681805.2015.1009485,excluir,E1,,otro,infección urinaria,estudio de implementación o impacto de guías
+doi:10.1097/bcr.0000000000000193,excluir,E3,,guia,infección urinaria asociada a catéter,quemados y catéter
+doi:10.1016/j.eururo.2014.11.007,excluir,E5,,guia,infección urinaria,EAU/ESPU 2015; versión más nueva: doi:10.1016/j.jpurol.2025.06.016
+doi:10.1111/nep.12349,incluir,,"internacional (KHA-CARI, Australia y Nueva Zelanda)",guia,infección urinaria,resumen consultado
+doi:10.1016/j.juro.2014.06.100,excluir,E1,,otro,infección urinaria,estudio de implementación o impacto de guías
+doi:10.1055/s-0034-1384646,excluir,E1,,otro,infección urinaria,estudio primario o revisión narrativa
+doi:10.1007/s15010-014-0659-4,excluir,E1,,otro,infección urinaria,estudio de adherencia a guías
+pmid:26700084,excluir,E1,,otro,infección urinaria,estudio primario o revisión narrativa
+doi:10.31260/repertmedcir.v24.n2.2015.632,excluir,E1,,otro,infección urinaria,estudio primario o revisión narrativa
+doi:10.1186/s12879-016-1972-6,excluir,E1,,otro,infección urinaria,estudio de adherencia a guías
+doi:10.1016/j.juro.2016.07.081,excluir,E3,,guia,otro (espina bífida),vejiga neurogénica
+pmid:27705739,excluir,E2,,guia,otro (circuncisión),prevención
+doi:10.1016/j.jhin.2016.05.008,excluir,E4,,otro,otro (infecciones asociadas a la atención),intrahospitalarias
+doi:10.1016/j.annemergmed.2016.01.042,excluir,E2,,otro,fiebre sin foco,resumen sin texto; política clínica ACEP centrada en estratificación diagnóstica
+doi:10.5546/aap.2016.eng.129,excluir,E1,,otro,infección urinaria,estudio primario o revisión narrativa
+doi:10.1016/j.jpurol.2015.12.004,excluir,E6,,otro,infección urinaria,comentario o respuesta
+doi:10.1016/j.ajic.2016.08.007,excluir,E4,,otro,otro (infecciones asociadas a dispositivos),intrahospitalarias
+doi:10.1186/s12879-016-1805-7,excluir,E1,,otro,infección urinaria,estudio primario o revisión narrativa
+doi:10.1097/inf.0000000000000987,excluir,E1,,otro,infección urinaria,estudio primario o revisión narrativa
+doi:10.1136/sextrans-2014-051891,excluir,E1,,otro,infección urinaria,estudio primario o revisión narrativa
+doi:10.18359/rmed.2332,excluir,E1,,otro,infección urinaria,estudio primario o revisión narrativa
+doi:10.30554/archmed.16.1.1567.2016,excluir,E1,,otro,infección urinaria,estudio primario o revisión narrativa
+doi:10.1016/j.juro.2017.02.028,excluir,E6,,otro,infección urinaria,comentario o respuesta
+doi:10.1016/s0929-693x(17)30514-6,incluir,,"internacional (GPIP/SPILF, Francia)",guia,infección urinaria,resumen consultado
+doi:10.1016/j.jpurol.2017.07.018,incluir,,"internacional (AAP, NICE, SINePe, CPS, Polonia, EAU/ESPU)",revision de guias,infección urinaria,resumen consultado; comparación crítica de seis guías
+doi:10.1007/s13312-017-1168-1,excluir,E1,,otro,infección urinaria,estudio primario o revisión narrativa
+pmid:28566116,excluir,E1,,otro,infección urinaria,estudio de adherencia a guías
+doi:10.1016/j.jacr.2017.02.028,excluir,E2,,guia,infección urinaria,criterios ACR solo de imágenes
+doi:10.1016/j.jpurol.2017.02.023,excluir,E2,,otro,otro (hidronefrosis prenatal),solo profilaxis
+doi:10.1007/s11255-017-1551-9,excluir,E1,,otro,infección urinaria,estudio de adherencia a guías
+doi:10.1016/j.bmhimx.2017.06.001,excluir,E6,,otro,infección urinaria,comentario o respuesta
+pmid:28763075,excluir,E4,,otro,otro (estreptococo del grupo B perinatal),fuera del alcance
+doi:10.1016/j.burns.2016.07.008,excluir,E3,,otro,otro (quemados),huésped especial
+doi:10.15446/revfacmed.v65n4.59327,excluir,E1,,otro,infección urinaria,estudio primario o revisión narrativa
+doi:10.1016/j.rccot.2017.01.001,excluir,E4,,otro,otro (artroplastia),fuera del alcance
+doi:10.17160/josha.4.5.352,excluir,E1,,otro,infección urinaria,estudio primario o revisión narrativa
+pmid:31971701,excluir,E5,,guia,infección urinaria,resumen consultado; NICE 2018; versión más nueva: pmid:36745714
+doi:10.1177/0009922818784958,excluir,E1,,otro,infección urinaria,estudio primario o revisión narrativa
+doi:10.3205/dgkh000310,excluir,E1,,otro,infección urinaria,estudio de adherencia a guías
+doi:10.1016/j.jpurol.2018.02.008,excluir,E6,,otro,infección urinaria,comentario o respuesta
+doi:10.1016/j.jpurol.2018.01.018,excluir,E6,,otro,infección urinaria,comentario o respuesta
+doi:10.1186/s13012-018-0709-x,excluir,E1,,otro,infección urinaria,estudio de adherencia a guías
+doi:10.5489/cuaj.4796,incluir,,"internacional (guías de IU pediátrica, evaluación AGREE II)",revision de guias,infección urinaria,resumen consultado; búsqueda sistemática y AGREE II
+doi:10.1016/j.jpurol.2017.10.014,excluir,E6,,otro,infección urinaria,comentario o respuesta
+doi:10.1093/jac/dkx324,excluir,E3,,guia,cistitis hemorrágica por virus BK,trasplante
+doi:10.1007/s00467-017-3799-9,excluir,E2,,guia,otro (disfunción vesical e intestinal),sin tratamiento antimicrobiano
+doi:10.1016/j.juro.2017.08.099,excluir,E1,,otro,infección urinaria,estudio de implementación o impacto de guías
+doi:10.1016/j.ajic.2017.08.015,excluir,E4,,otro,otro (infección del sitio operatorio),fuera del alcance
+titulo:alteracionesurinariasenniosconprimerainfeccinurinariaeinfeccinurinariarecurrente,excluir,E1,,otro,infección urinaria,estudio primario o revisión narrativa
+doi:10.1055/s-0038-1645844,excluir,E1,,otro,infección urinaria,estudio primario o revisión narrativa
+doi:10.15446/revfacmed.v66n3.59978,excluir,E1,,otro,infección urinaria,estudio primario o revisión narrativa
+doi:10.1055/s-0038-1656543,excluir,E1,,otro,infección urinaria,estudio primario o revisión narrativa
+doi:10.1055/s-0038-1660444,excluir,E1,,otro,infección urinaria,estudio primario o revisión narrativa
+doi:10.53853/encr.5.2.418,excluir,E1,,otro,infección urinaria,estudio primario o revisión narrativa
+doi:https://doi.org/10.11144/javeriana.umed59-4.piel,excluir,E1,,otro,infección urinaria,estudio primario o revisión narrativa
+doi:10.1001/jamapediatrics.2019.3168,excluir,E1,,otro,infección urinaria,estudio primario o revisión narrativa
+doi:10.1093/cid/ciz021,excluir,E6,,guia,bacteriuria asintomática,resumen consultado; resumen ejecutivo de la guía IDSA incluida doi:10.1093/cid/ciy1121
+doi:10.1177/0009922819853003,excluir,E1,,otro,infección urinaria,estudio de implementación o impacto de guías
+doi:10.1016/j.anpedi.2019.02.009,incluir,,"internacional (AEP y sociedades pediátricas, España)",consenso,infección urinaria,resumen consultado; indica no tratar la bacteriuria asintomática
+doi:10.1371/journal.pone.0214572,excluir,E1,,otro,infección urinaria,estudio de adherencia a guías
+doi:10.1093/cid/ciy1121,incluir,,"internacional (IDSA, Estados Unidos)",guia,bacteriuria asintomática,resumen consultado; actualización 2019 incluye niños (recomendación de no tratar); texto completo (resumen ejecutivo: doi:10.1093/cid/ciz021)
+doi:10.1016/j.urology.2018.12.044,excluir,E1,,otro,infección urinaria,estudio de adherencia a guías
+doi:10.1016/j.jpurol.2018.12.009,excluir,E1,,otro,infección urinaria,estudio primario o revisión narrativa
+doi:10.1007/s00345-018-2607-x,excluir,E1,,otro,infección urinaria,estudio primario o revisión narrativa
+doi:10.1093/jac/dky405,excluir,E1,,otro,infección urinaria,resumen consultado; estudio de resistencia frente a guías locales
+doi:10.1111/apa.14506,excluir,E1,,otro,infección urinaria,estudio primario o revisión narrativa
+pmid:31260553,excluir,E1,,otro,infección urinaria,estudio primario o revisión narrativa
+doi:10.1016/j.acuro.2018.11.001,excluir,E1,,otro,infección urinaria,estudio primario o revisión narrativa
+doi:10.15446/revfacmed.v67n1.56918,excluir,E1,,otro,infección urinaria,estudio primario o revisión narrativa
+doi:10.36789/sanus.vi3.75,excluir,E1,,otro,infección urinaria,estudio primario o revisión narrativa
+doi:10.32641/rchped.v91i2.1267,incluir,,"Latinoamerica (Rama de Nefrología, Sociedad Chilena de Pediatría, Chile)",consenso,infección urinaria,resumen consultado; parte 1: diagnóstico y tratamiento
+doi:10.32641/rchped.v91i3.1268,excluir,E2,,otro,infección urinaria,"resumen consultado; parte 2: estudio, prevención y seguimiento (el tratamiento está en doi:10.32641/rchped.v91i2.1267)"
+doi:10.1007/s00431-020-03681-w,excluir,E4,,guia,otro (disfunción miccional),fuera del alcance
+doi:10.1016/j.jpurol.2019.12.020,excluir,E4,,guia,otro (enuresis),fuera del alcance
+doi:10.1111/iju.14223,excluir,E2,,guia,reflujo vesicoureteral,RVU
+doi:10.1016/j.purol.2020.02.009,excluir,E3,,guia,otro (cateterismo intermitente),huésped especial
+doi:10.1007/s00247-020-04637-w,excluir,E1,,otro,infección urinaria,estudio primario o revisión narrativa
+doi:10.1590/s1677-5538.ibju.2019.0401,excluir,E2,,guia,reflujo vesicoureteral,RVU
+doi:10.1111/iju.14186,excluir,E3,,guia,otro (lesión medular),huésped especial
+doi:10.1001/jamapediatrics.2019.5242,excluir,E6,,otro,infección urinaria,comentario o respuesta
+doi:10.1097/ju.0000000000000670.02,excluir,E6,,otro,infección urinaria,comentario o respuesta
+doi:10.1002/nau.24211,excluir,E3,,guia,otro (vejiga neurogénica),huésped especial
+doi:10.1093/fampra/cmz068,excluir,E1,,otro,infección urinaria,estudio de adherencia a guías
+doi:10.1111/apa.14988,incluir,,"internacional (Sociedad Italiana de Nefrología Pediátrica, Italia)",consenso,infección urinaria febril,resumen consultado; actualiza recomendaciones de 2012
+doi:10.1007/s00345-019-02761-3,excluir,E1,,otro,infección urinaria,estudio primario o revisión narrativa
+titulo:caracterizacindelosneonatosconfiebrequeingresanalaunidaddecuidadointensivoneonat,excluir,E1,,otro,infección urinaria,estudio primario o revisión narrativa
+doi:10.5377/recsp.v3i1.9795,excluir,E1,,otro,infección urinaria,estudio primario o revisión narrativa
+doi:10.1097/ju.0000000000002235,excluir,E3,,guia,otro (vejiga neurogénica),adultos
+doi:10.1016/j.arcped.2021.06.003,excluir,E1,,otro,infección urinaria,estudio de adherencia a guías
+doi:10.1016/j.jiac.2021.07.014,incluir,,"internacional (grupo asiático de guías de IU, Asia)",guia,infección urinaria,resumen consultado
+doi:10.1016/j.sopen.2021.04.003,excluir,E4,,otro,otro (trauma renal),fuera del alcance
+doi:10.1016/j.jpurol.2021.06.022,excluir,E6,,otro,infección urinaria,fe de erratas de EAU/ESPU 2021 (versión vigente incluida: doi:10.1016/j.jpurol.2025.06.016)
+doi:10.1016/j.jpurol.2021.06.021,excluir,E6,,otro,infección urinaria,comentario o respuesta
+doi:10.1016/j.ijpam.2021.03.001,incluir,,"internacional (SPIDS, Arabia Saudita)",guia,infección urinaria,resumen consultado; 90 días a 14 años
+doi:10.1038/s41372-021-01079-6,excluir,E3,,guia,infección urinaria,solo neonatos en UCI
+doi:10.4103/iju.iju_568_20,incluir,,"internacional (Urological Society of India, India)",guia,infección urinaria,resumen ejecutivo
+doi:10.1016/j.ajog.2021.04.218,excluir,E1,,otro,infección urinaria,estudio de adherencia a guías
+doi:10.1017/s1463423621000116,excluir,E1,,otro,infección urinaria,estudio de adherencia a guías
+doi:10.1007/s00467-021-05042-7,excluir,E1,,otro,infección urinaria,estudio primario o revisión narrativa
+doi:10.1111/apa.15779,excluir,E6,,otro,infección urinaria,comentario o respuesta
+doi:10.1016/j.jpurol.2021.01.037,excluir,E5,,guia,infección urinaria,resumen consultado; EAU/ESPU 2021; versión más nueva: doi:10.1016/j.jpurol.2025.06.016
+doi:10.1111/apa.15767,excluir,E6,,otro,infección urinaria,comentario o respuesta
+doi:10.1111/apa.15727,incluir,,"internacional (guía sueca comparada con AAP, CPS, NICE, España, Italia, EAU)",revision de guias,infección urinaria,dudoso; resumen consultado
+doi:10.1016/j.jpurol.2020.10.009,excluir,E1,,otro,infección urinaria,estudio de adherencia a guías
+doi:10.1093/fampra/cmaa110,excluir,E1,,otro,infección urinaria,estudio primario o revisión narrativa
+doi:10.1007/s00431-020-03820-3,excluir,E6,,otro,infección urinaria,fe de erratas del consenso suizo incluido doi:10.1007/s00431-020-03714-4
+doi:10.1007/s10096-020-03999-1,excluir,E1,,otro,infección urinaria,estudio de implementación o impacto de guías
+doi:10.1007/s00431-020-03714-4,incluir,,"internacional (consenso suizo, Suiza)",consenso,infección urinaria,resumen consultado
+doi:10.24875/bmhim.20000280,excluir,E1,,otro,infección urinaria,reporte de caso
+pmid:33632945,excluir,E1,,otro,infección urinaria,estudio primario o revisión narrativa
+doi:10.1007/s00431-021-03948-w,excluir,E1,,otro,infección urinaria,"revisión sistemática de estudios, no de guías"
+doi:10.1093/tropej/fmac109,excluir,E1,,otro,infección urinaria febril,resumen consultado; estudio retrospectivo de protocolo hospitalario de imágenes
+doi:10.5546/aap.2022.s69,incluir,,"Latinoamerica (Comité de Nefrología, SAP, Argentina)",guia,infección urinaria,resumen consultado; actualización 2022
+doi:10.1016/j.jpurol.2022.07.026,excluir,E6,,otro,infección urinaria,comentario o respuesta
+doi:10.1016/j.jpurol.2022.07.029,excluir,E6,,otro,infección urinaria,comentario o respuesta
+doi:10.1016/j.jpurol.2022.06.034,excluir,E6,,otro,infección urinaria,comentario o respuesta
+doi:10.1001/jamanetworkopen.2022.25730,excluir,E1,,otro,infección urinaria,estudio de adherencia a guías
+pmid:36745714,incluir,,"internacional (NICE NG224, Reino Unido)",guia,infección urinaria,resumen consultado; 2022; menores de 16 años
+doi:10.4067/s0716-10182022000200184,incluir,,"Latinoamerica (Sociedad Chilena de Infectología, Chile)",consenso,infección urinaria,"resumen consultado; parte 2: complicaciones, situaciones especiales, PK/PD de antimicrobianos"
+doi:10.4067/s0716-10182022000200174,incluir,,"Latinoamerica (Sociedad Chilena de Infectología, Chile)",consenso,infección urinaria,"resumen consultado; parte 1: diagnóstico, susceptibilidad y manejo"
+doi:10.1016/j.jpurol.2022.06.004,excluir,E1,,otro,infección urinaria,estudio primario o revisión narrativa
+doi:10.1136/bmjopen-2021-057736,incluir,,"internacional (guías chinas e inglesas, AGREE II)",revision de guias,infección urinaria,resumen consultado
+doi:10.3390/antibiotics11030296,excluir,E2,,guia,otro (profilaxis en procedimientos urológicos),solo profilaxis
+doi:10.1080/14767058.2020.1839879,excluir,E3,,otro,infecciones en el embarazo,embarazadas
+doi:10.5489/cuaj.7677,excluir,E1,,otro,infección urinaria,estudio primario o revisión narrativa
+doi:10.1055/s-0042-1758464,excluir,E1,,otro,infección urinaria,estudio primario o revisión narrativa
+doi:10.35366/105822,excluir,E1,,otro,infección urinaria,estudio primario o revisión narrativa
+doi:10.7759/cureus.44959,excluir,E1,,otro,infección urinaria,estudio primario o revisión narrativa
+doi:10.3390/antibiotics12061040,excluir,E2,,guia,infección urinaria,solo profilaxis
+doi:10.4103/ua.ua_147_22,incluir,,internacional (guías 2000-2022),revision de guias,infección urinaria,dudoso; resumen consultado; revisión narrativa con búsqueda de guías
+doi:10.1186/s12884-023-06060-z,excluir,E3,,otro,infección urinaria,embarazadas
+pmid:39937934,excluir,E2,,guia,infección urinaria recurrente,resumen consultado; NICE 2024 solo prevención/profilaxis
+doi:10.1001/jamanetworkopen.2024.44495,incluir,,internacional (WikiGuidelines Group),consenso,infección urinaria,resumen consultado; niños y adultos
+doi:10.25259/ijn_546_23,excluir,E6,,guia,infección urinaria,resumen consultado; resumen duplicado de la guía ISPN incluida doi:10.1007/s00467-023-06173-9
+doi:10.1016/j.anpede.2024.07.010,incluir,,"internacional (GPC española, España)",guia,infección urinaria,resumen consultado; actualización 2024
+doi:10.1089/sur.2024.008,excluir,E1,,otro,infección urinaria,estudio de adherencia a guías
+doi:10.1038/s41409-024-02320-4,excluir,E3,,guia,cistitis hemorrágica,trasplante
+doi:10.1016/j.jacr.2024.02.025,excluir,E2,,guia,infección urinaria,criterios ACR solo de imágenes
+doi:10.1002/nau.25463,excluir,E2,,guia,otro (profilaxis en urodinamia),solo profilaxis
+doi:10.1007/s00247-024-05883-y,excluir,E2,,otro,otro (cistouretrografía),solo imágenes
+pmid:38419278,excluir,E6,,guia,infección urinaria,resumen consultado; resumen duplicado de la guía ISPN incluida doi:10.1007/s00467-023-06173-9
+doi:10.1097/inf.0000000000004292,excluir,E1,,otro,infección urinaria,resumen consultado; estudio retrospectivo sobre diagnóstico
+doi:10.1016/j.eururo.2023.12.005,excluir,E2,,guia,reflujo vesicoureteral,RVU
+doi:10.1007/s00467-023-06173-9,incluir,,"internacional (Indian Society of Pediatric Nephrology, India)",guia,infección urinaria,resumen consultado; 2023-2024
+doi:10.1016/j.jpurol.2023.09.005,excluir,E2,,otro,otro (megauréter),cirugía
+doi:10.1016/j.jhin.2024.05.001,excluir,E4,,otro,otro (infección del sitio operatorio),fuera del alcance
+doi:10.1016/j.ajic.2023.12.019,excluir,E4,,otro,otro (infecciones asociadas a dispositivos),intrahospitalarias
+doi:10.17533/udea.iatreia.254,excluir,E1,,otro,infección urinaria,estudio primario o revisión narrativa
+doi:10.56434/j.arch.esp.urol.20257809.171,excluir,E1,,otro,infección urinaria,reporte de caso
+doi:10.1186/s12879-025-11928-w,excluir,E1,,otro,infección urinaria,estudio de adherencia a guías
+doi:10.4081/aiua.2025.14085,excluir,E4,,guia,otro (urolitiasis),fuera del alcance
+doi:10.1016/j.urology.2025.04.025,excluir,E1,,otro,infección urinaria,estudio de adherencia a guías
+doi:10.1002/nau.70046,excluir,E1,,otro,infección urinaria,estudio primario o revisión narrativa
+doi:10.1016/j.eururo.2025.02.022,excluir,E5,,guia,infección urinaria,resumen consultado; resumen EAU/ESPU 2024 parte II; versión más nueva de la sección de IU: doi:10.1016/j.jpurol.2025.06.016
+doi:10.1097/inf.0000000000004790,incluir,,"internacional (ESPID, Europa)",guia,infección urinaria complicada,resumen consultado
+doi:10.1017/ash.2025.2,excluir,E1,,otro,infección urinaria,estudio de implementación o impacto de guías
+doi:10.1016/j.jpurol.2025.02.024,excluir,E1,,otro,infección urinaria,estudio de adherencia a guías
+doi:10.1016/j.acuroe.2025.501710,excluir,E1,,otro,infección urinaria,estudio primario o revisión narrativa
+doi:10.1590/s1678-9946202567007,incluir,,internacional (guías de IU complicada),revision de guias,infección urinaria complicada,"dudoso; resumen consultado; revisión integrativa, mayoría adultos, incluye guías pediátricas"
+doi:10.1016/j.euf.2025.01.012,excluir,E2,,guia,otro (obstrucción urinaria baja congénita),sin tratamiento de IU
+doi:10.1177/03915603241309426,excluir,E1,,otro,infección urinaria,estudio primario o revisión narrativa
+doi:10.1111/apa.17554,excluir,E1,,otro,infección urinaria,estudio de adherencia a guías
+titulo:resistenciaantimicrobianaasociadaaprofilaxisenpeditricosconbacteriuriaeinfeccind,excluir,E1,,otro,infección urinaria,estudio primario o revisión narrativa
+doi:10.22265/acnef.12.2.899,excluir,E1,,otro,infección urinaria,estudio primario o revisión narrativa
+doi:10.22265/acnef.12.1.798,excluir,E1,,otro,infección urinaria,estudio primario o revisión narrativa
+doi:10.1093/jpids/piag113,excluir,E1,,otro,infección urinaria,estudio de implementación o impacto de guías
+doi:10.1542/peds.2026-078566,excluir,E2,,guia,infección urinaria,informe técnico de diagnóstico que acompaña la guía AAP 2026 doi:10.1542/peds.2026-078565
+doi:10.1542/peds.2026-078565,incluir,,"internacional (AAP, Estados Unidos)",guia,infección urinaria,resumen consultado; 2026; 8 días a 5 años; reemplaza la guía 2011
+doi:10.1016/j.jpurol.2026.106203,excluir,E1,,otro,infección urinaria,estudio de adherencia a guías
+doi:10.3390/antibiotics15080788,excluir,E1,,otro,infección urinaria,"resumen consultado; revisión narrativa, sobre todo neonatos"
+doi:10.1097/ju.0000000000005228,excluir,E4,,guia,otro (urolitiasis),fuera del alcance
+doi:10.1016/j.idnow.2026.105312,excluir,E3,,guia,infección urinaria,solo hombres adultos
+doi:10.1016/j.diagmicrobio.2026.117324,excluir,E1,,otro,infección urinaria,estudio primario o revisión narrativa
+doi:10.1097/ju.0000000000004966,excluir,E1,,otro,infección urinaria,estudio primario o revisión narrativa
+doi:10.1007/s00330-025-12100-3,excluir,E2,,guia,otro (imágenes renales),solo imágenes
+doi:10.1016/j.jpurol.2025.07.041,excluir,E6,,otro,infección urinaria,comentario a la guía EAU/ESPU incluida doi:10.1016/j.jpurol.2025.06.016
+doi:10.1016/j.jpurol.2025.08.041,excluir,E6,,otro,infección urinaria,respuesta a comentario sobre la guía EAU/ESPU incluida doi:10.1016/j.jpurol.2025.06.016
+doi:10.1016/j.jpurol.2025.06.016,incluir,,"internacional (EAU/ESPU, Europa)",guia,infección urinaria,resumen consultado; actualización 2025
+doi:10.7705/biomedica.7743,excluir,E1,,otro,infección urinaria,estudio primario o revisión narrativa
+doi:10.1097/inf.0000000000005323,excluir,E1,,otro,infección urinaria,ensayo clínico
+doi:10.3390/pathogens15010092,excluir,E1,,otro,infección urinaria,estudio primario o revisión narrativa
+doi:10.1016/j.nefro.2025.501406,excluir,E3,,otro,otro (diálisis peritoneal),huésped especial
